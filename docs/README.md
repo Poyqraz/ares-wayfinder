@@ -4,7 +4,7 @@ Start with the [project README](../README.md). This page says what each folder u
 
 | Folder | What it holds | Status |
 |---|---|---|
-| [`submission/`](submission/) | Project description, NASA data list, AI use disclosure, demo runbook, slide and video outlines | Current, except the slide and video outlines (marked as drafts) |
+| [`submission/`](submission/) | The submission slides (PDF), project description, NASA data list, AI use disclosure, demo runbook, slide and video outlines | Current, except the slide and video outlines (marked as drafts) |
 | [`images/`](images/) | Screenshots of the current build, used by the README | Current |
 | [`decisions/`](decisions/) | Architecture decision records (ADR-001, ADR-002), change requests (CR-001 to CR-009), the M0–A terrain gate and the map-layer contract | Current |
 | [`checkpoints/`](checkpoints/) | One folder per release candidate: its report and its evidence screenshots | Historical record; the latest is [`s15-rc1`](checkpoints/s15-rc1/S15_RC1_REPORT.md) with its `s15-rc2` update |

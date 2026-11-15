@@ -1,5 +1,9 @@
 # Slides outline (7 slides maximum)
 
+> The submitted deck is [ARES_WAYFINDER_SLIDES.pdf](ARES_WAYFINDER_SLIDES.pdf). Its photographs are credited on each slide
+> (NASA/JPL-Caltech; ESA Mars Express for the Jezero image) and keep their own terms; they are not covered by the
+> repository licence. This outline is an earlier plan.
+
 > **Working draft from release s5-rc1.** It describes the earlier two-route demo and its screenshots.
 > The current build has three routes, mission B (Amalik) and the EVA HUD; current pictures are in
 > `docs/images/`. Update the shots before recording or presenting.

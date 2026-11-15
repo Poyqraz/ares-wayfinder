@@ -81,6 +81,7 @@ three are 438.6 m. Routes are candidate corridors, not surveyed paths.
 
 | Document | Content |
 |---|---|
+| [Slides (PDF, 7 slides)](docs/submission/ARES_WAYFINDER_SLIDES.pdf) | The submission deck: science rationale, missions, crew, how the system works, limits |
 | [Project description](docs/submission/PROJECT_DESCRIPTION.md) | The problem, what we built, how it works, limitations |
 | [NASA data and resources](docs/submission/NASA_DATA_AND_RESOURCES.md) | Every NASA / USGS product used, with product IDs, URLs and DOIs |
 | [AI use disclosure](docs/submission/AI_USE_DISCLOSURE.md) | Which AI tools were used, for what, and how their output was checked |
