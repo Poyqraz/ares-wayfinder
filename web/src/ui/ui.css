@@ -1,0 +1,18 @@
+.ui-preview { font-family: "Segoe UI", sans-serif; background: #100c0a; color: #f3eadf; padding: 16px; display: grid; gap: 16px; }
+.ui-preview h1 { font-size: 20px; margin: 0; }
+.ui-form, .ui-card, .ui-magnifier { border: 1px solid #5a3d2e; padding: 10px; display: grid; gap: 8px; }
+.ui-form label, .ui-card dt { display: grid; gap: 4px; font-size: 13px; }
+.ui-form input, .ui-preview select, .ui-preview button { font: inherit; color: inherit; background: #2a1e18; border: 1px solid #5a3d2e; padding: 6px 8px; }
+.ui-card dl { margin: 0; display: grid; gap: 6px; }
+.ui-card-head, .ui-actions { display: flex; justify-content: space-between; gap: 8px; align-items: center; flex-wrap: wrap; }
+.ui-frame { position: relative; width: min(100%, 480px); height: 220px; background: #1b1410; overflow: hidden; }
+.ui-frame img { width: 100%; height: 100%; object-fit: fill; }
+.ui-select { position: absolute; border: 1px solid #79e7ff; background: rgba(121, 231, 255, 0.2); }
+.ui-detail { max-width: 100%; border: 1px solid #5a3d2e; padding: 8px; }
+button:disabled { opacity: 0.75; }
+@media (max-width: 768px) {
+  .ui-preview { padding: 10px; }
+  .ui-frame { width: 100%; }
+}
+.ui-frame { touch-action: none; user-select: none; }
+.ui-frame img { pointer-events: none; -webkit-user-drag: none; user-select: none; } /* native image drag cancelled the selection */

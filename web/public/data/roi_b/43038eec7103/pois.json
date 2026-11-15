@@ -1,0 +1,34 @@
+[
+  {
+    "id": "landing",
+    "name": "Octavia E. Butler Landing (Perseverance)",
+    "geo": { "lat": 18.44463, "lon": 77.45088 },
+    "claim": "Perseverance landing site. Coordinates UNVERIFIED until task S2.",
+    "source": "https://ntrs.nasa.gov/citations/20210024644",
+    "confidence": "low"
+  },
+  {
+    "id": "roubion",
+    "name": "Roubion (Máaz)",
+    "geo": { "lat": 18.42769, "lon": 77.45165 },
+    "claim": "Mars 2020 sampling location. Coordinates UNVERIFIED until task S2.",
+    "source": "https://doi.org/10.1029/2022JE007474",
+    "confidence": "low"
+  },
+  {
+    "id": "rochette",
+    "name": "Rochette / Montdenier (Máaz)",
+    "geo": { "lat": 18.43074, "lon": 77.44437 },
+    "claim": "Mars 2020 sampling location. Coordinates UNVERIFIED until task S2.",
+    "source": "https://doi.org/10.1029/2022JE007474",
+    "confidence": "low"
+  },
+  {
+    "id": "sid",
+    "name": "Sid / Hahonih (Máaz)",
+    "geo": { "lat": 18.44386, "lon": 77.45242 },
+    "claim": "Mars 2020 sampling location. Coordinates UNVERIFIED until task S2.",
+    "source": "https://doi.org/10.1029/2022JE007474",
+    "confidence": "low"
+  }
+]

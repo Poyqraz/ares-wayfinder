@@ -1,0 +1,198 @@
+{
+ "schema": "ares-base-scenario/1",
+ "status": "HYPOTHETICAL scenario reference; not evaluated or approved by NASA; not a landing-site certification",
+ "inputs": {
+  "regional_relief": "5c4dd158f4cf",
+  "m0a": "f8de9017164a",
+  "catalog": "572fba1ce61f"
+ },
+ "sites": {
+  "landing_zone": {
+   "id": "LZ-1",
+   "role": "candidate human landing zone",
+   "lat": 18.444854,
+   "lon": 77.452327,
+   "radius_m": 400,
+   "evaluation": "40 m regional relief (display-grade); PROVISIONAL",
+   "inside_roi_a": true,
+   "routable": true,
+   "routable_note": "inside the ROI-A CTX 20 m grid only; no analysis grid connects it to the base",
+   "distance_to_perseverance_landing_m": 82,
+   "search_note": "the minimum lies near the outer edge of the 1.0-2.5 km search ring"
+  },
+  "base": {
+   "id": "BASE",
+   "role": "primary habitat / base (scenario reference and expedition start)",
+   "lat": 18.455683,
+   "lon": 77.40964,
+   "grid": "m0a",
+   "radius_m": 60,
+   "cells": 2971,
+   "slope_p50_deg": 1.98,
+   "slope_p95_deg": 4.26,
+   "slope_max_deg": 7.23,
+   "relief_m": 3.1,
+   "elev_mean_m": -2544.0,
+   "evaluation": "HiRISE 2 m prototype grid (slope only)",
+   "routable": true
+  },
+  "camp_a": {
+   "id": "CAMP-A",
+   "role": "temporary expedition camp, Western Delta",
+   "lat": 18.456189,
+   "lon": 77.405794,
+   "grid": "m0a",
+   "radius_m": 30,
+   "cells": 733,
+   "slope_p50_deg": 3.41,
+   "slope_p95_deg": 6.43,
+   "slope_max_deg": 11.1,
+   "relief_m": 3.1,
+   "elev_mean_m": -2540.1,
+   "evaluation": "HiRISE 2 m prototype grid (slope only)",
+   "routable": true
+  },
+  "camp_b": {
+   "id": "CAMP-B",
+   "role": "temporary expedition camp, Bright Angel (PROVISIONAL)",
+   "lat": 18.504913,
+   "lon": 77.320736,
+   "grid": "regional_40m",
+   "radius_m": 300,
+   "cells": 181,
+   "slope_p50_deg": 3.65,
+   "slope_p95_deg": 6.22,
+   "slope_max_deg": 7.97,
+   "relief_m": 41.6,
+   "elev_mean_m": -2355.4,
+   "evaluation": "40 m regional relief only; no detailed terrain at B",
+   "routable": false
+  }
+ },
+ "candidates": [
+  {
+   "id": "LZ-1",
+   "name": "Crater floor near Three Forks (flattest disc 1.0-2.5 km from the base)",
+   "lat": 18.444854,
+   "lon": 77.452327,
+   "note": "selected by the rule in this file",
+   "radius_m": 400,
+   "cells": 332,
+   "slope_p50_deg": 1.27,
+   "slope_p95_deg": 2.6,
+   "slope_max_deg": 4.07,
+   "relief_m": 9.6,
+   "elev_mean_m": -2568.7,
+   "distance_m": {
+    "M0": 2517,
+    "A": 2734,
+    "B": 8841
+   },
+   "distance_to_base_m": 2485
+  },
+  {
+   "id": "LZ-2",
+   "name": "Octavia E. Butler landing site (Perseverance, 2021)",
+   "lat": 18.44463,
+   "lon": 77.45088,
+   "note": "historical robotic landing point; NTRS 20210024644 coordinate as used in ROI-A",
+   "radius_m": 400,
+   "cells": 333,
+   "slope_p50_deg": 1.3,
+   "slope_p95_deg": 2.94,
+   "slope_max_deg": 4.41,
+   "relief_m": 10.6,
+   "elev_mean_m": -2568.3,
+   "distance_m": {
+    "M0": 2440,
+    "A": 2660,
+    "B": 8770
+   },
+   "distance_to_base_m": 2410
+  },
+  {
+   "id": "LZ-3",
+   "name": "Three Forks depot area",
+   "lat": 18.45272753,
+   "lon": 77.40833585,
+   "note": "the sample depot itself; excluded as a landing zone to protect the tubes",
+   "radius_m": 400,
+   "cells": 331,
+   "slope_p50_deg": 3.51,
+   "slope_p95_deg": 10.45,
+   "slope_max_deg": 22.76,
+   "relief_m": 51.8,
+   "elev_mean_m": -2540.6,
+   "distance_m": {
+    "M0": 0,
+    "A": 378,
+    "B": 6377
+   },
+   "distance_to_base_m": 190
+  },
+  {
+   "id": "LZ-4",
+   "name": "Delta top near Belva crater (F02 anchor)",
+   "lat": 18.48292946,
+   "lon": 77.36900835,
+   "note": "on the fan, next to an impact crater",
+   "radius_m": 400,
+   "cells": 330,
+   "slope_p50_deg": 2.9,
+   "slope_p95_deg": 13.39,
+   "slope_max_deg": 20.08,
+   "relief_m": 66.5,
+   "elev_mean_m": -2425.1,
+   "distance_m": {
+    "M0": 2845,
+    "A": 2525,
+    "B": 3690
+   },
+   "distance_to_base_m": 2798
+  },
+  {
+   "id": "LZ-5",
+   "name": "Neretva Vallis near Bright Angel (B waypoint)",
+   "lat": 18.49748444,
+   "lon": 77.30519089,
+   "note": "inlet valley floor; HiRISE CR_SOUTH parallax caveat",
+   "radius_m": 400,
+   "cells": 332,
+   "slope_p50_deg": 6.65,
+   "slope_p95_deg": 22.96,
+   "slope_max_deg": 28.47,
+   "relief_m": 93.1,
+   "elev_mean_m": -2334.2,
+   "distance_m": {
+    "M0": 6377,
+    "A": 6113,
+    "B": 0
+   },
+   "distance_to_base_m": 6373
+  }
+ ],
+ "distances_from_base_m": {
+  "M0": 190,
+  "A": 274,
+  "B": 6373,
+  "landing_zone": 2485,
+  "camp_a": 218,
+  "camp_b": 5788
+ },
+ "rules": "BASE   flattest 60 m-radius patch (lowest p95 Horn slope, 2 m HiRISE) inside the M0-A grid, >= 40 m from the grid\n         edge and >= 120 m from every depot drop rover position (keep habitat traffic off the sample depot).\n  LZ     lowest p95 slope (40 m regional grid) over 400 m-radius discs whose centre is 1.0-2.5 km from the base\n         (assumed lander/habitat separation), compared with named reference candidates.\n  CAMPS  A: flattest 30 m patch within 150 m of the A waypoint (2 m grid). B: flattest 300 m disc within 1 km of\n         the B waypoint (40 m grid) - PROVISIONAL, no detailed terrain at B.",
+ "not_evaluated": [
+  "rock abundance and small obstacles",
+  "dust depth, bearing strength, trafficability",
+  "lander plume and ejecta effects",
+  "radiation (no Jezero surface measurement; no spatial dataset)",
+  "thermal, wind and dust-storm conditions at the site",
+  "solar power and illumination",
+  "communications and logistics",
+  "planetary protection constraints"
+ ],
+ "limits": [
+  "Slopes on the 40 m grid are averages over ~100 m; a low value does not mean a smooth or safe surface.",
+  "Vertical reference of both terrain products is UNVERIFIED.",
+  "Targets are rover waypoints, not exact rock or tube positions."
+ ]
+}

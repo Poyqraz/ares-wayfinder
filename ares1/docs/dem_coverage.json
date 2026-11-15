@@ -1,0 +1,282 @@
+{
+ "catalog_version": "572fba1ce61f",
+ "areas": {
+  "m0_to_a": {
+   "lon_min": 77.40288685,
+   "lat_min": 18.4495234,
+   "lon_max": 77.41160064,
+   "lat_max": 18.461931
+  },
+  "b_spot": {
+   "lon_min": 77.30214915,
+   "lat_min": 18.49447434,
+   "lon_max": 77.30819089,
+   "lat_max": 18.50048444
+  }
+ },
+ "existing_bundles": {
+  "ctx_roi_a_lon": [
+   77.4357,
+   77.462
+  ],
+  "ctx_roi_b_lon": [
+   77.42,
+   77.49
+  ],
+  "verdict": "M0 (lon 77.4078-77.4086), A (77.4059-77.4062) and B (77.3051) lie west of both ROI-A and ROI-B: the current terrain bundles cannot be used."
+ },
+ "dems": {
+  "jpl_ctx_dem_20m": {
+   "m0_to_a": {
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/ScienceInvestigationMaps_JPL/M20_JezeroCrater_CTXDEM_20m.tif",
+    "crs": "+proj=eqc +lat_ts=18.4663 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+    "pixel_m_proj": [
+     20.0,
+     20.0
+    ],
+    "window_shape": [
+     38,
+     26
+    ],
+    "window_inside_raster": true,
+    "valid_fraction": 1.0,
+    "elev_min_m": -2555.45,
+    "elev_max_m": -2475.23,
+    "slope_deg_p50": 4.97,
+    "slope_deg_p95": 17.51,
+    "slope_deg_max": 27.74,
+    "points_on_valid_pixels": {
+     "waypoint:M0": true,
+     "waypoint:A": true,
+     "drop:M2020-00337-08": true,
+     "drop:M2020-00579-17": true,
+     "drop:M2020-00639-21": true,
+     "drop:M2020-00164-02": true,
+     "drop:M2020-00271-06": true,
+     "drop:M2020-00190-03": true,
+     "drop:M2020-00516-15": true,
+     "drop:M2020-00495-12": true,
+     "drop:M2020-00374-10": true,
+     "drop:M2020-00586-18": true,
+     "sample:M2020-00495-12": true,
+     "sample:M2020-00516-15": true,
+     "sample:M2020-00490-11": true,
+     "sample:M2020-00509-14": true
+    },
+    "all_points_valid": true
+   },
+   "b_spot": {
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/ScienceInvestigationMaps_JPL/M20_JezeroCrater_CTXDEM_20m.tif",
+    "crs": "+proj=eqc +lat_ts=18.4663 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+    "pixel_m_proj": [
+     20.0,
+     20.0
+    ],
+    "window_shape": [
+     19,
+     18
+    ],
+    "window_inside_raster": true,
+    "valid_fraction": 1.0,
+    "elev_min_m": -2369.27,
+    "elev_max_m": -2289.53,
+    "slope_deg_p50": 7.63,
+    "slope_deg_p95": 24.88,
+    "slope_deg_max": 28.61,
+    "points_on_valid_pixels": {
+     "waypoint:B": true,
+     "sample:M2020-01215-28": true
+    },
+    "all_points_valid": true
+   }
+  },
+  "usgs_trn_ctx_dtm_20m": {
+   "m0_to_a": {
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.tif",
+    "crs": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+    "pixel_m_proj": [
+     20.0,
+     20.0
+    ],
+    "window_shape": [
+     38,
+     27
+    ],
+    "window_inside_raster": true,
+    "valid_fraction": 1.0,
+    "elev_min_m": -2555.56,
+    "elev_max_m": -2475.17,
+    "slope_deg_p50": 4.96,
+    "slope_deg_p95": 17.46,
+    "slope_deg_max": 28.13,
+    "points_on_valid_pixels": {
+     "waypoint:M0": true,
+     "waypoint:A": true,
+     "drop:M2020-00337-08": true,
+     "drop:M2020-00579-17": true,
+     "drop:M2020-00639-21": true,
+     "drop:M2020-00164-02": true,
+     "drop:M2020-00271-06": true,
+     "drop:M2020-00190-03": true,
+     "drop:M2020-00516-15": true,
+     "drop:M2020-00495-12": true,
+     "drop:M2020-00374-10": true,
+     "drop:M2020-00586-18": true,
+     "sample:M2020-00495-12": true,
+     "sample:M2020-00516-15": true,
+     "sample:M2020-00490-11": true,
+     "sample:M2020-00509-14": true
+    },
+    "all_points_valid": true
+   },
+   "b_spot": {
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.tif",
+    "crs": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+    "pixel_m_proj": [
+     20.0,
+     20.0
+    ],
+    "window_shape": [
+     18,
+     19
+    ],
+    "window_inside_raster": true,
+    "valid_fraction": 1.0,
+    "elev_min_m": -2369.39,
+    "elev_max_m": -2289.15,
+    "slope_deg_p50": 7.96,
+    "slope_deg_p95": 25.32,
+    "slope_deg_max": 29.04,
+    "points_on_valid_pixels": {
+     "waypoint:B": true,
+     "sample:M2020-01215-28": true
+    },
+    "all_points_valid": true
+   }
+  },
+  "usgs_hirise_dtm_1m": {
+   "m0_to_a": {
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_006_DTM_MOLAtopography_DeltaGeoid_1m_Eqc_latTs0_lon0_blend40.tif",
+    "crs": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+    "pixel_m_proj": [
+     1.0,
+     1.0
+    ],
+    "window_shape": [
+     737,
+     518
+    ],
+    "window_inside_raster": true,
+    "valid_fraction": 1.0,
+    "elev_min_m": -2549.68,
+    "elev_max_m": -2470.51,
+    "slope_deg_p50": 4.7,
+    "slope_deg_p95": 21.96,
+    "slope_deg_max": 56.86,
+    "points_on_valid_pixels": {
+     "waypoint:M0": true,
+     "waypoint:A": true,
+     "drop:M2020-00337-08": true,
+     "drop:M2020-00579-17": true,
+     "drop:M2020-00639-21": true,
+     "drop:M2020-00164-02": true,
+     "drop:M2020-00271-06": true,
+     "drop:M2020-00190-03": true,
+     "drop:M2020-00516-15": true,
+     "drop:M2020-00495-12": true,
+     "drop:M2020-00374-10": true,
+     "drop:M2020-00586-18": true,
+     "sample:M2020-00495-12": true,
+     "sample:M2020-00516-15": true,
+     "sample:M2020-00490-11": true,
+     "sample:M2020-00509-14": true
+    },
+    "all_points_valid": true
+   },
+   "b_spot": {
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_006_DTM_MOLAtopography_DeltaGeoid_1m_Eqc_latTs0_lon0_blend40.tif",
+    "crs": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+    "pixel_m_proj": [
+     1.0,
+     1.0
+    ],
+    "window_shape": [
+     357,
+     359
+    ],
+    "window_inside_raster": true,
+    "valid_fraction": 1.0,
+    "elev_min_m": -2365.71,
+    "elev_max_m": -2285.57,
+    "slope_deg_p50": 9.33,
+    "slope_deg_p95": 29.38,
+    "slope_deg_max": 52.1,
+    "points_on_valid_pixels": {
+     "waypoint:B": true,
+     "sample:M2020-01215-28": true
+    },
+    "all_points_valid": true
+   }
+  }
+ },
+ "hirise_pairs": {
+  "C": {
+   "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/DTM_MOLAtopography_DeltaGeoid_Jezero_C_Edited_affine_1m_Eqc_latTs0_lon0.tif",
+   "covers_with_valid_data": [
+    "sample:M2020-00490-11",
+    "sample:M2020-00495-12",
+    "sample:M2020-00509-14",
+    "sample:M2020-00516-15",
+    "waypoint:A",
+    "waypoint:M0"
+   ]
+  },
+  "E": {
+   "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/DTM_MOLAtopography_DeltaGeoid_Jezero_E_Edited_affine_1m_Eqc_latTs0_lon0.tif",
+   "covers_with_valid_data": []
+  },
+  "N": {
+   "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/DTM_MOLAtopography_DeltaGeoid_Jezero_N_Edited_affine_1m_Eqc_latTs0_lon0.tif",
+   "covers_with_valid_data": []
+  },
+  "W": {
+   "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/DTM_MOLAtopography_DeltaGeoid_Jezero_W_Edited_affine_1m_Eqc_latTs0_lon0.tif",
+   "covers_with_valid_data": [
+    "sample:M2020-00490-11",
+    "sample:M2020-00495-12",
+    "sample:M2020-00509-14",
+    "sample:M2020-00516-15",
+    "waypoint:A",
+    "waypoint:M0"
+   ]
+  },
+  "DL": {
+   "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/DTM_MOLAtopography_DeltaGeoid_Jezero_DL_Edited_affine_1m_Eqc_latTs0_lon0.tif",
+   "covers_with_valid_data": [
+    "sample:M2020-00490-11",
+    "sample:M2020-00495-12",
+    "sample:M2020-00509-14",
+    "sample:M2020-00516-15",
+    "waypoint:A",
+    "waypoint:M0"
+   ]
+  },
+  "CR_NORTH": {
+   "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/DTM_MOLAtopography_DeltaGeoid_Jezero_CR_NORTH_Edited_affine_1m_Eqc_latTs0_lon0.tif",
+   "covers_with_valid_data": []
+  },
+  "CR_SOUTH": {
+   "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/DTM_MOLAtopography_DeltaGeoid_Jezero_CR_SOUTH_Edited_affine_1m_Eqc_latTs0_lon0.tif",
+   "covers_with_valid_data": [
+    "sample:M2020-01215-28",
+    "waypoint:B"
+   ]
+  }
+ },
+ "notes": [
+  "Valid fraction and slopes are computed on each DEM's native grid; ground spacing corrects lat_ts=0 grids by cos(lat).",
+  "Point checks use rover positions/waypoints, not exact rock or tube points.",
+  "USGS metadata: the CR (crater rim, far-western) HiRISE stereo pair has uncompensated y-parallax; use with caution.",
+  "This is a coverage feasibility check only. No route was computed; the CTX ROI-A/ROI-B bundles were not used."
+ ]
+}

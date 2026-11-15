@@ -1,0 +1,159 @@
+{
+ "schema": "ares-terrain-feature/1",
+ "frozen_inputs_untouched": [
+  "ares1 catalog 572fba1ce61f",
+  "M0-A bundle f8de9017164a",
+  "ROI-A bundles"
+ ],
+ "status_ladder": [
+  "LITERATURE_CONFIRMED",
+  "RASTERS_DOWNLOADED",
+  "THREE_LAYER_VISUALLY_CONFIRMED",
+  "MEASURED_WITH_UNCERTAINTY",
+  "QA_APPROVED",
+  "UI_VERIFIED"
+ ],
+ "features": [
+  {
+   "feature_id": "F01",
+   "name": "Western delta fan front / Hawksbill Gap",
+   "related_missions": [
+    "A",
+    "M0"
+   ],
+   "anchor": {
+    "lat": 18.45869497,
+    "lon": 77.40595178,
+    "sol": 501,
+    "rmc": "26_1154",
+    "source_type": "rover_waypoint",
+    "source": "NASA MMGIS M20_waypoints.json",
+    "is_feature_centre": false
+   },
+   "observation": "fan-front scarp between delta deposits and the crater floor (published naming: Kathir et al., NTRS 20250004753, Fig. 1)",
+   "published_reference": {
+    "source_url": "https://ntrs.nasa.gov/api/citations/20250004753/downloads/AGU_FINAL_FloatsPaper_Kathir%20et%20al_May2024.pdf",
+    "via": "team document ARES1_ARAZI_BILIMSEL_DOGRULAMA.md v0.9 (cited; not retrieved by this pipeline)"
+   },
+   "geometry": "F01/F01_geometry.json",
+   "geometry_status": "ALGORITHMIC_CANDIDATE_PENDING_REVIEW",
+   "transect": "F01/F01_profile.csv",
+   "measurements": {
+    "crest_elev_m": -2514.163,
+    "foot_elev_m": -2522.52,
+    "delta_z_m": 8.357,
+    "horizontal_span_m": 23.0,
+    "mean_transect_slope_deg": 19.968,
+    "local_slope_cells": 193,
+    "local_slope_mean_deg": 14.236,
+    "local_slope_p50_deg": 9.899,
+    "local_slope_p95_deg": 31.801,
+    "local_slope_max_deg": 32.459
+   },
+   "uncertainty": "F01/F01_qa.json#uncertainty",
+   "evidence_image": "F01/F01_panel.png",
+   "three_raster_validation": "AUTOMATED_MEASUREMENT_PENDING_REVIEW",
+   "evidence_level": "HIGH_FOR_EXISTENCE_MEDIUM_FOR_LOCAL_GEOMETRY",
+   "qa_status": "LITERATURE_CONFIRMED",
+   "data_products": [
+    "CTX-2020",
+    "DEM-2020",
+    "HIRISE-2020"
+   ],
+   "validated_for_human_eva": false,
+   "used_in_routing": false,
+   "hazard_type": null
+  },
+  {
+   "feature_id": "F02",
+   "name": "Belva crater",
+   "related_missions": [],
+   "anchor": {
+    "lat": 18.48292946,
+    "lon": 77.36900835,
+    "sol": 770,
+    "rmc": "39_650",
+    "source_type": "rover_waypoint",
+    "source": "NASA MMGIS M20_waypoints.json",
+    "is_feature_centre": false
+   },
+   "observation": "impact crater; NASA reports an approximate 0.9 km diameter",
+   "published_reference": {
+    "approx_diameter_m": 900,
+    "uncertainty_m": null,
+    "source_url": "https://science.nasa.gov/resource/perseverance-takes-in-view-at-belva-crater/",
+    "via": "team document ARES1_ARAZI_BILIMSEL_DOGRULAMA.md v0.9 (cited; not retrieved by this pipeline)"
+   },
+   "geometry": null,
+   "geometry_status": "NOT_TRACED",
+   "transect": null,
+   "measurements": {
+    "crater_diameter_m": null,
+    "crater_depth_m": null,
+    "slope_p95_deg": null
+   },
+   "uncertainty": null,
+   "evidence_image": null,
+   "three_raster_validation": "PENDING",
+   "evidence_level": "HIGH_FOR_EXISTENCE_LOW_FOR_LOCAL_GEOMETRY",
+   "qa_status": "LITERATURE_CONFIRMED",
+   "data_products": [
+    "CTX-2020",
+    "DEM-2020",
+    "HIRISE-2020"
+   ],
+   "validated_for_human_eva": false,
+   "used_in_routing": false,
+   "hazard_type": null
+  },
+  {
+   "feature_id": "F03",
+   "name": "Neretva Vallis northern channel margin / Bright Angel",
+   "related_missions": [
+    "B"
+   ],
+   "anchor": {
+    "lat": 18.49748444,
+    "lon": 77.30519089,
+    "sol": 1210,
+    "rmc": "56_0",
+    "source_type": "rover_waypoint",
+    "source": "NASA MMGIS M20_waypoints.json",
+    "is_feature_centre": false
+   },
+   "observation": "valley shaped by an ancient river; Bright Angel outcrops at the northern channel margin; a local inner channel ~50-80 m wide, 2-3 m deep (applies to that inner channel only)",
+   "published_reference": {
+    "source_urls": [
+     "https://www.nature.com/articles/s41586-025-09413-0",
+     "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2025JE009420",
+     "https://www.nasa.gov/missions/mars-2020-perseverance/perseverance-rover/nasas-perseverance-fords-an-ancient-river-to-reach-science-target/"
+    ],
+    "via": "team document ARES1_ARAZI_BILIMSEL_DOGRULAMA.md v0.9 (cited; not retrieved by this pipeline)"
+   },
+   "geometry": null,
+   "geometry_status": "NOT_TRACED",
+   "transect": null,
+   "measurements": {
+    "channel_width_m": null,
+    "bank_to_floor_relief_m": null,
+    "slope_p95_deg": null
+   },
+   "uncertainty": null,
+   "evidence_image": null,
+   "three_raster_validation": "PENDING",
+   "evidence_level": "HIGH_FOR_EXISTENCE_LOW_FOR_LOCAL_GEOMETRY",
+   "qa_status": "LITERATURE_CONFIRMED",
+   "notes": [
+    "B lies in the HiRISE CR_SOUTH stereo pair area (USGS: uncompensated y-parallax) - check before any DEM measurement."
+   ],
+   "data_products": [
+    "CTX-2020",
+    "DEM-2020",
+    "HIRISE-2020"
+   ],
+   "validated_for_human_eva": false,
+   "used_in_routing": false,
+   "hazard_type": null
+  }
+ ]
+}

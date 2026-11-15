@@ -1,0 +1,30 @@
+[
+ {
+  "file": "dem.f32.bin",
+  "sha256": "72ec38df22b8a745d338ac39d8b9bf928f1566e8a1b14ca6745e2536aa060f61"
+ },
+ {
+  "file": "hillshade.png",
+  "sha256": "9025a057fd496e1d7defd9083528639f3748139b65bfca5a814bcbc92d0ec7cc"
+ },
+ {
+  "file": "ortho.jpg",
+  "sha256": "6556bd1401768b9a8b94237db5286d44577770ba96c26041cefa4695c1e6d295"
+ },
+ {
+  "file": "pois.json",
+  "sha256": "f9c472fefe600dea2e7fb8975848fba7ef75a02972939af067ddd492a56c45fb"
+ },
+ {
+  "file": "slope_deg.f32.bin",
+  "sha256": "de240b6cb30c7cbf28b73d6bbc53ae1b57c8e3ad69d1b685a9b654b9ccc0cdd4"
+ },
+ {
+  "file": "sources.json",
+  "sha256": "fb6d60447b36b7b1f835c001c76f3cd0da1061540f7ab065ff6dd1c02802e0a2"
+ },
+ {
+  "file": "validity.u8.bin",
+  "sha256": "0ca8aa51e2a90602d8c3fc322269cd6a7c6762d99361fc4145c21a5c3e438550"
+ }
+]

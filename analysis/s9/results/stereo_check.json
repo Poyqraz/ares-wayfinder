@@ -1,0 +1,520 @@
+{
+ "generated_by": "pipeline/traversability_check.py",
+ "dataset_version": "f8de9017164a",
+ "stereo_pairs": [
+  "C",
+  "DL",
+  "W"
+ ],
+ "routes": {
+  "m0a_reference": {
+   "name": "M0-A reference: M0 rover position to A rover position",
+   "by_gate": [
+    {
+     "gate_deg": null,
+     "clearance": false,
+     "status": "OK",
+     "steps": 184,
+     "python": {
+      "max_step_grade_deg": 18.18,
+      "max_cell_slope_deg": 19.94,
+      "max_cross_slope_deg": 15.34,
+      "max_relief_3x3_m": 1.83
+     },
+     "typescript": {
+      "max_step_grade_deg": 18.18,
+      "max_cell_slope_deg": 19.94,
+      "max_cross_slope_deg": 15.34,
+      "max_relief_3x3_m": 1.83
+     },
+     "corridor_max_slope_deg": {
+      "within_2m": 20.8,
+      "within_5m": 27.9,
+      "within_10m": 34.7
+     },
+     "nearest_ground_steeper_than_m": {
+      "25deg": 4.0,
+      "30deg": 6.0
+     },
+     "slope_at_4m_cells_max_deg": 21.2,
+     "per_stereo_pair": {
+      "C": {
+       "max_step_grade_deg": 18.2,
+       "max_cell_slope_deg": 19.9,
+       "max_cross_slope_deg": 15.3,
+       "metres_steeper_than_20deg": 0.0
+      },
+      "W": {
+       "max_step_grade_deg": 18.2,
+       "max_cell_slope_deg": 22.0,
+       "max_cross_slope_deg": 15.7,
+       "metres_steeper_than_20deg": 11.0
+      },
+      "DL": {
+       "max_step_grade_deg": 17.4,
+       "max_cell_slope_deg": 23.7,
+       "max_cross_slope_deg": 17.9,
+       "metres_steeper_than_20deg": 13.8
+      }
+     },
+     "agree": true,
+     "stereo_disagreement": {
+      "threshold_deg": 20,
+      "cells_all_models_below": 180,
+      "cells_models_disagree": 5,
+      "cells_all_models_above": 0,
+      "largest_slope_spread_deg": 15.9
+     }
+    },
+    {
+     "gate_deg": 25,
+     "clearance": false,
+     "status": "OK",
+     "steps": 184,
+     "python": {
+      "max_step_grade_deg": 18.18,
+      "max_cell_slope_deg": 19.94,
+      "max_cross_slope_deg": 15.34,
+      "max_relief_3x3_m": 1.83
+     },
+     "typescript": {
+      "max_step_grade_deg": 18.18,
+      "max_cell_slope_deg": 19.94,
+      "max_cross_slope_deg": 15.34,
+      "max_relief_3x3_m": 1.83
+     },
+     "corridor_max_slope_deg": {
+      "within_2m": 20.8,
+      "within_5m": 27.9,
+      "within_10m": 34.7
+     },
+     "nearest_ground_steeper_than_m": {
+      "25deg": 4.0,
+      "30deg": 6.0
+     },
+     "slope_at_4m_cells_max_deg": 21.2,
+     "per_stereo_pair": {
+      "C": {
+       "max_step_grade_deg": 18.2,
+       "max_cell_slope_deg": 19.9,
+       "max_cross_slope_deg": 15.3,
+       "metres_steeper_than_20deg": 0.0
+      },
+      "W": {
+       "max_step_grade_deg": 18.2,
+       "max_cell_slope_deg": 22.0,
+       "max_cross_slope_deg": 15.7,
+       "metres_steeper_than_20deg": 11.0
+      },
+      "DL": {
+       "max_step_grade_deg": 17.4,
+       "max_cell_slope_deg": 23.7,
+       "max_cross_slope_deg": 17.9,
+       "metres_steeper_than_20deg": 13.8
+      }
+     },
+     "agree": true,
+     "stereo_disagreement": {
+      "threshold_deg": 25,
+      "cells_all_models_below": 185,
+      "cells_models_disagree": 0,
+      "cells_all_models_above": 0,
+      "largest_slope_spread_deg": 15.9
+     }
+    },
+    {
+     "gate_deg": 25,
+     "clearance": true,
+     "status": "OK",
+     "steps": 184,
+     "python": {
+      "max_step_grade_deg": 18.18,
+      "max_cell_slope_deg": 19.94,
+      "max_cross_slope_deg": 15.34,
+      "max_relief_3x3_m": 1.83
+     },
+     "typescript": {
+      "max_step_grade_deg": 18.18,
+      "max_cell_slope_deg": 19.94,
+      "max_cross_slope_deg": 15.34,
+      "max_relief_3x3_m": 1.83
+     },
+     "corridor_max_slope_deg": {
+      "within_2m": 20.8,
+      "within_5m": 27.9,
+      "within_10m": 34.7
+     },
+     "nearest_ground_steeper_than_m": {
+      "25deg": 4.0,
+      "30deg": 6.0
+     },
+     "slope_at_4m_cells_max_deg": 21.2,
+     "per_stereo_pair": {
+      "C": {
+       "max_step_grade_deg": 18.2,
+       "max_cell_slope_deg": 19.9,
+       "max_cross_slope_deg": 15.3,
+       "metres_steeper_than_20deg": 0.0
+      },
+      "W": {
+       "max_step_grade_deg": 18.2,
+       "max_cell_slope_deg": 22.0,
+       "max_cross_slope_deg": 15.7,
+       "metres_steeper_than_20deg": 11.0
+      },
+      "DL": {
+       "max_step_grade_deg": 17.4,
+       "max_cell_slope_deg": 23.7,
+       "max_cross_slope_deg": 17.9,
+       "metres_steeper_than_20deg": 13.8
+      }
+     },
+     "agree": true,
+     "stereo_disagreement": {
+      "threshold_deg": 25,
+      "cells_all_models_below": 185,
+      "cells_models_disagree": 0,
+      "cells_all_models_above": 0,
+      "largest_slope_spread_deg": 15.9
+     }
+    },
+    {
+     "gate_deg": 20,
+     "clearance": false,
+     "status": "OK",
+     "steps": 185,
+     "python": {
+      "max_step_grade_deg": 15.09,
+      "max_cell_slope_deg": 19.64,
+      "max_cross_slope_deg": 15.21,
+      "max_relief_3x3_m": 1.83
+     },
+     "typescript": {
+      "max_step_grade_deg": 15.09,
+      "max_cell_slope_deg": 19.64,
+      "max_cross_slope_deg": 15.21,
+      "max_relief_3x3_m": 1.83
+     },
+     "corridor_max_slope_deg": {
+      "within_2m": 20.8,
+      "within_5m": 27.9,
+      "within_10m": 34.7
+     },
+     "nearest_ground_steeper_than_m": {
+      "25deg": 4.0,
+      "30deg": 6.0
+     },
+     "slope_at_4m_cells_max_deg": 21.2,
+     "per_stereo_pair": {
+      "C": {
+       "max_step_grade_deg": 15.1,
+       "max_cell_slope_deg": 19.6,
+       "max_cross_slope_deg": 15.2,
+       "metres_steeper_than_20deg": 0.0
+      },
+      "W": {
+       "max_step_grade_deg": 16.9,
+       "max_cell_slope_deg": 22.0,
+       "max_cross_slope_deg": 20.2,
+       "metres_steeper_than_20deg": 12.9
+      },
+      "DL": {
+       "max_step_grade_deg": 17.4,
+       "max_cell_slope_deg": 24.3,
+       "max_cross_slope_deg": 18.5,
+       "metres_steeper_than_20deg": 5.5
+      }
+     },
+     "agree": true,
+     "stereo_disagreement": {
+      "threshold_deg": 20,
+      "cells_all_models_below": 181,
+      "cells_models_disagree": 5,
+      "cells_all_models_above": 0,
+      "largest_slope_spread_deg": 16.6
+     }
+    },
+    {
+     "gate_deg": 20,
+     "clearance": true,
+     "status": "ENDPOINT_BLOCKED_BY_POLICY"
+    },
+    {
+     "gate_deg": 15,
+     "clearance": false,
+     "status": "ENDPOINT_BLOCKED_BY_POLICY"
+    },
+    {
+     "gate_deg": 15,
+     "clearance": true,
+     "status": "ENDPOINT_BLOCKED_BY_POLICY"
+    }
+   ]
+  },
+  "m0a_base_to_a": {
+   "name": "M0-A: ARES Base (hypothetical) to A rover position",
+   "by_gate": [
+    {
+     "gate_deg": null,
+     "clearance": false,
+     "status": "OK",
+     "steps": 104,
+     "python": {
+      "max_step_grade_deg": 18.21,
+      "max_cell_slope_deg": 20.96,
+      "max_cross_slope_deg": 19.19,
+      "max_relief_3x3_m": 1.98
+     },
+     "typescript": {
+      "max_step_grade_deg": 18.21,
+      "max_cell_slope_deg": 20.96,
+      "max_cross_slope_deg": 19.19,
+      "max_relief_3x3_m": 1.98
+     },
+     "corridor_max_slope_deg": {
+      "within_2m": 21.7,
+      "within_5m": 27.9,
+      "within_10m": 34.7
+     },
+     "nearest_ground_steeper_than_m": {
+      "25deg": 4.0,
+      "30deg": 6.0
+     },
+     "slope_at_4m_cells_max_deg": 21.2,
+     "per_stereo_pair": {
+      "C": {
+       "max_step_grade_deg": 18.2,
+       "max_cell_slope_deg": 21.0,
+       "max_cross_slope_deg": 19.2,
+       "metres_steeper_than_20deg": 9.3
+      },
+      "W": {
+       "max_step_grade_deg": 26.9,
+       "max_cell_slope_deg": 24.2,
+       "max_cross_slope_deg": 22.8,
+       "metres_steeper_than_20deg": 26.0
+      },
+      "DL": {
+       "max_step_grade_deg": 20.6,
+       "max_cell_slope_deg": 25.0,
+       "max_cross_slope_deg": 20.7,
+       "metres_steeper_than_20deg": 23.1
+      }
+     },
+     "agree": true,
+     "stereo_disagreement": {
+      "threshold_deg": 20,
+      "cells_all_models_below": 92,
+      "cells_models_disagree": 13,
+      "cells_all_models_above": 0,
+      "largest_slope_spread_deg": 20.0
+     }
+    },
+    {
+     "gate_deg": 25,
+     "clearance": false,
+     "status": "OK",
+     "steps": 104,
+     "python": {
+      "max_step_grade_deg": 18.21,
+      "max_cell_slope_deg": 20.96,
+      "max_cross_slope_deg": 19.19,
+      "max_relief_3x3_m": 1.98
+     },
+     "typescript": {
+      "max_step_grade_deg": 18.21,
+      "max_cell_slope_deg": 20.96,
+      "max_cross_slope_deg": 19.19,
+      "max_relief_3x3_m": 1.98
+     },
+     "corridor_max_slope_deg": {
+      "within_2m": 21.7,
+      "within_5m": 27.9,
+      "within_10m": 34.7
+     },
+     "nearest_ground_steeper_than_m": {
+      "25deg": 4.0,
+      "30deg": 6.0
+     },
+     "slope_at_4m_cells_max_deg": 21.2,
+     "per_stereo_pair": {
+      "C": {
+       "max_step_grade_deg": 18.2,
+       "max_cell_slope_deg": 21.0,
+       "max_cross_slope_deg": 19.2,
+       "metres_steeper_than_20deg": 9.3
+      },
+      "W": {
+       "max_step_grade_deg": 26.9,
+       "max_cell_slope_deg": 24.2,
+       "max_cross_slope_deg": 22.8,
+       "metres_steeper_than_20deg": 26.0
+      },
+      "DL": {
+       "max_step_grade_deg": 20.6,
+       "max_cell_slope_deg": 25.0,
+       "max_cross_slope_deg": 20.7,
+       "metres_steeper_than_20deg": 23.1
+      }
+     },
+     "agree": true,
+     "stereo_disagreement": {
+      "threshold_deg": 25,
+      "cells_all_models_below": 104,
+      "cells_models_disagree": 1,
+      "cells_all_models_above": 0,
+      "largest_slope_spread_deg": 20.0
+     }
+    },
+    {
+     "gate_deg": 25,
+     "clearance": true,
+     "status": "OK",
+     "steps": 104,
+     "python": {
+      "max_step_grade_deg": 18.21,
+      "max_cell_slope_deg": 20.96,
+      "max_cross_slope_deg": 19.19,
+      "max_relief_3x3_m": 1.98
+     },
+     "typescript": {
+      "max_step_grade_deg": 18.21,
+      "max_cell_slope_deg": 20.96,
+      "max_cross_slope_deg": 19.19,
+      "max_relief_3x3_m": 1.98
+     },
+     "corridor_max_slope_deg": {
+      "within_2m": 21.7,
+      "within_5m": 27.9,
+      "within_10m": 34.7
+     },
+     "nearest_ground_steeper_than_m": {
+      "25deg": 4.0,
+      "30deg": 6.0
+     },
+     "slope_at_4m_cells_max_deg": 21.2,
+     "per_stereo_pair": {
+      "C": {
+       "max_step_grade_deg": 18.2,
+       "max_cell_slope_deg": 21.0,
+       "max_cross_slope_deg": 19.2,
+       "metres_steeper_than_20deg": 9.3
+      },
+      "W": {
+       "max_step_grade_deg": 26.9,
+       "max_cell_slope_deg": 24.2,
+       "max_cross_slope_deg": 22.8,
+       "metres_steeper_than_20deg": 26.0
+      },
+      "DL": {
+       "max_step_grade_deg": 20.6,
+       "max_cell_slope_deg": 25.0,
+       "max_cross_slope_deg": 20.7,
+       "metres_steeper_than_20deg": 23.1
+      }
+     },
+     "agree": true,
+     "stereo_disagreement": {
+      "threshold_deg": 25,
+      "cells_all_models_below": 104,
+      "cells_models_disagree": 1,
+      "cells_all_models_above": 0,
+      "largest_slope_spread_deg": 20.0
+     }
+    },
+    {
+     "gate_deg": 20,
+     "clearance": false,
+     "status": "OK",
+     "steps": 108,
+     "python": {
+      "max_step_grade_deg": 16.93,
+      "max_cell_slope_deg": 19.09,
+      "max_cross_slope_deg": 16.57,
+      "max_relief_3x3_m": 1.83
+     },
+     "typescript": {
+      "max_step_grade_deg": 16.93,
+      "max_cell_slope_deg": 19.09,
+      "max_cross_slope_deg": 16.57,
+      "max_relief_3x3_m": 1.83
+     },
+     "corridor_max_slope_deg": {
+      "within_2m": 21.3,
+      "within_5m": 27.9,
+      "within_10m": 34.7
+     },
+     "nearest_ground_steeper_than_m": {
+      "25deg": 4.0,
+      "30deg": 6.0
+     },
+     "slope_at_4m_cells_max_deg": 21.2,
+     "per_stereo_pair": {
+      "C": {
+       "max_step_grade_deg": 16.9,
+       "max_cell_slope_deg": 19.1,
+       "max_cross_slope_deg": 16.6,
+       "metres_steeper_than_20deg": 0.0
+      },
+      "W": {
+       "max_step_grade_deg": 23.7,
+       "max_cell_slope_deg": 24.0,
+       "max_cross_slope_deg": 22.8,
+       "metres_steeper_than_20deg": 9.5
+      },
+      "DL": {
+       "max_step_grade_deg": 21.4,
+       "max_cell_slope_deg": 23.5,
+       "max_cross_slope_deg": 19.7,
+       "metres_steeper_than_20deg": 22.2
+      }
+     },
+     "agree": true,
+     "stereo_disagreement": {
+      "threshold_deg": 20,
+      "cells_all_models_below": 97,
+      "cells_models_disagree": 12,
+      "cells_all_models_above": 0,
+      "largest_slope_spread_deg": 12.5
+     }
+    },
+    {
+     "gate_deg": 20,
+     "clearance": true,
+     "status": "ENDPOINT_BLOCKED_BY_POLICY"
+    },
+    {
+     "gate_deg": 15,
+     "clearance": false,
+     "status": "ENDPOINT_BLOCKED_BY_POLICY"
+    },
+    {
+     "gate_deg": 15,
+     "clearance": true,
+     "status": "ENDPOINT_BLOCKED_BY_POLICY"
+    }
+   ]
+  }
+ },
+ "slope_difference_between_pairs_deg": {
+  "C-DL": {
+   "robust_sigma": 2.22,
+   "p95_abs": 5.71,
+   "robust_sigma_where_slope_over_15": 3.65
+  },
+  "C-W": {
+   "robust_sigma": 2.75,
+   "p95_abs": 7.55,
+   "robust_sigma_where_slope_over_15": 4.22
+  },
+  "DL-W": {
+   "robust_sigma": 2.98,
+   "p95_abs": 7.67,
+   "robust_sigma_where_slope_over_15": 5.04
+  }
+ },
+ "bundle_minus_pair_C_m": {
+  "median": -0.0,
+  "robust_sigma": 0.0
+ }
+}

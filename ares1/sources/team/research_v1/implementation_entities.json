@@ -1,0 +1,49 @@
+{
+  "mission": "ARES-1",
+  "schema_version": "1.0",
+  "sources_retrieved_date": "2026-11-14",
+  "missions": [
+    {
+      "id": "M0",
+      "name": "Three Forks Sample Depot",
+      "feature_type": "sample_depot",
+      "precise_tube_geometries_available": false,
+      "sample_ids": [
+        "M2020-00337-08",
+        "M2020-00579-17",
+        "M2020-00639-21",
+        "M2020-00164-02",
+        "M2020-00271-06",
+        "M2020-00190-03",
+        "M2020-00516-15",
+        "M2020-00495-12",
+        "M2020-00374-10",
+        "M2020-00586-18"
+      ]
+    },
+    {
+      "id": "A",
+      "name": "Western Delta",
+      "feature_type": "science_area",
+      "outcrops": [
+        "Skinner Ridge",
+        "Wildcat Ridge"
+      ],
+      "location_precision": "approx_waypoint_only"
+    },
+    {
+      "id": "B",
+      "name": "Bright Angel",
+      "feature_type": "science_area",
+      "rock": "Cheyava Falls",
+      "core": "Sapphire Canyon",
+      "location_precision": "approx_waypoint_only"
+    }
+  ],
+  "confidence_levels": {
+    "high": "direct primary documented",
+    "medium": "evidence-based interpretation",
+    "low": "hypothesis; alternative explanations remain",
+    "pending": "not yet checked"
+  }
+}

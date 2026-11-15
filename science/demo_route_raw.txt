@@ -1,0 +1,13 @@
+dataset_version fc22a0c8a91f
+rochette: Rochette / Montdenier (Máaz) | cell {"row":63,"col":24} | confidence low | Crater-floor igneous rock sampling target (Máaz formation, Jezero crater floor); not a delta sedimentary target. Coordinates UNVERIFIED until task S2.
+landing: Octavia E. Butler Landing (historical Perseverance landing site) | cell {"row":22,"col":42} | confidence low | Historical Mars 2020 Perseverance landing site (2021-02-18), used here as a hypothetical mission reference point. Not a verified human habitat site. Coordinates UNVERIFIED until task S2.
+
+[minetti] distance route: OK, length 969.161 m, surface 970.239 m, ascent 22.80 m, descent 12.29 m
+[minetti] terrain route : OK, length 969.161 m, surface 969.326 m, ascent 12.73 m, descent 2.21 m
+[minetti] model cost (flat-equivalent m, same minetti model): terrain 1058.299102 | distance-route 1093.229244 | delta -3.493014e+1 | relation LOWER
+[minetti] length difference: 5.684e-13 m
+
+[tobler] distance route: OK, length 969.161 m, surface 970.239 m, ascent 22.80 m, descent 12.29 m
+[tobler] terrain route : OK, length 969.161 m, surface 969.326 m, ascent 12.73 m, descent 2.21 m
+[tobler] model cost (flat-equivalent m, same tobler model): terrain 1008.017846 | distance-route 1028.228564 | delta -2.021072e+1 | relation LOWER
+[tobler] length difference: 5.684e-13 m

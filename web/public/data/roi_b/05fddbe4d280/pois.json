@@ -1,0 +1,291 @@
+[
+ {
+  "id": "landing",
+  "name": "Octavia E. Butler Landing (historical Perseverance landing site)",
+  "geo": {
+   "lat": 18.444627146,
+   "lon": 77.450885729
+  },
+  "claim": "Historical Mars 2020 Perseverance landing site, used as a hypothetical mission reference point; not a validated astronaut habitat. PDS landing-site position VERIFIED; CTX DEM/image registration UNRESOLVED (S-4); vertical datum UNVERIFIED.",
+  "source": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_localizations/best_interp.csv",
+  "confidence": "medium",
+  "evidence": {
+   "schema": "ares-poi-evidence/1",
+   "coordinate_source": {
+    "status": "VERIFIED",
+    "kind": "pds_landing_site",
+    "product": "urn:nasa:pds:mars2020_rover_places, data_localizations/best_interp.csv",
+    "locator": "frame SITE, site 1",
+    "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_localizations/best_interp.csv",
+    "printed": {
+     "lat": 18.444627146,
+     "lon": 77.450885729,
+     "elev_m": -2569.91
+    },
+    "convention": {
+     "latitude": "planetocentric",
+     "longitude": "east_positive",
+     "lon_domain": "-180..180",
+     "elevation_reference": "areoid"
+    },
+    "cross_checks": [
+     {
+      "source": "PLACES best_tactical.csv, frame SITE, site 1",
+      "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_localizations/best_tactical.csv",
+      "delta_m": 3.6
+     }
+    ]
+   },
+   "target_location": {
+    "precision": "APPROXIMATE",
+    "basis": "PDS landing-site localization (PLACES best_interp, frame SITE, site 1); the two PLACES versions differ by 3.6 m"
+   },
+   "ctx_registration": {
+    "status": "UNRESOLVED",
+    "ref": "S-4",
+    "note": "CTX DEM and imagery may be offset by up to ~1-1.5 cells; see science/s4_registration_investigation.md"
+   },
+   "vertical_datum": {
+    "status": "UNVERIFIED"
+   },
+   "role": {
+    "kind": "historical_landing_reference",
+    "validated_habitat": false,
+    "text": "Historical Perseverance landing site, used as a hypothetical mission reference point; not a validated astronaut habitat."
+   },
+   "science": {
+    "events": "landing, sol 0 (2021-02-18)",
+    "references": [
+     "PDS PLACES best_interp.csv"
+    ]
+   }
+  }
+ },
+ {
+  "id": "roubion",
+  "name": "Roubion (Máaz formation)",
+  "geo": {
+   "lat": 18.4276934,
+   "lon": 77.45165066
+  },
+  "claim": "First Perseverance sampling attempt (sample #2): the lower-Máaz rock disaggregated and the sealed tube holds atmosphere only. PDS rover position VERIFIED; exact rock location APPROXIMATE; CTX DEM/image registration UNRESOLVED (S-4); vertical datum UNVERIFIED.",
+  "source": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_sample_dossier/initial_reports/initial_reports_volume1.pdf",
+  "confidence": "medium",
+  "evidence": {
+   "schema": "ares-poi-evidence/1",
+   "coordinate_source": {
+    "status": "VERIFIED",
+    "kind": "pds_rover_position",
+    "product": "urn:nasa:pds:mars2020_sample_dossier, Initial Report M2020-164-2",
+    "locator": "initial_reports_volume1.pdf p. 16",
+    "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_sample_dossier/initial_reports/initial_reports_volume1.pdf",
+    "printed": {
+     "lat": 18.4276934,
+     "lon": 77.45165066,
+     "elev_m": -2584.96
+    },
+    "convention": {
+     "latitude": "planetocentric",
+     "longitude": "east_positive",
+     "lon_domain": "-180..180",
+     "elevation_reference": "areoid"
+    },
+    "cross_checks": [
+     {
+      "source": "PLACES best_interp.csv, frame SITE, site 6",
+      "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_localizations/best_interp.csv",
+      "delta_m": 0.28
+     }
+    ]
+   },
+   "target_location": {
+    "precision": "APPROXIMATE",
+    "basis": "PDS value is the rover position during the activity; the rock/core lies within the arm workspace and was not independently located"
+   },
+   "ctx_registration": {
+    "status": "UNRESOLVED",
+    "ref": "S-4",
+    "note": "CTX DEM and imagery may be offset by up to ~1-1.5 cells; see science/s4_registration_investigation.md"
+   },
+   "vertical_datum": {
+    "status": "UNVERIFIED"
+   },
+   "role": {
+    "kind": "sampling_site",
+    "validated_habitat": false,
+    "text": "Mars 2020 sampling site (sample #2, atmosphere only)."
+   },
+   "science": {
+    "geology": "lower Máaz formation; basalt or microgabbro",
+    "samples": [
+     {
+      "name": "Roubion",
+      "number": 2,
+      "sol_sealed": 164,
+      "note": "atmospheric sample"
+     }
+    ],
+    "events": "Guillaumes abrasion and coring, sols 157-168",
+    "references": [
+     "Simon et al. 2023, JGR Planets 128, e2022JE007474, doi:10.1029/2022JE007474",
+     "PDS Initial Report M2020-164-2"
+    ]
+   }
+  }
+ },
+ {
+  "id": "rochette",
+  "name": "Rochette / Montdenier (Máaz formation)",
+  "geo": {
+   "lat": 18.43074132,
+   "lon": 77.44436502
+  },
+  "claim": "Crater-floor igneous rock (Rochette member, Máaz formation; likely basalt), source of the first two rock cores Montdenier (#3) and Montagnac (#4); not a delta sedimentary target. PDS rover position VERIFIED; exact rock location APPROXIMATE; CTX DEM/image registration UNRESOLVED (S-4); vertical datum UNVERIFIED.",
+  "source": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_sample_dossier/initial_reports/initial_reports_volume1.pdf",
+  "confidence": "medium",
+  "evidence": {
+   "schema": "ares-poi-evidence/1",
+   "coordinate_source": {
+    "status": "VERIFIED",
+    "kind": "pds_rover_position",
+    "product": "urn:nasa:pds:mars2020_sample_dossier, Initial Reports M2020-190-3 and M2020-196-4",
+    "locator": "initial_reports_volume1.pdf pp. 36, 59",
+    "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_sample_dossier/initial_reports/initial_reports_volume1.pdf",
+    "printed": {
+     "lat": 18.43074132,
+     "lon": 77.44436502,
+     "elev_m": -2574.553
+    },
+    "convention": {
+     "latitude": "planetocentric",
+     "longitude": "east_positive",
+     "lon_domain": "-180..180",
+     "elevation_reference": "areoid"
+    },
+    "cross_checks": [
+     {
+      "source": "PLACES best_interp.csv, frame SITE, site 7",
+      "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_localizations/best_interp.csv",
+      "delta_m": 0.24
+     }
+    ]
+   },
+   "target_location": {
+    "precision": "APPROXIMATE",
+    "basis": "PDS value is the rover position during the activity; the rock/core lies within the arm workspace and was not independently located"
+   },
+   "ctx_registration": {
+    "status": "UNRESOLVED",
+    "ref": "S-4",
+    "note": "CTX DEM and imagery may be offset by up to ~1-1.5 cells; see science/s4_registration_investigation.md"
+   },
+   "vertical_datum": {
+    "status": "UNVERIFIED"
+   },
+   "role": {
+    "kind": "sampling_site",
+    "validated_habitat": false,
+    "text": "Mars 2020 sampling site (cores #3 Montdenier, #4 Montagnac)."
+   },
+   "science": {
+    "geology": "Rochette member, Máaz formation; fine-grained mafic igneous rock, likely basalt",
+    "samples": [
+     {
+      "name": "Montdenier",
+      "number": 3,
+      "sol_cored": 190,
+      "sol_sealed": 194
+     },
+     {
+      "name": "Montagnac",
+      "number": 4,
+      "sol_cored": 196,
+      "sol_sealed": 196
+     }
+    ],
+    "events": "Bellegarde abrasion sol 182",
+    "references": [
+     "Simon et al. 2023, JGR Planets 128, e2022JE007474, doi:10.1029/2022JE007474",
+     "PDS Initial Reports M2020-190-3, M2020-196-4"
+    ]
+   }
+  }
+ },
+ {
+  "id": "sid",
+  "name": "Sid / Hahonih (Máaz formation)",
+  "geo": {
+   "lat": 18.44386406,
+   "lon": 77.45242176
+  },
+  "claim": "Igneous boulder Sid (Ch'al member, upper Máaz; likely basaltic andesite), source of cores Hahonih (#9) and Atsah (#10). PDS rover position VERIFIED; exact rock location APPROXIMATE; CTX DEM/image registration UNRESOLVED (S-4); vertical datum UNVERIFIED.",
+  "source": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_sample_dossier/initial_reports/initial_reports_volume1.pdf",
+  "confidence": "medium",
+  "evidence": {
+   "schema": "ares-poi-evidence/1",
+   "coordinate_source": {
+    "status": "VERIFIED",
+    "kind": "pds_rover_position",
+    "product": "urn:nasa:pds:mars2020_sample_dossier, Initial Reports M2020-371-9 and M2020-374-10",
+    "locator": "initial_reports_volume1.pdf p. 128",
+    "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_sample_dossier/initial_reports/initial_reports_volume1.pdf",
+    "printed": {
+     "lat": 18.44386406,
+     "lon": 77.45242176,
+     "elev_m": -2568.357
+    },
+    "convention": {
+     "latitude": "planetocentric",
+     "longitude": "east_positive",
+     "lon_domain": "-180..180",
+     "elevation_reference": "areoid"
+    },
+    "cross_checks": [
+     {
+      "source": "PLACES best_interp.csv, frame ROVER, site 11 drive 108 (parked pose)",
+      "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_localizations/best_interp.csv",
+      "delta_m": 2.6
+     }
+    ]
+   },
+   "target_location": {
+    "precision": "APPROXIMATE",
+    "basis": "Initial Report position, 2.6 m from the PLACES parked pose (difference unexplained); the boulder lies within the arm workspace and was not independently located"
+   },
+   "ctx_registration": {
+    "status": "UNRESOLVED",
+    "ref": "S-4",
+    "note": "CTX DEM and imagery may be offset by up to ~1-1.5 cells; see science/s4_registration_investigation.md"
+   },
+   "vertical_datum": {
+    "status": "UNVERIFIED"
+   },
+   "role": {
+    "kind": "sampling_site",
+    "validated_habitat": false,
+    "text": "Mars 2020 sampling site (cores #9 Hahonih, #10 Atsah)."
+   },
+   "science": {
+    "geology": "Ch'al member, upper Máaz formation; likely basaltic andesite",
+    "samples": [
+     {
+      "name": "Hahonih",
+      "number": 9,
+      "sol_cored": 371
+     },
+     {
+      "name": "Atsah",
+      "number": 10,
+      "sol_cored": 374,
+      "sol_sealed": 377
+     }
+    ],
+    "events": "Alfalfa abrasion sol 367",
+    "references": [
+     "Simon et al. 2023, JGR Planets 128, e2022JE007474, doi:10.1029/2022JE007474",
+     "PDS Initial Reports M2020-371-9, M2020-374-10"
+    ]
+   }
+  }
+ }
+]

@@ -1,0 +1,595 @@
+{
+ "dataset_version": "f8de9017164a",
+ "g6": {
+  "g_max_grade": 0.45,
+  "g_max_deg": 24.23,
+  "threshold_kind": "experimental algorithm threshold (cost-curve domain), NOT an astronaut safety limit",
+  "same_strong_component": true,
+  "component_share_of_grid": 1.0,
+  "edges_removed_share": 0.0151,
+  "result": "CONNECTED"
+ },
+ "nominal": {
+  "M0->A distance": {
+   "cost_flat_equiv_m": 416.4257,
+   "length_horizontal_m": 416.4257,
+   "ascent_m": 26.346,
+   "descent_m": 1.382,
+   "max_edge_grade": 0.4041,
+   "max_edge_slope_deg": 22.0,
+   "cells": 185
+  },
+  "M0->A terrain-minetti": {
+   "cost_flat_equiv_m": 664.3901,
+   "length_horizontal_m": 416.4257,
+   "ascent_m": 25.086,
+   "descent_m": 0.122,
+   "max_edge_grade": 0.3284,
+   "max_edge_slope_deg": 18.18,
+   "cells": 185
+  },
+  "M0->A terrain-tobler": {
+   "cost_flat_equiv_m": 530.272,
+   "length_horizontal_m": 416.4257,
+   "ascent_m": 25.086,
+   "descent_m": 0.122,
+   "max_edge_grade": 0.3284,
+   "max_edge_slope_deg": 18.18,
+   "cells": 185
+  },
+  "A->M0 distance": {
+   "cost_flat_equiv_m": 416.4257,
+   "length_horizontal_m": 416.4257,
+   "ascent_m": 1.06,
+   "descent_m": 26.024,
+   "max_edge_grade": 0.4049,
+   "max_edge_slope_deg": 22.04,
+   "cells": 185
+  },
+  "A->M0 terrain-minetti": {
+   "cost_flat_equiv_m": 303.8004,
+   "length_horizontal_m": 417.5662,
+   "ascent_m": 0.122,
+   "descent_m": 25.086,
+   "max_edge_grade": 0.2696,
+   "max_edge_slope_deg": 15.09,
+   "cells": 186
+  },
+  "A->M0 terrain-tobler": {
+   "cost_flat_equiv_m": 422.793,
+   "length_horizontal_m": 416.4257,
+   "ascent_m": 0.13,
+   "descent_m": 25.094,
+   "max_edge_grade": 0.3284,
+   "max_edge_slope_deg": 18.18,
+   "cells": 185
+  }
+ },
+ "threshold": [
+  {
+   "g_max": 0.25,
+   "g_max_deg": 14.0,
+   "curve": "minetti",
+   "status": "OK",
+   "cost_flat_equiv_m": 667.557,
+   "length_horizontal_m": 421.3605,
+   "ascent_m": 25.086,
+   "descent_m": 0.122,
+   "max_edge_grade": 0.2448,
+   "max_edge_slope_deg": 13.76,
+   "cells": 188,
+   "hausdorff_m": 5.69,
+   "mean_m": 0.46
+  },
+  {
+   "g_max": 0.25,
+   "g_max_deg": 14.0,
+   "curve": "tobler",
+   "status": "OK",
+   "cost_flat_equiv_m": 533.231,
+   "length_horizontal_m": 421.3605,
+   "ascent_m": 25.086,
+   "descent_m": 0.122,
+   "max_edge_grade": 0.2448,
+   "max_edge_slope_deg": 13.76,
+   "cells": 188,
+   "hausdorff_m": 2.76,
+   "mean_m": 0.26
+  },
+  {
+   "g_max": 0.35,
+   "g_max_deg": 19.3,
+   "curve": "minetti",
+   "status": "OK",
+   "cost_flat_equiv_m": 664.39,
+   "length_horizontal_m": 416.4257,
+   "ascent_m": 25.086,
+   "descent_m": 0.122,
+   "max_edge_grade": 0.3284,
+   "max_edge_slope_deg": 18.18,
+   "cells": 185,
+   "hausdorff_m": 0.0,
+   "mean_m": 0.0
+  },
+  {
+   "g_max": 0.35,
+   "g_max_deg": 19.3,
+   "curve": "tobler",
+   "status": "OK",
+   "cost_flat_equiv_m": 530.272,
+   "length_horizontal_m": 416.4257,
+   "ascent_m": 25.086,
+   "descent_m": 0.122,
+   "max_edge_grade": 0.3284,
+   "max_edge_slope_deg": 18.18,
+   "cells": 185,
+   "hausdorff_m": 0.0,
+   "mean_m": 0.0
+  },
+  {
+   "g_max": 0.45,
+   "g_max_deg": 24.2,
+   "curve": "minetti",
+   "status": "OK",
+   "cost_flat_equiv_m": 664.39,
+   "length_horizontal_m": 416.4257,
+   "ascent_m": 25.086,
+   "descent_m": 0.122,
+   "max_edge_grade": 0.3284,
+   "max_edge_slope_deg": 18.18,
+   "cells": 185,
+   "hausdorff_m": 0.0,
+   "mean_m": 0.0
+  },
+  {
+   "g_max": 0.45,
+   "g_max_deg": 24.2,
+   "curve": "tobler",
+   "status": "OK",
+   "cost_flat_equiv_m": 530.272,
+   "length_horizontal_m": 416.4257,
+   "ascent_m": 25.086,
+   "descent_m": 0.122,
+   "max_edge_grade": 0.3284,
+   "max_edge_slope_deg": 18.18,
+   "cells": 185,
+   "hausdorff_m": 0.0,
+   "mean_m": 0.0
+  }
+ ],
+ "endpoint_shift": [
+  {
+   "shift_m": 2.0,
+   "azimuth_deg": 0,
+   "start": [
+    272,
+    161
+   ],
+   "goal": [
+    88,
+    97
+   ],
+   "status": "OK",
+   "cost_flat_equiv_m": 670.403,
+   "length_horizontal_m": 416.4257,
+   "hausdorff_m": 2.0,
+   "mean_m": 0.04
+  },
+  {
+   "shift_m": 2.0,
+   "azimuth_deg": 45,
+   "start": [
+    272,
+    162
+   ],
+   "goal": [
+    88,
+    98
+   ],
+   "status": "OK",
+   "cost_flat_equiv_m": 666.326,
+   "length_horizontal_m": 416.4257,
+   "hausdorff_m": 2.76,
+   "mean_m": 0.08
+  },
+  {
+   "shift_m": 2.0,
+   "azimuth_deg": 90,
+   "start": [
+    273,
+    162
+   ],
+   "goal": [
+    89,
+    98
+   ],
+   "status": "OK",
+   "cost_flat_equiv_m": 659.764,
+   "length_horizontal_m": 416.4257,
+   "hausdorff_m": 1.9,
+   "mean_m": 0.06
+  },
+  {
+   "shift_m": 2.0,
+   "azimuth_deg": 135,
+   "start": [
+    273,
+    162
+   ],
+   "goal": [
+    89,
+    98
+   ],
+   "status": "OK",
+   "cost_flat_equiv_m": 659.764,
+   "length_horizontal_m": 416.4257,
+   "hausdorff_m": 1.9,
+   "mean_m": 0.06
+  },
+  {
+   "shift_m": 2.0,
+   "azimuth_deg": 180,
+   "start": [
+    274,
+    161
+   ],
+   "goal": [
+    90,
+    97
+   ],
+   "status": "OK",
+   "cost_flat_equiv_m": 657.745,
+   "length_horizontal_m": 416.4257,
+   "hausdorff_m": 7.59,
+   "mean_m": 0.86
+  },
+  {
+   "shift_m": 2.0,
+   "azimuth_deg": 225,
+   "start": [
+    273,
+    161
+   ],
+   "goal": [
+    89,
+    96
+   ],
+   "status": "OK",
+   "cost_flat_equiv_m": 669.616,
+   "length_horizontal_m": 417.1824,
+   "hausdorff_m": 3.79,
+   "mean_m": 0.37
+  },
+  {
+   "shift_m": 2.0,
+   "azimuth_deg": 270,
+   "start": [
+    273,
+    160
+   ],
+   "goal": [
+    89,
+    96
+   ],
+   "status": "OK",
+   "cost_flat_equiv_m": 668.422,
+   "length_horizontal_m": 416.4257,
+   "hausdorff_m": 7.59,
+   "mean_m": 0.86
+  },
+  {
+   "shift_m": 2.0,
+   "azimuth_deg": 315,
+   "start": [
+    272,
+    161
+   ],
+   "goal": [
+    88,
+    96
+   ],
+   "status": "OK",
+   "cost_flat_equiv_m": 676.315,
+   "length_horizontal_m": 417.1824,
+   "hausdorff_m": 2.76,
+   "mean_m": 0.01
+  },
+  {
+   "shift_m": 4.0,
+   "azimuth_deg": 0,
+   "start": [
+    271,
+    161
+   ],
+   "goal": [
+    87,
+    97
+   ],
+   "status": "OK",
+   "cost_flat_equiv_m": 679.001,
+   "length_horizontal_m": 416.4257,
+   "hausdorff_m": 4.0,
+   "mean_m": 0.06
+  },
+  {
+   "shift_m": 4.0,
+   "azimuth_deg": 45,
+   "start": [
+    271,
+    163
+   ],
+   "goal": [
+    87,
+    99
+   ],
+   "status": "OK",
+   "cost_flat_equiv_m": 669.855,
+   "length_horizontal_m": 416.4257,
+   "hausdorff_m": 5.51,
+   "mean_m": 0.17
+  },
+  {
+   "shift_m": 4.0,
+   "azimuth_deg": 90,
+   "start": [
+    273,
+    163
+   ],
+   "goal": [
+    89,
+    99
+   ],
+   "status": "OK",
+   "cost_flat_equiv_m": 656.645,
+   "length_horizontal_m": 416.4257,
+   "hausdorff_m": 3.79,
+   "mean_m": 0.14
+  },
+  {
+   "shift_m": 4.0,
+   "azimuth_deg": 135,
+   "start": [
+    274,
+    163
+   ],
+   "goal": [
+    90,
+    99
+   ],
+   "status": "OK",
+   "cost_flat_equiv_m": 650.123,
+   "length_horizontal_m": 416.4257,
+   "hausdorff_m": 4.29,
+   "mean_m": 0.15
+  },
+  {
+   "shift_m": 4.0,
+   "azimuth_deg": 180,
+   "start": [
+    275,
+    161
+   ],
+   "goal": [
+    91,
+    97
+   ],
+   "status": "OK",
+   "cost_flat_equiv_m": 646.803,
+   "length_horizontal_m": 416.4257,
+   "hausdorff_m": 7.59,
+   "mean_m": 0.89
+  },
+  {
+   "shift_m": 4.0,
+   "azimuth_deg": 225,
+   "start": [
+    274,
+    160
+   ],
+   "goal": [
+    90,
+    96
+   ],
+   "status": "OK",
+   "cost_flat_equiv_m": 663.297,
+   "length_horizontal_m": 417.5662,
+   "hausdorff_m": 7.59,
+   "mean_m": 0.89
+  },
+  {
+   "shift_m": 4.0,
+   "azimuth_deg": 270,
+   "start": [
+    273,
+    159
+   ],
+   "goal": [
+    89,
+    95
+   ],
+   "status": "OK",
+   "cost_flat_equiv_m": 670.34,
+   "length_horizontal_m": 417.5662,
+   "hausdorff_m": 7.59,
+   "mean_m": 0.89
+  },
+  {
+   "shift_m": 4.0,
+   "azimuth_deg": 315,
+   "start": [
+    271,
+    160
+   ],
+   "goal": [
+    87,
+    96
+   ],
+   "status": "OK",
+   "cost_flat_equiv_m": 684.943,
+   "length_horizontal_m": 417.5662,
+   "hausdorff_m": 4.43,
+   "mean_m": 0.16
+  }
+ ],
+ "dem_pairs": [
+  {
+   "pair": "C",
+   "mode": "distance",
+   "curve": "minetti",
+   "valid_share": 1.0,
+   "status": "OK",
+   "cost_flat_equiv_m": 416.426,
+   "length_horizontal_m": 416.4257,
+   "ascent_m": 26.347,
+   "descent_m": 1.383,
+   "max_edge_grade": 0.4041,
+   "max_edge_slope_deg": 22.0,
+   "cells": 185,
+   "hausdorff_m": 0.0,
+   "mean_m": 0.0
+  },
+  {
+   "pair": "C",
+   "mode": "terrain",
+   "curve": "minetti",
+   "valid_share": 1.0,
+   "status": "OK",
+   "cost_flat_equiv_m": 664.39,
+   "length_horizontal_m": 416.4257,
+   "ascent_m": 25.086,
+   "descent_m": 0.122,
+   "max_edge_grade": 0.3284,
+   "max_edge_slope_deg": 18.18,
+   "cells": 185,
+   "hausdorff_m": 0.0,
+   "mean_m": 0.0
+  },
+  {
+   "pair": "C",
+   "mode": "terrain",
+   "curve": "tobler",
+   "valid_share": 1.0,
+   "status": "OK",
+   "cost_flat_equiv_m": 530.272,
+   "length_horizontal_m": 416.4257,
+   "ascent_m": 25.086,
+   "descent_m": 0.122,
+   "max_edge_grade": 0.3284,
+   "max_edge_slope_deg": 18.18,
+   "cells": 185,
+   "hausdorff_m": 0.0,
+   "mean_m": 0.0
+  },
+  {
+   "pair": "W",
+   "mode": "distance",
+   "curve": "minetti",
+   "valid_share": 1.0,
+   "status": "OK",
+   "cost_flat_equiv_m": 416.426,
+   "length_horizontal_m": 416.4257,
+   "ascent_m": 31.482,
+   "descent_m": 6.589,
+   "max_edge_grade": 0.5524,
+   "max_edge_slope_deg": 28.91,
+   "cells": 185,
+   "hausdorff_m": 0.0,
+   "mean_m": 0.0
+  },
+  {
+   "pair": "W",
+   "mode": "terrain",
+   "curve": "minetti",
+   "valid_share": 1.0,
+   "status": "OK",
+   "cost_flat_equiv_m": 666.775,
+   "length_horizontal_m": 416.4257,
+   "ascent_m": 25.676,
+   "descent_m": 0.782,
+   "max_edge_grade": 0.3242,
+   "max_edge_slope_deg": 17.96,
+   "cells": 185,
+   "hausdorff_m": 38.67,
+   "mean_m": 17.48
+  },
+  {
+   "pair": "W",
+   "mode": "terrain",
+   "curve": "tobler",
+   "valid_share": 1.0,
+   "status": "OK",
+   "cost_flat_equiv_m": 532.128,
+   "length_horizontal_m": 416.4257,
+   "ascent_m": 25.975,
+   "descent_m": 1.081,
+   "max_edge_grade": 0.3134,
+   "max_edge_slope_deg": 17.4,
+   "cells": 185,
+   "hausdorff_m": 19.39,
+   "mean_m": 6.39
+  },
+  {
+   "pair": "DL",
+   "mode": "distance",
+   "curve": "minetti",
+   "valid_share": 1.0,
+   "status": "OK",
+   "cost_flat_equiv_m": 416.426,
+   "length_horizontal_m": 416.4257,
+   "ascent_m": 28.079,
+   "descent_m": 3.364,
+   "max_edge_grade": 0.4451,
+   "max_edge_slope_deg": 23.99,
+   "cells": 185,
+   "hausdorff_m": 0.0,
+   "mean_m": 0.0
+  },
+  {
+   "pair": "DL",
+   "mode": "terrain",
+   "curve": "minetti",
+   "valid_share": 1.0,
+   "status": "OK",
+   "cost_flat_equiv_m": 661.069,
+   "length_horizontal_m": 416.4257,
+   "ascent_m": 24.798,
+   "descent_m": 0.084,
+   "max_edge_grade": 0.3195,
+   "max_edge_slope_deg": 17.72,
+   "cells": 185,
+   "hausdorff_m": 24.87,
+   "mean_m": 9.19
+  },
+  {
+   "pair": "DL",
+   "mode": "terrain",
+   "curve": "tobler",
+   "valid_share": 1.0,
+   "status": "OK",
+   "cost_flat_equiv_m": 528.76,
+   "length_horizontal_m": 416.4257,
+   "ascent_m": 24.798,
+   "descent_m": 0.084,
+   "max_edge_grade": 0.3195,
+   "max_edge_slope_deg": 17.72,
+   "cells": 185,
+   "hausdorff_m": 24.87,
+   "mean_m": 9.26
+  }
+ ],
+ "grade_noise_between_pairs": {
+  "C-W": {
+   "east_edge_sigma": 0.0623,
+   "north_edge_sigma": 0.058
+  },
+  "C-DL": {
+   "east_edge_sigma": 0.0476,
+   "north_edge_sigma": 0.0496
+  },
+  "W-DL": {
+   "east_edge_sigma": 0.0676,
+   "north_edge_sigma": 0.0664
+  }
+ },
+ "grade_noise_note": "sigma of the difference of two independent DTMs; one DTM's own grade noise is about sigma/sqrt(2) if the two are independent and equally noisy."
+}

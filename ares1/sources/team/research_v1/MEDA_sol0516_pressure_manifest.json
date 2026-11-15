@@ -1,0 +1,31 @@
+{
+  "mission": "ARES-1",
+  "dataset": "Mars 2020 MEDA Derived Pressure Sensor",
+  "product_type": "PDS4 derived sensor measurements",
+  "sol": 516,
+  "source_file": "WE__0516___________DER_PS__________________P01.CSV",
+  "source_label": "WE__0516___________DER_PS__________________P01.xml",
+  "data_url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0420_0539/sol_0516/WE__0516___________DER_PS__________________P01.CSV",
+  "label_url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0420_0539/sol_0516/WE__0516___________DER_PS__________________P01.xml",
+  "catalog_url": "https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/PERSEVERANCE/meda.html",
+  "source_directory_url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0420_0539/sol_0516/",
+  "doi": "10.17189/1522849",
+  "record_status": "official_data_product_identified_online; bytes_not_retrieved_in_this_execution_environment",
+  "contains_numeric_measurements_in_package": false,
+  "ingest_command": "python download_validate_meda.py",
+  "target_files_after_success": [
+    "meda_source/WE__0516___________DER_PS__________________P01.CSV",
+    "meda_source/WE__0516___________DER_PS__________________P01.xml",
+    "meda_source/meda_sol0516_der_ps_tidy.csv",
+    "meda_source/meda_sol0516_ingestion_report.json"
+  ],
+  "unit_expected": "Pa",
+  "data_basis": "real archived Perseverance MEDA pressure at rover position on Sol 516",
+  "limitations": [
+    "Sol 516 is near Wildcat Ridge operations but measurements are rover-local, not a distributed field over Jezero",
+    "Product is derived; consult PDS XML for actual column definitions and units",
+    "No future weather forecast is inferred",
+    "No measurement values were imputed"
+  ],
+  "confidence": "high_product_identity / pending_download_and_data_QA"
+}

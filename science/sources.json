@@ -1,0 +1,53 @@
+[
+  {
+    "id": "ctx_dem_20m",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/ScienceInvestigationMaps_JPL/M20_JezeroCrater_CTXDEM_20m.tif",
+    "agency": "NASA / USGS Astrogeology (PDS)",
+    "mission": "Mars Reconnaissance Orbiter (MRO)",
+    "instrument": "Context Camera (CTX), stereo-derived",
+    "product_version": "urn:nasa:pds:mars2020_ctx_basemap_2021:data:m20_ctxdem_mosaic, version_id 1.0, title 'Mars 2020 Science Investigation CTX DEM Mosaic' (2021)",
+    "citation": "Mangold et al., 2021, Perseverance rover reveals an ancient delta-lake system and flood deposits at Jezero crater, Mars, Science. https://doi.org/10.1126/science.abl4051",
+    "crs": "Equirectangular, sphere R=3396190 m, standard_parallel_1=18.4663, central_meridian=0, pixel-is-area",
+    "native_pixel_m": 20,
+    "vertical_reference": "Not stated in label. Agrees within ~1 m with the MOLA-referenced TRN DTM at 4 points in ROI-A (evidence, not proof).",
+    "license": "NASA/USGS PDS data, no license stated in label; credit the citation above",
+    "confidence": "high",
+    "limitations": [
+      "20 m posting; effective resolution is coarser; features smaller than the posting are not visible",
+      "Elevation precision not stated in label"
+    ]
+  },
+  {
+    "id": "ctx_ortho_5m",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/ScienceInvestigationMaps_JPL/M20_JezeroCrater_CTXortho_mosaic_5m.tif",
+    "agency": "NASA / USGS Astrogeology (PDS)",
+    "mission": "Mars Reconnaissance Orbiter (MRO)",
+    "instrument": "Context Camera (CTX)",
+    "product_version": "urn:nasa:pds:mars2020_ctx_basemap_2021:data:m20_ctxortho_mosaic, version_id 1.0, title 'Mars 2020 Science Investigation CTX Orthoimage Mosaic' (2021)",
+    "citation": "Mangold et al., 2021, Perseverance rover reveals an ancient delta-lake system and flood deposits at Jezero crater, Mars, Science. https://doi.org/10.1126/science.abl4051",
+    "crs": "Same parameters as ctx_dem_20m; pixel 5.002065 x 5.002263 m, not pixel-aligned with the DEM (resampled bilinearly onto the DEM grid for display)",
+    "native_pixel_m": 5,
+    "vertical_reference": "n/a (image)",
+    "license": "NASA/USGS PDS data, no license stated in label; credit the citation above",
+    "confidence": "high",
+    "limitations": [
+      "Display only: 5 m image resolution does not imply 5 m terrain or hazard information",
+      "Co-produced with the DEM from the same CTX data; registration to the DEM is internal consistency, not absolute position"
+    ]
+  },
+  {
+    "id": "trn_dtm_20m",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.tif",
+    "agency": "NASA / USGS Astrogeology",
+    "mission": "Mars Reconnaissance Orbiter (MRO); tied to Mars Global Surveyor MOLA topography",
+    "instrument": "Context Camera (CTX), stereo-derived",
+    "product_version": "Mars 2020 Terrain Relative Navigation CTX DTM mosaic (file name above; ISIS label .lbl)",
+    "citation": "USGS Astrogeology, Mars 2020 Terrain Relative Navigation CTX DTM Mosaic, https://astrogeology.usgs.gov/search/map/mars_2020_terrain_relative_navigation_ctx_dtm_mosaic",
+    "crs": "Equirectangular, sphere R=3396190 m, latitude of true scale 0",
+    "native_pixel_m": 20,
+    "vertical_reference": "MOLA-referenced ('DeltaGeoid' in file name; exact definition not verified)",
+    "license": "NASA/USGS data; credit the citation above",
+    "confidence": "medium",
+    "limitations": ["Used only as an independent elevation cross-check, not as a displayed layer"]
+  }
+]

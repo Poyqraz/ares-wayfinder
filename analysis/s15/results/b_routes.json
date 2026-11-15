@@ -1,0 +1,265 @@
+{
+ "wide_dataset": "5b2abdb8bb70",
+ "frozen_dataset": "f8de9017164a",
+ "gates": {
+  "G1_G2": "PASS (automated, 2026-11-15)",
+  "G3": "PASS (automated, 2026-11-15)",
+  "G4": "automated numbers MEETS_LIMITS; owner sign-off PENDING for the wider box",
+  "G5": "same grid definition as M0-A (HiRISE-derived 2 m); owner confirmation PENDING for the wider box"
+ },
+ "overlap": {
+  "cells": 95571,
+  "identical_cells": 95571,
+  "same_ground_spacing": true
+ },
+ "m0_to_a_on_frozen_grid": {
+  "start": {
+   "row": 273,
+   "col": 161
+  },
+  "goal": {
+   "row": 89,
+   "col": 97
+  },
+  "distance": {
+   "status": "OK",
+   "length_m": 416.426,
+   "cost_flat_equiv_m": 416.426,
+   "ascent_m": 26.46,
+   "descent_m": 1.5,
+   "max_step_deg": 22,
+   "max_ground_deg": 23.4,
+   "max_cross_deg": 11.9,
+   "m_over_15": 28,
+   "m_over_20": 8,
+   "m_over_25": 0
+  },
+  "terrain": {
+   "status": "OK",
+   "length_m": 416.426,
+   "cost_flat_equiv_m": 664.39,
+   "ascent_m": 25.09,
+   "descent_m": 0.12,
+   "max_step_deg": 18.2,
+   "max_ground_deg": 19.9,
+   "max_cross_deg": 15.3,
+   "m_over_15": 33,
+   "m_over_20": 0,
+   "m_over_25": 0
+  },
+  "conservative": {
+   "status": "OK",
+   "length_m": 453.513,
+   "cost_flat_equiv_m": 695.372,
+   "ascent_m": 25.55,
+   "descent_m": 0.59,
+   "max_step_deg": 14.4,
+   "max_ground_deg": 18.1,
+   "max_cross_deg": 15.3,
+   "m_over_15": 9,
+   "m_over_20": 0,
+   "m_over_25": 0
+  },
+  "relation": "LOWER"
+ },
+ "m0_to_a_on_wider_grid": {
+  "start": {
+   "row": 273,
+   "col": 283
+  },
+  "goal": {
+   "row": 89,
+   "col": 219
+  },
+  "distance": {
+   "status": "OK",
+   "length_m": 416.426,
+   "cost_flat_equiv_m": 416.426,
+   "ascent_m": 26.46,
+   "descent_m": 1.5,
+   "max_step_deg": 22,
+   "max_ground_deg": 23.4,
+   "max_cross_deg": 11.9,
+   "m_over_15": 28,
+   "m_over_20": 8,
+   "m_over_25": 0
+  },
+  "terrain": {
+   "status": "OK",
+   "length_m": 416.426,
+   "cost_flat_equiv_m": 664.39,
+   "ascent_m": 25.09,
+   "descent_m": 0.12,
+   "max_step_deg": 18.2,
+   "max_ground_deg": 19.9,
+   "max_cross_deg": 15.3,
+   "m_over_15": 33,
+   "m_over_20": 0,
+   "m_over_25": 0
+  },
+  "conservative": {
+   "status": "OK",
+   "length_m": 453.513,
+   "cost_flat_equiv_m": 695.372,
+   "ascent_m": 25.55,
+   "descent_m": 0.59,
+   "max_step_deg": 14.4,
+   "max_ground_deg": 18.1,
+   "max_cross_deg": 15.3,
+   "m_over_15": 9,
+   "m_over_20": 0,
+   "m_over_25": 0
+  },
+  "relation": "LOWER"
+ },
+ "m0_to_b": {
+  "start": {
+   "row": 273,
+   "col": 283
+  },
+  "goal": {
+   "row": 333,
+   "col": 79
+  },
+  "distance": {
+   "status": "OK",
+   "length_m": 438.587,
+   "cost_flat_equiv_m": 438.587,
+   "ascent_m": 24.62,
+   "descent_m": 5.69,
+   "max_step_deg": 22.8,
+   "max_ground_deg": 25.7,
+   "max_cross_deg": 21.9,
+   "m_over_15": 69,
+   "m_over_20": 34,
+   "m_over_25": 6
+  },
+  "terrain": {
+   "status": "OK",
+   "length_m": 438.587,
+   "cost_flat_equiv_m": 615.136,
+   "ascent_m": 19.97,
+   "descent_m": 1.04,
+   "max_step_deg": 7.8,
+   "max_ground_deg": 15.4,
+   "max_cross_deg": 14.4,
+   "m_over_15": 6,
+   "m_over_20": 0,
+   "m_over_25": 0
+  },
+  "conservative": {
+   "status": "OK",
+   "length_m": 438.587,
+   "cost_flat_equiv_m": 619.149,
+   "ascent_m": 20.43,
+   "descent_m": 1.5,
+   "max_step_deg": 9.5,
+   "max_ground_deg": 9.1,
+   "max_cross_deg": 6.6,
+   "m_over_15": 0,
+   "m_over_20": 0,
+   "m_over_25": 0
+  },
+  "relation": "LOWER"
+ },
+ "b_to_m0": {
+  "start": {
+   "row": 333,
+   "col": 79
+  },
+  "goal": {
+   "row": 273,
+   "col": 283
+  },
+  "distance": {
+   "status": "OK",
+   "length_m": 438.587,
+   "cost_flat_equiv_m": 438.587,
+   "ascent_m": 3.97,
+   "descent_m": 22.9,
+   "max_step_deg": 14.7,
+   "max_ground_deg": 14.8,
+   "max_cross_deg": 5.7,
+   "m_over_15": 0,
+   "m_over_20": 0,
+   "m_over_25": 0
+  },
+  "terrain": {
+   "status": "OK",
+   "length_m": 438.587,
+   "cost_flat_equiv_m": 325.837,
+   "ascent_m": 1.89,
+   "descent_m": 20.82,
+   "max_step_deg": 7,
+   "max_ground_deg": 15.5,
+   "max_cross_deg": 14.9,
+   "m_over_15": 11,
+   "m_over_20": 0,
+   "m_over_25": 0
+  },
+  "conservative": {
+   "status": "OK",
+   "length_m": 438.587,
+   "cost_flat_equiv_m": 330.738,
+   "ascent_m": 1.45,
+   "descent_m": 20.38,
+   "max_step_deg": 9.5,
+   "max_ground_deg": 9.1,
+   "max_cross_deg": 7.4,
+   "m_over_15": 0,
+   "m_over_20": 0,
+   "m_over_25": 0
+  },
+  "relation": "LOWER"
+ },
+ "a_to_b": {
+  "start": {
+   "row": 89,
+   "col": 219
+  },
+  "goal": {
+   "row": 333,
+   "col": 79
+  },
+  "distance": {
+   "status": "OK",
+   "length_m": 593.931,
+   "cost_flat_equiv_m": 593.931,
+   "ascent_m": 20.13,
+   "descent_m": 26.17,
+   "max_step_deg": 19.4,
+   "max_ground_deg": 24.6,
+   "max_cross_deg": 19.3,
+   "m_over_15": 87,
+   "m_over_20": 25,
+   "m_over_25": 0
+  },
+  "terrain": {
+   "status": "OK",
+   "length_m": 593.931,
+   "cost_flat_equiv_m": 599.666,
+   "ascent_m": 9.55,
+   "descent_m": 15.58,
+   "max_step_deg": 15.2,
+   "max_ground_deg": 23.3,
+   "max_cross_deg": 19.8,
+   "m_over_15": 32,
+   "m_over_20": 13,
+   "m_over_25": 0
+  },
+  "conservative": {
+   "status": "OK",
+   "length_m": 608.736,
+   "cost_flat_equiv_m": 621.495,
+   "ascent_m": 11.33,
+   "descent_m": 17.36,
+   "max_step_deg": 15.2,
+   "max_ground_deg": 23.3,
+   "max_cross_deg": 19.8,
+   "m_over_15": 15,
+   "m_over_20": 8,
+   "m_over_25": 0
+  },
+  "relation": "LOWER"
+ }
+}

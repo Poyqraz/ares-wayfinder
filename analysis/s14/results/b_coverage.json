@@ -1,0 +1,89 @@
+{
+ "targets": {
+  "shuyak": {
+   "lat": 18.45068954,
+   "lon": 77.40143171
+  },
+  "mageik": {
+   "lat": 18.45068664,
+   "lon": 77.40143554
+  }
+ },
+ "m0a_grid": {
+  "dataset": "f8de9017164a",
+  "shuyak": {
+   "fractional_cell": {
+    "row": 333.5,
+    "col": -42.8
+   },
+   "grid_size": {
+    "ny": 369,
+    "nx": 259
+   },
+   "inside": false,
+   "cell": null,
+   "outside_by_m": {
+    "west": 81,
+    "east": 0,
+    "north": 0,
+    "south": 0
+   },
+   "validity": null,
+   "slope_deg": null,
+   "neighbourhood_slope_deg": null
+  },
+  "mageik": {
+   "fractional_cell": {
+    "row": 333.6,
+    "col": -42.7
+   },
+   "grid_size": {
+    "ny": 369,
+    "nx": 259
+   },
+   "inside": false,
+   "cell": null,
+   "outside_by_m": {
+    "west": 81,
+    "east": 0,
+    "north": 0,
+    "south": 0
+   },
+   "validity": null,
+   "slope_deg": null,
+   "neighbourhood_slope_deg": null
+  }
+ },
+ "roi_a_grid": {
+  "dataset": "7ec72147790e",
+  "shuyak": {
+   "fractional_cell": {
+    "row": 4,
+    "col": -96.3
+   },
+   "grid_size": {
+    "ny": 90,
+    "nx": 74
+   },
+   "inside": false,
+   "cell": null,
+   "outside_by_m": {
+    "west": 1927,
+    "east": 0,
+    "north": 0,
+    "south": 0
+   },
+   "validity": null,
+   "slope_deg": null,
+   "neighbourhood_slope_deg": null
+  }
+ },
+ "straight_line_m": {
+  "note": "great circle on the catalog sphere between recorded rover positions; not a walking distance",
+  "m0_reference_waypoint_to_b": 407,
+  "skinner_ridge_sampling_position_to_b": 556,
+  "wildcat_ridge_sampling_position_to_b": 534,
+  "shuyak_to_mageik": 0.28
+ },
+ "routes_to_b": "not planned: B is outside the validated grid"
+}

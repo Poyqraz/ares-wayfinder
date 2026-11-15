@@ -1,0 +1,56 @@
+{
+ "contract_version": "1.0.0",
+ "dataset_version": "f8de9017164a",
+ "roi_id": "m0a",
+ "analysis_role": "PROTOTYPE ANALYSIS grid for M0-A (HiRISE-derived 2 m). Not the ROI-A dataset; not in web/public/data.",
+ "source_ids": [
+  "hirise_dtm_1m",
+  "hirise_ortho_25cm"
+ ],
+ "nx": 259,
+ "ny": 369,
+ "dx_proj": 2.0,
+ "dy_proj": 2.0,
+ "dx_ground_m": 1.8971372313334578,
+ "dy_ground_m": 2.0,
+ "x0": 4588032.0,
+ "y0": 1094326.0,
+ "radius_m": 3396190.0,
+ "lat_ts_deg": 0.0,
+ "central_meridian_deg": 0.0,
+ "bounds_geo": {
+  "lat_min": 18.449491025576506,
+  "lat_max": 18.461941531961795,
+  "lon_min": 77.40287494838809,
+  "lon_max": 77.41161392170459
+ },
+ "roi_request_geo": {
+  "lon_min": 77.40288685,
+  "lat_min": 18.4495234,
+  "lon_max": 77.41160064,
+  "lat_max": 18.461931
+ },
+ "source_window": {
+  "col0": 10666,
+  "row0": 12292,
+  "source_pixel_m": 1.0,
+  "cells_per_axis": 2
+ },
+ "elevation_unit": "m",
+ "vertical_reference": "UNVERIFIED: USGS HiRISE DTM tied to MOLA ('DeltaGeoid' in the file name); stereo pairs C/W/DL differ by up to 2.4 m (constant offsets); this box is pair C only",
+ "nodata_policy": "NaN in dem = no source data (any NaN in a 2x2 block), never filled; validity 1 = not routable",
+ "h_min": -2549.6728515625,
+ "h_max": -2470.5325927734375,
+ "slope_method": "horn3x3",
+ "semantic_resolution": {
+  "dem_posting_m": 2.0,
+  "image_gsd_m": 1.0,
+  "note": "2 m posting of a 1 m stereo DTM; effective terrain resolution is coarser (several metres). Rocks below that are not represented. Ortho is display only."
+ },
+ "gates": {
+  "G1_G2": "PASS (df13f41)",
+  "G3": "PASS (df13f41)",
+  "G4": "conditionally approved for prototype analysis 2026-11-14",
+  "G5": "HiRISE-derived 2 m analysis grid selected 2026-11-14"
+ }
+}

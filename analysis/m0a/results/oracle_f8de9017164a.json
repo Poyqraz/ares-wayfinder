@@ -1,0 +1,117 @@
+{
+ "dataset_version": "f8de9017164a",
+ "generator": "pipeline/m0a_routes.py (oracle.route_cost)",
+ "g6": {
+  "g_max_grade": 0.45,
+  "g_max_deg": 24.23,
+  "threshold_kind": "experimental algorithm threshold (cost-curve domain), NOT an astronaut safety limit",
+  "same_strong_component": true,
+  "component_share_of_grid": 1.0,
+  "edges_removed_share": 0.0151,
+  "result": "CONNECTED"
+ },
+ "cases": [
+  {
+   "id": "M0->A distance",
+   "start": [
+    273,
+    161
+   ],
+   "goal": [
+    89,
+    97
+   ],
+   "mode": "distance",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 416.42572132996787,
+   "vectorised_cost": 416.42572132996787
+  },
+  {
+   "id": "M0->A terrain-minetti",
+   "start": [
+    273,
+    161
+   ],
+   "goal": [
+    89,
+    97
+   ],
+   "mode": "terrain",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 664.3901018131736,
+   "vectorised_cost": 664.3901018131736
+  },
+  {
+   "id": "M0->A terrain-tobler",
+   "start": [
+    273,
+    161
+   ],
+   "goal": [
+    89,
+    97
+   ],
+   "mode": "terrain",
+   "curve": "tobler",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 530.2719731898817,
+   "vectorised_cost": 530.2719731898817
+  },
+  {
+   "id": "A->M0 distance",
+   "start": [
+    89,
+    97
+   ],
+   "goal": [
+    273,
+    161
+   ],
+   "mode": "distance",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 416.42572132996787,
+   "vectorised_cost": 416.42572132996787
+  },
+  {
+   "id": "A->M0 terrain-minetti",
+   "start": [
+    89,
+    97
+   ],
+   "goal": [
+    273,
+    161
+   ],
+   "mode": "terrain",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 303.8004283468983,
+   "vectorised_cost": 303.8004283468983
+  },
+  {
+   "id": "A->M0 terrain-tobler",
+   "start": [
+    89,
+    97
+   ],
+   "goal": [
+    273,
+    161
+   ],
+   "mode": "terrain",
+   "curve": "tobler",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 422.7929717098011,
+   "vectorised_cost": 422.7929717098011
+  }
+ ]
+}

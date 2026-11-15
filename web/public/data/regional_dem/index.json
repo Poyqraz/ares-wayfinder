@@ -1,0 +1,11 @@
+{
+ "regional_dem": {
+  "dataset_version": "5c4dd158f4cf",
+  "path": "data/regional_dem/5c4dd158f4cf/",
+  "role": "display_only_regional_relief",
+  "source_id": "trn_ctx_dtm_20m",
+  "manifest_sha256": "5c4dd158f4cf1775e680365a607ef7cca1c7cbc76100cb853db0003e65cdfb96",
+  "terrain_json_sha256": "50a625bbc4a45310175ba900ac905441a018a61375dea72716dd3b75cad0410e",
+  "texture": "data/regional/d3d62fc34c56/science_6m.jpg"
+ }
+}

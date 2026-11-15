@@ -1,0 +1,67 @@
+{
+ "contract_version": "1.0.0",
+ "dataset_version": "5b2abdb8bb70",
+ "roi_id": "m0ab",
+ "analysis_role": "PROTOTYPE ANALYSIS grid for M0-A-B (HiRISE-derived 2 m): the M0-A grid widened west and south to hold Amalik. Not the ROI-A dataset.",
+ "source_ids": [
+  "hirise_dtm_1m",
+  "hirise_ortho_25cm"
+ ],
+ "nx": 381,
+ "ny": 409,
+ "dx_proj": 2.0,
+ "dy_proj": 2.0,
+ "dx_ground_m": 1.8971372313334578,
+ "dy_ground_m": 2.0,
+ "x0": 4587788.0,
+ "y0": 1094326.0,
+ "radius_m": 3396190.0,
+ "lat_ts_deg": 0.0,
+ "central_meridian_deg": 0.0,
+ "bounds_geo": {
+  "lat_min": 18.448141377187856,
+  "lat_max": 18.461941531961795,
+  "lon_min": 77.3987585208027,
+  "lon_max": 77.41161392170459
+ },
+ "roi_request_geo": {
+  "lon_min": 77.39876781880291,
+  "lat_min": 18.448156049271283,
+  "lon_max": 77.41160064,
+  "lat_max": 18.461931
+ },
+ "source_window": {
+  "col0": 10422,
+  "row0": 12292,
+  "source_pixel_m": 1.0,
+  "cells_per_axis": 2
+ },
+ "elevation_unit": "m",
+ "vertical_reference": "UNVERIFIED: USGS HiRISE DTM tied to MOLA ('DeltaGeoid' in the file name); stereo pairs C/W/DL differ by up to 2.4 m (constant offsets); this box is pair C only",
+ "nodata_policy": "NaN in dem = no source data (any NaN in a 2x2 block), never filled; validity 1 = not routable",
+ "h_min": -2550.7339477539062,
+ "h_max": -2466.831298828125,
+ "slope_method": "horn3x3",
+ "semantic_resolution": {
+  "dem_posting_m": 2.0,
+  "image_gsd_m": 1.0,
+  "note": "2 m posting of a 1 m stereo DTM; effective terrain resolution is coarser (several metres). Rocks below that are not represented. Ortho is display only."
+ },
+ "gates": {
+  "G1_G2": "PASS (automated, 2026-11-15)",
+  "G3": "PASS (automated, 2026-11-15)",
+  "G4": "automated numbers MEETS_LIMITS; approved for prototype analysis, owner (Poyraz), 2026-11-15",
+  "G5": "HiRISE-derived 2 m analysis grid confirmed for the wider box, owner (Poyraz), 2026-11-15"
+ },
+ "superset_of": {
+  "dataset_version": "f8de9017164a",
+  "row_offset": 0,
+  "col_offset": 122,
+  "cells": 95571,
+  "identical": {
+   "dem": true,
+   "slope": true,
+   "validity": true
+  }
+ }
+}

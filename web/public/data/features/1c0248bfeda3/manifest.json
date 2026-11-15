@@ -1,0 +1,30 @@
+[
+ {
+  "file": "F01/F01_geometry.json",
+  "sha256": "1189b49b9a17dccc1db2ad83bb41fef2059eb333b6658f2319c5f95eaee63139"
+ },
+ {
+  "file": "F01/F01_panel.png",
+  "sha256": "47943e05815d1d13e75db661f37e35b4694efedd80c60f9ca01b78c0edaa3c29"
+ },
+ {
+  "file": "F01/F01_profile.csv",
+  "sha256": "2d66ba761c1082ba10b68361d2b5d3d2476461a8206d702511560b22be345555"
+ },
+ {
+  "file": "F01/F01_profile.png",
+  "sha256": "06d96ffa9f521dcf8b0d4a3bcbade510346e698cc2ae9ad73eb1c29349001c2f"
+ },
+ {
+  "file": "F01/F01_qa.json",
+  "sha256": "40ea255c87b176c56693162d058ad040a0e99bf6cf36cbc039f51731ede50ee0"
+ },
+ {
+  "file": "scientific_sources.json",
+  "sha256": "a51a9f159cb1a4a03a7fc03abb65a4c9bb71ef36e95d02afc5c86fcdb94b1123"
+ },
+ {
+  "file": "terrain_features.json",
+  "sha256": "58dde4da064065dc4d72a792f970bb2c5ca005f33cb59e8c37319a364f02acde"
+ }
+]

@@ -1,0 +1,343 @@
+{
+ "schema": "ares1-catalog-bundle/1",
+ "catalog_schema": "ares1-science-catalog/1",
+ "files": [
+  {
+   "file": "catalog.json",
+   "bytes": 89138,
+   "sha256": "c2313227031a790d9247167bd7f0b30ccbce108dec05eb553cc12a2aabdc0eae"
+  },
+  {
+   "file": "meda_sol0516_der_ps_qa.json",
+   "bytes": 9822,
+   "sha256": "38ff4ac0dbb41622b40738da370d5a424b9b8f0b2b03f42436717e941af45964"
+  },
+  {
+   "file": "meda_sol0516_der_ps_rows.csv",
+   "bytes": 631463,
+   "sha256": "1fc865b50b3810da2168c4d1f8be33937a0cc0e6b0a6ffa924af4d8272bd94c0"
+  }
+ ],
+ "source_register": [
+  {
+   "id": "pds_tf_locations_csv",
+   "title": "Three Forks Depot - sample_tube_locations (CSV)",
+   "kind": "pds_table",
+   "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_sample_depot_three_forks/miscellaneous/sample_metadata/sample_tube_locations.csv",
+   "local_path": "ares1/sources/raw/pds_three_forks/sample_tube_locations.csv",
+   "bytes": 859,
+   "sha256": "089015bb25bc61415cfa69aea7160ddb7f1b5149446dd50dd84332c7660c5d59",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "pds_tf_locations_xml",
+   "title": "Three Forks Depot - sample_tube_locations (PDS4 label)",
+   "kind": "pds_label",
+   "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_sample_depot_three_forks/miscellaneous/sample_metadata/sample_tube_locations.xml",
+   "local_path": "ares1/sources/raw/pds_three_forks/sample_tube_locations.xml",
+   "bytes": 6402,
+   "sha256": "1b4d14fe315bd2f7fd17584e33b728193682220a71840c446fec218361e9e3c3",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "pds_tf_identifiers_csv",
+   "title": "Three Forks Depot - sample_tube_identifiers (CSV)",
+   "kind": "pds_table",
+   "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_sample_depot_three_forks/miscellaneous/sample_metadata/sample_tube_identifiers.csv",
+   "local_path": "ares1/sources/raw/pds_three_forks/sample_tube_identifiers.csv",
+   "bytes": 692,
+   "sha256": "c9ceb1c8c73b1d384433fad6bf1ec521315f9e63cd7a18cf973cc5be8b08bf76",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "pds_tf_identifiers_xml",
+   "title": "Three Forks Depot - sample_tube_identifiers (PDS4 label)",
+   "kind": "pds_label",
+   "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_sample_depot_three_forks/miscellaneous/sample_metadata/sample_tube_identifiers.xml",
+   "local_path": "ares1/sources/raw/pds_three_forks/sample_tube_identifiers.xml",
+   "bytes": 5289,
+   "sha256": "00adcde360cdc4c7d1866636b8488b3033b70f201ad2b554d47d0d830bfc6775",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "pds_tf_targets_csv",
+   "title": "Three Forks Depot - sample_tube_targets (CSV)",
+   "kind": "pds_table",
+   "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_sample_depot_three_forks/miscellaneous/sample_metadata/sample_tube_targets.csv",
+   "local_path": "ares1/sources/raw/pds_three_forks/sample_tube_targets.csv",
+   "bytes": 2431,
+   "sha256": "9b2600e88b762f24411b74e5603f789591050fc9a19e6b6f76d7bcced02f8765",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "pds_tf_targets_xml",
+   "title": "Three Forks Depot - sample_tube_targets (PDS4 label)",
+   "kind": "pds_label",
+   "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_sample_depot_three_forks/miscellaneous/sample_metadata/sample_tube_targets.xml",
+   "local_path": "ares1/sources/raw/pds_three_forks/sample_tube_targets.xml",
+   "bytes": 5574,
+   "sha256": "fdfb02e690f9a5b9fdfa01f49fed56a935a11c9c948760adfa9d134271b2c3bc",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "pds_meda_sol0516_ps_csv",
+   "title": "Mars 2020 MEDA Pressure Sensor Derived Data, sol 516 (CSV)",
+   "kind": "pds_table",
+   "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0420_0539/sol_0516/WE__0516___________DER_PS__________________P01.CSV",
+   "local_path": "ares1/sources/raw/pds_meda/WE__0516___________DER_PS__________________P01.CSV",
+   "bytes": 401817,
+   "sha256": "4d50e6a15508814d7815d532bae9b5791cb2de66d1ad01d135fed2d086a01643",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "pds_meda_sol0516_ps_xml",
+   "title": "Mars 2020 MEDA Pressure Sensor Derived Data, sol 516 (PDS4 label)",
+   "kind": "pds_label",
+   "url": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0420_0539/sol_0516/WE__0516___________DER_PS__________________P01.xml",
+   "local_path": "ares1/sources/raw/pds_meda/WE__0516___________DER_PS__________________P01.xml",
+   "bytes": 9095,
+   "sha256": "3388cd323757e23a68db58570464cf8d717c09fa4d50dfbbfbbd7009d4313e54",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "nasa_mmgis_waypoints",
+   "title": "NASA MMGIS M20 rover waypoints (JSON)",
+   "kind": "nasa_json",
+   "url": "https://mars.nasa.gov/mmgis-maps/M20/Layers/json/M20_waypoints.json",
+   "local_path": "ares1/sources/raw/nasa_mmgis/M20_waypoints.json",
+   "bytes": 603126,
+   "sha256": "bd143ee69241229926abd373e6305b8bbb326d6b5a7b4a8d6935262696f93dc4",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "nasa_rock_samples_page",
+   "title": "NASA Mars 2020 Mars Rock Samples page (HTML snapshot)",
+   "kind": "nasa_web",
+   "url": "https://science.nasa.gov/mission/mars-2020-perseverance/mars-rock-samples/",
+   "local_path": "ares1/sources/raw/nasa_web/mars-rock-samples.html",
+   "bytes": 483403,
+   "sha256": "4358097faea363416268e7cba58b6bea344ff2e51a30912dfa255143239d60ef",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "pds_an_three_forks",
+   "title": "PDS Analyst's Notebook - Three Forks Depot help page (HTML snapshot)",
+   "kind": "pds_web",
+   "url": "https://an.rsl.wustl.edu/help/Content/About%20the%20mission/M20/Return%20sample%20science/Three%20Forks%20Depot.htm",
+   "local_path": "ares1/sources/raw/nasa_web/an_three_forks.htm",
+   "bytes": 50618,
+   "sha256": "7e716b6c01d52686bec1dc7f07ae399d08bcfbd90dc481222e51aaeba1e0d799",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "team_m0_table",
+   "title": "ARES-1 science team: M0_10_tup_kaydi.csv (research package v1)",
+   "kind": "team_research",
+   "url": null,
+   "local_path": "ares1/sources/team/research_v1/M0_10_tup_kaydi.csv",
+   "bytes": 5744,
+   "sha256": "52bca23566c7e073030aa6688acc0246c7b4096c7fcef69d2c06dedc752a8d04",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "team_a_table",
+   "title": "ARES-1 science team: A_iki_kaya_kanitlari.csv",
+   "kind": "team_research",
+   "url": null,
+   "local_path": "ares1/sources/team/research_v1/A_iki_kaya_kanitlari.csv",
+   "bytes": 1372,
+   "sha256": "da8c2267ab02071202df998e691e8bffc507825b7aaf9c336a8329ba89c0e4eb",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "team_b_claims",
+   "title": "ARES-1 science team: B_Cheyava_Falls_bulgular.csv",
+   "kind": "team_research",
+   "url": null,
+   "local_path": "ares1/sources/team/research_v1/B_Cheyava_Falls_bulgular.csv",
+   "bytes": 2248,
+   "sha256": "49e9acf193027af2e99795f4ce2d66a97608a2f57e0eaf52f1023eabf9ea27d5",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "team_waypoints",
+   "title": "ARES-1 science team: Jezeroda_3_taslak_waypoint.geojson",
+   "kind": "team_research",
+   "url": null,
+   "local_path": "ares1/sources/team/research_v1/Jezeroda_3_taslak_waypoint.geojson",
+   "bytes": 2550,
+   "sha256": "ec4e338d8ac3e8e911f08543b823ca6102033f388dcc5c6c86c43a56fbe75e7b",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "team_research_readme",
+   "title": "ARES-1 science team: README_ARAStIRMA.md",
+   "kind": "team_research",
+   "url": null,
+   "local_path": "ares1/sources/team/research_v1/README_ARAStIRMA.md",
+   "bytes": 11474,
+   "sha256": "86ace995a11afaedd892d81c320449d282c716fb82afd63a4b476ad34a2c9ea2",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "team_verification_report",
+   "title": "ARES-1 science team: ARES1_M0_MEDA_DOGRULAMA_RAPORU.md",
+   "kind": "team_research",
+   "url": null,
+   "local_path": "ares1/sources/team/verification/ARES1_M0_MEDA_DOGRULAMA_RAPORU.md",
+   "bytes": 16101,
+   "sha256": "2af4f9e7f874569b9c9fa0cd498de059e9c71467d55c5cdea815c5aab0dd0331",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "team_developer_handoff",
+   "title": "ARES-1 science team: ARES-1_Gelistirici_Teknik_Devir_Dokumani.md",
+   "kind": "team_research",
+   "url": null,
+   "local_path": "ares1/sources/team/developer_handoff/ARES-1_Gelistirici_Teknik_Devir_Dokumani.md",
+   "bytes": 47503,
+   "sha256": "20d8f76edc2e70343c5b3ba0e030eb69dbcfb0c92d012648fe1515f3c5a2e3f0",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "ir_extract",
+   "title": "Initial Reports header extract (generated by ares1/ingest/extract_initial_reports.py)",
+   "kind": "derived_extract",
+   "url": null,
+   "local_path": "ares1/sources/extracted/initial_reports_extract.json",
+   "bytes": 12879,
+   "sha256": "8c385dff70ff6d362a3af7f4cedcfd9ddc4fff5042cb6a9000e90f70890ca25c",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "pds_initial_reports_v1",
+   "title": "Mars 2020 Sample Dossier - Initial Reports, volume 1 (PDF; not stored in the repo)",
+   "kind": "pds_pdf",
+   "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_sample_dossier/initial_reports/initial_reports_volume1.pdf",
+   "local_path": null,
+   "bytes": 113084961,
+   "sha256": "63ccbdb901803cf3270fb8d8360f6f18a928d6f6316ccdeb6bd88acc6132cc04",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "pds_initial_reports_v2",
+   "title": "Mars 2020 Sample Dossier - Initial Reports, volume 2 (PDF; not stored in the repo)",
+   "kind": "pds_pdf",
+   "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_sample_dossier/initial_reports/initial_reports_volume2.pdf",
+   "local_path": null,
+   "bytes": 104818942,
+   "sha256": "914a4baacdbd4dd6f86688b9d4e15dc353a506f9b24874e6f0bf04a799b9f123",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "pds_initial_reports_v3",
+   "title": "Mars 2020 Sample Dossier - Initial Reports, volume 3 (PDF; not stored in the repo)",
+   "kind": "pds_pdf",
+   "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_sample_dossier/initial_reports/initial_reports_volume3.pdf",
+   "local_path": null,
+   "bytes": 87933471,
+   "sha256": "ce1704c975b03680bf55afbf98060158868ab14d768b2715032c2fdbc9869aa0",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "pds_initial_reports_v4",
+   "title": "Mars 2020 Sample Dossier - Initial Reports, volume 4 (PDF; not stored in the repo)",
+   "kind": "pds_pdf",
+   "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_sample_dossier/initial_reports/initial_reports_volume4.pdf",
+   "local_path": null,
+   "bytes": 190739145,
+   "sha256": "92ac3e4c6dae006ab031742238f405bbc6508b5ba1eb62dccf7137b73b381e02",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "pds_initial_reports_v5",
+   "title": "Mars 2020 Sample Dossier - Initial Reports, volume 5 (PDF; not stored in the repo)",
+   "kind": "pds_pdf",
+   "url": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_sample_dossier/initial_reports/initial_reports_volume5.pdf",
+   "local_path": null,
+   "bytes": 38842206,
+   "sha256": "5cc8b0eb21350a16f23030f9c9dc103fa1fb1787e814809f097005cba0a1a796",
+   "retrieved": "2026-11-14"
+  },
+  {
+   "id": "bosak_2024_agu_advances",
+   "title": "Bosak et al. (2024), AGU Advances, doi:10.1029/2024AV001241 (cited by the team; not retrieved here)",
+   "kind": "cited_not_retrieved",
+   "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024AV001241",
+   "local_path": null,
+   "bytes": null,
+   "sha256": null,
+   "retrieved": null
+  },
+  {
+   "id": "hurowitz_2025_nature",
+   "title": "Redox-driven mineral and organic associations in Jezero Crater, Mars. Nature (2025), doi:10.1038/s41586-025-09413-0 (cited by the team; not retrieved here)",
+   "kind": "cited_not_retrieved",
+   "url": "https://www.nature.com/articles/s41586-025-09413-0",
+   "local_path": null,
+   "bytes": null,
+   "sha256": null,
+   "retrieved": null
+  },
+  {
+   "id": "nasa_2024_cheyava_release",
+   "title": "NASA (2024) Perseverance rover scientists find intriguing Mars rock (cited by the team; not retrieved here)",
+   "kind": "cited_not_retrieved",
+   "url": "https://www.nasa.gov/solar-system/nasas-perseverance-rover-scientists-find-intriguing-mars-rock/",
+   "local_path": null,
+   "bytes": null,
+   "sha256": null,
+   "retrieved": null
+  },
+  {
+   "id": "nasa_leopard_spots_image",
+   "title": "NASA image resource: Perseverance finds a rock with leopard spots (cited by the team; not retrieved here)",
+   "kind": "cited_not_retrieved",
+   "url": "https://science.nasa.gov/resource/perseverance-finds-a-rock-with-leopard-spots/",
+   "local_path": null,
+   "bytes": null,
+   "sha256": null,
+   "retrieved": null
+  },
+  {
+   "id": "nasa_skinner_cores_image",
+   "title": "NASA image resource: Rock cores from Skinner Ridge (cited by the team; not retrieved here)",
+   "kind": "cited_not_retrieved",
+   "url": "https://science.nasa.gov/resource/rock-cores-from-skinner-ridge/",
+   "local_path": null,
+   "bytes": null,
+   "sha256": null,
+   "retrieved": null
+  },
+  {
+   "id": "nasa_wildcat_cores_image",
+   "title": "NASA image resource: Perseverance rock cores from Wildcat Ridge (cited by the team; not retrieved here)",
+   "kind": "cited_not_retrieved",
+   "url": "https://science.nasa.gov/resource/perseverance-rock-cores-from-wildcat-ridge/",
+   "local_path": null,
+   "bytes": null,
+   "sha256": null,
+   "retrieved": null
+  },
+  {
+   "id": "nasa_two_sampling_locations",
+   "title": "NASA image resource: Two Perseverance sampling locations in Jezero's delta (cited by the team; not retrieved here)",
+   "kind": "cited_not_retrieved",
+   "url": "https://science.nasa.gov/resource/two-perseverance-sampling-locations-in-jezeros-delta/",
+   "local_path": null,
+   "bytes": null,
+   "sha256": null,
+   "retrieved": null
+  },
+  {
+   "id": "meda_bundle_doi",
+   "title": "Rodriguez-Manfredi & de la Torre Juarez (2021), Mars 2020 MEDA Bundle, doi:10.17189/1522849",
+   "kind": "cited_not_retrieved",
+   "url": "https://doi.org/10.17189/1522849",
+   "local_path": null,
+   "bytes": null,
+   "sha256": null,
+   "retrieved": null
+  }
+ ]
+}

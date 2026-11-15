@@ -1,0 +1,126 @@
+/* EVA visor HUD and route-marker presentation (S7 polish). */
+.hud { flex: 1; min-height: 0; display: flex; flex-direction: column; padding: 10px 14px; gap: 6px; }
+.hud-visor { position: relative; flex: 1; min-height: 360px; overflow: hidden; border-radius: 46% 46% 30% 30% / 22% 22% 16% 16%; background: #020406; border: 2px solid #2f4254; box-shadow: inset 0 0 0 6px #0b1117, inset 0 0 90px rgba(0, 0, 0, 0.9); }
+/* ground plane: the real ortho, heading-up, tilted away from the viewer */
+.hud-ground { position: absolute; inset: -30% -25% -8% -25%; perspective: 700px; perspective-origin: 50% 30%; }
+.hud-ground svg { width: 100%; height: 100%; transform: rotateX(58deg); transform-origin: 50% 82%; }
+.hud-route { fill: none; stroke: #6fd6ff; stroke-width: 4px; vector-effect: non-scaling-stroke; stroke-linejoin: round; stroke-dasharray: 10 7; }
+.hud-route.done { stroke: rgba(255, 255, 255, 0.45); stroke-dasharray: none; stroke-width: 3px; }
+.hud-mark circle { fill: rgba(11, 16, 22, 0.85); stroke: #6fd6ff; stroke-width: 2px; vector-effect: non-scaling-stroke; }
+.hud-mark text { fill: #e8eef4; font-weight: 700; }
+.hud-mark.caution circle { stroke: #ffb454; }
+.hud-self { fill: #ffb454; stroke: #1a1206; stroke-width: 1.5px; vector-effect: non-scaling-stroke; }
+/* visor glass: horizon fade, edge vignette, faint scan lines */
+.hud-glass { position: absolute; inset: 0; pointer-events: none; background:
+  linear-gradient(180deg, #020406 0%, rgba(2, 4, 6, 0.92) 16%, rgba(2, 4, 6, 0) 40%),
+  radial-gradient(120% 90% at 50% 62%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.78) 100%),
+  repeating-linear-gradient(180deg, rgba(111, 214, 255, 0.035) 0 1px, transparent 1px 4px); }
+.hud-top { position: absolute; top: 5%; left: 0; right: 0; display: grid; justify-items: center; gap: 6px; padding: 0 16%; text-align: center; }
+.hud-sim { font-size: 12px; color: #ffd9a0; border: 1px solid #6b4d1c; background: rgba(42, 30, 8, 0.72); padding: 3px 10px; border-radius: 4px; }
+.hud-compass { font-size: 18px; letter-spacing: 0.08em; color: #6fd6ff; }
+.hud-compass strong { font-size: 26px; margin-right: 6px; }
+.hud-alert { position: absolute; top: 27%; left: 50%; transform: translateX(-50%); background: rgba(58, 38, 6, 0.9); border: 1px solid #ffb454; color: #ffd9a0; padding: 5px 14px; border-radius: 4px; font-weight: 600; }
+.hud-left, .hud-right { position: absolute; top: 24%; display: grid; gap: 6px; }
+.hud-left { left: 7%; }
+.hud-right { right: 7%; justify-items: end; }
+.hud-tile { min-width: 132px; background: rgba(9, 14, 20, 0.66); border-left: 2px solid #6fd6ff; padding: 4px 10px; display: grid; }
+.hud-tile span { font-size: 11px; color: #9db0c2; }
+.hud-tile strong { font-size: 19px; font-weight: 600; color: #e8eef4; }
+.hud-tile em { font-size: 11px; font-style: normal; color: #9db0c2; }
+.hud-tile.wide { min-width: 210px; max-width: 240px; border-left: none; border-right: 2px solid #6fd6ff; text-align: right; }
+.hud-tile.caution { border-color: #ffb454; }
+.hud-tile.caution strong { color: #ffd9a0; }
+.hud-tile.sim { border-color: #53657a; }
+.hud-tile.sim strong { color: #9db0c2; font-size: 15px; }
+.hud-mini { width: 150px; height: 150px; border: 1px solid #2f4254; border-radius: 6px; background: #05080b; }
+.hud-mini .hud-route { stroke-width: 2px; stroke-dasharray: none; }
+.hud-bottom { position: absolute; bottom: 6%; left: 22%; right: 22%; display: flex; gap: 10px; align-items: center; }
+.hud-bottom input { flex: 1; }
+.hud-pct { color: #6fd6ff; min-width: 44px; text-align: right; }
+.hud-caption { margin: 0; text-align: center; }
+@media (max-width: 980px) { .hud-visor { border-radius: 18px; } .hud-left { left: 3%; } .hud-right { right: 3%; } .hud-tile.wide { min-width: 150px; } .hud-mini { width: 96px; height: 96px; } }
+
+/* route markers: one colour for cautions, a clear lead line in the card */
+.route-marker.rm-steepest circle { stroke: #ffb454; }
+.route-marker.rm-start circle, .route-marker.rm-goal circle { stroke: #4fe0c0; }
+.rm-badge { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; border: 2px solid #fff; font-size: 12px; margin-right: 4px; }
+.rm-badge.rm-steepest { border-color: #ffb454; color: #ffd9a0; }
+.rm-badge.rm-start, .rm-badge.rm-goal { border-color: #4fe0c0; }
+.rm-lead { font-size: 13.5px; margin: 4px 0; }
+.rm-card .row { margin-top: 6px; align-items: center; }
+
+/* final spacing pass */
+.mc-side { gap: 10px; }
+.mc-head { padding-bottom: 2px; }
+.mc-cards .mission-card { padding: 8px; }
+.side .block { padding: 10px 12px; margin-bottom: 10px; }
+.map-toolbar { padding: 2px 0 4px; }
+.regional-label { font-weight: 500; }
+
+/* s7-rc3: ground guidance, elevation profile, arrival state */
+.hud-ground { perspective: 900px; }
+.hud-route { stroke-width: 2px; opacity: 0.55; }
+.hud-route.done { opacity: 1; }
+.hud-step { fill: none; stroke: #6fd6ff; stroke-width: 3px; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.hud-step.caution { stroke: #ffb454; }
+.hud-mark.next circle { stroke-width: 3.5px; fill: rgba(20, 44, 58, 0.9); }
+.hud-mini-mark { fill: #0b1016; stroke: #6fd6ff; stroke-width: 1.5px; vector-effect: non-scaling-stroke; }
+.hud-mini-mark.next { fill: #6fd6ff; }
+.hud-alert.ok { border-color: #4fe0c0; color: #d9fff5; background: rgba(6, 40, 34, 0.9); }
+.hud-alert.hint { border-color: #6fd6ff; color: #d6f3ff; background: rgba(8, 28, 40, 0.85); font-weight: 500; }
+.hud-profile { position: absolute; bottom: 13%; left: 24%; right: 24%; display: grid; gap: 3px; justify-items: center; padding: 5px 10px; background: rgba(9, 14, 20, 0.62); border-top: 1px solid #2f4254; }
+.hud-profile svg { width: 100%; max-height: 84px; display: block; }
+.hud-prof-line { fill: none; stroke: #e8eef4; stroke-width: 1.5px; vector-effect: non-scaling-stroke; }
+.hud-prof-mark { stroke: #6fd6ff; stroke-width: 2px; vector-effect: non-scaling-stroke; }
+.hud-prof-mark.next { stroke: #fff; stroke-width: 3px; }
+.hud-prof-now { stroke: #ffb454; stroke-width: 2px; vector-effect: non-scaling-stroke; }
+.hud-prof-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: center; font-size: 11.5px; color: #9db0c2; }
+.hud-prof-row button, .hud-bottom button { padding: 2px 8px; font-size: 12px; white-space: nowrap; }
+.hud-bottom { left: 18%; right: 18%; }
+@media (max-width: 980px) { .hud-profile { left: 6%; right: 6%; bottom: 15%; } .hud-bottom { left: 6%; right: 6%; flex-wrap: wrap; justify-content: center; } .hud-left, .hud-right { top: 20%; } .hud-tile { min-width: 96px; } .hud-tile strong { font-size: 15px; } }
+
+/* s7-rc3: planning density, provenance links, HiRISE detail inset */
+.side details > summary, .side details.block > summary { cursor: pointer; font-weight: 600; font-size: 13px; color: var(--ink); }
+.side details.block > summary { font-size: 15px; }
+.side .block p { margin: 4px 0; }
+.side table.nums th, .side table.nums td { padding-top: 2px; padding-bottom: 2px; }
+.src-link, .prov a, .prov td, .prov li { overflow-wrap: anywhere; }
+.prov article, .prov li { max-width: 86ch; }
+.regional-m0a.detail { fill: none; }
+
+/* Orbital: the map box takes the mosaic's own proportions (set inline), so no empty bands are drawn inside the frame */
+.orbital-s7 { align-items: center; }
+.orbital-map { width: 100%; max-height: 100%; min-width: 0; }
+@media (max-width: 980px) { .orbital-map { flex: none; } .orbital-map .rc-box { min-height: 0; } }
+.hud-profile { bottom: 12%; }
+.hud-profile svg { max-height: 60px; }
+
+/* s8: first-person world behind the visor glass, ways back, smoothed line, 3D marker panel */
+.hud-world { position: absolute; inset: 0; }
+.hud-world canvas { display: block; }
+.hud-glass { background:
+  linear-gradient(180deg, rgba(2, 4, 6, 0.9) 0%, rgba(2, 4, 6, 0.55) 14%, rgba(2, 4, 6, 0) 30%),
+  radial-gradient(120% 90% at 50% 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.7) 100%),
+  repeating-linear-gradient(180deg, rgba(111, 214, 255, 0.03) 0 1px, transparent 1px 4px); }
+.hud-nav { display: flex; gap: 8px; align-items: center; justify-content: center; flex-wrap: wrap; }
+.hud-nav button { padding: 3px 10px; font-size: 12.5px; }
+.route-smooth { fill: none; stroke: #ffffff; stroke-width: 1.5px; stroke-dasharray: 2 4; vector-effect: non-scaling-stroke; stroke-linecap: round; pointer-events: none; }
+.rm-card.inline { position: static; width: auto; box-shadow: none; margin-top: 6px; }
+.marker3d { padding: 6px 0; }
+.marker3d .row { flex-wrap: wrap; gap: 4px; }
+.marker3d button { padding: 2px 8px; font-size: 12px; }
+
+/* s9: terrain under the route */
+.trav-chart { width: 100%; height: 96px; background: #05080b; border: 1px solid var(--line); border-radius: 4px; display: block; }
+.trav-chart polyline, .trav-chart line { fill: none; vector-effect: non-scaling-stroke; }
+.trav-slope { stroke: #ffb454; stroke-width: 2px; }
+.trav-cross { stroke: #6fd6ff; stroke-width: 1.5px; stroke-dasharray: 4 3; }
+.trav-grade { stroke: #e8eef4; stroke-width: 1.2px; }
+.trav-gate { stroke: #d646d6; stroke-width: 1.5px; }
+.trav-grid { stroke: #2a3846; stroke-width: 1px; }
+.trav-legend span { margin-right: 8px; padding-left: 14px; position: relative; }
+.trav-legend span::before { content: ""; position: absolute; left: 0; top: 50%; width: 10px; border-top: 2px solid; }
+.k-slope::before { border-color: #ffb454; } .k-cross::before { border-color: #6fd6ff; border-top-style: dashed; } .k-grade::before { border-color: #e8eef4; } .k-gate::before { border-color: #d646d6; }
+.route-reference { fill: none; stroke: #b9c4cf; stroke-width: 1.5px; stroke-dasharray: 6 4; vector-effect: non-scaling-stroke; pointer-events: none; }
+.route-steep { stroke: #ffd24d; stroke-width: 9px; stroke-linecap: round; vector-effect: non-scaling-stroke; pointer-events: none; opacity: 0.9; }
+.route-steep.hot { stroke: #ff3b3b; }

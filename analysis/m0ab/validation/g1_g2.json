@@ -1,0 +1,354 @@
+{
+ "generated_utc": "2026-11-15T10:25:41+00:00",
+ "catalog_version": "572fba1ce61f",
+ "box": {
+  "lon_min": 77.39876781880291,
+  "lat_min": 18.448156049271283,
+  "lon_max": 77.41160064,
+  "lat_max": 18.461931
+ },
+ "endpoints": {
+  "start_M0": {
+   "lat": 18.45272753,
+   "lon": 77.40833585,
+   "semantics": "NASA rover End-of-drive localization (sol 674, RMC 32_774); regional reference only, not a sample or tube point"
+  },
+  "goal_A": {
+   "lat": 18.458931,
+   "lon": 77.40617078,
+   "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)"
+  },
+  "goal_B": {
+   "lat": 18.45068664,
+   "lon": 77.40143554,
+   "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)"
+  }
+ },
+ "dems": {
+  "ctx_dem_20m": {
+   "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/ScienceInvestigationMaps_JPL/M20_JezeroCrater_CTXDEM_20m.tif",
+   "header": {
+    "size": [
+     4456,
+     5067
+    ],
+    "dtype": "float32",
+    "nodata": -3.4028234663852886e+38,
+    "crs_proj4": "+proj=eqc +lat_ts=18.4663 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+    "proj": "eqc",
+    "R_m": 3396190,
+    "lat_ts": 18.4663,
+    "lat_0": 0,
+    "lon_0": 0,
+    "transform": [
+     20.0,
+     0.0,
+     4328999.999999998,
+     0.0,
+     -20.0,
+     1143420.0000000028
+    ],
+    "area_or_point": "Area",
+    "overviews": []
+   },
+   "window": {
+    "col0": 1128,
+    "col1": 1165,
+    "row0": 2454,
+    "row1": 2496,
+    "nx": 37,
+    "ny": 42,
+    "x0": 4351559.999999998,
+    "y0": 1094340.0000000028,
+    "inside_with_halo": true
+   },
+   "spacing_m": {
+    "dx_proj": 20.0,
+    "dy_proj": 20.0,
+    "dx_ground": 20.001311753736985,
+    "dy_ground": 20.0,
+    "lat_center": 18.45504352463564,
+    "dx_ground_over_proj": 1.0000655876868492
+   },
+   "valid_fraction": 1.0,
+   "validity_counts": {
+    "0": 1554,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "elev_m": {
+    "min": -2555.455,
+    "max": -2470.975
+   },
+   "slope_deg_horn": {
+    "p50": 5.19,
+    "p95": 17.6,
+    "max": 27.15,
+    "share_above_24_2": 0.00386
+   },
+   "endpoints": {
+    "start_M0": {
+     "row": 28,
+     "col": 27,
+     "inside": true,
+     "validity": 0,
+     "h_m": -2547.09,
+     "roundtrip_m": 2.1058602869781218e-10
+    },
+    "goal_A": {
+     "row": 9,
+     "col": 21,
+     "inside": true,
+     "validity": 0,
+     "h_m": -2517.258,
+     "roundtrip_m": 2.1058602869781218e-10
+    },
+    "goal_B": {
+     "row": 34,
+     "col": 7,
+     "inside": true,
+     "validity": 0,
+     "h_m": -2527.182,
+     "roundtrip_m": 2.1058602869781218e-10
+    }
+   },
+   "corridor": {
+    "half_width_m": 20.0,
+    "cells": 134,
+    "all_valid": true,
+    "slope_deg_max": 12.58
+   },
+   "gate": "PASS",
+   "problems": []
+  },
+  "trn_ctx_dtm_20m": {
+   "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.tif",
+   "header": {
+    "size": [
+     1596,
+     1512
+    ],
+    "dtype": "float32",
+    "nodata": -3.4028226550889045e+38,
+    "crs_proj4": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+    "proj": "eqc",
+    "R_m": 3396190,
+    "lat_ts": 0,
+    "lat_0": 0,
+    "lon_0": 0,
+    "transform": [
+     20.0,
+     0.0,
+     4573663.250853,
+     0.0,
+     -20.0,
+     1109693.140188
+    ],
+    "area_or_point": "Area",
+    "overviews": []
+   },
+   "window": {
+    "col0": 706,
+    "col1": 745,
+    "row0": 768,
+    "row1": 810,
+    "nx": 39,
+    "ny": 42,
+    "x0": 4587783.250853,
+    "y0": 1094333.140188,
+    "inside_with_halo": true
+   },
+   "spacing_m": {
+    "dx_proj": 20.0,
+    "dy_proj": 20.0,
+    "dx_ground": 18.971446654276054,
+    "dy_ground": 20.0,
+    "lat_center": 18.45504352463564,
+    "dx_ground_over_proj": 0.9485723327138027
+   },
+   "valid_fraction": 1.0,
+   "validity_counts": {
+    "0": 1638,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "elev_m": {
+    "min": -2555.557,
+    "max": -2471.195
+   },
+   "slope_deg_horn": {
+    "p50": 5.23,
+    "p95": 17.7,
+    "max": 27.57,
+    "share_above_24_2": 0.00549
+   },
+   "endpoints": {
+    "start_M0": {
+     "row": 27,
+     "col": 28,
+     "inside": true,
+     "validity": 0,
+     "h_m": -2546.802,
+     "roundtrip_m": 8.263192883182939e-10
+    },
+    "goal_A": {
+     "row": 9,
+     "col": 22,
+     "inside": true,
+     "validity": 0,
+     "h_m": -2516.724,
+     "roundtrip_m": 8.262913697218081e-10
+    },
+    "goal_B": {
+     "row": 33,
+     "col": 8,
+     "inside": true,
+     "validity": 0,
+     "h_m": -2526.77,
+     "roundtrip_m": 2.1058602869781218e-10
+    }
+   },
+   "corridor": {
+    "half_width_m": 20.0,
+    "cells": 140,
+    "all_valid": true,
+    "slope_deg_max": 12.82
+   },
+   "gate": "PASS",
+   "problems": []
+  },
+  "hirise_dtm_1m": {
+   "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_006_DTM_MOLAtopography_DeltaGeoid_1m_Eqc_latTs0_lon0_blend40.tif",
+   "header": {
+    "size": [
+     21400,
+     21488
+    ],
+    "dtype": "float32",
+    "nodata": -3.4028226550889045e+38,
+    "crs_proj4": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+    "proj": "eqc",
+    "R_m": 3396190,
+    "lat_ts": 0,
+    "lat_0": 0,
+    "lon_0": 0,
+    "transform": [
+     1.0,
+     0.0,
+     4577366.0,
+     0.0,
+     -1.0,
+     1106618.0
+    ],
+    "area_or_point": "Area",
+    "overviews": []
+   },
+   "window": {
+    "col0": 10422,
+    "col1": 11184,
+    "row0": 12292,
+    "row1": 13110,
+    "nx": 762,
+    "ny": 818,
+    "x0": 4587788.0,
+    "y0": 1094326.0,
+    "inside_with_halo": true
+   },
+   "spacing_m": {
+    "dx_proj": 1.0,
+    "dy_proj": 1.0,
+    "dx_ground": 0.9485723327138027,
+    "dy_ground": 1.0,
+    "lat_center": 18.45504352463564,
+    "dx_ground_over_proj": 0.9485723327138027
+   },
+   "valid_fraction": 1.0,
+   "validity_counts": {
+    "0": 623316,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "elev_m": {
+    "min": -2550.748,
+    "max": -2466.779
+   },
+   "slope_deg_horn": {
+    "p50": 5.38,
+    "p95": 20.89,
+    "max": 55.82,
+    "share_above_24_2": 0.03061
+   },
+   "endpoints": {
+    "start_M0": {
+     "row": 546,
+     "col": 567,
+     "inside": true,
+     "validity": 0,
+     "h_m": -2545.454,
+     "roundtrip_m": 8.263192883182939e-10
+    },
+    "goal_A": {
+     "row": 178,
+     "col": 439,
+     "inside": true,
+     "validity": 0,
+     "h_m": -2520.468,
+     "roundtrip_m": 8.262913697218081e-10
+    },
+    "goal_B": {
+     "row": 667,
+     "col": 158,
+     "inside": true,
+     "validity": 0,
+     "h_m": -2526.465,
+     "roundtrip_m": 2.1058602869781218e-10
+    }
+   },
+   "corridor": {
+    "half_width_m": 20.0,
+    "cells": 55837,
+    "all_valid": true,
+    "slope_deg_max": 36.87
+   },
+   "gate": "PASS",
+   "problems": []
+  }
+ },
+ "ortho": {
+  "hirise_ortho_25cm": {
+   "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_007_orthoMosaic_25cm_Ortho_blend120.tif",
+   "header": {
+    "size": [
+     81064,
+     85936
+    ],
+    "dtype": "uint8",
+    "nodata": 0.0,
+    "crs_proj4": "+proj=ortho +lat_0=18.4663 +lon_0=77.4298 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+    "proj": "ortho",
+    "R_m": 3396190,
+    "lat_ts": null,
+    "lat_0": 18.4663,
+    "lon_0": 77.4298,
+    "transform": [
+     0.25,
+     0.0,
+     -11612.0,
+     0.0,
+     -0.25,
+     12036.0
+    ],
+    "area_or_point": "Area",
+    "overviews": []
+   },
+   "window_inside": true,
+   "preview_step": 8,
+   "empty_fraction": 0.0,
+   "empty_rule": "nodata tag"
+  }
+ },
+ "g1_g2": "PASS"
+}

@@ -1,0 +1,379 @@
+{
+ "product": {
+  "logical_identifier": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0516___________der_ps__________________p",
+  "version_id": "1.0",
+  "title": "Mars 2020 MEDA Pressure Sensor Derived Data",
+  "start_date_time_utc": "2022-08-02T08:51:27.903Z",
+  "stop_date_time_utc": "2022-08-03T08:34:37.576Z",
+  "processing_level": "Derived",
+  "file_name": "WE__0516___________DER_PS__________________P01.CSV",
+  "creation_date_time": "2022-11-05T19:05:21.297Z",
+  "start_local_true_solar_time": "0515 23:39:08",
+  "stop_local_true_solar_time": "0516 22:43:34",
+  "start_solar_longitude": "277.586",
+  "stop_solar_longitude": "278.202"
+ },
+ "source_urls": {
+  "csv": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0420_0539/sol_0516/WE__0516___________DER_PS__________________P01.CSV",
+  "xml": "https://atmos.nmsu.edu/PDS/data/PDS4/Mars2020/mars2020_meda/data_derived_env/sol_0420_0539/sol_0516/WE__0516___________DER_PS__________________P01.xml"
+ },
+ "source_bytes": {
+  "csv": 401817,
+  "xml": 9095
+ },
+ "source_sha256": {
+  "csv": "4d50e6a15508814d7815d532bae9b5791cb2de66d1ad01d135fed2d086a01643",
+  "xml": "3388cd323757e23a68db58570464cf8d717c09fa4d50dfbbfbbd7009d4313e54"
+ },
+ "label_fields": [
+  {
+   "field_number": 1,
+   "name": "SCLK",
+   "data_type": "ASCII_Real",
+   "unit": "second",
+   "description": "Spacecraft Clock, as approximated by MEDA internal clock, at the time of the observation, without partition and including decimal thousandths of a second",
+   "special_constants": {}
+  },
+  {
+   "field_number": 2,
+   "name": "LMST",
+   "data_type": "ASCII_String",
+   "unit": null,
+   "description": "Local Mean Solar Time",
+   "special_constants": {}
+  },
+  {
+   "field_number": 3,
+   "name": "LTST",
+   "data_type": "ASCII_String",
+   "unit": null,
+   "description": "Local True Solar Time",
+   "special_constants": {}
+  },
+  {
+   "field_number": 4,
+   "name": "PRESSURE",
+   "data_type": "ASCII_Real",
+   "unit": "pascal",
+   "description": "Pressure",
+   "special_constants": {}
+  },
+  {
+   "field_number": 5,
+   "name": "PRESSURE UNCERTAINTY",
+   "data_type": "ASCII_Real",
+   "unit": "kelvin",
+   "description": "Pressure uncertainty",
+   "special_constants": {}
+  },
+  {
+   "field_number": 6,
+   "name": "TRANSDUCER",
+   "data_type": "ASCII_Integer",
+   "unit": null,
+   "description": "Transducer used: 1 / 2",
+   "special_constants": {}
+  }
+ ],
+ "label_anomalies": [
+  "header spells 'PRESSURE_UNCERTAINTY' where the label names the field 'PRESSURE UNCERTAINTY' (same field after normalisation)",
+  "label unit of PRESSURE UNCERTAINTY is 'kelvin', inconsistent with a pressure uncertainty; values kept as published, no conversion"
+ ],
+ "records_declared": 7440,
+ "records_parsed": 7440,
+ "status_counts": {
+  "valid": 7440,
+  "flagged": 0,
+  "missing": 0,
+  "invalid": 0
+ },
+ "flag_counts": {},
+ "uncertainty_provided_rows": 0,
+ "transducer_counts": {
+  "1": 7440
+ },
+ "pressure_pa_valid": {
+  "n": 7440,
+  "min": 769.75,
+  "max": 803.51,
+  "mean": 788.5145,
+  "median": 788.42
+ },
+ "sclk_range_s": [
+  712701837.0,
+  712787226.0
+ ],
+ "sclk_step_counts_top": [
+  [
+   1,
+   7416
+  ],
+  [
+   3394,
+   12
+  ],
+  [
+   3386,
+   8
+  ],
+  [
+   3385,
+   2
+  ],
+  [
+   3387,
+   1
+  ]
+ ],
+ "sessions": [
+  {
+   "first_record": 1,
+   "last_record": 306,
+   "n": 306,
+   "sclk_start": 712701837.0,
+   "sclk_end": 712702142.0,
+   "lmst_start": "00516M00:00:06.025",
+   "lmst_end": "00516M00:05:02.867"
+  },
+  {
+   "first_record": 307,
+   "last_record": 612,
+   "n": 306,
+   "sclk_start": 712705536.0,
+   "sclk_end": 712705841.0,
+   "lmst_start": "00516M01:00:06.084",
+   "lmst_end": "00516M01:05:02.926"
+  },
+  {
+   "first_record": 613,
+   "last_record": 918,
+   "n": 306,
+   "sclk_start": 712709235.0,
+   "sclk_end": 712709540.0,
+   "lmst_start": "00516M02:00:06.143",
+   "lmst_end": "00516M02:05:02.985"
+  },
+  {
+   "first_record": 919,
+   "last_record": 1224,
+   "n": 306,
+   "sclk_start": 712712934.0,
+   "sclk_end": 712713239.0,
+   "lmst_start": "00516M03:00:06.202",
+   "lmst_end": "00516M03:05:03.044"
+  },
+  {
+   "first_record": 1225,
+   "last_record": 1530,
+   "n": 306,
+   "sclk_start": 712716633.0,
+   "sclk_end": 712716938.0,
+   "lmst_start": "00516M04:00:06.261",
+   "lmst_end": "00516M04:05:03.103"
+  },
+  {
+   "first_record": 1531,
+   "last_record": 1836,
+   "n": 306,
+   "sclk_start": 712720332.0,
+   "sclk_end": 712720637.0,
+   "lmst_start": "00516M05:00:06.320",
+   "lmst_end": "00516M05:05:03.162"
+  },
+  {
+   "first_record": 1837,
+   "last_record": 2142,
+   "n": 306,
+   "sclk_start": 712724031.0,
+   "sclk_end": 712724336.0,
+   "lmst_start": "00516M06:00:06.379",
+   "lmst_end": "00516M06:05:03.221"
+  },
+  {
+   "first_record": 2143,
+   "last_record": 2448,
+   "n": 306,
+   "sclk_start": 712727730.0,
+   "sclk_end": 712728035.0,
+   "lmst_start": "00516M07:00:06.438",
+   "lmst_end": "00516M07:05:03.280"
+  },
+  {
+   "first_record": 2449,
+   "last_record": 2754,
+   "n": 306,
+   "sclk_start": 712731429.0,
+   "sclk_end": 712731734.0,
+   "lmst_start": "00516M08:00:06.497",
+   "lmst_end": "00516M08:05:03.339"
+  },
+  {
+   "first_record": 2755,
+   "last_record": 3060,
+   "n": 306,
+   "sclk_start": 712735128.0,
+   "sclk_end": 712735433.0,
+   "lmst_start": "00516M09:00:06.556",
+   "lmst_end": "00516M09:05:03.398"
+  },
+  {
+   "first_record": 3061,
+   "last_record": 3366,
+   "n": 306,
+   "sclk_start": 712738827.0,
+   "sclk_end": 712739132.0,
+   "lmst_start": "00516M10:00:06.615",
+   "lmst_end": "00516M10:05:03.457"
+  },
+  {
+   "first_record": 3367,
+   "last_record": 3672,
+   "n": 306,
+   "sclk_start": 712742526.0,
+   "sclk_end": 712742831.0,
+   "lmst_start": "00516M11:00:06.674",
+   "lmst_end": "00516M11:05:03.516"
+  },
+  {
+   "first_record": 3673,
+   "last_record": 3986,
+   "n": 314,
+   "sclk_start": 712746225.0,
+   "sclk_end": 712746538.0,
+   "lmst_start": "00516M12:00:06.733",
+   "lmst_end": "00516M12:05:11.361"
+  },
+  {
+   "first_record": 3987,
+   "last_record": 4300,
+   "n": 314,
+   "sclk_start": 712749924.0,
+   "sclk_end": 712750237.0,
+   "lmst_start": "00516M13:00:06.792",
+   "lmst_end": "00516M13:05:11.420"
+  },
+  {
+   "first_record": 4301,
+   "last_record": 4614,
+   "n": 314,
+   "sclk_start": 712753622.0,
+   "sclk_end": 712753935.0,
+   "lmst_start": "00516M14:00:05.878",
+   "lmst_end": "00516M14:05:10.506"
+  },
+  {
+   "first_record": 4615,
+   "last_record": 4928,
+   "n": 314,
+   "sclk_start": 712757321.0,
+   "sclk_end": 712757634.0,
+   "lmst_start": "00516M15:00:05.937",
+   "lmst_end": "00516M15:05:10.565"
+  },
+  {
+   "first_record": 4929,
+   "last_record": 5242,
+   "n": 314,
+   "sclk_start": 712761020.0,
+   "sclk_end": 712761333.0,
+   "lmst_start": "00516M16:00:05.996",
+   "lmst_end": "00516M16:05:10.624"
+  },
+  {
+   "first_record": 5243,
+   "last_record": 5556,
+   "n": 314,
+   "sclk_start": 712764719.0,
+   "sclk_end": 712765032.0,
+   "lmst_start": "00516M17:00:06.055",
+   "lmst_end": "00516M17:05:10.683"
+  },
+  {
+   "first_record": 5557,
+   "last_record": 5870,
+   "n": 314,
+   "sclk_start": 712768418.0,
+   "sclk_end": 712768731.0,
+   "lmst_start": "00516M18:00:06.114",
+   "lmst_end": "00516M18:05:10.742"
+  },
+  {
+   "first_record": 5871,
+   "last_record": 6184,
+   "n": 314,
+   "sclk_start": 712772116.0,
+   "sclk_end": 712772429.0,
+   "lmst_start": "00516M19:00:05.200",
+   "lmst_end": "00516M19:05:09.828"
+  },
+  {
+   "first_record": 6185,
+   "last_record": 6498,
+   "n": 314,
+   "sclk_start": 712775816.0,
+   "sclk_end": 712776129.0,
+   "lmst_start": "00516M20:00:06.232",
+   "lmst_end": "00516M20:05:10.860"
+  },
+  {
+   "first_record": 6499,
+   "last_record": 6812,
+   "n": 314,
+   "sclk_start": 712779515.0,
+   "sclk_end": 712779828.0,
+   "lmst_start": "00516M21:00:06.291",
+   "lmst_end": "00516M21:05:10.919"
+  },
+  {
+   "first_record": 6813,
+   "last_record": 7126,
+   "n": 314,
+   "sclk_start": 712783214.0,
+   "sclk_end": 712783527.0,
+   "lmst_start": "00516M22:00:06.350",
+   "lmst_end": "00516M22:05:10.978"
+  },
+  {
+   "first_record": 7127,
+   "last_record": 7440,
+   "n": 314,
+   "sclk_start": 712786913.0,
+   "sclk_end": 712787226.0,
+   "lmst_start": "00516M23:00:06.410",
+   "lmst_end": "00516M23:05:11.037"
+  }
+ ],
+ "plausibility_screen_pa": [
+  100.0,
+  1500.0
+ ],
+ "time_basis": "Each record carries SCLK (s, MEDA clock approximation), LMST and LTST as published. No per-record UTC is in the product; only the product start/stop UTC from the label. SCLK-to-UTC conversion would need SPICE kernels and was not done.",
+ "missing_value_rule": "The label defines no Special_Constants; an empty field is treated as missing. Missing values are kept as rows, never imputed.",
+ "data_kind": "observed_historical (PDS processing level: Derived)",
+ "limitations": [
+  "Rover-local point measurement at the MEDA pressure inlet on Perseverance, sol 516; not a spatial field over Jezero.",
+  "Historical (2022) observation; not a forecast and not a condition for a hypothetical future EVA.",
+  "Not a validated EVA risk or safety value.",
+  "Pressure uncertainty is not provided in this product (all rows empty); the label's unit for it ('kelvin') is inconsistent.",
+  "The plausibility screen is a sanity check only; no row was removed."
+ ],
+ "rover_location_context": {
+  "last_logged_end_of_drive_before_sol_516": {
+   "sol": 502,
+   "rmc": "26_1222",
+   "lat_deg": 18.45864728,
+   "lon_deg_east": 77.40592495
+  },
+  "next_logged_drive_sol": 535,
+  "bearwallow_sampling_rover_position": {
+   "lat_deg": 18.45863832,
+   "lon_deg_east": 77.40588685,
+   "source": "pds_initial_reports_v2",
+   "locator": "p. 97"
+  },
+  "separation_m": 2.2,
+  "statement": "No MMGIS drive waypoint is logged between these sols, so the sol 516 series is attributed to the rover parked at the Wildcat Ridge workspace.",
+  "confidence": "medium",
+  "evidence_kind": "interpretation (absence of logged drives)"
+ }
+}

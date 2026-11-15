@@ -1,0 +1,9 @@
+{
+ "note": "Human gates for the wider M0-A-B box. Recorded from the owner's reply \"Sign off both\" to the question \"Do you sign off G4 and G5 for the wider M0-A-B grid?\" (15 Nov 2026, after the s15-rc1 report and the G4 overlay were delivered).",
+ "date": "2026-11-15",
+ "by": "owner (Poyraz)",
+ "G4": "approved for prototype analysis",
+ "G5": "HiRISE-derived 2 m analysis grid confirmed for the wider box",
+ "basis": "analysis/m0ab/validation/g3_g4.json (automated G4 numbers within limits) and g4_overlay.png",
+ "scope": "Prototype analysis only, as for the frozen M0-A grid. It does not verify the vertical datum, close DEM registration to the CTX frame (G1/S-4), or approve a merge."
+}

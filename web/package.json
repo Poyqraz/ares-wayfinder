@@ -1,0 +1,32 @@
+{
+  "name": "@ares/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "node --experimental-strip-types --test test/explain.test.ts test/bundle.test.ts test/terrainMesh.test.ts test/flyalong.test.ts test/displayDrape.test.ts test/hirise.test.ts test/poiStatus.test.ts test/ares1.test.ts test/uiDestination.test.ts test/m0a.test.ts test/s5.test.ts test/relief.test.ts test/s7.test.ts test/s8.test.ts test/s9.test.ts test/s10.test.ts test/s11.test.ts test/s13.test.ts test/s14.test.ts test/s15.test.ts",
+    "test:e2e": "playwright test",
+    "test:perf": "playwright test -c playwright.perf.config.ts"
+  },
+  "dependencies": {
+    "@ares/contracts": "workspace:*",
+    "@ares/core": "workspace:*",
+    "@react-three/fiber": "^9.8.2",
+    "react": "~19.2.0",
+    "react-dom": "~19.2.0",
+    "three": "^0.187.0",
+    "zustand": "^5.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/react": "~19.2.0",
+    "@types/react-dom": "~19.2.0",
+    "@types/three": "^0.187.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  }
+}

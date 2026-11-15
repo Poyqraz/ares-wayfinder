@@ -1,0 +1,51 @@
+{
+ "contract_version": "1.0.0",
+ "dataset_version": "05fddbe4d280",
+ "roi_id": "roi_b",
+ "source_ids": [
+  "ctx_dem_20m",
+  "ctx_ortho_5m"
+ ],
+ "nx": 198,
+ "ny": 150,
+ "dx_proj": 20.0,
+ "dy_proj": 20.0,
+ "dx_ground_m": 20.00248503433171,
+ "dy_ground_m": 20.0,
+ "x0": 4352740.0,
+ "y0": 1094820.0,
+ "radius_m": 3396190.0,
+ "lat_ts_deg": 18.4663,
+ "central_meridian_deg": 0.0,
+ "bounds_geo": {
+  "lat_min": 18.419663796187404,
+  "lat_max": 18.47027561076175,
+  "lon_min": 77.41968680870859,
+  "lon_max": 77.49012105466917
+ },
+ "roi_request_geo": {
+  "lat": [
+   18.42,
+   18.47
+  ],
+  "lon": [
+   77.42,
+   77.49
+  ]
+ },
+ "source_window": {
+  "col0": 1187,
+  "row0": 2430
+ },
+ "elevation_unit": "m",
+ "vertical_reference": "UNVERIFIED: not stated in DEM label; agrees within ~1 m with MOLA-referenced TRN DTM at 4 points",
+ "nodata_policy": "NaN in dem = no source data, never filled; validity 1 = not routable",
+ "h_min": -2638.07080078125,
+ "h_max": -2463.78173828125,
+ "slope_method": "horn3x3",
+ "semantic_resolution": {
+  "dem_posting_m": 20.0,
+  "image_gsd_m": 5.0,
+  "note": "Ortho is display only; 5 m image does not imply 5 m terrain or hazard information."
+ }
+}

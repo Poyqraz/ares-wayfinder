@@ -1,0 +1,65 @@
+{
+ "generated_by": "pipeline/m0ab_slope_sigma.py",
+ "dataset_version": "5b2abdb8bb70",
+ "stereo_pairs": [
+  "C",
+  "DL",
+  "W"
+ ],
+ "whole_box": {
+  "C-DL": {
+   "robust_sigma": 2.03,
+   "robust_sigma_where_slope_over_15": 3.24,
+   "cells_over_15": 21427
+  },
+  "C-W": {
+   "robust_sigma": 2.73,
+   "robust_sigma_where_slope_over_15": 4.29,
+   "cells_over_15": 24231
+  },
+  "DL-W": {
+   "robust_sigma": 2.95,
+   "robust_sigma_where_slope_over_15": 4.98,
+   "cells_over_15": 25390
+  }
+ },
+ "new_part_only": {
+  "C-DL": {
+   "robust_sigma": 1.78,
+   "robust_sigma_where_slope_over_15": 2.62,
+   "cells_over_15": 7566
+  },
+  "C-W": {
+   "robust_sigma": 2.71,
+   "robust_sigma_where_slope_over_15": 4.38,
+   "cells_over_15": 9091
+  },
+  "DL-W": {
+   "robust_sigma": 2.89,
+   "robust_sigma_where_slope_over_15": 4.86,
+   "cells_over_15": 9370
+  }
+ },
+ "frozen_part_only": {
+  "C-DL": {
+   "robust_sigma": 2.21,
+   "robust_sigma_where_slope_over_15": 3.65,
+   "cells_over_15": 13861
+  },
+  "C-W": {
+   "robust_sigma": 2.75,
+   "robust_sigma_where_slope_over_15": 4.22,
+   "cells_over_15": 15140
+  },
+  "DL-W": {
+   "robust_sigma": 2.98,
+   "robust_sigma_where_slope_over_15": 5.04,
+   "cells_over_15": 16020
+  }
+ },
+ "margin_used_by_the_app_deg": 4,
+ "new_part_range_deg": [
+  2.62,
+  4.86
+ ]
+}

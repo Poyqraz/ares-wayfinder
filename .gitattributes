@@ -1,0 +1,16 @@
+# Bundle and golden files are hashed byte-for-byte: never convert line endings.
+web/public/data/** -text
+core/test/golden/** -text
+# Source JSON copied byte-for-byte into hashed bundles (pois.json, sources.json): never convert line endings.
+science/**/*.json -text
+# ARES-1 source bytes are hashed: never convert line endings.
+ares1/sources/** -text
+ares1/bundle/** -text
+# M0-A analysis bundle and results are hashed or byte-compared: never convert line endings.
+analysis/m0a/bundle/** -text
+analysis/m0a/results/*.json -text
+analysis/regional/** -text
+analysis/features/** -text
+docs/review/** -text
+analysis/regional_dem/** -text
+analysis/base/** -text

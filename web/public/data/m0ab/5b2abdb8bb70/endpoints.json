@@ -1,0 +1,50 @@
+{
+ "catalog_version": "572fba1ce61f",
+ "endpoints": {
+  "start_M0": {
+   "lat": 18.45272753,
+   "lon": 77.40833585,
+   "semantics": "NASA rover End-of-drive localization (sol 674, RMC 32_774); regional reference only, not a sample or tube point",
+   "position_kind": "rover position (not a tube, core or rock point)",
+   "snap_rule": "cell containing the point (PixelIsArea, floor)",
+   "E": 4588355.693291252,
+   "N": 1093779.8428207354,
+   "row": 273,
+   "col": 283,
+   "cell_center_E": 4588355.0,
+   "cell_center_N": 1093779.0,
+   "snap_distance_ground_m": 1.069,
+   "validity": 0
+  },
+  "goal_A": {
+   "lat": 18.458931,
+   "lon": 77.40617078,
+   "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+   "position_kind": "rover position (not a tube, core or rock point)",
+   "snap_rule": "cell containing the point (PixelIsArea, floor)",
+   "E": 4588227.359421884,
+   "N": 1094147.5516285803,
+   "row": 89,
+   "col": 219,
+   "cell_center_E": 4588227.0,
+   "cell_center_N": 1094147.0,
+   "snap_distance_ground_m": 0.6485,
+   "validity": 0
+  },
+  "goal_B": {
+   "lat": 18.45068664,
+   "lon": 77.40143554,
+   "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+   "position_kind": "rover position (not a tube, core or rock point)",
+   "snap_rule": "cell containing the point (PixelIsArea, floor)",
+   "E": 4587946.679503184,
+   "N": 1093658.8696833071,
+   "row": 333,
+   "col": 79,
+   "cell_center_E": 4587947.0,
+   "cell_center_N": 1093659.0,
+   "snap_distance_ground_m": 0.3308,
+   "validity": 0
+  }
+ }
+}

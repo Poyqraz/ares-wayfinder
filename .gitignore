@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+.pytest_cache/
+*.tif
+pipeline/cache/
+.serena/
+.cursor/
+web/test-results/
+web/playwright-report/
+web/blob-report/
+# private pre-hackathon planning notes, not part of the submission
+Ares_Wayfinder_Claude_Chief_Architect_PreHackathon_Prompt_*.md

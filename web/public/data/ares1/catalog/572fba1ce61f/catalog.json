@@ -1,0 +1,2863 @@
+{
+ "schema": "ares1-science-catalog/1",
+ "status": "development catalog; not integrated in the live application",
+ "conventions": {
+  "coordinates": "planetocentric latitude, east-positive longitude, decimal degrees (Mars); never WGS84",
+  "sphere_radius_m_for_distances": 3396190.0,
+  "null_means": "unknown (never zero)",
+  "confidence": {
+   "high": "directly stated in a primary NASA/PDS record",
+   "medium": "evidence-based interpretation or inference",
+   "low": "hypothesis; alternatives remain",
+   "pending": "source identified, value not yet obtained"
+  },
+  "evidence_kind": [
+   "identity",
+   "observation",
+   "measurement",
+   "interpretation",
+   "hypothesis",
+   "rationale"
+  ],
+  "spatial_precision": [
+   "pds_rover_position_at_event (rover pose; the target lies near, not at, it)",
+   "approximate_rover_waypoint (MMGIS end-of-drive; regional reference)",
+   "not_available"
+  ]
+ },
+ "missions": [
+  {
+   "id": "M0",
+   "name": "Three Forks Sample Depot (hypothetical tube recovery)",
+   "region": "region:three_forks_depot",
+   "drop_events": [
+    "drop:M2020-00337-08",
+    "drop:M2020-00579-17",
+    "drop:M2020-00639-21",
+    "drop:M2020-00164-02",
+    "drop:M2020-00271-06",
+    "drop:M2020-00190-03",
+    "drop:M2020-00516-15",
+    "drop:M2020-00495-12",
+    "drop:M2020-00374-10",
+    "drop:M2020-00586-18"
+   ],
+   "reference_waypoint": "waypoint:M0"
+  },
+  {
+   "id": "A",
+   "name": "Western delta front: Skinner Ridge and Wildcat Ridge",
+   "region": "region:western_delta_front",
+   "outcrops": [
+    "outcrop:skinner_ridge",
+    "outcrop:wildcat_ridge"
+   ],
+   "reference_waypoint": "waypoint:A",
+   "measurement_series": [
+    "series:meda_sol0516_ps"
+   ]
+  },
+  {
+   "id": "B",
+   "name": "Bright Angel: Cheyava Falls rock and Sapphire Canyon core",
+   "region": "region:bright_angel",
+   "rocks": [
+    "rock:cheyava_falls"
+   ],
+   "claims": [
+    "claim:B-01",
+    "claim:B-02",
+    "claim:B-03",
+    "claim:B-04",
+    "claim:B-05",
+    "claim:B-06",
+    "claim:B-07",
+    "claim:B-08",
+    "claim:B-09"
+   ],
+   "reference_waypoint": "waypoint:B",
+   "flags": {
+    "life_detected": false,
+    "biological_origin_confirmed": false,
+    "possible_biosignature_hypothesis": true,
+    "label": "possible biosignature (hypothesis; abiotic pathways not excluded)"
+   }
+  }
+ ],
+ "regions": [
+  {
+   "id": "region:three_forks_depot",
+   "kind": "region",
+   "name": "Three Forks Sample Depot",
+   "mission": "M0",
+   "spatial": {
+    "precision": "pds_rover_positions_at_drops",
+    "rover_drop_positions_bbox": {
+     "lat_min": 18.4525234,
+     "lat_max": 18.45337179,
+     "lon_min": 77.40775601,
+     "lon_max": 77.40860064
+    },
+    "note": "Bounding box of the ten ROVER drop positions; the tubes lie near but not at these points."
+   },
+   "evidence": {
+    "confidence": "high",
+    "evidence_kind": "identity",
+    "sources": [
+     "pds_tf_locations_csv",
+     "pds_an_three_forks"
+    ]
+   }
+  },
+  {
+   "id": "region:western_delta_front",
+   "kind": "region",
+   "name": "Western delta front (Hawksbill Gap context)",
+   "mission": "A",
+   "spatial": {
+    "precision": "approximate_rover_waypoint",
+    "reference": "waypoint:A"
+   },
+   "evidence": {
+    "confidence": "high",
+    "evidence_kind": "identity",
+    "sources": [
+     "team_a_table",
+     "nasa_two_sampling_locations"
+    ]
+   }
+  },
+  {
+   "id": "region:bright_angel",
+   "kind": "region",
+   "name": "Bright Angel (Neretva Vallis)",
+   "mission": "B",
+   "spatial": {
+    "precision": "approximate_rover_waypoint",
+    "reference": "waypoint:B"
+   },
+   "evidence": {
+    "confidence": "high",
+    "evidence_kind": "identity",
+    "sources": [
+     "team_b_claims",
+     "nasa_2024_cheyava_release"
+    ]
+   }
+  }
+ ],
+ "outcrops": [
+  {
+   "id": "outcrop:skinner_ridge",
+   "kind": "outcrop",
+   "name": "Skinner Ridge",
+   "mission": "A",
+   "region": "region:western_delta_front",
+   "geologic_unit_team": "Lower Rockytop / Hawksbill Gap",
+   "abrasion_patch": "abrasion:thornton_gap",
+   "cores": [
+    "sample:M2020-00490-11",
+    "sample:M2020-00495-12"
+   ],
+   "rock_type_team": "medium_grained_sandstone",
+   "science_reason_team": "Fluvially transported clasts, cementation and aqueous alteration; compare sediment transport and depositional conditions",
+   "spatial": {
+    "precision": "pds_rover_position_at_sampling",
+    "positions": [
+     {
+      "lat_deg": 18.458931,
+      "lon_deg_east": 77.40617078,
+      "elev_m": -2520.185,
+      "frame": "planetocentric latitude, east-positive longitude (Mars)",
+      "elevation_reference": "areoid (relative to the datum, per PLACES)",
+      "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+      "source": "pds_initial_reports_v2",
+      "locator": "p. 14"
+     },
+     {
+      "lat_deg": 18.458931,
+      "lon_deg_east": 77.40617078,
+      "elev_m": -2520.185,
+      "frame": "planetocentric latitude, east-positive longitude (Mars)",
+      "elevation_reference": "areoid (relative to the datum, per PLACES)",
+      "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+      "source": "pds_initial_reports_v2",
+      "locator": "p. 52"
+     }
+    ],
+    "note": "Rover positions printed in the Initial Reports for the two cores; the outcrop's extent and the exact core points are not defined here."
+   },
+   "evidence": {
+    "rock_type": {
+     "confidence": "high",
+     "evidence_kind": "observation"
+    },
+    "scientific_interpretation": {
+     "confidence": "medium",
+     "evidence_kind": "interpretation"
+    },
+    "core_ids": {
+     "confidence": "high",
+     "evidence_kind": "identity"
+    },
+    "sources": [
+     "team_a_table",
+     "nasa_skinner_cores_image",
+     "bosak_2024_agu_advances",
+     "nasa_rock_samples_page"
+    ]
+   }
+  },
+  {
+   "id": "outcrop:wildcat_ridge",
+   "kind": "outcrop",
+   "name": "Wildcat Ridge",
+   "mission": "A",
+   "region": "region:western_delta_front",
+   "geologic_unit_team": "Hogwallow Flats / Hawksbill Gap",
+   "abrasion_patch": "abrasion:berry_hollow",
+   "cores": [
+    "sample:M2020-00509-14",
+    "sample:M2020-00516-15"
+   ],
+   "rock_type_team": "fine_grained_sedimentary_rock",
+   "science_reason_team": "Fine-grained deposition, potential organic preservation, sulfate/carbonate and saline-water history",
+   "spatial": {
+    "precision": "pds_rover_position_at_sampling",
+    "positions": [
+     {
+      "lat_deg": 18.45863707,
+      "lon_deg_east": 77.40588851,
+      "elev_m": -2523.0974,
+      "frame": "planetocentric latitude, east-positive longitude (Mars)",
+      "elevation_reference": "areoid (relative to the datum, per PLACES)",
+      "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+      "source": "pds_initial_reports_v2",
+      "locator": "p. 58"
+     },
+     {
+      "lat_deg": 18.45863832,
+      "lon_deg_east": 77.40588685,
+      "elev_m": -2523.077677,
+      "frame": "planetocentric latitude, east-positive longitude (Mars)",
+      "elevation_reference": "areoid (relative to the datum, per PLACES)",
+      "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+      "source": "pds_initial_reports_v2",
+      "locator": "p. 97"
+     }
+    ],
+    "note": "Rover positions printed in the Initial Reports for the two cores; the outcrop's extent and the exact core points are not defined here."
+   },
+   "evidence": {
+    "rock_type": {
+     "confidence": "high",
+     "evidence_kind": "observation"
+    },
+    "scientific_interpretation": {
+     "confidence": "medium",
+     "evidence_kind": "interpretation"
+    },
+    "core_ids": {
+     "confidence": "high",
+     "evidence_kind": "identity"
+    },
+    "sources": [
+     "team_a_table",
+     "nasa_wildcat_cores_image",
+     "bosak_2024_agu_advances",
+     "nasa_rock_samples_page"
+    ]
+   }
+  }
+ ],
+ "rocks": [
+  {
+   "id": "rock:cheyava_falls",
+   "kind": "rock",
+   "name": "Cheyava Falls",
+   "mission": "B",
+   "region": "region:bright_angel",
+   "is_not": "a waterfall or a sample",
+   "cores": [
+    "sample:M2020-01215-28"
+   ],
+   "spatial": {
+    "precision": "pds_rover_position_at_sampling",
+    "positions": [
+     {
+      "lat_deg": 18.49747434,
+      "lon_deg_east": 77.30514915,
+      "elev_m": -2354.235808,
+      "frame": "planetocentric latitude, east-positive longitude (Mars)",
+      "elevation_reference": "areoid (relative to the datum, per PLACES)",
+      "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+      "source": "pds_initial_reports_v4",
+      "locator": "p. 120"
+     }
+    ]
+   },
+   "evidence": {
+    "confidence": "high",
+    "evidence_kind": "identity",
+    "sources": [
+     "team_b_claims",
+     "nasa_rock_samples_page",
+     "pds_initial_reports_v4"
+    ]
+   }
+  }
+ ],
+ "abrasion_patches": [
+  {
+   "id": "abrasion:thornton_gap",
+   "kind": "abrasion_patch",
+   "name": "Thornton Gap",
+   "outcrop": "outcrop:skinner_ridge",
+   "evidence": {
+    "confidence": "high",
+    "evidence_kind": "identity",
+    "sources": [
+     "team_a_table"
+    ]
+   }
+  },
+  {
+   "id": "abrasion:berry_hollow",
+   "kind": "abrasion_patch",
+   "name": "Berry Hollow",
+   "outcrop": "outcrop:wildcat_ridge",
+   "evidence": {
+    "confidence": "high",
+    "evidence_kind": "identity",
+    "sources": [
+     "team_a_table"
+    ]
+   }
+  }
+ ],
+ "samples": [
+  {
+   "id": "sample:M2020-00164-02",
+   "kind": "sample",
+   "sample_designation": "M2020-00164-02",
+   "sample_name": "Roubion",
+   "alternate_names": [
+    "25 Sample 26 Sample 27 Sample 28 Sample 29 Sample 30 Roubion"
+   ],
+   "designation_sol": 164,
+   "designation_tube_number": 2,
+   "nasa_public_sample_number": 1,
+   "classification": {
+    "team_class": "atmosphere",
+    "nasa_sample_type": "Atmospheric",
+    "nasa_rock_type": "n/a",
+    "evidence": {
+     "confidence": "high",
+     "evidence_kind": "identity",
+     "sources": [
+      "team_m0_table",
+      "nasa_rock_samples_page",
+      "pds_initial_reports_v1"
+     ]
+    }
+   },
+   "origin": {
+    "team_origin": "Roubion site",
+    "nasa_feature_name": "Roubion",
+    "initial_report_campaign_raw": "Cra ter Floor",
+    "initial_report_region_of_interest_raw": "Séí tah Thumb"
+   },
+   "sampling_event": {
+    "designation_sol": 164,
+    "date_of_coring_raw": "5-Aug-2021",
+    "rover_position": {
+     "lat_deg": 18.4276934,
+     "lon_deg_east": 77.45165066,
+     "elev_m": -2584.96,
+     "frame": "planetocentric latitude, east-positive longitude (Mars)",
+     "elevation_reference": "areoid (relative to the datum, per PLACES)",
+     "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+     "source": "pds_initial_reports_v1",
+     "locator": "p. 16"
+    }
+   },
+   "sealing_event": {
+    "sol": 164,
+    "lmst": "19:11:35",
+    "ls_deg": 81.1,
+    "date_of_sealing_raw": null,
+    "independently_documented": true,
+    "sources": [
+     "pds_initial_reports_v1",
+     "nasa_rock_samples_page"
+    ],
+    "note": null
+   },
+   "current_location": "Three Forks Depot (surface)",
+   "lithology_raw": "Fine- to medium-gr ained mafic and likely igneous rock, possibly basalt or microgabbro",
+   "initial_report": {
+    "volume": 1,
+    "page": 16,
+    "designation_printed": "M2020-164-2"
+   }
+  },
+  {
+   "id": "sample:M2020-00190-03",
+   "kind": "sample",
+   "sample_designation": "M2020-00190-03",
+   "sample_name": "Montdenier",
+   "alternate_names": [],
+   "designation_sol": 190,
+   "designation_tube_number": 3,
+   "nasa_public_sample_number": 2,
+   "classification": {
+    "team_class": "igneous_rock",
+    "nasa_sample_type": "Rock Core",
+    "nasa_rock_type": "Igneous",
+    "evidence": {
+     "confidence": "high",
+     "evidence_kind": "identity",
+     "sources": [
+      "team_m0_table",
+      "nasa_rock_samples_page",
+      "pds_initial_reports_v1"
+     ]
+    }
+   },
+   "origin": {
+    "team_origin": "Rochette",
+    "nasa_feature_name": "Rochette",
+    "initial_report_campaign_raw": "Cra ter Floor",
+    "initial_report_region_of_interest_raw": "Art uby ridge"
+   },
+   "sampling_event": {
+    "designation_sol": 190,
+    "date_of_coring_raw": "31-Aug-2021",
+    "rover_position": {
+     "lat_deg": 18.43074132,
+     "lon_deg_east": 77.44436502,
+     "elev_m": -2574.553,
+     "frame": "planetocentric latitude, east-positive longitude (Mars)",
+     "elevation_reference": "areoid (relative to the datum, per PLACES)",
+     "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+     "source": "pds_initial_reports_v1",
+     "locator": "p. 36"
+    }
+   },
+   "sealing_event": {
+    "sol": 194,
+    "lmst": "16:53:19",
+    "ls_deg": 92.5,
+    "date_of_sealing_raw": null,
+    "independently_documented": true,
+    "sources": [
+     "pds_initial_reports_v1",
+     "nasa_rock_samples_page"
+    ],
+    "note": null
+   },
+   "current_location": "Three Forks Depot (surface)",
+   "lithology_raw": "Fine-gr ained mafic and likely igneous rock, possibly basalt (alternatively, basaltic sandstone).",
+   "initial_report": {
+    "volume": 1,
+    "page": 36,
+    "designation_printed": "M2020-190-3"
+   }
+  },
+  {
+   "id": "sample:M2020-00271-06",
+   "kind": "sample",
+   "sample_designation": "M2020-00271-06",
+   "sample_name": "Coulettes",
+   "alternate_names": [],
+   "designation_sol": 271,
+   "designation_tube_number": 6,
+   "nasa_public_sample_number": 5,
+   "classification": {
+    "team_class": "igneous_rock",
+    "nasa_sample_type": "Rock Core",
+    "nasa_rock_type": "Igneous",
+    "evidence": {
+     "confidence": "high",
+     "evidence_kind": "identity",
+     "sources": [
+      "team_m0_table",
+      "nasa_rock_samples_page",
+      "pds_initial_reports_v1"
+     ]
+    }
+   },
+   "origin": {
+    "team_origin": "Brac / Séítah",
+    "nasa_feature_name": "Brac",
+    "initial_report_campaign_raw": "Cra ter Floor",
+    "initial_report_region_of_interest_raw": "Séít ah South"
+   },
+   "sampling_event": {
+    "designation_sol": 271,
+    "date_of_coring_raw": "24-November-2021",
+    "rover_position": {
+     "lat_deg": 18.43397,
+     "lon_deg_east": 77.44301,
+     "elev_m": -2569.2,
+     "frame": "planetocentric latitude, east-positive longitude (Mars)",
+     "elevation_reference": "areoid (relative to the datum, per PLACES)",
+     "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+     "source": "pds_initial_reports_v1",
+     "locator": "p. 90"
+    }
+   },
+   "sealing_event": {
+    "sol": 271,
+    "lmst": "20:18",
+    "ls_deg": 132.0,
+    "date_of_sealing_raw": null,
+    "independently_documented": true,
+    "sources": [
+     "pds_initial_reports_v1",
+     "nasa_rock_samples_page"
+    ],
+    "note": null
+   },
+   "current_location": "Three Forks Depot (surface)",
+   "lithology_raw": "Med ium- to coarse-grained poikilitic olivine cumulate rock. Primary minerals are olivine and",
+   "initial_report": {
+    "volume": 1,
+    "page": 90,
+    "designation_printed": "M2020-271-6"
+   }
+  },
+  {
+   "id": "sample:M2020-00337-08",
+   "kind": "sample",
+   "sample_designation": "M2020-00337-08",
+   "sample_name": "Malay",
+   "alternate_names": [],
+   "designation_sol": 337,
+   "designation_tube_number": 8,
+   "nasa_public_sample_number": 7,
+   "classification": {
+    "team_class": "igneous_rock",
+    "nasa_sample_type": "Rock Core",
+    "nasa_rock_type": "Igneous",
+    "evidence": {
+     "confidence": "high",
+     "evidence_kind": "identity",
+     "sources": [
+      "team_m0_table",
+      "nasa_rock_samples_page",
+      "pds_initial_reports_v1"
+     ]
+    }
+   },
+   "origin": {
+    "team_origin": "Issole / Séítah",
+    "nasa_feature_name": "Issole",
+    "initial_report_campaign_raw": "Cra ter Floor",
+    "initial_report_region_of_interest_raw": "Séít ah South"
+   },
+   "sampling_event": {
+    "designation_sol": 337,
+    "date_of_coring_raw": "30-January-2022",
+    "rover_position": {
+     "lat_deg": 18.43264,
+     "lon_deg_east": 77.44133,
+     "elev_m": -2574.3,
+     "frame": "planetocentric latitude, east-positive longitude (Mars)",
+     "elevation_reference": "areoid (relative to the datum, per PLACES)",
+     "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+     "source": "pds_initial_reports_v1",
+     "locator": "p. 125"
+    }
+   },
+   "sealing_event": {
+    "sol": 337,
+    "lmst": "19:25",
+    "ls_deg": 166.6,
+    "date_of_sealing_raw": null,
+    "independently_documented": true,
+    "sources": [
+     "pds_initial_reports_v1",
+     "nasa_rock_samples_page"
+    ],
+    "note": null
+   },
+   "current_location": "Three Forks Depot (surface)",
+   "lithology_raw": "Med ium- to coarse-grained poikilitic olivine cumulate rock. Primary minerals are olivine and",
+   "initial_report": {
+    "volume": 1,
+    "page": 125,
+    "designation_printed": "M2020-337-8"
+   }
+  },
+  {
+   "id": "sample:M2020-00374-10",
+   "kind": "sample",
+   "sample_designation": "M2020-00374-10",
+   "sample_name": "Atsah",
+   "alternate_names": [
+    "Atsá (aka Atsah)"
+   ],
+   "designation_sol": 374,
+   "designation_tube_number": 10,
+   "nasa_public_sample_number": 9,
+   "classification": {
+    "team_class": "igneous_rock",
+    "nasa_sample_type": "Rock Core",
+    "nasa_rock_type": "Igneous",
+    "evidence": {
+     "confidence": "high",
+     "evidence_kind": "identity",
+     "sources": [
+      "team_m0_table",
+      "nasa_rock_samples_page",
+      "pds_initial_reports_v1"
+     ]
+    }
+   },
+   "origin": {
+    "team_origin": "Sid",
+    "nasa_feature_name": "Sid",
+    "initial_report_campaign_raw": "Cra ter Floor",
+    "initial_report_region_of_interest_raw": "Ch’ ał member of Máaz formation, east of the Octavia E. Butler landing site"
+   },
+   "sampling_event": {
+    "designation_sol": 374,
+    "date_of_coring_raw": "9-Mar-22",
+    "rover_position": {
+     "lat_deg": 18.44386406,
+     "lon_deg_east": 77.45242176,
+     "elev_m": -2568.357,
+     "frame": "planetocentric latitude, east-positive longitude (Mars)",
+     "elevation_reference": "areoid (relative to the datum, per PLACES)",
+     "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+     "source": "pds_initial_reports_v1",
+     "locator": "p. 159"
+    }
+   },
+   "sealing_event": {
+    "sol": 377,
+    "lmst": "21:12:02",
+    "ls_deg": 187.0,
+    "date_of_sealing_raw": null,
+    "independently_documented": true,
+    "sources": [
+     "pds_initial_reports_v1",
+     "nasa_rock_samples_page"
+    ],
+    "note": null
+   },
+   "current_location": "Three Forks Depot (surface)",
+   "lithology_raw": "Like ly basaltic andesite. Few mm-size white feldspar laths and pyroxene grains are present, as",
+   "initial_report": {
+    "volume": 1,
+    "page": 159,
+    "designation_printed": "M2020-374-10"
+   }
+  },
+  {
+   "id": "sample:M2020-00495-12",
+   "kind": "sample",
+   "sample_designation": "M2020-00495-12",
+   "sample_name": "Skyland",
+   "alternate_names": [],
+   "designation_sol": 495,
+   "designation_tube_number": 12,
+   "nasa_public_sample_number": 11,
+   "classification": {
+    "team_class": "sedimentary_rock",
+    "nasa_sample_type": "Rock Core",
+    "nasa_rock_type": "Sedimentary",
+    "evidence": {
+     "confidence": "high",
+     "evidence_kind": "identity",
+     "sources": [
+      "team_m0_table",
+      "nasa_rock_samples_page",
+      "pds_initial_reports_v2"
+     ]
+    }
+   },
+   "origin": {
+    "team_origin": "Skinner Ridge",
+    "nasa_feature_name": "Skinner Ridge",
+    "initial_report_campaign_raw": "Del ta Front",
+    "initial_report_region_of_interest_raw": "Haw ksbill Gap"
+   },
+   "sampling_event": {
+    "designation_sol": 495,
+    "date_of_coring_raw": "11- July-2022",
+    "rover_position": {
+     "lat_deg": 18.458931,
+     "lon_deg_east": 77.40617078,
+     "elev_m": -2520.185,
+     "frame": "planetocentric latitude, east-positive longitude (Mars)",
+     "elevation_reference": "areoid (relative to the datum, per PLACES)",
+     "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+     "source": "pds_initial_reports_v2",
+     "locator": "p. 52"
+    }
+   },
+   "sealing_event": {
+    "sol": 495,
+    "lmst": "21:22",
+    "ls_deg": 264.6,
+    "date_of_sealing_raw": null,
+    "independently_documented": true,
+    "sources": [
+     "pds_initial_reports_v2",
+     "nasa_rock_samples_page"
+    ],
+    "note": null
+   },
+   "current_location": "Three Forks Depot (surface)",
+   "lithology_raw": "Fine to medium-grained san dstone deposited in a prodelta setting. Poorly-sorted",
+   "initial_report": {
+    "volume": 2,
+    "page": 52,
+    "designation_printed": "M2020-495-12"
+   }
+  },
+  {
+   "id": "sample:M2020-00516-15",
+   "kind": "sample",
+   "sample_designation": "M2020-00516-15",
+   "sample_name": "Bearwallow",
+   "alternate_names": [],
+   "designation_sol": 516,
+   "designation_tube_number": 15,
+   "nasa_public_sample_number": 13,
+   "classification": {
+    "team_class": "sedimentary_rock",
+    "nasa_sample_type": "Rock Core",
+    "nasa_rock_type": "Sedimentary",
+    "evidence": {
+     "confidence": "high",
+     "evidence_kind": "identity",
+     "sources": [
+      "team_m0_table",
+      "nasa_rock_samples_page",
+      "pds_initial_reports_v2"
+     ]
+    }
+   },
+   "origin": {
+    "team_origin": "Wildcat Ridge",
+    "nasa_feature_name": "Wildcat Ridge",
+    "initial_report_campaign_raw": "Del ta Front",
+    "initial_report_region_of_interest_raw": "Haw ksbill Gap"
+   },
+   "sampling_event": {
+    "designation_sol": 516,
+    "date_of_coring_raw": "2- August-2022",
+    "rover_position": {
+     "lat_deg": 18.45863832,
+     "lon_deg_east": 77.40588685,
+     "elev_m": -2523.077677,
+     "frame": "planetocentric latitude, east-positive longitude (Mars)",
+     "elevation_reference": "areoid (relative to the datum, per PLACES)",
+     "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+     "source": "pds_initial_reports_v2",
+     "locator": "p. 97"
+    }
+   },
+   "sealing_event": {
+    "sol": 516,
+    "lmst": "20:27",
+    "ls_deg": 278.13,
+    "date_of_sealing_raw": null,
+    "independently_documented": true,
+    "sources": [
+     "pds_initial_reports_v2",
+     "nasa_rock_samples_page"
+    ],
+    "note": null
+   },
+   "current_location": "Three Forks Depot (surface)",
+   "lithology_raw": "Fine-gr ained, well-sorted sedimentary rock likely deposited in a lacustrine setting; a sulfate-",
+   "initial_report": {
+    "volume": 2,
+    "page": 97,
+    "designation_printed": "M2020-516-15"
+   }
+  },
+  {
+   "id": "sample:M2020-00579-17",
+   "kind": "sample",
+   "sample_designation": "M2020-00579-17",
+   "sample_name": "Mageik",
+   "alternate_names": [],
+   "designation_sol": 579,
+   "designation_tube_number": 17,
+   "nasa_public_sample_number": 15,
+   "classification": {
+    "team_class": "sedimentary_rock",
+    "nasa_sample_type": "Rock Core",
+    "nasa_rock_type": "Sedimentary",
+    "evidence": {
+     "confidence": "high",
+     "evidence_kind": "identity",
+     "sources": [
+      "team_m0_table",
+      "nasa_rock_samples_page",
+      "pds_initial_reports_v2"
+     ]
+    }
+   },
+   "origin": {
+    "team_origin": "Amalik",
+    "nasa_feature_name": "Amalik",
+    "initial_report_campaign_raw": "Del ta Front",
+    "initial_report_region_of_interest_raw": "Cap e Nukshak"
+   },
+   "sampling_event": {
+    "designation_sol": 579,
+    "date_of_coring_raw": "6- Oct-2022",
+    "rover_position": {
+     "lat_deg": 18.45068664,
+     "lon_deg_east": 77.40143554,
+     "elev_m": -2526.292311,
+     "frame": "planetocentric latitude, east-positive longitude (Mars)",
+     "elevation_reference": "areoid (relative to the datum, per PLACES)",
+     "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+     "source": "pds_initial_reports_v2",
+     "locator": "p. 145"
+    }
+   },
+   "sealing_event": {
+    "sol": 619,
+    "lmst": "19:53",
+    "ls_deg": 339.96,
+    "date_of_sealing_raw": null,
+    "independently_documented": true,
+    "sources": [
+     "pds_initial_reports_v2",
+     "nasa_rock_samples_page"
+    ],
+    "note": null
+   },
+   "current_location": "Three Forks Depot (surface)",
+   "lithology_raw": "Fine-gr ained, well-sorted sedimentary rock likely deposited in a lacustrine setting; an olivine-",
+   "initial_report": {
+    "volume": 2,
+    "page": 145,
+    "designation_printed": "M2020-579-17"
+   }
+  },
+  {
+   "id": "sample:M2020-00586-18",
+   "kind": "sample",
+   "sample_designation": "M2020-00586-18",
+   "sample_name": "Amalik Witness",
+   "alternate_names": [
+    "WB3"
+   ],
+   "designation_sol": 586,
+   "designation_tube_number": 18,
+   "nasa_public_sample_number": null,
+   "classification": {
+    "team_class": "witness_control",
+    "nasa_sample_type": "witness tube (no NASA sample card)",
+    "nasa_rock_type": null,
+    "evidence": {
+     "confidence": "high",
+     "evidence_kind": "identity",
+     "sources": [
+      "team_m0_table",
+      "nasa_rock_samples_page",
+      "pds_initial_reports_v2"
+     ]
+    }
+   },
+   "origin": {
+    "team_origin": "Amalik (witness)",
+    "nasa_feature_name": null,
+    "initial_report_campaign_raw": null,
+    "initial_report_region_of_interest_raw": null
+   },
+   "sampling_event": {
+    "designation_sol": 586,
+    "date_of_coring_raw": null,
+    "rover_position": {
+     "lat_deg": 18.45069082,
+     "lon_deg_east": 77.40142933,
+     "elev_m": -2526.326886,
+     "frame": "planetocentric latitude, east-positive longitude (Mars)",
+     "elevation_reference": "areoid (relative to the datum, per PLACES)",
+     "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+     "source": "pds_initial_reports_v2",
+     "locator": "p. 148"
+    }
+   },
+   "sealing_event": {
+    "sol": 586,
+    "lmst": "19:16:40",
+    "ls_deg": 321.03,
+    "date_of_sealing_raw": "12 -Octber-2022",
+    "independently_documented": false,
+    "sources": [
+     "pds_initial_reports_v2"
+    ],
+    "note": "Witness tube: sealing documented only by its Initial Report"
+   },
+   "current_location": "Three Forks Depot (surface)",
+   "lithology_raw": null,
+   "initial_report": {
+    "volume": 2,
+    "page": 148,
+    "designation_printed": "M2020-586-18"
+   }
+  },
+  {
+   "id": "sample:M2020-00639-21",
+   "kind": "sample",
+   "sample_designation": "M2020-00639-21",
+   "sample_name": "Crosswind Lake",
+   "alternate_names": [],
+   "designation_sol": 639,
+   "designation_tube_number": 21,
+   "nasa_public_sample_number": 18,
+   "classification": {
+    "team_class": "regolith",
+    "nasa_sample_type": "Regolith",
+    "nasa_rock_type": "Likely mixed sedimentary and igneous grains",
+    "evidence": {
+     "confidence": "high",
+     "evidence_kind": "identity",
+     "sources": [
+      "team_m0_table",
+      "nasa_rock_samples_page",
+      "pds_initial_reports_v2"
+     ]
+    }
+   },
+   "origin": {
+    "team_origin": "Observation Mountain",
+    "nasa_feature_name": "Observation Mountain",
+    "initial_report_campaign_raw": "Del ta Front",
+    "initial_report_region_of_interest_raw": "Obs ervation Mountain"
+   },
+   "sampling_event": {
+    "designation_sol": 639,
+    "date_of_coring_raw": "06-Dec-2022",
+    "rover_position": {
+     "lat_deg": 18.45132238,
+     "lon_deg_east": 77.40121614,
+     "elev_m": -2524.977556,
+     "frame": "planetocentric latitude, east-positive longitude (Mars)",
+     "elevation_reference": "areoid (relative to the datum, per PLACES)",
+     "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+     "source": "pds_initial_reports_v2",
+     "locator": "p. 231"
+    }
+   },
+   "sealing_event": {
+    "sol": 639,
+    "lmst": "21:30",
+    "ls_deg": 350.49,
+    "date_of_sealing_raw": null,
+    "independently_documented": true,
+    "sources": [
+     "pds_initial_reports_v2",
+     "nasa_rock_samples_page"
+    ],
+    "note": null
+   },
+   "current_location": "Three Forks Depot (surface)",
+   "lithology_raw": "Regolith sample consists of a mixture of coarse grains up to ~ 5 mm diameter, finer sand of",
+   "initial_report": {
+    "volume": 2,
+    "page": 231,
+    "designation_printed": "M2020-639-21"
+   }
+  },
+  {
+   "id": "sample:M2020-00490-11",
+   "kind": "sample",
+   "sample_designation": "M2020-00490-11",
+   "sample_name": "Swift Run",
+   "alternate_names": [],
+   "designation_sol": 490,
+   "designation_tube_number": 11,
+   "nasa_public_sample_number": 10,
+   "classification": {
+    "team_class": "sedimentary_rock (A table rock_type: medium_grained_sandstone)",
+    "nasa_sample_type": "Rock Core",
+    "nasa_rock_type": "Sedimentary",
+    "evidence": {
+     "confidence": "high",
+     "evidence_kind": "identity",
+     "sources": [
+      "team_a_table",
+      "nasa_rock_samples_page",
+      "pds_initial_reports_v2"
+     ]
+    }
+   },
+   "origin": {
+    "team_origin": "Skinner Ridge",
+    "nasa_feature_name": "Skinner Ridge",
+    "initial_report_campaign_raw": "Del ta Front",
+    "initial_report_region_of_interest_raw": "Haw ksbill Gap"
+   },
+   "sampling_event": {
+    "designation_sol": 490,
+    "date_of_coring_raw": "6- July-2022",
+    "rover_position": {
+     "lat_deg": 18.458931,
+     "lon_deg_east": 77.40617078,
+     "elev_m": -2520.185,
+     "frame": "planetocentric latitude, east-positive longitude (Mars)",
+     "elevation_reference": "areoid (relative to the datum, per PLACES)",
+     "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+     "source": "pds_initial_reports_v2",
+     "locator": "p. 14"
+    }
+   },
+   "sealing_event": {
+    "sol": 490,
+    "lmst": "21:23",
+    "ls_deg": 261.4,
+    "date_of_sealing_raw": null,
+    "independently_documented": true,
+    "sources": [
+     "pds_initial_reports_v2",
+     "nasa_rock_samples_page"
+    ],
+    "note": null
+   },
+   "current_location": "Perseverance Rover (NASA page snapshot 2026-11-14)",
+   "lithology_raw": "Fine to medium-grained san dstone deposited in a prodelta setting. Poorly-sorted",
+   "initial_report": {
+    "volume": 2,
+    "page": 14,
+    "designation_printed": "M2020-490-11"
+   }
+  },
+  {
+   "id": "sample:M2020-00509-14",
+   "kind": "sample",
+   "sample_designation": "M2020-00509-14",
+   "sample_name": "Hazeltop",
+   "alternate_names": [],
+   "designation_sol": 509,
+   "designation_tube_number": 14,
+   "nasa_public_sample_number": 12,
+   "classification": {
+    "team_class": "sedimentary_rock (A table rock_type: fine_grained_sedimentary_rock)",
+    "nasa_sample_type": "Rock Core",
+    "nasa_rock_type": "Sedimentary",
+    "evidence": {
+     "confidence": "high",
+     "evidence_kind": "identity",
+     "sources": [
+      "team_a_table",
+      "nasa_rock_samples_page",
+      "pds_initial_reports_v2"
+     ]
+    }
+   },
+   "origin": {
+    "team_origin": "Wildcat Ridge",
+    "nasa_feature_name": "Wildcat Ridge",
+    "initial_report_campaign_raw": "Del ta Front",
+    "initial_report_region_of_interest_raw": "Haw ksbill Gap"
+   },
+   "sampling_event": {
+    "designation_sol": 509,
+    "date_of_coring_raw": "25- July-2022",
+    "rover_position": {
+     "lat_deg": 18.45863707,
+     "lon_deg_east": 77.40588851,
+     "elev_m": -2523.0974,
+     "frame": "planetocentric latitude, east-positive longitude (Mars)",
+     "elevation_reference": "areoid (relative to the datum, per PLACES)",
+     "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+     "source": "pds_initial_reports_v2",
+     "locator": "p. 58"
+    }
+   },
+   "sealing_event": {
+    "sol": 509,
+    "lmst": "20:57",
+    "ls_deg": 273.7,
+    "date_of_sealing_raw": null,
+    "independently_documented": true,
+    "sources": [
+     "pds_initial_reports_v2",
+     "nasa_rock_samples_page"
+    ],
+    "note": null
+   },
+   "current_location": "Perseverance Rover (NASA page snapshot 2026-11-14)",
+   "lithology_raw": "Fine-gr ained, well-sorted sedimentary rock likely deposited in a lacustrine setting; a sulfate-",
+   "initial_report": {
+    "volume": 2,
+    "page": 58,
+    "designation_printed": "M2020-509-14"
+   }
+  },
+  {
+   "id": "sample:M2020-01215-28",
+   "kind": "sample",
+   "sample_designation": "M2020-01215-28",
+   "sample_name": "Sapphire Canyon",
+   "alternate_names": [],
+   "designation_sol": 1215,
+   "designation_tube_number": 28,
+   "nasa_public_sample_number": 25,
+   "numbering_note": "NASA's public 'Sample No. 25' differs from the designation tube number 28 because NASA's public list does not count witness tubes; both are recorded.",
+   "classification": {
+    "team_class": "sedimentary_rock (core)",
+    "nasa_sample_type": "Rock Core",
+    "nasa_rock_type": "Sedimentary",
+    "evidence": {
+     "confidence": "high",
+     "evidence_kind": "identity",
+     "sources": [
+      "team_b_claims",
+      "nasa_rock_samples_page",
+      "pds_initial_reports_v4"
+     ]
+    }
+   },
+   "origin": {
+    "team_origin": "Cheyava Falls",
+    "nasa_feature_name": "Cheyava Falls",
+    "initial_report_campaign_raw": "Margin",
+    "initial_report_region_of_interest_raw": "Bright Angel"
+   },
+   "sampling_event": {
+    "designation_sol": 1215,
+    "date_of_coring_raw": "21-July-2024",
+    "rover_position": {
+     "lat_deg": 18.49747434,
+     "lon_deg_east": 77.30514915,
+     "elev_m": -2354.235808,
+     "frame": "planetocentric latitude, east-positive longitude (Mars)",
+     "elevation_reference": "areoid (relative to the datum, per PLACES)",
+     "semantics": "rover position printed in the Initial Report for the sampling activity (not the rock/core point)",
+     "source": "pds_initial_reports_v4",
+     "locator": "p. 120"
+    }
+   },
+   "sealing_event": {
+    "sol": 1215,
+    "lmst": "20:05",
+    "ls_deg": 293.3,
+    "date_of_sealing_raw": null,
+    "independently_documented": true,
+    "sources": [
+     "pds_initial_reports_v4",
+     "nasa_rock_samples_page"
+    ],
+    "note": null
+   },
+   "current_location": "Perseverance Rover (NASA page snapshot 2026-11-14)",
+   "lithology_raw": "Fine-grained silicate rock with abundant calcium sulfate veins. Likely a fluvial or lacustrine",
+   "initial_report": {
+    "volume": 4,
+    "page": 120,
+    "designation_printed": "M2020-1215-28"
+   }
+  }
+ ],
+ "depot_drop_events": [
+  {
+   "id": "drop:M2020-00337-08",
+   "kind": "depot_drop_event",
+   "sample": "sample:M2020-00337-08",
+   "sample_designation": "M2020-00337-08",
+   "drop_sol": 653,
+   "drop_time": "13:38:22.157",
+   "drop_time_basis": "sol-local time as published by the Analyst's Notebook ('Sample drop timestamp'); the page does not name the time scale (the team labels it LMST)",
+   "rmc": {
+    "site": 32,
+    "drive": 148
+   },
+   "rover_position": {
+    "lat_deg": 18.45262651,
+    "lon_deg_east": 77.40775601,
+    "elev_m": -2545.263,
+    "frame": "planetocentric latitude, east-positive longitude (Mars)",
+    "elevation_reference": "areoid (relative to the datum, per PLACES)",
+    "semantics": "ROVER position during the tube drop (PDS: 'Latitude of the rover during tube drop'); NOT the tube location",
+    "source": "pds_tf_locations_csv",
+    "locator": "row M2020-00337-08"
+   },
+   "tube_azimuth_deg": 325.0,
+   "tube_azimuth_definition": "clockwise from true north to the vector from the seal end to the glove end, nearest degree (PDS label)",
+   "drop_zone_id": "26",
+   "tube_id": "TUBE_01",
+   "serial_numbers": {
+    "tube": "SN261",
+    "seal": "SN53",
+    "ferrule": "SN062"
+   },
+   "targets": {
+    "Drop Zone - Strategic": "MSR_ThreeForks_Depot_26",
+    "Drop Zone - Tactical": "TF_Zone026_S032_D0148_rp_parked",
+    "Drop Zone - End of Drive": "TF_Zone026_Tube01_S032_D0148_ACA_drop_point",
+    "Drop Location - Glove": "TF_Zone026_Tube01_S032_D0148_glove_base_wtsn",
+    "Drop Location - Seal": "TF_Zone026_Tube01_S032_D0148_tube_tip_wtsn",
+    "Imaging Target": "Malay_tube"
+   },
+   "tube_center": {
+    "status": "NOT_AVAILABLE",
+    "lat_deg": null,
+    "lon_deg_east": null,
+    "uncertainty_m": null,
+    "reason": "The PDS depot tables give the rover position and named glove/seal targets, but no tube-center coordinates. Deriving them needs the per-tube Navcam DEM/RZS products, the target coordinates in the local frame and the PLACES transform; not done.",
+    "named_targets": {
+     "glove_end": "TF_Zone026_Tube01_S032_D0148_glove_base_wtsn",
+     "seal_end": "TF_Zone026_Tube01_S032_D0148_tube_tip_wtsn"
+    }
+   },
+   "evidence": {
+    "confidence": "high",
+    "evidence_kind": "identity",
+    "sources": [
+     "pds_tf_locations_csv",
+     "pds_tf_identifiers_csv",
+     "pds_tf_targets_csv",
+     "pds_an_three_forks",
+     "team_m0_table"
+    ]
+   }
+  },
+  {
+   "id": "drop:M2020-00579-17",
+   "kind": "depot_drop_event",
+   "sample": "sample:M2020-00579-17",
+   "sample_designation": "M2020-00579-17",
+   "drop_sol": 655,
+   "drop_time": "13:25:56.560",
+   "drop_time_basis": "sol-local time as published by the Analyst's Notebook ('Sample drop timestamp'); the page does not name the time scale (the team labels it LMST)",
+   "rmc": {
+    "site": 32,
+    "drive": 250
+   },
+   "rover_position": {
+    "lat_deg": 18.4525234,
+    "lon_deg_east": 77.40784692,
+    "elev_m": -2545.479,
+    "frame": "planetocentric latitude, east-positive longitude (Mars)",
+    "elevation_reference": "areoid (relative to the datum, per PLACES)",
+    "semantics": "ROVER position during the tube drop (PDS: 'Latitude of the rover during tube drop'); NOT the tube location",
+    "source": "pds_tf_locations_csv",
+    "locator": "row M2020-00579-17"
+   },
+   "tube_azimuth_deg": 144.0,
+   "tube_azimuth_definition": "clockwise from true north to the vector from the seal end to the glove end, nearest degree (PDS label)",
+   "drop_zone_id": "25",
+   "tube_id": "TUBE_28",
+   "serial_numbers": {
+    "tube": "SN184",
+    "seal": "SN587",
+    "ferrule": "SN030"
+   },
+   "targets": {
+    "Drop Zone - Strategic": "MSR_ThreeForks_Depot_25",
+    "Drop Zone - Tactical": "TF_Zone025_S032_D0250_rp_parked",
+    "Drop Zone - End of Drive": "TF_Zone025_Tube28_S032_D0250_ACA_drop_point",
+    "Drop Location - Glove": "TF_Zone025_Tube28_S032_D0250_glove_base_wtsn",
+    "Drop Location - Seal": "TF_Zone025_Tube28_S032_D0250_tube_tip_wtsn",
+    "Imaging Target": "Mageik_tube"
+   },
+   "tube_center": {
+    "status": "NOT_AVAILABLE",
+    "lat_deg": null,
+    "lon_deg_east": null,
+    "uncertainty_m": null,
+    "reason": "The PDS depot tables give the rover position and named glove/seal targets, but no tube-center coordinates. Deriving them needs the per-tube Navcam DEM/RZS products, the target coordinates in the local frame and the PLACES transform; not done.",
+    "named_targets": {
+     "glove_end": "TF_Zone025_Tube28_S032_D0250_glove_base_wtsn",
+     "seal_end": "TF_Zone025_Tube28_S032_D0250_tube_tip_wtsn"
+    }
+   },
+   "evidence": {
+    "confidence": "high",
+    "evidence_kind": "identity",
+    "sources": [
+     "pds_tf_locations_csv",
+     "pds_tf_identifiers_csv",
+     "pds_tf_targets_csv",
+     "pds_an_three_forks",
+     "team_m0_table"
+    ]
+   }
+  },
+  {
+   "id": "drop:M2020-00639-21",
+   "kind": "depot_drop_event",
+   "sample": "sample:M2020-00639-21",
+   "sample_designation": "M2020-00639-21",
+   "drop_sol": 661,
+   "drop_time": "12:48:35.876",
+   "drop_time_basis": "sol-local time as published by the Analyst's Notebook ('Sample drop timestamp'); the page does not name the time scale (the team labels it LMST)",
+   "rmc": {
+    "site": 32,
+    "drive": 378
+   },
+   "rover_position": {
+    "lat_deg": 18.45267034,
+    "lon_deg_east": 77.408056,
+    "elev_m": -2545.309,
+    "frame": "planetocentric latitude, east-positive longitude (Mars)",
+    "elevation_reference": "areoid (relative to the datum, per PLACES)",
+    "semantics": "ROVER position during the tube drop (PDS: 'Latitude of the rover during tube drop'); NOT the tube location",
+    "source": "pds_tf_locations_csv",
+    "locator": "row M2020-00639-21"
+   },
+   "tube_azimuth_deg": 117.0,
+   "tube_azimuth_definition": "clockwise from true north to the vector from the seal end to the glove end, nearest degree (PDS label)",
+   "drop_zone_id": "22",
+   "tube_id": "TUBE_17",
+   "serial_numbers": {
+    "tube": "SN173",
+    "seal": "SN191",
+    "ferrule": "SN106"
+   },
+   "targets": {
+    "Drop Zone - Strategic": "MSR_ThreeForks_Depot_22",
+    "Drop Zone - Tactical": "TF_Zone022_S032_D0378_rp_parked",
+    "Drop Zone - End of Drive": "TF_Zone022_Tube17_S032_D0378_ACA_drop_point",
+    "Drop Location - Glove": "TF_Zone022_Tube17_S032_D0378_glove_base_wtsn",
+    "Drop Location - Seal": "TF_Zone022_Tube17_S032_D0378_tube_tip_wtsn",
+    "Imaging Target": "Crosswind_Lake_tube"
+   },
+   "tube_center": {
+    "status": "NOT_AVAILABLE",
+    "lat_deg": null,
+    "lon_deg_east": null,
+    "uncertainty_m": null,
+    "reason": "The PDS depot tables give the rover position and named glove/seal targets, but no tube-center coordinates. Deriving them needs the per-tube Navcam DEM/RZS products, the target coordinates in the local frame and the PLACES transform; not done.",
+    "named_targets": {
+     "glove_end": "TF_Zone022_Tube17_S032_D0378_glove_base_wtsn",
+     "seal_end": "TF_Zone022_Tube17_S032_D0378_tube_tip_wtsn"
+    }
+   },
+   "evidence": {
+    "confidence": "high",
+    "evidence_kind": "identity",
+    "sources": [
+     "pds_tf_locations_csv",
+     "pds_tf_identifiers_csv",
+     "pds_tf_targets_csv",
+     "pds_an_three_forks",
+     "team_m0_table"
+    ]
+   }
+  },
+  {
+   "id": "drop:M2020-00164-02",
+   "kind": "depot_drop_event",
+   "sample": "sample:M2020-00164-02",
+   "sample_designation": "M2020-00164-02",
+   "drop_sol": 666,
+   "drop_time": "13:32:55.072",
+   "drop_time_basis": "sol-local time as published by the Analyst's Notebook ('Sample drop timestamp'); the page does not name the time scale (the team labels it LMST)",
+   "rmc": {
+    "site": 32,
+    "drive": 482
+   },
+   "rover_position": {
+    "lat_deg": 18.45276569,
+    "lon_deg_east": 77.40807823,
+    "elev_m": -2545.18,
+    "frame": "planetocentric latitude, east-positive longitude (Mars)",
+    "elevation_reference": "areoid (relative to the datum, per PLACES)",
+    "semantics": "ROVER position during the tube drop (PDS: 'Latitude of the rover during tube drop'); NOT the tube location",
+    "source": "pds_tf_locations_csv",
+    "locator": "row M2020-00164-02"
+   },
+   "tube_azimuth_deg": 221.0,
+   "tube_azimuth_definition": "clockwise from true north to the vector from the seal end to the glove end, nearest degree (PDS label)",
+   "drop_zone_id": "21",
+   "tube_id": "TUBE_29",
+   "serial_numbers": {
+    "tube": "SN233",
+    "seal": "SN025",
+    "ferrule": "SN062"
+   },
+   "targets": {
+    "Drop Zone - Strategic": "MSR_ThreeForks_Depot_21",
+    "Drop Zone - Tactical": "TF_Zone021_S032_D0482_rp_parked",
+    "Drop Zone - End of Drive": "TF_Zone021_Tube29_S032_D0482_ACA_drop_point",
+    "Drop Location - Glove": "TF_Zone021_Tube29_S032_D0482_glove_base_wtsn",
+    "Drop Location - Seal": "TF_Zone021_Tube29_S032_D0482_tube_tip_wtsn",
+    "Imaging Target": "Roubion_tube"
+   },
+   "tube_center": {
+    "status": "NOT_AVAILABLE",
+    "lat_deg": null,
+    "lon_deg_east": null,
+    "uncertainty_m": null,
+    "reason": "The PDS depot tables give the rover position and named glove/seal targets, but no tube-center coordinates. Deriving them needs the per-tube Navcam DEM/RZS products, the target coordinates in the local frame and the PLACES transform; not done.",
+    "named_targets": {
+     "glove_end": "TF_Zone021_Tube29_S032_D0482_glove_base_wtsn",
+     "seal_end": "TF_Zone021_Tube29_S032_D0482_tube_tip_wtsn"
+    }
+   },
+   "evidence": {
+    "confidence": "high",
+    "evidence_kind": "identity",
+    "sources": [
+     "pds_tf_locations_csv",
+     "pds_tf_identifiers_csv",
+     "pds_tf_targets_csv",
+     "pds_an_three_forks",
+     "team_m0_table"
+    ]
+   }
+  },
+  {
+   "id": "drop:M2020-00271-06",
+   "kind": "depot_drop_event",
+   "sample": "sample:M2020-00271-06",
+   "sample_designation": "M2020-00271-06",
+   "drop_sol": 668,
+   "drop_time": "13:23:55.805",
+   "drop_time_basis": "sol-local time as published by the Analyst's Notebook ('Sample drop timestamp'); the page does not name the time scale (the team labels it LMST)",
+   "rmc": {
+    "site": 32,
+    "drive": 580
+   },
+   "rover_position": {
+    "lat_deg": 18.45272365,
+    "lon_deg_east": 77.4082,
+    "elev_m": -2545.27,
+    "frame": "planetocentric latitude, east-positive longitude (Mars)",
+    "elevation_reference": "areoid (relative to the datum, per PLACES)",
+    "semantics": "ROVER position during the tube drop (PDS: 'Latitude of the rover during tube drop'); NOT the tube location",
+    "source": "pds_tf_locations_csv",
+    "locator": "row M2020-00271-06"
+   },
+   "tube_azimuth_deg": 82.0,
+   "tube_azimuth_definition": "clockwise from true north to the vector from the seal end to the glove end, nearest degree (PDS label)",
+   "drop_zone_id": "20",
+   "tube_id": "TUBE_34",
+   "serial_numbers": {
+    "tube": "SN284",
+    "seal": "SN219",
+    "ferrule": "SN189"
+   },
+   "targets": {
+    "Drop Zone - Strategic": "MSR_ThreeForks_Depot_20",
+    "Drop Zone - Tactical": "TF_Zone020_S032_D0580_rp_parked",
+    "Drop Zone - End of Drive": "TF_Zone020_Tube34_S032_D0580_ACA_drop_point",
+    "Drop Location - Glove": "TF_Zone020_Tube34_S032_D0580_glove_base_wtsn",
+    "Drop Location - Seal": "TF_Zone020_Tube34_S032_D0580_tube_tip_wtsn",
+    "Imaging Target": "Coulettes_tube"
+   },
+   "tube_center": {
+    "status": "NOT_AVAILABLE",
+    "lat_deg": null,
+    "lon_deg_east": null,
+    "uncertainty_m": null,
+    "reason": "The PDS depot tables give the rover position and named glove/seal targets, but no tube-center coordinates. Deriving them needs the per-tube Navcam DEM/RZS products, the target coordinates in the local frame and the PLACES transform; not done.",
+    "named_targets": {
+     "glove_end": "TF_Zone020_Tube34_S032_D0580_glove_base_wtsn",
+     "seal_end": "TF_Zone020_Tube34_S032_D0580_tube_tip_wtsn"
+    }
+   },
+   "evidence": {
+    "confidence": "high",
+    "evidence_kind": "identity",
+    "sources": [
+     "pds_tf_locations_csv",
+     "pds_tf_identifiers_csv",
+     "pds_tf_targets_csv",
+     "pds_an_three_forks",
+     "team_m0_table"
+    ]
+   }
+  },
+  {
+   "id": "drop:M2020-00190-03",
+   "kind": "depot_drop_event",
+   "sample": "sample:M2020-00190-03",
+   "sample_designation": "M2020-00190-03",
+   "drop_sol": 672,
+   "drop_time": "14:09:04.193",
+   "drop_time_basis": "sol-local time as published by the Analyst's Notebook ('Sample drop timestamp'); the page does not name the time scale (the team labels it LMST)",
+   "rmc": {
+    "site": 32,
+    "drive": 672
+   },
+   "rover_position": {
+    "lat_deg": 18.45281322,
+    "lon_deg_east": 77.40824352,
+    "elev_m": -2545.101,
+    "frame": "planetocentric latitude, east-positive longitude (Mars)",
+    "elevation_reference": "areoid (relative to the datum, per PLACES)",
+    "semantics": "ROVER position during the tube drop (PDS: 'Latitude of the rover during tube drop'); NOT the tube location",
+    "source": "pds_tf_locations_csv",
+    "locator": "row M2020-00190-03"
+   },
+   "tube_azimuth_deg": 173.0,
+   "tube_azimuth_definition": "clockwise from true north to the vector from the seal end to the glove end, nearest degree (PDS label)",
+   "drop_zone_id": "18",
+   "tube_id": "TUBE_13",
+   "serial_numbers": {
+    "tube": "SN266",
+    "seal": "SN178",
+    "ferrule": "SN099"
+   },
+   "targets": {
+    "Drop Zone - Strategic": "MSR_ThreeForks_Depot_18",
+    "Drop Zone - Tactical": "TF_Zone018_S032_D0672_rp_parked",
+    "Drop Zone - End of Drive": "TF_Zone018_Tube13_S032_D0672_ACA_drop_point",
+    "Drop Location - Glove": "TF_Zone018_Tube13_S032_D0672_glove_base_wtsn",
+    "Drop Location - Seal": "TF_Zone018_Tube13_S032_D0672_tube_tip_wtsn",
+    "Imaging Target": "Mondenier_tube"
+   },
+   "tube_center": {
+    "status": "NOT_AVAILABLE",
+    "lat_deg": null,
+    "lon_deg_east": null,
+    "uncertainty_m": null,
+    "reason": "The PDS depot tables give the rover position and named glove/seal targets, but no tube-center coordinates. Deriving them needs the per-tube Navcam DEM/RZS products, the target coordinates in the local frame and the PLACES transform; not done.",
+    "named_targets": {
+     "glove_end": "TF_Zone018_Tube13_S032_D0672_glove_base_wtsn",
+     "seal_end": "TF_Zone018_Tube13_S032_D0672_tube_tip_wtsn"
+    }
+   },
+   "evidence": {
+    "confidence": "high",
+    "evidence_kind": "identity",
+    "sources": [
+     "pds_tf_locations_csv",
+     "pds_tf_identifiers_csv",
+     "pds_tf_targets_csv",
+     "pds_an_three_forks",
+     "team_m0_table"
+    ]
+   }
+  },
+  {
+   "id": "drop:M2020-00516-15",
+   "kind": "depot_drop_event",
+   "sample": "sample:M2020-00516-15",
+   "sample_designation": "M2020-00516-15",
+   "drop_sol": 675,
+   "drop_time": "13:07:52.470",
+   "drop_time_basis": "sol-local time as published by the Analyst's Notebook ('Sample drop timestamp'); the page does not name the time scale (the team labels it LMST)",
+   "rmc": {
+    "site": 32,
+    "drive": 774
+   },
+   "rover_position": {
+    "lat_deg": 18.45272753,
+    "lon_deg_east": 77.40833585,
+    "elev_m": -2545.443,
+    "frame": "planetocentric latitude, east-positive longitude (Mars)",
+    "elevation_reference": "areoid (relative to the datum, per PLACES)",
+    "semantics": "ROVER position during the tube drop (PDS: 'Latitude of the rover during tube drop'); NOT the tube location",
+    "source": "pds_tf_locations_csv",
+    "locator": "row M2020-00516-15"
+   },
+   "tube_azimuth_deg": 146.0,
+   "tube_azimuth_definition": "clockwise from true north to the vector from the seal end to the glove end, nearest degree (PDS label)",
+   "drop_zone_id": "19",
+   "tube_id": "TUBE_14",
+   "serial_numbers": {
+    "tube": "SN259",
+    "seal": "SN177",
+    "ferrule": "SN110"
+   },
+   "targets": {
+    "Drop Zone - Strategic": "MSR_ThreeForks_Depot_19",
+    "Drop Zone - Tactical": "TF_Zone019_S032_D0774_rp_parked",
+    "Drop Zone - End of Drive": "TF_Zone019_Tube14_S032_D0774_ACA_drop_point",
+    "Drop Location - Glove": "TF_Zone019_Tube14_S032_D0774_glove_base_wtsn",
+    "Drop Location - Seal": "TF_Zone019_Tube14_S032_D0774_tube_tip_wtsn",
+    "Imaging Target": "Bearwallow_tube"
+   },
+   "tube_center": {
+    "status": "NOT_AVAILABLE",
+    "lat_deg": null,
+    "lon_deg_east": null,
+    "uncertainty_m": null,
+    "reason": "The PDS depot tables give the rover position and named glove/seal targets, but no tube-center coordinates. Deriving them needs the per-tube Navcam DEM/RZS products, the target coordinates in the local frame and the PLACES transform; not done.",
+    "named_targets": {
+     "glove_end": "TF_Zone019_Tube14_S032_D0774_glove_base_wtsn",
+     "seal_end": "TF_Zone019_Tube14_S032_D0774_tube_tip_wtsn"
+    }
+   },
+   "evidence": {
+    "confidence": "high",
+    "evidence_kind": "identity",
+    "sources": [
+     "pds_tf_locations_csv",
+     "pds_tf_identifiers_csv",
+     "pds_tf_targets_csv",
+     "pds_an_three_forks",
+     "team_m0_table"
+    ]
+   }
+  },
+  {
+   "id": "drop:M2020-00495-12",
+   "kind": "depot_drop_event",
+   "sample": "sample:M2020-00495-12",
+   "sample_designation": "M2020-00495-12",
+   "drop_sol": 680,
+   "drop_time": "12:52:41.778",
+   "drop_time_basis": "sol-local time as published by the Analyst's Notebook ('Sample drop timestamp'); the page does not name the time scale (the team labels it LMST)",
+   "rmc": {
+    "site": 32,
+    "drive": 896
+   },
+   "rover_position": {
+    "lat_deg": 18.45300487,
+    "lon_deg_east": 77.4085047,
+    "elev_m": -2545.093,
+    "frame": "planetocentric latitude, east-positive longitude (Mars)",
+    "elevation_reference": "areoid (relative to the datum, per PLACES)",
+    "semantics": "ROVER position during the tube drop (PDS: 'Latitude of the rover during tube drop'); NOT the tube location",
+    "source": "pds_tf_locations_csv",
+    "locator": "row M2020-00495-12"
+   },
+   "tube_azimuth_deg": 233.0,
+   "tube_azimuth_definition": "clockwise from true north to the vector from the seal end to the glove end, nearest degree (PDS label)",
+   "drop_zone_id": "17",
+   "tube_id": "TUBE_24",
+   "serial_numbers": {
+    "tube": "SN272",
+    "seal": "SN192",
+    "ferrule": "SN068"
+   },
+   "targets": {
+    "Drop Zone - Strategic": "MSR_ThreeForks_Depot_17",
+    "Drop Zone - Tactical": "TF_Zone017_S032_D0896_rp_parked",
+    "Drop Zone - End of Drive": "TF_Zone017_Tube24_S032_D0896_ACA_drop_point",
+    "Drop Location - Glove": "TF_Zone017_Tube24_S032_D0896_glove_base_wtsn",
+    "Drop Location - Seal": "TF_Zone017_Tube24_S032_D0896_tube_tip_wtsn",
+    "Imaging Target": "Skyland_tube_682"
+   },
+   "tube_center": {
+    "status": "NOT_AVAILABLE",
+    "lat_deg": null,
+    "lon_deg_east": null,
+    "uncertainty_m": null,
+    "reason": "The PDS depot tables give the rover position and named glove/seal targets, but no tube-center coordinates. Deriving them needs the per-tube Navcam DEM/RZS products, the target coordinates in the local frame and the PLACES transform; not done.",
+    "named_targets": {
+     "glove_end": "TF_Zone017_Tube24_S032_D0896_glove_base_wtsn",
+     "seal_end": "TF_Zone017_Tube24_S032_D0896_tube_tip_wtsn"
+    }
+   },
+   "evidence": {
+    "confidence": "high",
+    "evidence_kind": "identity",
+    "sources": [
+     "pds_tf_locations_csv",
+     "pds_tf_identifiers_csv",
+     "pds_tf_targets_csv",
+     "pds_an_three_forks",
+     "team_m0_table"
+    ]
+   }
+  },
+  {
+   "id": "drop:M2020-00374-10",
+   "kind": "depot_drop_event",
+   "sample": "sample:M2020-00374-10",
+   "sample_designation": "M2020-00374-10",
+   "drop_sol": 682,
+   "drop_time": "14:04:26.386",
+   "drop_time_basis": "sol-local time as published by the Analyst's Notebook ('Sample drop timestamp'); the page does not name the time scale (the team labels it LMST)",
+   "rmc": {
+    "site": 32,
+    "drive": 1038
+   },
+   "rover_position": {
+    "lat_deg": 18.45306554,
+    "lon_deg_east": 77.40860064,
+    "elev_m": -2545.282,
+    "frame": "planetocentric latitude, east-positive longitude (Mars)",
+    "elevation_reference": "areoid (relative to the datum, per PLACES)",
+    "semantics": "ROVER position during the tube drop (PDS: 'Latitude of the rover during tube drop'); NOT the tube location",
+    "source": "pds_tf_locations_csv",
+    "locator": "row M2020-00374-10"
+   },
+   "tube_azimuth_deg": 46.0,
+   "tube_azimuth_definition": "clockwise from true north to the vector from the seal end to the glove end, nearest degree (PDS label)",
+   "drop_zone_id": "16",
+   "tube_id": "TUBE_36",
+   "serial_numbers": {
+    "tube": "SN202",
+    "seal": "SN168",
+    "ferrule": "SN074"
+   },
+   "targets": {
+    "Drop Zone - Strategic": "MSR_ThreeForks_Depot_16",
+    "Drop Zone - Tactical": "TF_Zone016_S032_D1038_rp_parked",
+    "Drop Zone - End of Drive": "TF_Zone016_Tube36_S032_D1038_ACA_drop_point",
+    "Drop Location - Glove": "TF_Zone016_Tube36_S032_D1038_glove_base_wtsn",
+    "Drop Location - Seal": "TF_Zone016_Tube36_S032_D1038_tube_tip_wtsn",
+    "Imaging Target": "Atsah_tube_686"
+   },
+   "tube_center": {
+    "status": "NOT_AVAILABLE",
+    "lat_deg": null,
+    "lon_deg_east": null,
+    "uncertainty_m": null,
+    "reason": "The PDS depot tables give the rover position and named glove/seal targets, but no tube-center coordinates. Deriving them needs the per-tube Navcam DEM/RZS products, the target coordinates in the local frame and the PLACES transform; not done.",
+    "named_targets": {
+     "glove_end": "TF_Zone016_Tube36_S032_D1038_glove_base_wtsn",
+     "seal_end": "TF_Zone016_Tube36_S032_D1038_tube_tip_wtsn"
+    }
+   },
+   "evidence": {
+    "confidence": "high",
+    "evidence_kind": "identity",
+    "sources": [
+     "pds_tf_locations_csv",
+     "pds_tf_identifiers_csv",
+     "pds_tf_targets_csv",
+     "pds_an_three_forks",
+     "team_m0_table"
+    ]
+   }
+  },
+  {
+   "id": "drop:M2020-00586-18",
+   "kind": "depot_drop_event",
+   "sample": "sample:M2020-00586-18",
+   "sample_designation": "M2020-00586-18",
+   "drop_sol": 690,
+   "drop_time": "14:36:26.755",
+   "drop_time_basis": "sol-local time as published by the Analyst's Notebook ('Sample drop timestamp'); the page does not name the time scale (the team labels it LMST)",
+   "rmc": {
+    "site": 32,
+    "drive": 1184
+   },
+   "rover_position": {
+    "lat_deg": 18.45337179,
+    "lon_deg_east": 77.40844668,
+    "elev_m": -2545.203,
+    "frame": "planetocentric latitude, east-positive longitude (Mars)",
+    "elevation_reference": "areoid (relative to the datum, per PLACES)",
+    "semantics": "ROVER position during the tube drop (PDS: 'Latitude of the rover during tube drop'); NOT the tube location",
+    "source": "pds_tf_locations_csv",
+    "locator": "row M2020-00586-18"
+   },
+   "tube_azimuth_deg": 206.0,
+   "tube_azimuth_definition": "clockwise from true north to the vector from the seal end to the glove end, nearest degree (PDS label)",
+   "drop_zone_id": "13",
+   "tube_id": "TUBE_40",
+   "serial_numbers": {
+    "tube": "SN188",
+    "seal": "SN153",
+    "ferrule": "SN073"
+   },
+   "targets": {
+    "Drop Zone - Strategic": "MSR_ThreeForks_Depot_13",
+    "Drop Zone - Tactical": "TF_Zone013_S032_D1184_rp_parked",
+    "Drop Zone - End of Drive": "TF_Zone013_Tube40_S032_D1184_ACA_drop_point",
+    "Drop Location - Glove": "TF_Zone013_Tube40_S032_D1184_glove_base_wtsn",
+    "Drop Location - Seal": "TF_Zone013_Tube40_S032_D1184_tube_tip_wtsn",
+    "Imaging Target": "-"
+   },
+   "tube_center": {
+    "status": "NOT_AVAILABLE",
+    "lat_deg": null,
+    "lon_deg_east": null,
+    "uncertainty_m": null,
+    "reason": "The PDS depot tables give the rover position and named glove/seal targets, but no tube-center coordinates. Deriving them needs the per-tube Navcam DEM/RZS products, the target coordinates in the local frame and the PLACES transform; not done.",
+    "named_targets": {
+     "glove_end": "TF_Zone013_Tube40_S032_D1184_glove_base_wtsn",
+     "seal_end": "TF_Zone013_Tube40_S032_D1184_tube_tip_wtsn"
+    }
+   },
+   "evidence": {
+    "confidence": "high",
+    "evidence_kind": "identity",
+    "sources": [
+     "pds_tf_locations_csv",
+     "pds_tf_identifiers_csv",
+     "pds_tf_targets_csv",
+     "pds_an_three_forks",
+     "team_m0_table"
+    ]
+   }
+  }
+ ],
+ "reference_waypoints": [
+  {
+   "id": "waypoint:M0",
+   "kind": "reference_waypoint",
+   "mission": "M0",
+   "position": {
+    "lat_deg": 18.45272753,
+    "lon_deg_east": 77.40833585,
+    "elev_m": -2545.443,
+    "frame": "planetocentric latitude, east-positive longitude (Mars)",
+    "elevation_reference": "elev_geoid as published by MMGIS",
+    "semantics": "NASA rover End-of-drive localization (sol 674, RMC 32_774); regional reference only, not a sample or tube point",
+    "source": "nasa_mmgis_waypoints",
+    "locator": "RMC 32_774"
+   },
+   "team_label": "Three Forks örnek deposu",
+   "coordinate_status": "approximate_rover_waypoint"
+  },
+  {
+   "id": "waypoint:A",
+   "kind": "reference_waypoint",
+   "mission": "A",
+   "position": {
+    "lat_deg": 18.45869497,
+    "lon_deg_east": 77.40595178,
+    "elev_m": -2522.827881,
+    "frame": "planetocentric latitude, east-positive longitude (Mars)",
+    "elevation_reference": "elev_geoid as published by MMGIS",
+    "semantics": "NASA rover End-of-drive localization (sol 501, RMC 26_1154); regional reference only, not a sample or tube point",
+    "source": "nasa_mmgis_waypoints",
+    "locator": "RMC 26_1154"
+   },
+   "team_label": "Wildcat / Skinner Ridge delta",
+   "coordinate_status": "approximate_rover_waypoint"
+  },
+  {
+   "id": "waypoint:B",
+   "kind": "reference_waypoint",
+   "mission": "B",
+   "position": {
+    "lat_deg": 18.49748444,
+    "lon_deg_east": 77.30519089,
+    "elev_m": -2354.03125,
+    "frame": "planetocentric latitude, east-positive longitude (Mars)",
+    "elevation_reference": "elev_geoid as published by MMGIS",
+    "semantics": "NASA rover End-of-drive localization (sol 1210, RMC 56_0); regional reference only, not a sample or tube point",
+    "source": "nasa_mmgis_waypoints",
+    "locator": "RMC 56_0"
+   },
+   "team_label": "Bright Angel / Cheyava Falls",
+   "coordinate_status": "approximate_rover_waypoint"
+  }
+ ],
+ "reference_distances_m": {
+  "M0-A": 378.3,
+  "M0-B": 6376.8,
+  "A-B": 6113.5,
+  "skinner_ridge-wildcat_ridge_sampling_positions": 23.6
+ },
+ "claims": [
+  {
+   "id": "claim:B-01",
+   "kind": "science_claim",
+   "mission": "B",
+   "subject": "rock:cheyava_falls",
+   "category": "locality",
+   "claim": "Cheyava Falls in Bright Angel, Neretva Vallis",
+   "confidence": "high",
+   "evidence_kind": "identity",
+   "limitation": "Directly observed on rover mission; distinct from sample name Sapphire Canyon",
+   "primary_source": "nasa_2024_cheyava_release",
+   "primary_source_url": "https://www.nasa.gov/solar-system/nasas-perseverance-rover-scientists-find-intriguing-mars-rock/",
+   "team_source": "team_b_claims"
+  },
+  {
+   "id": "claim:B-02",
+   "kind": "science_claim",
+   "mission": "B",
+   "subject": "sample:M2020-01215-28",
+   "category": "core",
+   "claim": "Sapphire Canyon sample #25 sealed sol 1215, 21 July 2024; currently held by rover",
+   "confidence": "high",
+   "evidence_kind": "identity",
+   "limitation": "Not one of ten M0 depot tubes",
+   "primary_source": "nasa_rock_samples_page",
+   "primary_source_url": "https://science.nasa.gov/mission/mars-2020-perseverance/mars-rock-samples/",
+   "team_source": "team_b_claims"
+  },
+  {
+   "id": "claim:B-03",
+   "kind": "science_claim",
+   "mission": "B",
+   "subject": "rock:cheyava_falls",
+   "category": "sedimentology",
+   "claim": "Fine-grained mudstone and layered rocks consistent with aqueous sediment deposition",
+   "confidence": "medium",
+   "evidence_kind": "interpretation",
+   "limitation": "Geological interpretation of observed textures",
+   "primary_source": "hurowitz_2025_nature",
+   "primary_source_url": "https://www.nature.com/articles/s41586-025-09413-0",
+   "team_source": "team_b_claims"
+  },
+  {
+   "id": "claim:B-04",
+   "kind": "science_claim",
+   "mission": "B",
+   "subject": "rock:cheyava_falls",
+   "category": "organics",
+   "claim": "SHERLOC Raman G-band consistent with organic carbon-bearing material in Bright Angel mudstones",
+   "confidence": "medium",
+   "evidence_kind": "interpretation",
+   "limitation": "Raman signal supports organic-carbon interpretation; not a living organism detection",
+   "primary_source": "hurowitz_2025_nature",
+   "primary_source_url": "https://www.nature.com/articles/s41586-025-09413-0",
+   "team_source": "team_b_claims"
+  },
+  {
+   "id": "claim:B-05",
+   "kind": "science_claim",
+   "mission": "B",
+   "subject": "rock:cheyava_falls",
+   "category": "nodule_phosphate",
+   "claim": "Fe-P-rich nodules and reaction rims consistent with ferrous iron-phosphate phases such as vivianite",
+   "confidence": "medium",
+   "evidence_kind": "interpretation",
+   "limitation": "Mineral identification inferred from chemistry/textures; alternative phases possible",
+   "primary_source": "hurowitz_2025_nature",
+   "primary_source_url": "https://www.nature.com/articles/s41586-025-09413-0",
+   "team_source": "team_b_claims"
+  },
+  {
+   "id": "claim:B-06",
+   "kind": "science_claim",
+   "mission": "B",
+   "subject": "rock:cheyava_falls",
+   "category": "reaction_front_sulfide",
+   "claim": "Fe-S-rich phases have chemistry consistent with greigite, associated with pale leopard-spot-type reaction fronts",
+   "confidence": "medium",
+   "evidence_kind": "interpretation",
+   "limitation": "Mineral presence and formation pathways not uniquely established",
+   "primary_source": "hurowitz_2025_nature",
+   "primary_source_url": "https://www.nature.com/articles/s41586-025-09413-0",
+   "team_source": "team_b_claims"
+  },
+  {
+   "id": "claim:B-07",
+   "kind": "science_claim",
+   "mission": "B",
+   "subject": "rock:cheyava_falls",
+   "category": "sulfate_veins",
+   "claim": "Calcium sulfate veins, olivine-bearing materials and oxidation/alteration features observed",
+   "confidence": "high",
+   "evidence_kind": "observation",
+   "limitation": "Not evidence by itself of biology",
+   "primary_source": "nasa_leopard_spots_image",
+   "primary_source_url": "https://science.nasa.gov/resource/perseverance-finds-a-rock-with-leopard-spots/",
+   "team_source": "team_b_claims"
+  },
+  {
+   "id": "claim:B-08",
+   "kind": "science_claim",
+   "mission": "B",
+   "subject": "rock:cheyava_falls",
+   "category": "potential_biosignature",
+   "claim": "Features could reflect biologically mediated redox processes",
+   "confidence": "low",
+   "evidence_kind": "hypothesis",
+   "limitation": "Abiotic pathways are not excluded; no proof of life",
+   "primary_source": "hurowitz_2025_nature",
+   "primary_source_url": "https://www.nature.com/articles/s41586-025-09413-0",
+   "team_source": "team_b_claims"
+  },
+  {
+   "id": "claim:B-09",
+   "kind": "science_claim",
+   "mission": "B",
+   "subject": "rock:cheyava_falls",
+   "category": "sample_return_need",
+   "claim": "Earth-based laboratories could further test organic and mineral chemistry",
+   "confidence": "medium",
+   "evidence_kind": "rationale",
+   "limitation": "Scientific rationale, NOT confirmation NASA has a specific return schedule",
+   "primary_source": "nasa_2024_cheyava_release",
+   "primary_source_url": "https://www.nasa.gov/solar-system/nasas-perseverance-rover-scientists-find-intriguing-mars-rock/",
+   "team_source": "team_b_claims"
+  }
+ ],
+ "measurement_series": [
+  {
+   "id": "series:meda_sol0516_ps",
+   "kind": "measurement_series",
+   "mission": "A",
+   "instrument": "Mars 2020 MEDA Pressure Sensor (PS)",
+   "product_lid": "urn:nasa:pds:mars2020_meda:data_derived_env:we__0516___________der_ps__________________p",
+   "processing_level": "Derived",
+   "sol": 516,
+   "start_utc": "2022-08-02T08:51:27.903Z",
+   "stop_utc": "2022-08-03T08:34:37.576Z",
+   "ls_deg": [
+    277.586,
+    278.202
+   ],
+   "data_kind": "observed_historical",
+   "rows_file": "meda_sol0516_der_ps_rows.csv",
+   "qa_file": "meda_sol0516_der_ps_qa.json",
+   "status_counts": {
+    "valid": 7440,
+    "flagged": 0,
+    "missing": 0,
+    "invalid": 0
+   },
+   "pressure_pa_valid": {
+    "n": 7440,
+    "min": 769.75,
+    "max": 803.51,
+    "mean": 788.5145,
+    "median": 788.42
+   },
+   "linked_samples": [
+    "sample:M2020-00516-15"
+   ],
+   "not_to_be_presented_as": [
+    "spatial weather map",
+    "forecast",
+    "future EVA condition",
+    "validated EVA risk"
+   ],
+   "sources": [
+    "pds_meda_sol0516_ps_csv",
+    "pds_meda_sol0516_ps_xml",
+    "meda_bundle_doi"
+   ]
+  }
+ ],
+ "relations": [
+  {
+   "from": "sample:M2020-00164-02",
+   "rel": "dropped_at",
+   "to": "region:three_forks_depot",
+   "via": "drop:M2020-00164-02"
+  },
+  {
+   "from": "sample:M2020-00190-03",
+   "rel": "dropped_at",
+   "to": "region:three_forks_depot",
+   "via": "drop:M2020-00190-03"
+  },
+  {
+   "from": "sample:M2020-00271-06",
+   "rel": "dropped_at",
+   "to": "region:three_forks_depot",
+   "via": "drop:M2020-00271-06"
+  },
+  {
+   "from": "sample:M2020-00337-08",
+   "rel": "dropped_at",
+   "to": "region:three_forks_depot",
+   "via": "drop:M2020-00337-08"
+  },
+  {
+   "from": "sample:M2020-00374-10",
+   "rel": "dropped_at",
+   "to": "region:three_forks_depot",
+   "via": "drop:M2020-00374-10"
+  },
+  {
+   "from": "sample:M2020-00495-12",
+   "rel": "dropped_at",
+   "to": "region:three_forks_depot",
+   "via": "drop:M2020-00495-12"
+  },
+  {
+   "from": "sample:M2020-00516-15",
+   "rel": "dropped_at",
+   "to": "region:three_forks_depot",
+   "via": "drop:M2020-00516-15"
+  },
+  {
+   "from": "sample:M2020-00579-17",
+   "rel": "dropped_at",
+   "to": "region:three_forks_depot",
+   "via": "drop:M2020-00579-17"
+  },
+  {
+   "from": "sample:M2020-00586-18",
+   "rel": "dropped_at",
+   "to": "region:three_forks_depot",
+   "via": "drop:M2020-00586-18"
+  },
+  {
+   "from": "sample:M2020-00639-21",
+   "rel": "dropped_at",
+   "to": "region:three_forks_depot",
+   "via": "drop:M2020-00639-21"
+  },
+  {
+   "from": "sample:M2020-00490-11",
+   "rel": "cored_from",
+   "to": "outcrop:skinner_ridge"
+  },
+  {
+   "from": "sample:M2020-00495-12",
+   "rel": "cored_from",
+   "to": "outcrop:skinner_ridge"
+  },
+  {
+   "from": "sample:M2020-00509-14",
+   "rel": "cored_from",
+   "to": "outcrop:wildcat_ridge"
+  },
+  {
+   "from": "sample:M2020-00516-15",
+   "rel": "cored_from",
+   "to": "outcrop:wildcat_ridge"
+  },
+  {
+   "from": "outcrop:skinner_ridge",
+   "rel": "located_in",
+   "to": "region:western_delta_front"
+  },
+  {
+   "from": "outcrop:wildcat_ridge",
+   "rel": "located_in",
+   "to": "region:western_delta_front"
+  },
+  {
+   "from": "sample:M2020-01215-28",
+   "rel": "cored_from",
+   "to": "rock:cheyava_falls"
+  },
+  {
+   "from": "rock:cheyava_falls",
+   "rel": "located_in",
+   "to": "region:bright_angel"
+  },
+  {
+   "from": "series:meda_sol0516_ps",
+   "rel": "same_sol_as_sealing_of",
+   "to": "sample:M2020-00516-15"
+  }
+ ],
+ "consistency_checks": [
+  {
+   "check": "M0: exactly 10 distinct designations in sample_tube_locations",
+   "pass": true,
+   "detail": "['M2020-00164-02', 'M2020-00190-03', 'M2020-00271-06', 'M2020-00337-08', 'M2020-00374-10', 'M2020-00495-12', 'M2020-00516-15', 'M2020-00579-17', 'M2020-00586-18', 'M2020-00639-21']"
+  },
+  {
+   "check": "M0: designation set of sample_tube_identifiers equals sample_tube_locations",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M0: designation set of sample_tube_targets equals sample_tube_locations",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M0: designation set of team M0 table equals sample_tube_locations",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M0: designation set of Analyst's Notebook drop table equals sample_tube_locations",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00164-02: Initial Report present (designation key)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00190-03: Initial Report present (designation key)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00271-06: Initial Report present (designation key)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00337-08: Initial Report present (designation key)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00374-10: Initial Report present (designation key)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00495-12: Initial Report present (designation key)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00516-15: Initial Report present (designation key)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00579-17: Initial Report present (designation key)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00586-18: Initial Report present (designation key)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00639-21: Initial Report present (designation key)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00337-08: sample name identical in the three PDS depot tables",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00337-08: dropoff sol PDS == Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00337-08: drop timestamp Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00337-08: tube serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN261 vs SN261"
+  },
+  {
+   "check": "M2020-00337-08: seal serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN053 vs SN53"
+  },
+  {
+   "check": "M2020-00337-08: ferrule serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN062 vs SN062"
+  },
+  {
+   "check": "M2020-00337-08: designation sol <= Initial Report sealing sol",
+   "pass": true,
+   "detail": "337 vs 337"
+  },
+  {
+   "check": "M2020-00337-08: NASA card found by Initial Report sealing sol",
+   "pass": true,
+   "detail": "337"
+  },
+  {
+   "check": "M2020-00337-08: team class 'igneous_rock' consistent with NASA card type 'Rock Core' / rock 'Igneous'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00337-08: NASA card display name contains the PDS sample name (post-join cross-check)",
+   "pass": true,
+   "detail": "'Malay' vs 'Malay'"
+  },
+  {
+   "check": "M2020-00579-17: sample name identical in the three PDS depot tables",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00579-17: dropoff sol PDS == Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00579-17: drop timestamp Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00579-17: tube serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN184 vs SN184"
+  },
+  {
+   "check": "M2020-00579-17: seal serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN587 vs SN587"
+  },
+  {
+   "check": "M2020-00579-17: ferrule serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN030 vs SN030"
+  },
+  {
+   "check": "M2020-00579-17: designation sol <= Initial Report sealing sol",
+   "pass": true,
+   "detail": "579 vs 619"
+  },
+  {
+   "check": "M2020-00579-17: NASA card found by Initial Report sealing sol",
+   "pass": true,
+   "detail": "619"
+  },
+  {
+   "check": "M2020-00579-17: team class 'sedimentary_rock' consistent with NASA card type 'Rock Core' / rock 'Sedimentary'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00579-17: NASA card display name contains the PDS sample name (post-join cross-check)",
+   "pass": true,
+   "detail": "'Mageik' vs 'Mageik'"
+  },
+  {
+   "check": "M2020-00639-21: sample name identical in the three PDS depot tables",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00639-21: dropoff sol PDS == Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00639-21: drop timestamp Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00639-21: tube serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN173 vs SN173"
+  },
+  {
+   "check": "M2020-00639-21: seal serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN191 vs SN191"
+  },
+  {
+   "check": "M2020-00639-21: ferrule serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN106 vs SN106"
+  },
+  {
+   "check": "M2020-00639-21: designation sol <= Initial Report sealing sol",
+   "pass": true,
+   "detail": "639 vs 639"
+  },
+  {
+   "check": "M2020-00639-21: NASA card found by Initial Report sealing sol",
+   "pass": true,
+   "detail": "639"
+  },
+  {
+   "check": "M2020-00639-21: team class 'regolith' consistent with NASA card type 'Regolith' / rock 'Likely mixed sedimentary and igneous grains'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00639-21: NASA card display name contains the PDS sample name (post-join cross-check)",
+   "pass": true,
+   "detail": "'Crosswind Lake' vs 'Crosswind Lake'"
+  },
+  {
+   "check": "M2020-00164-02: sample name identical in the three PDS depot tables",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00164-02: dropoff sol PDS == Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00164-02: drop timestamp Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00164-02: tube serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN233 vs SN233"
+  },
+  {
+   "check": "M2020-00164-02: seal serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN025 vs SN025"
+  },
+  {
+   "check": "M2020-00164-02: ferrule serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN062 vs SN062"
+  },
+  {
+   "check": "M2020-00164-02: designation sol <= Initial Report sealing sol",
+   "pass": true,
+   "detail": "164 vs 164"
+  },
+  {
+   "check": "M2020-00164-02: NASA card found by Initial Report sealing sol",
+   "pass": true,
+   "detail": "164"
+  },
+  {
+   "check": "M2020-00164-02: team class 'atmosphere' consistent with NASA card type 'Atmospheric' / rock 'n/a'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00164-02: NASA card display name contains the PDS sample name (post-join cross-check)",
+   "pass": true,
+   "detail": "'25 Sample 26 Sample 27 Sample 28 Sample 29 Sample 30 Roubion' vs 'Roubion'"
+  },
+  {
+   "check": "M2020-00271-06: sample name identical in the three PDS depot tables",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00271-06: dropoff sol PDS == Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00271-06: drop timestamp Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00271-06: tube serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN284 vs SN284"
+  },
+  {
+   "check": "M2020-00271-06: seal serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN219 vs SN219"
+  },
+  {
+   "check": "M2020-00271-06: ferrule serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN189 vs SN189"
+  },
+  {
+   "check": "M2020-00271-06: designation sol <= Initial Report sealing sol",
+   "pass": true,
+   "detail": "271 vs 271"
+  },
+  {
+   "check": "M2020-00271-06: NASA card found by Initial Report sealing sol",
+   "pass": true,
+   "detail": "271"
+  },
+  {
+   "check": "M2020-00271-06: team class 'igneous_rock' consistent with NASA card type 'Rock Core' / rock 'Igneous'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00271-06: NASA card display name contains the PDS sample name (post-join cross-check)",
+   "pass": true,
+   "detail": "'Coulettes' vs 'Coulettes'"
+  },
+  {
+   "check": "M2020-00190-03: sample name identical in the three PDS depot tables",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00190-03: dropoff sol PDS == Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00190-03: drop timestamp Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00190-03: tube serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN266 vs SN266"
+  },
+  {
+   "check": "M2020-00190-03: seal serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN178 vs SN178"
+  },
+  {
+   "check": "M2020-00190-03: ferrule serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN099 vs SN099"
+  },
+  {
+   "check": "M2020-00190-03: designation sol <= Initial Report sealing sol",
+   "pass": true,
+   "detail": "190 vs 194"
+  },
+  {
+   "check": "M2020-00190-03: NASA card found by Initial Report sealing sol",
+   "pass": true,
+   "detail": "194"
+  },
+  {
+   "check": "M2020-00190-03: team class 'igneous_rock' consistent with NASA card type 'Rock Core' / rock 'Igneous'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00190-03: NASA card display name contains the PDS sample name (post-join cross-check)",
+   "pass": true,
+   "detail": "'Montdenier' vs 'Montdenier'"
+  },
+  {
+   "check": "M2020-00516-15: sample name identical in the three PDS depot tables",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00516-15: dropoff sol PDS == Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00516-15: drop timestamp Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00516-15: tube serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN259 vs SN259"
+  },
+  {
+   "check": "M2020-00516-15: seal serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN177 vs SN177"
+  },
+  {
+   "check": "M2020-00516-15: ferrule serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN110 vs SN110"
+  },
+  {
+   "check": "M2020-00516-15: designation sol <= Initial Report sealing sol",
+   "pass": true,
+   "detail": "516 vs 516"
+  },
+  {
+   "check": "M2020-00516-15: NASA card found by Initial Report sealing sol",
+   "pass": true,
+   "detail": "516"
+  },
+  {
+   "check": "M2020-00516-15: team class 'sedimentary_rock' consistent with NASA card type 'Rock Core' / rock 'Sedimentary'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00516-15: NASA card display name contains the PDS sample name (post-join cross-check)",
+   "pass": true,
+   "detail": "'Bearwallow' vs 'Bearwallow'"
+  },
+  {
+   "check": "M2020-00495-12: sample name identical in the three PDS depot tables",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00495-12: dropoff sol PDS == Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00495-12: drop timestamp Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00495-12: tube serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN272 vs SN272"
+  },
+  {
+   "check": "M2020-00495-12: seal serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN192 vs SN192"
+  },
+  {
+   "check": "M2020-00495-12: ferrule serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN068 vs SN068"
+  },
+  {
+   "check": "M2020-00495-12: designation sol <= Initial Report sealing sol",
+   "pass": true,
+   "detail": "495 vs 495"
+  },
+  {
+   "check": "M2020-00495-12: NASA card found by Initial Report sealing sol",
+   "pass": true,
+   "detail": "495"
+  },
+  {
+   "check": "M2020-00495-12: team class 'sedimentary_rock' consistent with NASA card type 'Rock Core' / rock 'Sedimentary'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00495-12: NASA card display name contains the PDS sample name (post-join cross-check)",
+   "pass": true,
+   "detail": "'Skyland' vs 'Skyland'"
+  },
+  {
+   "check": "M2020-00374-10: sample name identical in the three PDS depot tables",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00374-10: dropoff sol PDS == Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00374-10: drop timestamp Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00374-10: tube serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN202 vs SN202"
+  },
+  {
+   "check": "M2020-00374-10: seal serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN168 vs SN168"
+  },
+  {
+   "check": "M2020-00374-10: ferrule serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN074 vs SN074"
+  },
+  {
+   "check": "M2020-00374-10: designation sol <= Initial Report sealing sol",
+   "pass": true,
+   "detail": "374 vs 377"
+  },
+  {
+   "check": "M2020-00374-10: NASA card found by Initial Report sealing sol",
+   "pass": true,
+   "detail": "377"
+  },
+  {
+   "check": "M2020-00374-10: team class 'igneous_rock' consistent with NASA card type 'Rock Core' / rock 'Igneous'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00374-10: NASA card display name contains the PDS sample name (post-join cross-check)",
+   "pass": true,
+   "detail": "'Atsá (aka Atsah)' vs 'Atsah'"
+  },
+  {
+   "check": "M2020-00586-18: sample name identical in the three PDS depot tables",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00586-18: dropoff sol PDS == Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00586-18: drop timestamp Analyst's Notebook == team",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "M2020-00586-18: tube serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN188 vs SN188"
+  },
+  {
+   "check": "M2020-00586-18: seal serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN153 vs SN153"
+  },
+  {
+   "check": "M2020-00586-18: ferrule serial number Initial Report == depot identifiers",
+   "pass": true,
+   "detail": "SN073 vs SN073"
+  },
+  {
+   "check": "M2020-00586-18: designation sol <= Initial Report sealing sol",
+   "pass": true,
+   "detail": "586 vs 586"
+  },
+  {
+   "check": "M2020-00586-18: witness tube has no NASA sample card at its sealing sol",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: exactly two outcrops in the team table",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Swift Run Initial Report printed designation matches",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Swift Run designation sol equals the team's sample sol",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Swift Run NASA card (by sealing sol) names the outcrop Skinner Ridge",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Swift Run NASA card display name contains the core name (post-join cross-check)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Swift Run depot membership agrees with the team table (Perseverance Rover)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Skyland Initial Report printed designation matches",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Skyland designation sol equals the team's sample sol",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Skyland NASA card (by sealing sol) names the outcrop Skinner Ridge",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Skyland NASA card display name contains the core name (post-join cross-check)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Skyland depot membership agrees with the team table (Three Forks Depot (M0))",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Hazeltop Initial Report printed designation matches",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Hazeltop designation sol equals the team's sample sol",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Hazeltop NASA card (by sealing sol) names the outcrop Wildcat Ridge",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Hazeltop NASA card display name contains the core name (post-join cross-check)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Hazeltop depot membership agrees with the team table (Perseverance Rover)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Bearwallow Initial Report printed designation matches",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Bearwallow designation sol equals the team's sample sol",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Bearwallow NASA card (by sealing sol) names the outcrop Wildcat Ridge",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Bearwallow NASA card display name contains the core name (post-join cross-check)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Bearwallow depot membership agrees with the team table (Three Forks Depot (M0))",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "A: Skinner and Wildcat sampling positions are distinct (> 5 m)",
+   "pass": true,
+   "detail": "23.6 m"
+  },
+  {
+   "check": "B: Sapphire Canyon NASA card found by Initial Report sealing sol 1215",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "B: Sapphire Canyon is not one of the ten M0 depot tubes",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "B: nine documented claims",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "B: the biosignature claim is a low-confidence hypothesis",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "waypoint M0: team pin equals NASA MMGIS RMC 32_774",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "waypoint A: team pin equals NASA MMGIS RMC 26_1154",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "waypoint B: team pin equals NASA MMGIS RMC 56_0",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "waypoint M0 equals the Bearwallow drop rover position (same RMC 32_774)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "MEDA: every declared record parsed and kept",
+   "pass": true,
+   "detail": ""
+  }
+ ],
+ "unknowns": [
+  "Tube-center coordinates of all ten Three Forks tubes (not in the PDS depot tables).",
+  "Exact rock/core points for Skinner Ridge, Wildcat Ridge and Cheyava Falls (only rover positions at sampling).",
+  "Time scale of the Analyst's Notebook drop timestamps (not stated; team labels it LMST).",
+  "Per-record UTC of the MEDA sol 516 series (only SCLK/LMST/LTST); pressure uncertainty (not provided).",
+  "Vertical datum consistency between PLACES elevations, MMGIS elev_geoid and the CTX/HiRISE DEMs."
+ ],
+ "excluded_claims": [
+  "Life detected / biological origin confirmed (not supported; B-08 is a low-confidence hypothesis).",
+  "Any tube-center coordinate derived from rover drop positions.",
+  "Spatial weather fields, forecasts or EVA risk values derived from MEDA.",
+  "A NASA-approved sample-return schedule (B-09 is a scientific rationale only)."
+ ]
+}

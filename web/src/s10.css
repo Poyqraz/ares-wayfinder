@@ -1,0 +1,220 @@
+/* S10: science-objective map, one-scroll side panels, EVA marker card and x3 label. Loaded last. */
+
+/* ---- science targets on the regional map: one colour per investigation, shape per kind */
+.target circle, .target rect, .target polygon { stroke: #0b1016; stroke-width: 2px; }
+.t-M0 circle, .t-M0 rect, .t-M0 polygon { fill: var(--m0); }
+.t-A circle, .t-A rect, .t-A polygon { fill: var(--ma); }
+.t-B circle, .t-B rect, .t-B polygon { fill: var(--mb); }
+.target.on circle, .target.on rect, .target.on polygon { stroke: #fff; stroke-width: 3.5px; }
+.target.dim { opacity: 0.4; }
+.rc-box { position: relative; }
+/* the label outline was a fixed 3 map units: at deep zoom that is metres wide and swallowed the text. Tie it to the font size. */
+.regional-label { stroke-width: 0.14em; }
+/* bottom right, and clicks pass through it to the map: only its title is clickable */
+.rc-legend { pointer-events: none; position: absolute; right: 8px; bottom: 8px; max-width: 330px; background: rgba(11, 16, 22, 0.88); border: 1px solid var(--line); border-radius: 6px; padding: 5px 9px; font-size: 12px; }
+.rc-legend summary { cursor: pointer; font-weight: 600; pointer-events: auto; }
+.rc-legend ul { list-style: none; margin: 4px 0; padding: 0; display: grid; gap: 3px; }
+.rc-legend p { margin: 2px 0 0; }
+.lg { display: inline-block; width: 11px; height: 11px; margin-right: 6px; vertical-align: -1px; border: 1.5px solid #0b1016; outline: 1px solid rgba(255, 255, 255, 0.25); }
+.lg-m0 { background: var(--m0); border-radius: 50%; } .lg-a { background: var(--ma); border-radius: 3px; } .lg-b { background: var(--mb); }
+.lg-f { background: var(--feature); transform: rotate(45deg) scale(0.85); } .lg-site { background: var(--site); }
+.lg-grid { background: none; border: 1.5px dashed var(--site); outline: none; }
+@media (max-width: 980px) { .rc-legend { max-width: 250px; font-size: 11px; } .rc-legend:not([open]) { max-width: none; } }
+
+/* ---- Mission Control side: one scroll, sequence strip, objective cards */
+.mc { grid-template-columns: minmax(0, 1fr) minmax(320px, min(30vw, 440px)); }
+.mc-seq { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 2px; align-items: flex-start; counter-reset: seq; }
+.mc-seq li { display: grid; justify-items: start; gap: 1px; counter-increment: seq; padding-right: 14px; position: relative; }
+.mc-seq li:not(:last-child)::after { content: "›"; position: absolute; right: 3px; top: 3px; color: var(--muted); }
+.mc-seq button { padding: 4px 9px; font-size: 13px; }
+.mc-seq button::before { content: counter(seq) " "; color: var(--muted); }
+.mc-seq span { font-size: 10.5px; color: var(--muted); padding-left: 2px; }
+.seq-M0 { box-shadow: inset 0 -2px 0 var(--m0); } .seq-A { box-shadow: inset 0 -2px 0 var(--ma); } .seq-B { box-shadow: inset 0 -2px 0 var(--mb); }
+.mc-sites { align-items: center; }
+.mc-cards { grid-template-columns: 1fr; gap: 8px; }
+.mc-cards .mission-card { padding: 8px 10px; gap: 5px; border-top: none; border-left: 4px solid var(--line); border-radius: 0 6px 6px 0; }
+.mc-cards .mission-card:nth-child(n) { border-top: none; }
+.mission-card.m-M0 { border-left-color: var(--m0); } .mission-card.m-A { border-left-color: var(--ma); } .mission-card.m-B { border-left-color: var(--mb); } .mission-card.m-F { border-left-color: var(--feature); }
+.mc-cards .mission-card.on { background: #1b2530; }
+.mc-cards h3 { font-size: 14.5px; }
+.mission-card .status { color: var(--rust-2); }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.target-chip { padding: 3px 8px; font-size: 12.5px; border-radius: 999px; }
+.tag { display: inline-block; padding: 1px 7px; border-radius: 999px; font-size: 11.5px; color: #10161d; font-weight: 600; margin-right: 4px; }
+.tag-M0 { background: var(--m0); } .tag-A { background: var(--ma); } .tag-B { background: var(--mb); }
+.target-card.m-M0 { border-color: var(--m0); } .target-card.m-A { border-color: var(--ma); } .target-card.m-B { border-color: var(--mb); }
+.target-card ul { margin: 4px 0; padding-left: 18px; }
+.mc-tabpanel { border: none; border-top: 1px solid var(--line); border-radius: 0; background: none; padding: 8px 2px; }
+.chip-exp { border-color: #d646d6; color: #f3c9f3; }
+
+/* ---- Planning side: wider, flat sections, one scroll */
+.work { grid-template-columns: minmax(0, 1fr) minmax(320px, min(25vw, 400px)); }
+.side .block { border-width: 0 0 1px 0; border-radius: 0; background: none; padding: 10px 4px 12px; margin-bottom: 0; }
+.side .block h2, .side details.block > summary { font-size: 15px; }
+.side button, .mc-side button, .terrain-hud button { min-height: 28px; }
+.side .row, .terrain-hud .row { flex-wrap: wrap; gap: 6px; }
+
+/* ---- 3D Terrain: controls in a right-hand column that scrolls as one piece, no boxes inside boxes */
+@media (min-width: 981px) {
+  .terrain { grid-template-columns: minmax(0, 1fr) minmax(340px, min(30vw, 430px)); grid-template-rows: minmax(0, 1fr); }
+  .terrain-hud { display: block; max-height: none; overflow: auto; border-top: none; border-left: 1px solid var(--line); padding: 10px 14px; }
+}
+.terrain-hud .mission-nav, .terrain-hud .terrain-meta { max-height: none; overflow: visible; border: none; background: none; padding: 0; border-radius: 0; }
+.terrain-hud .mission-nav { padding-bottom: 8px; border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+.terrain-meta { font-size: 12.5px; }
+.marker3d { border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+.fly-speed input, .fly-scrub input { width: min(220px, 40vw); }
+@media (max-width: 980px) { .terrain-hud { max-height: 46vh; overflow: auto; display: block; } }
+
+/* ---- EVA HUD: display-scale label, marker card, marker chips */
+.hud { overflow: auto; } /* on short screens the rows under the visor scroll into view instead of being cut off */
+.hud-ve { font-size: 11.5px; color: #9db0c2; border: 1px solid #2f4254; background: rgba(9, 14, 20, 0.7); padding: 2px 9px; border-radius: 4px; }
+.hud-ve.on { color: #f3c9f3; border-color: #d646d6; }
+button.hud-tile { font: inherit; color: inherit; text-align: right; cursor: pointer; border-width: 0 2px 0 0; border-radius: 0; }
+button.hud-tile:disabled { opacity: 1; cursor: default; }
+.hud-marker { border-color: #ffe066; gap: 2px; }
+.hud-marker strong { font-size: 15px; }
+.hud-marker em { line-height: 1.25; }
+.hud-markers { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }
+.hud-markers button { padding: 2px 8px; font-size: 12px; }
+.hud-markers button.next { border-color: #6fd6ff; }
+@media (max-height: 820px), (max-width: 980px) { .hud-marker em:nth-of-type(n + 2) { display: none; } }
+
+/* ---- S11: regional relief mission markers panel; quieter 3D route swatches */
+.relief-card { margin: 8px 0; }
+.relief-card p { margin: 4px 0; }
+.relief-groups { display: grid; gap: 8px; padding: 8px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+.relief-group h3 { margin: 0 0 4px; font-size: 13px; }
+.relief-group .lg { border-radius: 50%; }
+.relief-group .lg.lg-grid { border-radius: 0; }
+.slope-toggle { display: block; margin: 6px 0 2px; }
+.terrain-legend .swatch { border-top-color: #6cc3d8; }
+.terrain-legend .swatch-t { border-top-color: #e0894a; }
+
+/* ---- S12: rendering-style toggle */
+.view-style { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.view-style button { padding: 3px 10px; font-size: 12.5px; }
+.terrain-hud .view-style { margin: 8px 0 4px; }
+
+/* ---- S12: regional relief sidebar. The selected card stays in view while the catalogue scrolls under it. */
+.relief-card { background: #121a23; }
+@media (min-width: 981px) and (min-height: 640px) { .relief-card { position: sticky; top: 0; z-index: 2; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45); } }
+.relief-group > summary { cursor: pointer; font-size: 13px; font-weight: 600; margin-bottom: 4px; list-style-position: inside; }
+.relief-sub { margin: 6px 0 3px; }
+.relief .mission-nav .warn { font-size: 12.5px; }
+
+/* short screens: keep the visor tall enough for its readouts; the rows under it scroll */
+@media (max-height: 800px) { .hud-visor { min-height: 430px; } }
+
+/* ---- S13: third route (soft green), three-column comparison */
+:root { --cons: #9fd67a; }
+.route-conservative { stroke: var(--cons); }
+.swatch-c { border-top-color: var(--cons); }
+.col-c { color: var(--cons); }
+.terrain-legend .swatch-c { border-top-color: #9fd67a; }
+.side table.nums { font-size: 12px; }
+.side table.nums th, .side table.nums td { padding-left: 3px; padding-right: 3px; }
+.cons-note { border-left: 3px solid var(--cons); padding: 4px 0 4px 8px; margin: 8px 0; }
+.cons-note p { margin: 2px 0 6px; }
+
+/* ---- S13: environmental context. Four kinds of statement, four colours; no map areas */
+.env-tag { display: inline-block; font-size: 10.5px; font-weight: 600; line-height: 1.5; padding: 0 6px; border-radius: 3px; border: 1px solid currentColor; white-space: nowrap; vertical-align: 1px; }
+.env-tag.env-measured { color: #6fd6ff; }
+.env-tag.env-model { color: #b9a3ff; }
+.env-tag.env-scenario { color: #ff7a7a; }
+.env-tag.env-unknown { color: #8a97a5; }
+.env-key .env-switch { gap: 4px; margin: 5px 0 2px; }
+.env-key .env-switch button { padding: 1px 7px; font-size: 11.5px; }
+.env-panel { display: grid; gap: 8px; max-width: 760px; }
+.env-legend-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; font-size: 12px; color: var(--muted, #9db0c2); }
+.env-card { border-left: 3px solid #53657a; background: rgba(15, 21, 28, 0.6); padding: 6px 10px; }
+.env-card.env-measured { border-left-color: #6fd6ff; }
+.env-card.env-model { border-left-color: #b9a3ff; }
+.env-card.env-scenario { border-left-color: #ff5a5a; }
+.env-card h4 { margin: 0 0 3px; font-size: 13.5px; font-weight: 600; }
+.env-card p { margin: 2px 0; }
+.env-value { font-size: 13.5px; }
+.env-key { position: absolute; left: 8px; top: 46px; z-index: 4; width: min(290px, 52%); background: rgba(12, 17, 23, 0.93); border: 1px solid #3b5166; border-radius: 6px; padding: 6px 9px; font-size: 12px; }
+.env-key summary { cursor: pointer; font-weight: 600; }
+.env-key p { margin: 4px 0; }
+.env-key ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.terrain-hud .env-key { position: static; width: auto; margin: 4px 0; }
+.env-site circle { fill: rgba(111, 214, 255, 0.25); stroke: #6fd6ff; stroke-width: 2px; }
+.env-site text { fill: #d8f3ff; paint-order: stroke; stroke: #05080b; stroke-width: 0.22em; pointer-events: none; }
+@media (max-width: 980px) { .env-key { font-size: 11px; width: min(230px, 60%); } }
+
+/* ---- S13: EVA HUD scenario storm indicator. Sits just above the right-hand tiles, upper right of the visor */
+.hud-storm { position: relative; width: 236px; z-index: 6; } /* first in the right-hand column, so it can never sit on the centred top labels */
+.hud-storm > button { display: grid; grid-template-columns: auto 1fr; column-gap: 8px; align-items: center; width: 100%; text-align: left; font: inherit; cursor: pointer; padding: 5px 10px; border-radius: 4px; border: 1px solid rgba(255, 90, 90, 0.75); background: rgba(40, 8, 10, 0.8); color: #ffd6d6; }
+.hud-storm > button:hover, .hud-storm > button:focus-visible { background: rgba(62, 12, 14, 0.9); }
+.hud-storm i { grid-row: span 2; width: 9px; height: 9px; border-radius: 50%; background: #ff5a5a; box-shadow: 0 0 0 3px rgba(255, 90, 90, 0.25); }
+.hud-storm strong { font-size: 12.5px; font-weight: 600; }
+.hud-storm span { font-size: 10.5px; color: #ff9f9f; }
+@media (prefers-reduced-motion: no-preference) { .hud-storm i { animation: storm-pulse 2.4s ease-in-out infinite; } }
+@keyframes storm-pulse { 50% { box-shadow: 0 0 0 6px rgba(255, 90, 90, 0.05); } }
+/* room for it: on large windows the column starts higher; on small ones the two "no data" tiles drop their second line */
+@media (min-width: 1200px) and (min-height: 860px) { .hud-right { top: 17%; } }
+@media (max-height: 859px), (max-width: 1199px) { .hud-tile.sim em { display: none; } }
+/* comparison table with three strategies: the unit sits under the number instead of breaking mid-word */
+.side .nums td .fine { display: block; white-space: nowrap; font-size: 10px; font-family: system-ui, sans-serif; }
+.side .conditions th { white-space: normal; } /* long factor names pushed the table past the panel edge */
+
+/* ---- S14: four missions. B (Amalik) keeps the blue; C (Bright Angel) is lilac */
+:root { --mc: #c79bff; }
+.lg-c { background: var(--mc); }
+.seq-C { box-shadow: inset 0 -2px 0 var(--mc); }
+.mission-card.m-C { border-left-color: var(--mc); }
+.tag-C { background: var(--mc); }
+.target-card.m-C { border-color: var(--mc); }
+.t-C circle, .t-C rect, .t-C polygon { fill: var(--mc); }
+.regional-wp.wp-C { stroke: var(--mc); fill: rgba(199, 155, 255, 0.22); }
+.table-scroll { overflow-x: auto; }
+.amalik { display: grid; gap: 4px; margin: 4px 0; }
+
+/* ---- S14: EVA visor. The forward view comes first: short readouts at the edges, long text in popovers or under the visor */
+.hud-top { top: 4%; gap: 4px; }
+.hud-sim { font-size: 11px; padding: 1px 10px; border-radius: 999px; background: rgba(42, 30, 8, 0.6); cursor: help; }
+.hud-left { top: 21%; gap: 10px; width: 158px; }
+.hud-main { display: grid; padding: 2px 0 2px 10px; border-left: 2px solid #6fd6ff; background: linear-gradient(90deg, rgba(9, 14, 20, 0.66), rgba(9, 14, 20, 0)); }
+.hud-main span { font-size: 11px; color: #9db0c2; }
+.hud-main strong { font-size: 30px; font-weight: 600; line-height: 1.05; color: #f2f6fa; font-variant-numeric: tabular-nums; }
+.hud-readouts { margin: 0; padding: 4px 0 4px 12px; display: grid; gap: 2px; background: linear-gradient(90deg, rgba(9, 14, 20, 0.5), rgba(9, 14, 20, 0)); }
+.hud-readouts div { display: flex; justify-content: space-between; gap: 10px; font-size: 12px; }
+.hud-readouts dt { color: #9db0c2; }
+.hud-readouts dd { margin: 0; color: #e8eef4; font-variant-numeric: tabular-nums; }
+.hud-readouts .caution dd { color: #ffd9a0; }
+.hud-right { width: 236px; gap: 8px; justify-items: stretch; }
+.hud-next { display: grid; text-align: right; font: inherit; color: inherit; cursor: pointer; padding: 3px 10px; border: 0; border-right: 2px solid #6fd6ff; border-radius: 0; background: linear-gradient(270deg, rgba(9, 14, 20, 0.7), rgba(9, 14, 20, 0.1)); }
+.hud-next:disabled { cursor: default; opacity: 1; }
+.hud-next span { font-size: 10.5px; color: #9db0c2; }
+.hud-next strong { font-size: 16px; font-weight: 600; color: #e8eef4; }
+.hud-next em { font-size: 12px; font-style: normal; color: #6fd6ff; font-variant-numeric: tabular-nums; }
+.hud-next.near { border-right-color: #ffe066; }
+.hud-next.near em { color: #ffe066; }
+.hud-pop { background: rgba(12, 17, 23, 0.96); border: 1px solid #3b5166; border-radius: 4px; padding: 6px 10px; font-size: 11.5px; color: #d5dee6; text-align: left; z-index: 7; }
+.hud-pop p { margin: 4px 0; line-height: 1.35; }
+.hud-storm .hud-pop { position: absolute; right: 0; top: 100%; margin-top: 4px; width: 280px; border-color: rgba(255, 90, 90, 0.6); }
+.hud-marker { position: absolute; right: calc(100% + 10px); top: 0; width: 264px; border-color: #ffe066; }
+.hud-marker > span { color: #9db0c2; }
+.hud-pop-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.hud-pop-head strong { font-size: 13px; color: #f2f6fa; }
+.hud-pop-head button { padding: 0 7px; font-size: 11px; }
+.hud-suit { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px 6px; padding: 5px 8px 4px; border-top: 1px solid rgba(111, 214, 255, 0.45); background: rgba(9, 14, 20, 0.58); text-align: center; cursor: help; }
+.hud-suit div { display: grid; }
+.hud-suit strong { font-size: 17px; font-weight: 600; color: #e8eef4; font-variant-numeric: tabular-nums; }
+.hud-suit small { font-size: 10px; font-weight: 400; color: #9db0c2; margin-left: 2px; }
+.hud-suit span { font-size: 10px; color: #9db0c2; }
+.hud-suit p { grid-column: 1 / -1; margin: 2px 0 0; font-size: 10px; color: #ffd9a0; }
+.hud-heart { width: 11px; height: 10px; margin-right: 4px; fill: #ff7a8a; transform-origin: center; }
+@media (prefers-reduced-motion: no-preference) { .hud-heart { animation: hud-beat 0.68s ease-in-out infinite; } }
+@keyframes hud-beat { 0%, 60%, 100% { transform: scale(1); } 20% { transform: scale(1.28); } 40% { transform: scale(0.96); } }
+.hud-right .hud-mini { justify-self: end; }
+.hud-details { text-align: left; max-width: 980px; margin: 0 auto; }
+.hud-details summary { cursor: pointer; font-size: 12.5px; color: #9db0c2; }
+.hud-details ul { margin: 4px 0; padding-left: 18px; }
+@media (max-width: 980px) { .hud-left { width: 132px; } .hud-main strong { font-size: 24px; } .hud-right { width: 204px; } .hud-marker { right: 0; top: 100%; width: 100%; } }
+@media (max-width: 1199px), (max-height: 859px) { .hud-right .hud-mini { width: 112px; height: 112px; } }
+
+/* ---- S15: the wider M0-A-B grid on the regional map, in mission B's blue */
+.regional-m0ab { stroke: var(--mb); fill: rgba(127, 182, 255, 0.07); stroke-dasharray: 9 5; }
+.regional-m0ab.detail { fill: none; }

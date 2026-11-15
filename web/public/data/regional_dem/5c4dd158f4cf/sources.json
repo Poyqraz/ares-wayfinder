@@ -1,0 +1,76 @@
+[
+ {
+  "id": "trn_ctx_dtm_20m",
+  "role": "ELEVATION SOURCE for display-only regional relief (not routing, not hazards)",
+  "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.tif",
+  "agency": "USGS Astrogeology / NASA",
+  "mission": "Mars Reconnaissance Orbiter (MRO); aligned to MEX HRSC per FGDC metadata",
+  "instrument": "Context Camera (CTX), stereo-derived (SOCET SET + Ames Stereo Pipeline)",
+  "product_version": "JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0 (FGDC publication date 2020-07-24)",
+  "citation": "Fergason, R.L., Galuszka, D.M., Hare, T.M., Mayer, D.P., Redding, B.L., Smith, E.S., 2020, Context Camera Digital Terrain Model Mosaic for Mars 2020 Terrain Relative Navigation, USGS Astrogeology, https://doi.org/10.5066/P906QQT8",
+  "crs": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+  "native_pixel_m": 20.0,
+  "vertical_reference": "UNVERIFIED: file name says 'MOLAtopography_DeltaGeoid'; the FGDC metadata (.xml) says elevations 'refer to the Mars 2020 IAU Sphere with a radius of 3396190m' and that the mosaic was shifted 183.3 m vertically to align with HRSC. The two statements are not reconciled here.",
+  "license": "USGS/NASA data, no license stated in the metadata; credit the citation above",
+  "confidence": "medium",
+  "limitations": [
+   "20 m posting, shown at 40 m (2 x 2 block mean); features smaller than ~100 m are not represented",
+   "Mosaic of three CTX stereo DTMs; FGDC metadata: 3.8 m vertical registration between them, 9.6 m mean image displacement",
+   "Display only: no slope, hazard or route information is derived for the user from this bundle"
+  ]
+ },
+ {
+  "id": "ctx_dem_20m",
+  "role": "cross-check only (R2), not in the bundle",
+  "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/ScienceInvestigationMaps_JPL/M20_JezeroCrater_CTXDEM_20m.tif",
+  "agency": "NASA / USGS Astrogeology (PDS)",
+  "mission": "Mars Reconnaissance Orbiter (MRO)",
+  "instrument": "Context Camera (CTX), stereo-derived",
+  "product_version": "urn:nasa:pds:mars2020_ctx_basemap_2021:data:m20_ctxdem_mosaic, version_id 1.0",
+  "citation": "Mangold et al., 2021, Science, https://doi.org/10.1126/science.abl4051",
+  "crs": "+proj=eqc +lat_ts=18.4663 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+  "native_pixel_m": 20.0,
+  "vertical_reference": "UNVERIFIED: the PDS4 label (M20_JezeroCrater_CTXDEM_20m.xml) states no vertical datum.",
+  "license": "NASA/USGS PDS data, no license stated in label; credit the citation above",
+  "confidence": "medium",
+  "limitations": [
+   "Different projection (lat_ts 18.4663); warped bilinearly only for the comparison"
+  ]
+ },
+ {
+  "id": "hirise_dtm_1m",
+  "role": "cross-check only (overlap statistics), not in the bundle",
+  "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_006_DTM_MOLAtopography_DeltaGeoid_1m_Eqc_latTs0_lon0_blend40.tif",
+  "agency": "USGS Astrogeology / NASA",
+  "mission": "Mars Reconnaissance Orbiter (MRO)",
+  "instrument": "HiRISE, stereo-derived",
+  "product_version": "JEZ_hirise_soc_006_DTM_MOLAtopography_DeltaGeoid_1m_Eqc_latTs0_lon0_blend40",
+  "citation": "Fergason et al. 2020, USGS Astrogeology, https://doi.org/10.5066/P9REJ9JN",
+  "crs": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+  "native_pixel_m": 1.0,
+  "vertical_reference": "UNVERIFIED (DeltaGeoid per file name)",
+  "license": "USGS/NASA data; credit the citation above",
+  "confidence": "medium",
+  "limitations": [
+   "Covers 100.0 % of the extent at 20 m with complete 1 m support"
+  ]
+ },
+ {
+  "id": "ctx_ortho_6m_controlled",
+  "role": "texture partner (regional basemap d3d62fc34c56), not in this bundle",
+  "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0.tif",
+  "agency": "USGS Astrogeology / NASA",
+  "mission": "Mars Reconnaissance Orbiter (MRO)",
+  "instrument": "Context Camera (CTX)",
+  "product_version": "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+  "citation": "USGS Astrogeology Mars 2020 TRN products",
+  "crs": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+  "native_pixel_m": 6.0,
+  "vertical_reference": "n/a (image)",
+  "license": "USGS/NASA data; credit the citation above",
+  "confidence": "high",
+  "limitations": [
+   "Same soc_008 product family as the TRN DTM: R3 registration is internal consistency, not absolute position"
+  ]
+ }
+]

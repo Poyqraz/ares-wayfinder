@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Ancillary xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00.xsd">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:mars2020_sample_depot_three_forks:miscellaneous:sample_tube_targets</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>Three Forks Depot - sample_tube_targets</title>
+    <information_model_version>1.22.0.0</information_model_version>
+    <product_class>Product_Ancillary</product_class>
+  </Identification_Area>
+  <Context_Area>
+    <Investigation_Area>
+      <name>MARS 2020</name>
+      <type>Mission</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:investigation:mission.mars2020</lid_reference>
+        <reference_type>ancillary_to_investigation</reference_type>
+        <comment>This is the PDS4 logical identifier for the Mars 2020 Perseverance mission context product.</comment>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <Observing_System_Component>
+        <name>Perseverance</name>
+        <type>Host</type>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.mars2020</lid_reference>
+          <reference_type>is_instrument_host</reference_type>
+          <comment>This is the PDS4 logical identifier for the Mars 2020 Perseverance spacecraft.</comment>
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>Mars</name>
+      <type>Planet</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:target:planet.mars</lid_reference>
+        <reference_type>ancillary_to_target</reference_type>
+        <comment>This is the PDS4 logical identifier for the planet Mars.</comment>
+      </Internal_Reference>
+    </Target_Identification>
+  </Context_Area>
+  <File_Area_Ancillary>
+    <File>
+      <file_name>sample_tube_targets.csv</file_name>
+      <creation_date_time>2024-07-16</creation_date_time>
+    </File>
+    <Header>
+      <offset unit="byte">0</offset>
+      <object_length unit="byte">158</object_length>
+      <parsing_standard_id>PDS DSV 1</parsing_standard_id>
+    </Header>
+    <Table_Delimited>
+      <name>Three Forks Depot Sample Tube Targets</name>
+      <offset unit="byte">158</offset>
+      <object_length unit="byte">2273</object_length>
+      <parsing_standard_id>PDS DSV 1</parsing_standard_id>
+      <description>Targets associated with strategic and tactical planning for each sample tube.</description>
+      <records>10</records>
+      <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+      <field_delimiter>Comma</field_delimiter>
+      <Record_Delimited>
+        <fields>8</fields>
+        <groups>0</groups>
+        <Field_Delimited>
+          <name>Sample Designation</name>
+          <field_number>1</field_number>
+          <data_type>ASCII_String</data_type>
+          <description>Unique identifier for the sample.</description>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>Sample Name</name>
+          <field_number>2</field_number>
+          <data_type>ASCII_String</data_type>
+          <description>Short name for the sample.</description>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>Drop Zone - Strategic</name>
+          <field_number>3</field_number>
+          <data_type>ASCII_String</data_type>
+          <description>Target identifying the drop zone, defined strategically</description>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>Drop Zone - Tactical</name>
+          <field_number>4</field_number>
+          <data_type>ASCII_String</data_type>
+          <description>Target identifying the drop zone, defined tactically (typically immediately prior to driving to the drop location).</description>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>Drop Zone - End of Drive</name>
+          <field_number>5</field_number>
+          <data_type>ASCII_String</data_type>
+          <description>Target identifying the drop zone, defined after arrival at the drop location.</description>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>Drop Location - Glove</name>
+          <field_number>6</field_number>
+          <data_type>ASCII_String</data_type>
+          <description>Target identifying the glove end of the sample tube post-drop.</description>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>Drop Location - Seal</name>
+          <field_number>7</field_number>
+          <data_type>ASCII_String</data_type>
+          <description>Target identifying the seal end of the sample tube post-drop.</description>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>Imaging Target</name>
+          <field_number>8</field_number>
+          <data_type>ASCII_String</data_type>
+          <description>Target used to plan post-drop documentation imaging, typically using Mastcam-Z.</description>
+          <Special_Constants>
+            <missing_constant>-</missing_constant>
+          </Special_Constants>
+        </Field_Delimited>
+      </Record_Delimited>
+    </Table_Delimited>
+  </File_Area_Ancillary>
+</Product_Ancillary>

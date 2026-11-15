@@ -1,0 +1,176 @@
+{
+ "schema": "ares-regional-basemap/1",
+ "role": "REAL OBSERVED imagery, display only (no terrain or hazard information)",
+ "source": {
+  "id": "ctx_ortho_6m_controlled",
+  "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0.tif",
+  "product": "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+  "agency": "USGS Astrogeology / NASA (Mars 2020 TRN controlled CTX mosaic; also served by NASA Mars Trek)",
+  "mission": "MRO",
+  "instrument": "CTX",
+  "native_pixel_m": 6.0,
+  "size_px": [
+   5322,
+   5040
+  ],
+  "nodata": 0.0
+ },
+ "crs_proj4": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+ "pixel_convention": "PixelIsArea; x0/y0 = north-west corner of pixel (0,0); row 0 = north; columns increase east",
+ "assets": {
+  "science_6m.jpg": {
+   "x0": 4580743.250853,
+   "y0": 1097771.140188,
+   "dx": 6.0,
+   "dy": 6.0,
+   "nx": 2274,
+   "ny": 1187,
+   "source_window": {
+    "col0": 1180,
+    "row0": 1987
+   },
+   "bounds_geo_requested": {
+    "lat_min": 18.4,
+    "lat_max": 18.52,
+    "lon_min": 77.28,
+    "lon_max": 77.51
+   },
+   "nodata_share": 0.0,
+   "stretch": {
+    "method": "linear 1-99 % of valid pixels",
+    "lo_dn": 85.0,
+    "hi_dn": 199.0
+   }
+  },
+  "jezero_48m.jpg": {
+   "x0": 4573663.250853,
+   "y0": 1109693.140188,
+   "dx": 48.018045112781955,
+   "dy": 48.0,
+   "nx": 665,
+   "ny": 630,
+   "nodata_share": 0.0,
+   "note": "average of 8x8 source pixels (rounded grid); context only"
+  }
+ },
+ "features_px_in_science_6m": {
+  "waypoint:M0": {
+   "kind": "approximate rover waypoint (not a sample/tube point)",
+   "lat": 18.45272753,
+   "lon": 77.40833585,
+   "x_px": 1268.74,
+   "y_px": 665.216
+  },
+  "waypoint:A": {
+   "kind": "approximate rover waypoint (not a sample/tube point)",
+   "lat": 18.45869497,
+   "lon": 77.40595178,
+   "x_px": 1245.188,
+   "y_px": 606.263
+  },
+  "waypoint:B": {
+   "kind": "approximate rover waypoint (not a sample/tube point)",
+   "lat": 18.49748444,
+   "lon": 77.30519089,
+   "x_px": 249.759,
+   "y_px": 223.058
+  },
+  "roi_a": {
+   "kind": "existing CTX 20 m engineering ROI (requested box)",
+   "box": {
+    "lat": [
+     18.422,
+     18.452
+    ],
+    "lon": [
+     77.436,
+     77.462
+    ]
+   },
+   "nw": {
+    "x_px": 1542.038,
+    "y_px": 672.404
+   },
+   "se": {
+    "x_px": 1798.895,
+    "y_px": 968.777
+   }
+  },
+  "roi_b": {
+   "kind": "existing CTX 20 m engineering ROI (requested box)",
+   "box": {
+    "lat": [
+     18.42,
+     18.47
+    ],
+    "lon": [
+     77.42,
+     77.49
+    ]
+   },
+   "nw": {
+    "x_px": 1383.972,
+    "y_px": 494.579
+   },
+   "se": {
+    "x_px": 2075.51,
+    "y_px": 988.535
+   }
+  },
+  "m0a_analysis": {
+   "kind": "M0-A HiRISE 2 m prototype analysis grid f8de9017164a",
+   "bounds_geo": {
+    "lat_min": 18.449491025576506,
+    "lat_max": 18.461941531961795,
+    "lon_min": 77.40287494838809,
+    "lon_max": 77.41161392170459
+   },
+   "nw": {
+    "x_px": 1214.792,
+    "y_px": 574.19
+   },
+   "se": {
+    "x_px": 1301.125,
+    "y_px": 697.19
+   }
+  }
+ },
+ "registration_vs_hirise_ortho": {
+  "m0_a": {
+   "status": "MEASURED",
+   "grid_px_m": 6.0,
+   "size_px": [
+    123,
+    87
+   ],
+   "shift_east_m": 1.2,
+   "shift_north_m": -1.2,
+   "ncc": 0.893,
+   "sharpness": 0.32,
+   "peak_on_search_edge": false,
+   "search_radius_m": 60.0,
+   "convention": "position of a feature in CTX minus its position in HiRISE"
+  },
+  "b_spot": {
+   "status": "MEASURED",
+   "grid_px_m": 6.0,
+   "size_px": [
+    60,
+    61
+   ],
+   "shift_east_m": 1.1,
+   "shift_north_m": 0.3,
+   "ncc": 0.896,
+   "sharpness": 0.294,
+   "peak_on_search_edge": false,
+   "search_radius_m": 60.0,
+   "convention": "position of a feature in CTX minus its position in HiRISE"
+  }
+ },
+ "limits": [
+  "6 m imagery does not show rocks or hazards; it is a basemap only.",
+  "Catalog positions are in the HiRISE/PLACES frame; see registration_vs_hirise_ortho before trusting sub-50 m placement on CTX.",
+  "Contrast stretched for display; DN are not radiance."
+ ],
+ "version": "d3d62fc34c56"
+}

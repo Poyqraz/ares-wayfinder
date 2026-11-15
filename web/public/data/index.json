@@ -1,0 +1,12 @@
+{
+ "roi_a": {
+  "dataset_version": "7ec72147790e",
+  "path": "data/roi_a/7ec72147790e/",
+  "terrain_json_sha256": "0406bf2be956cb74e35467d4596f454cc1e184d291bf7dd73c1727424a20d953"
+ },
+ "roi_b": {
+  "dataset_version": "05fddbe4d280",
+  "path": "data/roi_b/05fddbe4d280/",
+  "terrain_json_sha256": "76cde0c84ba3914f29004f4f307dae73116cb523fada219eda05bc74f1337b21"
+ }
+}

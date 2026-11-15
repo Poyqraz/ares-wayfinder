@@ -1,0 +1,9 @@
+{
+  "name": "ares-wayfinder",
+  "private": true,
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "pnpm -r --if-present test",
+    "build": "pnpm -r --if-present build"
+  }
+}

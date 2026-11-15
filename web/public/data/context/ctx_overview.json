@@ -1,0 +1,54 @@
+{
+ "title": "MRO CTX orbital overview of Jezero crater (downsampled)",
+ "is_not": [
+  "MOLA imagery",
+  "a live or current view",
+  "an astronaut viewpoint"
+ ],
+ "mission": "Mars Reconnaissance Orbiter (MRO)",
+ "instrument": "Context Camera (CTX)",
+ "product_id": "urn:nasa:pds:mars2020_ctx_basemap_2021:data:m20_ctxortho_mosaic",
+ "product_version": "1.0",
+ "product_title": "Mars 2020 Science Investigation CTX Orthoimage Mosaic",
+ "citation": "Mangold et al., 2021, Perseverance rover reveals an ancient delta-lake system and flood deposits at Jezero crater, Mars, Science. https://doi.org/10.1126/science.abl4051",
+ "source_url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/ScienceInvestigationMaps_JPL/M20_JezeroCrater_CTXortho_mosaic_5m.tif",
+ "source_filename": "M20_JezeroCrater_CTXortho_mosaic_5m.tif",
+ "source_size_px": [
+  17766,
+  20234
+ ],
+ "source_pixel_m": [
+  5.002064681102627,
+  5.002262971613293
+ ],
+ "preview_size_px": [
+  987,
+  1124
+ ],
+ "preview_pixel_m": [
+  90.03716425984727,
+  90.04073348903927
+ ],
+ "crs": "+proj=eqc +lat_ts=18.4663 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+ "orientation": "north up, row 0 = north edge, column 0 = west edge",
+ "extent_proj_m": {
+  "x_min": 4329192.10812596,
+  "x_max": 4418058.78925043,
+  "y_min": 1042141.6397333178,
+  "y_max": 1143347.424174998
+ },
+ "extent_geo_deg": {
+  "lat_min": 17.58155981012907,
+  "lat_max": 19.288962608800244,
+  "lon_min": 77.00085397837796,
+  "lon_max": 78.58147460363604,
+  "latitude": "planetocentric",
+  "longitude": "east-positive"
+ },
+ "processing": "Exact 18x18 block mean over source columns 0..17765 and rows 0..20231 (trailing 0 columns and 2 rows omitted), streamed in 576-row chunks; no NoData tag in source, so all pixel values (including edge fill, if any) are averaged; linear stretch from block-mean p2=8.49 to p98=187.97 -> 0..255; JPEG quality 85, 8-bit grayscale.",
+ "scale_note": "Ground east-west scale varies by about +/-0.5% across the mosaic (latitude of true scale 18.4663 deg).",
+ "generated_utc": "2026-11-14T08:04:32+00:00",
+ "generator": "pipeline/context_overview.py",
+ "jpg_bytes": 329789,
+ "jpg_sha256": "8ed016876bc385a985a94d6747a384a103d3594bc3e51dcbe28d3062728ab0f4"
+}

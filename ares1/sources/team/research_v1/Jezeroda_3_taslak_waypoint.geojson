@@ -1,0 +1,73 @@
+{
+  "type": "FeatureCollection",
+  "name": "ARES-1 Jezero mission targets - approximate reference pins",
+  "description": "Planetary coordinates for Mars. Initial map markers derived from NASA rover waypoints, NOT certified sample or landing coordinates. Revalidate with PDS PLACES and sample dossiers.",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Three Forks örnek deposu",
+        "mission": "Tüp geri kazanımı",
+        "coordinate_status": "approximate_rover_waypoint",
+        "rover_sol": 674,
+        "rover_RMC": "32_774",
+        "note": "Perseverance rover end-of-drive; not exact sample tube coordinate",
+        "source": "https://mars.nasa.gov/mmgis-maps/M20/Layers/json/M20_waypoints.json",
+        "planet": "Mars",
+        "longitude_convention": "0_to_360_east",
+        "latitude_convention": "planetocentric_latitude_check_source_metadata"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.40833585,
+          18.45272753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wildcat / Skinner Ridge delta",
+        "mission": "Görev A",
+        "coordinate_status": "approximate_rover_waypoint",
+        "rover_sol": 501,
+        "rover_RMC": "26_1154",
+        "note": "Representative rover waypoint near delta sample outcrops; not precise core point",
+        "source": "https://mars.nasa.gov/mmgis-maps/M20/Layers/json/M20_waypoints.json",
+        "planet": "Mars",
+        "longitude_convention": "0_to_360_east",
+        "latitude_convention": "planetocentric_latitude_check_source_metadata"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.40595178,
+          18.45869497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bright Angel / Cheyava Falls",
+        "mission": "Görev B",
+        "coordinate_status": "approximate_rover_waypoint",
+        "rover_sol": 1210,
+        "rover_RMC": "56_0",
+        "note": "Representative rover waypoint near Cheyava Falls; not exact drilled sample rock coordinate",
+        "source": "https://mars.nasa.gov/mmgis-maps/M20/Layers/json/M20_waypoints.json",
+        "planet": "Mars",
+        "longitude_convention": "0_to_360_east",
+        "latitude_convention": "planetocentric_latitude_check_source_metadata"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.30519089,
+          18.49748444
+        ]
+      }
+    }
+  ]
+}

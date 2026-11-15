@@ -1,0 +1,21 @@
+[project]
+name = "ares-pipeline"
+version = "0.1.0"
+description = "Ares Wayfinder ROI data preparation, validation and reference routing oracle"
+license = "Apache-2.0"
+requires-python = ">=3.12"
+dependencies = [
+  "rasterio>=1.4",
+  "numpy>=2.0",
+  "scipy>=1.13",
+  "pillow>=10",
+]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

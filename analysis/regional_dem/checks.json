@@ -1,0 +1,721 @@
+{
+ "schema": "ares-regional-dem-checks/1",
+ "gates_doc": "analysis/regional_dem/GATES.md",
+ "limits": {
+  "r1_valid_share": 0.98,
+  "r2_mad_m": 5.0,
+  "r3_shift_m": 40.0,
+  "r3_sign_tol_px": 0.5,
+  "median_flag_m": 10.0,
+  "vertex_budget": 150000
+ },
+ "region_geo": {
+  "lat_min": 18.4,
+  "lat_max": 18.52,
+  "lon_min": 77.28,
+  "lon_max": 77.51
+ },
+ "regional_basemap_version": "d3d62fc34c56",
+ "dems": {
+  "ctx_dem_20m": {
+   "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/ScienceInvestigationMaps_JPL/M20_JezeroCrater_CTXDEM_20m.tif",
+   "header": {
+    "size": [
+     4456,
+     5067
+    ],
+    "dtype": "float32",
+    "nodata": -3.4028234663852886e+38,
+    "crs_proj4": "+proj=eqc +lat_ts=18.4663 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+    "proj": "eqc",
+    "R_m": 3396190,
+    "lat_ts": 18.4663,
+    "lat_0": 0,
+    "lon_0": 0,
+    "transform": [
+     20.0,
+     0.0,
+     4328999.999999998,
+     0.0,
+     -20.0,
+     1143420.0000000028
+    ],
+    "area_or_point": "Area",
+    "overviews": []
+   },
+   "window_cells": [
+    647,
+    357
+   ],
+   "x0": 4344879.999999998,
+   "y0": 1097780.0000000028,
+   "spacing_m": {
+    "dx_proj": 20.0,
+    "dy_proj": 20.0,
+    "dx_ground": 20.0007342546418,
+    "lat_center": 18.46
+   },
+   "valid_share": 1.0,
+   "nodata_cells": 0,
+   "nodata_pattern": {
+    "components": 0,
+    "largest_component_cells": 0,
+    "touches_window_edge": false,
+    "rows_with_nodata": 0,
+    "cols_with_nodata": 0
+   },
+   "elev_m": {
+    "min": -2649.727,
+    "p01": -2640.442,
+    "p99": -1889.673,
+    "max": -1787.69
+   },
+   "slope_deg_horn": {
+    "p50": 3.41,
+    "p95": 16.05,
+    "p99": 22.04,
+    "max": 33.68
+   },
+   "r3_registration": {
+    "status": "PASS",
+    "sun": {
+     "azimuth_deg": 270,
+     "altitude_deg": 45,
+     "ncc_zero_shift": 0.598
+    },
+    "grid_px_m": {
+     "east_ground": 11.3825,
+     "north": 12.0
+    },
+    "search_radius_px": 10,
+    "synthetic_sign_check": {
+     "pass": true,
+     "cases": [
+      {
+       "imposed_px": [
+        3.0,
+        -2.0
+       ],
+       "recovered_px": [
+        3.0,
+        -2.0
+       ],
+       "ncc": 1.0
+      },
+      {
+       "imposed_px": [
+        1.4,
+        2.6
+       ],
+       "recovered_px": [
+        1.419,
+        2.564
+       ],
+       "ncc": 0.994
+      }
+     ]
+    },
+    "tiles": {
+     "r0c0": {
+      "shift_east_m": -3.1,
+      "shift_north_m": 3.9,
+      "shift_m": 5.0,
+      "ncc": 0.633,
+      "sharpness": 0.088,
+      "peak_on_search_edge": false,
+      "adequate": true
+     },
+     "r0c1": {
+      "shift_east_m": 18.5,
+      "shift_north_m": 13.1,
+      "shift_m": 22.7,
+      "ncc": 0.646,
+      "sharpness": 0.1,
+      "peak_on_search_edge": false,
+      "adequate": true
+     },
+     "r0c2": {
+      "shift_east_m": 29.8,
+      "shift_north_m": 7.5,
+      "shift_m": 30.7,
+      "ncc": 0.675,
+      "sharpness": 0.082,
+      "peak_on_search_edge": false,
+      "adequate": true
+     },
+     "r0c3": {
+      "shift_east_m": 24.4,
+      "shift_north_m": 5.8,
+      "shift_m": 25.0,
+      "ncc": 0.466,
+      "sharpness": 0.073,
+      "peak_on_search_edge": false,
+      "adequate": true
+     },
+     "r1c0": {
+      "shift_east_m": -8.6,
+      "shift_north_m": 1.9,
+      "shift_m": 8.8,
+      "ncc": 0.7,
+      "sharpness": 0.091,
+      "peak_on_search_edge": false,
+      "adequate": true
+     },
+     "r1c1": {
+      "shift_east_m": 3.4,
+      "shift_north_m": 10.7,
+      "shift_m": 11.2,
+      "ncc": 0.672,
+      "sharpness": 0.105,
+      "peak_on_search_edge": false,
+      "adequate": true
+     },
+     "r1c2": {
+      "shift_east_m": 28.2,
+      "shift_north_m": 6.6,
+      "shift_m": 28.9,
+      "ncc": 0.586,
+      "sharpness": 0.069,
+      "peak_on_search_edge": false,
+      "adequate": true
+     },
+     "r1c3": {
+      "shift_east_m": 38.4,
+      "shift_north_m": 6.3,
+      "shift_m": 38.9,
+      "ncc": 0.349,
+      "sharpness": 0.058,
+      "peak_on_search_edge": false,
+      "adequate": true
+     },
+     "whole": {
+      "shift_east_m": 13.0,
+      "shift_north_m": 5.5,
+      "shift_m": 14.1,
+      "ncc": 0.61,
+      "sharpness": 0.084,
+      "peak_on_search_edge": false,
+      "adequate": true
+     }
+    },
+    "tiles_over_limit": [],
+    "convention": "position of a feature in the CTX 6 m ortho minus its position in the DEM hillshade (east +, north +)"
+   },
+   "gates": {
+    "R1_coverage": {
+     "value": 1.0,
+     "pass": true
+    },
+    "R2_dem_dem_mad": {
+     "value_m": 0.364,
+     "pass": true,
+     "median_flag": false
+    },
+    "R3_registration": {
+     "status": "PASS",
+     "pass": true
+    },
+    "R4_vertical_reference": {
+     "label": "UNVERIFIED: the PDS4 label (M20_JezeroCrater_CTXDEM_20m.xml) states no vertical datum.",
+     "pass": true
+    }
+   },
+   "suitable_display_only": true
+  },
+  "trn_ctx_dtm_20m": {
+   "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.tif",
+   "header": {
+    "size": [
+     1596,
+     1512
+    ],
+    "dtype": "float32",
+    "nodata": -3.4028226550889045e+38,
+    "crs_proj4": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+    "proj": "eqc",
+    "R_m": 3396190,
+    "lat_ts": 0,
+    "lat_0": 0,
+    "lon_0": 0,
+    "transform": [
+     20.0,
+     0.0,
+     4573663.250853,
+     0.0,
+     -20.0,
+     1109693.140188
+    ],
+    "area_or_point": "Area",
+    "overviews": []
+   },
+   "window_cells": [
+    682,
+    356
+   ],
+   "x0": 4580743.250853,
+   "y0": 1097773.140188,
+   "spacing_m": {
+    "dx_proj": 20.0,
+    "dy_proj": 20.0,
+    "dx_ground": 18.97089889053875,
+    "lat_center": 18.46
+   },
+   "valid_share": 1.0,
+   "nodata_cells": 0,
+   "nodata_pattern": {
+    "components": 0,
+    "largest_component_cells": 0,
+    "touches_window_edge": false,
+    "rows_with_nodata": 0,
+    "cols_with_nodata": 0
+   },
+   "elev_m": {
+    "min": -2649.692,
+    "p01": -2640.482,
+    "p99": -1890.477,
+    "max": -1788.225
+   },
+   "slope_deg_horn": {
+    "p50": 3.41,
+    "p95": 16.09,
+    "p99": 22.14,
+    "max": 34.22
+   },
+   "r3_registration": {
+    "status": "UNRESOLVED",
+    "sun": {
+     "azimuth_deg": 270,
+     "altitude_deg": 45,
+     "ncc_zero_shift": 0.581
+    },
+    "grid_px_m": {
+     "east_ground": 11.3825,
+     "north": 12.0
+    },
+    "search_radius_px": 10,
+    "synthetic_sign_check": {
+     "pass": true,
+     "cases": [
+      {
+       "imposed_px": [
+        3.0,
+        -2.0
+       ],
+       "recovered_px": [
+        3.0,
+        -2.0
+       ],
+       "ncc": 1.0
+      },
+      {
+       "imposed_px": [
+        1.4,
+        2.6
+       ],
+       "recovered_px": [
+        1.419,
+        2.568
+       ],
+       "ncc": 0.993
+      }
+     ]
+    },
+    "tiles": {
+     "r0c0": {
+      "shift_east_m": 1.3,
+      "shift_north_m": 13.5,
+      "shift_m": 13.5,
+      "ncc": 0.631,
+      "sharpness": 0.091,
+      "peak_on_search_edge": false,
+      "adequate": true
+     },
+     "r0c1": {
+      "shift_east_m": 23.0,
+      "shift_north_m": 22.9,
+      "shift_m": 32.5,
+      "ncc": 0.646,
+      "sharpness": 0.102,
+      "peak_on_search_edge": false,
+      "adequate": true
+     },
+     "r0c2": {
+      "shift_east_m": 32.8,
+      "shift_north_m": 16.3,
+      "shift_m": 36.7,
+      "ncc": 0.679,
+      "sharpness": 0.086,
+      "peak_on_search_edge": false,
+      "adequate": true
+     },
+     "r0c3": {
+      "shift_east_m": 30.7,
+      "shift_north_m": 18.7,
+      "shift_m": 36.0,
+      "ncc": 0.466,
+      "sharpness": 0.072,
+      "peak_on_search_edge": false,
+      "adequate": true
+     },
+     "r1c0": {
+      "shift_east_m": -4.4,
+      "shift_north_m": 13.1,
+      "shift_m": 13.8,
+      "ncc": 0.696,
+      "sharpness": 0.088,
+      "peak_on_search_edge": false,
+      "adequate": true
+     },
+     "r1c1": {
+      "shift_east_m": 7.7,
+      "shift_north_m": 20.1,
+      "shift_m": 21.5,
+      "ncc": 0.67,
+      "sharpness": 0.104,
+      "peak_on_search_edge": false,
+      "adequate": true
+     },
+     "r1c2": {
+      "shift_east_m": 32.8,
+      "shift_north_m": 19.2,
+      "shift_m": 38.0,
+      "ncc": 0.588,
+      "sharpness": 0.067,
+      "peak_on_search_edge": false,
+      "adequate": true
+     },
+     "r1c3": {
+      "shift_east_m": 43.5,
+      "shift_north_m": 23.1,
+      "shift_m": 49.2,
+      "ncc": 0.351,
+      "sharpness": 0.055,
+      "peak_on_search_edge": false,
+      "adequate": true
+     },
+     "whole": {
+      "shift_east_m": 17.2,
+      "shift_north_m": 17.4,
+      "shift_m": 24.5,
+      "ncc": 0.608,
+      "sharpness": 0.081,
+      "peak_on_search_edge": false,
+      "adequate": true
+     }
+    },
+    "tiles_over_limit": [
+     "r1c3"
+    ],
+    "convention": "position of a feature in the CTX 6 m ortho minus its position in the DEM hillshade (east +, north +)"
+   },
+   "gates": {
+    "R1_coverage": {
+     "value": 1.0,
+     "pass": true
+    },
+    "R2_dem_dem_mad": {
+     "value_m": 0.364,
+     "pass": true,
+     "median_flag": false
+    },
+    "R3_registration": {
+     "status": "UNRESOLVED",
+     "pass": true
+    },
+    "R4_vertical_reference": {
+     "label": "UNVERIFIED: file name says 'MOLAtopography_DeltaGeoid'; the FGDC metadata (.xml) says elevations 'refer to the Mars 2020 IAU Sphere with a radius of 3396190m' and that the mosaic was shifted 183.3 m vertically to align with HRSC. The two statements are not reconciled here.",
+     "pass": true
+    }
+   },
+   "suitable_display_only": true
+  }
+ },
+ "common_grid": {
+  "crs": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+  "x0": 4580743.250853,
+  "y0": 1097773.140188,
+  "dx_proj": 20.0,
+  "nx": 682,
+  "ny": 356,
+  "jpl_resampling": "GDAL bilinear, cells touching JPL NoData dropped",
+  "hirise_resampling": "GDAL average of 1 m pixels per 20 m cell; only cells with 100 % HiRISE coverage kept"
+ },
+ "r2_trn_minus_jpl": {
+  "n": 242792,
+  "median_m": -0.091,
+  "mad_m": 0.364,
+  "robust_sigma_m": 0.539,
+  "p05_m": -1.717,
+  "p95_m": 1.099,
+  "mean_m": -0.165,
+  "std_m": 0.953,
+  "tile_medians_m": {
+   "r0c0": -0.43,
+   "r0c1": 0.03,
+   "r0c2": -0.02,
+   "r0c3": 0.04,
+   "r1c0": -0.79,
+   "r1c1": -0.12,
+   "r1c2": -0.01,
+   "r1c3": 0.01
+  },
+  "shift_fit": {
+   "offset_m": 0.001,
+   "tilt_east_m_per_km": -0.001,
+   "tilt_north_m_per_km": -0.001,
+   "shift_east_m": -4.1,
+   "shift_north_m": -10.7,
+   "robust_sigma_before_m": 0.486,
+   "robust_sigma_after_m": 0.043,
+   "cells_used": 217427
+  },
+  "tile_shift_fit": {
+   "r0c0": {
+    "shift_east_m": -4.0,
+    "shift_north_m": -10.5,
+    "robust_sigma_before_m": 1.015,
+    "robust_sigma_after_m": 0.074
+   },
+   "r0c1": {
+    "shift_east_m": -4.2,
+    "shift_north_m": -11.1,
+    "robust_sigma_before_m": 0.571,
+    "robust_sigma_after_m": 0.056
+   },
+   "r0c2": {
+    "shift_east_m": -4.2,
+    "shift_north_m": -10.2,
+    "robust_sigma_before_m": 0.521,
+    "robust_sigma_after_m": 0.053
+   },
+   "r0c3": {
+    "shift_east_m": -4.3,
+    "shift_north_m": -11.1,
+    "robust_sigma_before_m": 0.32,
+    "robust_sigma_after_m": 0.039
+   },
+   "r1c0": {
+    "shift_east_m": -4.1,
+    "shift_north_m": -10.8,
+    "robust_sigma_before_m": 0.638,
+    "robust_sigma_after_m": 0.064
+   },
+   "r1c1": {
+    "shift_east_m": -4.2,
+    "shift_north_m": -11.0,
+    "robust_sigma_before_m": 0.412,
+    "robust_sigma_after_m": 0.028
+   },
+   "r1c2": {
+    "shift_east_m": -4.2,
+    "shift_north_m": -10.4,
+    "robust_sigma_before_m": 0.361,
+    "robust_sigma_after_m": 0.035
+   },
+   "r1c3": {
+    "shift_east_m": -4.3,
+    "shift_north_m": -11.0,
+    "robust_sigma_before_m": 0.317,
+    "robust_sigma_after_m": 0.03
+   }
+  }
+ },
+ "hirise": {
+  "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_006_DTM_MOLAtopography_DeltaGeoid_1m_Eqc_latTs0_lon0_blend40.tif",
+  "header": {
+   "size": [
+    21400,
+    21488
+   ],
+   "dtype": "float32",
+   "nodata": -3.4028226550889045e+38,
+   "crs_proj4": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+   "proj": "eqc",
+   "R_m": 3396190,
+   "lat_ts": 0,
+   "lat_0": 0,
+   "lon_0": 0,
+   "transform": [
+    1.0,
+    0.0,
+    4577366.0,
+    0.0,
+    -1.0,
+    1106618.0
+   ],
+   "area_or_point": "Area",
+   "overviews": []
+  },
+  "full_coverage_share": 1.0,
+  "partial_coverage_cells": 0,
+  "hirise_minus_trn": {
+   "n": 242792,
+   "median_m": -0.911,
+   "mad_m": 2.29,
+   "robust_sigma_m": 3.395,
+   "p05_m": -6.554,
+   "p95_m": 4.964,
+   "mean_m": -0.819,
+   "std_m": 3.562,
+   "tile_medians_m": {
+    "r0c0": -0.0,
+    "r0c1": -0.36,
+    "r0c2": 1.63,
+    "r0c3": 1.15,
+    "r1c0": -2.42,
+    "r1c1": -2.73,
+    "r1c2": -1.35,
+    "r1c3": -1.54
+   },
+   "shift_fit": {
+    "offset_m": -0.692,
+    "tilt_east_m_per_km": 0.15,
+    "tilt_north_m_per_km": 0.671,
+    "shift_east_m": -0.9,
+    "shift_north_m": 17.2,
+    "robust_sigma_before_m": 3.326,
+    "robust_sigma_after_m": 2.622,
+    "cells_used": 238519
+   },
+   "tile_shift_fit": {
+    "r0c0": {
+     "shift_east_m": -2.8,
+     "shift_north_m": 17.7,
+     "robust_sigma_before_m": 3.752,
+     "robust_sigma_after_m": 2.786
+    },
+    "r0c1": {
+     "shift_east_m": 2.1,
+     "shift_north_m": 17.5,
+     "robust_sigma_before_m": 3.871,
+     "robust_sigma_after_m": 3.376
+    },
+    "r0c2": {
+     "shift_east_m": 1.4,
+     "shift_north_m": 10.4,
+     "robust_sigma_before_m": 3.512,
+     "robust_sigma_after_m": 3.282
+    },
+    "r0c3": {
+     "shift_east_m": -8.3,
+     "shift_north_m": 7.6,
+     "robust_sigma_before_m": 2.586,
+     "robust_sigma_after_m": 2.226
+    },
+    "r1c0": {
+     "shift_east_m": 1.7,
+     "shift_north_m": 11.7,
+     "robust_sigma_before_m": 2.928,
+     "robust_sigma_after_m": 2.387
+    },
+    "r1c1": {
+     "shift_east_m": -7.3,
+     "shift_north_m": 20.4,
+     "robust_sigma_before_m": 2.462,
+     "robust_sigma_after_m": 2.162
+    },
+    "r1c2": {
+     "shift_east_m": -3.0,
+     "shift_north_m": 16.6,
+     "robust_sigma_before_m": 2.174,
+     "robust_sigma_after_m": 2.067
+    },
+    "r1c3": {
+     "shift_east_m": -18.0,
+     "shift_north_m": 18.9,
+     "robust_sigma_before_m": 2.184,
+     "robust_sigma_after_m": 1.695
+    }
+   }
+  },
+  "hirise_minus_jpl": {
+   "n": 242792,
+   "median_m": -1.043,
+   "mad_m": 2.213,
+   "robust_sigma_m": 3.281,
+   "p05_m": -6.51,
+   "p95_m": 4.49,
+   "mean_m": -0.984,
+   "std_m": 3.394,
+   "tile_medians_m": {
+    "r0c0": -0.42,
+    "r0c1": -0.27,
+    "r0c2": 1.58,
+    "r0c3": 1.17,
+    "r1c0": -3.25,
+    "r1c1": -2.86,
+    "r1c2": -1.34,
+    "r1c3": -1.45
+   },
+   "shift_fit": {
+    "offset_m": -0.703,
+    "tilt_east_m_per_km": 0.154,
+    "tilt_north_m_per_km": 0.673,
+    "shift_east_m": -4.8,
+    "shift_north_m": 8.0,
+    "robust_sigma_before_m": 3.214,
+    "robust_sigma_after_m": 2.574,
+    "cells_used": 238487
+   },
+   "tile_shift_fit": {
+    "r0c0": {
+     "shift_east_m": -6.3,
+     "shift_north_m": 7.9,
+     "robust_sigma_before_m": 3.062,
+     "robust_sigma_after_m": 2.717
+    },
+    "r0c1": {
+     "shift_east_m": -2.0,
+     "shift_north_m": 8.2,
+     "robust_sigma_before_m": 3.63,
+     "robust_sigma_after_m": 3.326
+    },
+    "r0c2": {
+     "shift_east_m": -2.6,
+     "shift_north_m": 1.7,
+     "robust_sigma_before_m": 3.396,
+     "robust_sigma_after_m": 3.25
+    },
+    "r0c3": {
+     "shift_east_m": -10.5,
+     "shift_north_m": 1.9,
+     "robust_sigma_before_m": 2.591,
+     "robust_sigma_after_m": 2.213
+    },
+    "r1c0": {
+     "shift_east_m": -1.9,
+     "shift_north_m": 2.6,
+     "robust_sigma_before_m": 2.709,
+     "robust_sigma_after_m": 2.318
+    },
+    "r1c1": {
+     "shift_east_m": -12.2,
+     "shift_north_m": 10.6,
+     "robust_sigma_before_m": 2.386,
+     "robust_sigma_after_m": 2.148
+    },
+    "r1c2": {
+     "shift_east_m": -6.0,
+     "shift_north_m": 9.4,
+     "robust_sigma_before_m": 2.083,
+     "robust_sigma_after_m": 2.024
+    },
+    "r1c3": {
+     "shift_east_m": -19.4,
+     "shift_north_m": 12.9,
+     "robust_sigma_before_m": 2.132,
+     "robust_sigma_after_m": 1.664
+    }
+   }
+  },
+  "sign": "positive = HiRISE higher; shift_fit = position in HiRISE minus position in the CTX DEM"
+ },
+ "decision": {
+  "chosen": "trn_ctx_dtm_20m",
+  "suitable": [
+   "ctx_dem_20m",
+   "trn_ctx_dtm_20m"
+  ],
+  "rule": "all of R1-R4; prefer native image CRS (no cross-projection resampling), then higher R1 share"
+ }
+}

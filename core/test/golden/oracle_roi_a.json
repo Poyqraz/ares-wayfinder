@@ -1,0 +1,280 @@
+{
+ "roi_id": "roi_a",
+ "dataset_version": "7ec72147790e",
+ "poi_cells": {
+  "landing": [
+   22,
+   42
+  ],
+  "roubion": [
+   72,
+   44
+  ],
+  "rochette": [
+   63,
+   24
+  ],
+  "sid": [
+   24,
+   47
+  ]
+ },
+ "cases": [
+  {
+   "id": "landing->roubion-distance-minetti-None",
+   "start": [
+    22,
+    42
+   ],
+   "goal": [
+    72,
+    44
+   ],
+   "mode": "distance",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 1016.5733902496142
+  },
+  {
+   "id": "landing->roubion-terrain-minetti-None",
+   "start": [
+    22,
+    42
+   ],
+   "goal": [
+    72,
+    44
+   ],
+   "mode": "terrain",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 904.6697377078019
+  },
+  {
+   "id": "landing->roubion-terrain-tobler-None",
+   "start": [
+    22,
+    42
+   ],
+   "goal": [
+    72,
+    44
+   ],
+   "mode": "terrain",
+   "curve": "tobler",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 965.57418311662
+  },
+  {
+   "id": "landing->roubion-terrain-minetti-6.0",
+   "start": [
+    22,
+    42
+   ],
+   "goal": [
+    72,
+    44
+   ],
+   "mode": "terrain",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": 6.0,
+   "expected_cost": 904.6697377078019
+  },
+  {
+   "id": "landing->rochette-distance-minetti-None",
+   "start": [
+    22,
+    42
+   ],
+   "goal": [
+    63,
+    24
+   ],
+   "mode": "distance",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 969.1605122465282
+  },
+  {
+   "id": "landing->rochette-terrain-minetti-None",
+   "start": [
+    22,
+    42
+   ],
+   "goal": [
+    63,
+    24
+   ],
+   "mode": "terrain",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 893.7165892971465
+  },
+  {
+   "id": "landing->rochette-terrain-tobler-None",
+   "start": [
+    22,
+    42
+   ],
+   "goal": [
+    63,
+    24
+   ],
+   "mode": "terrain",
+   "curve": "tobler",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 934.3509918109569
+  },
+  {
+   "id": "landing->rochette-terrain-minetti-6.0",
+   "start": [
+    22,
+    42
+   ],
+   "goal": [
+    63,
+    24
+   ],
+   "mode": "terrain",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": 6.0,
+   "expected_cost": 893.7165892971465
+  },
+  {
+   "id": "sid->rochette-distance-minetti-None",
+   "start": [
+    24,
+    47
+   ],
+   "goal": [
+    63,
+    24
+   ],
+   "mode": "distance",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 970.5939878705641
+  },
+  {
+   "id": "sid->rochette-terrain-minetti-None",
+   "start": [
+    24,
+    47
+   ],
+   "goal": [
+    63,
+    24
+   ],
+   "mode": "terrain",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 904.0737839006173
+  },
+  {
+   "id": "sid->rochette-terrain-tobler-None",
+   "start": [
+    24,
+    47
+   ],
+   "goal": [
+    63,
+    24
+   ],
+   "mode": "terrain",
+   "curve": "tobler",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 939.8522554501071
+  },
+  {
+   "id": "sid->rochette-terrain-minetti-6.0",
+   "start": [
+    24,
+    47
+   ],
+   "goal": [
+    63,
+    24
+   ],
+   "mode": "terrain",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": 6.0,
+   "expected_cost": 904.0737839006173
+  },
+  {
+   "id": "roubion->landing-distance-minetti-None",
+   "start": [
+    72,
+    44
+   ],
+   "goal": [
+    22,
+    42
+   ],
+   "mode": "distance",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 1016.5733902496142
+  },
+  {
+   "id": "roubion->landing-terrain-minetti-None",
+   "start": [
+    72,
+    44
+   ],
+   "goal": [
+    22,
+    42
+   ],
+   "mode": "terrain",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 1158.4559659101087
+  },
+  {
+   "id": "roubion->landing-terrain-tobler-None",
+   "start": [
+    72,
+    44
+   ],
+   "goal": [
+    22,
+    42
+   ],
+   "mode": "terrain",
+   "curve": "tobler",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 1078.2052638963944
+  },
+  {
+   "id": "roubion->landing-terrain-minetti-6.0",
+   "start": [
+    72,
+    44
+   ],
+   "goal": [
+    22,
+    42
+   ],
+   "mode": "terrain",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": 6.0,
+   "expected_cost": 1158.4559659101087
+  }
+ ]
+}

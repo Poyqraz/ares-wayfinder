@@ -1,0 +1,9 @@
+{
+ "roi_a": {
+  "dataset_version": "376dcb1220c4",
+  "path": "data/hirise/roi_a/376dcb1220c4/",
+  "manifest_sha256": "376dcb1220c4f0540194f5c951e1ce5b04e9f71e1ff20ecb6ad6c9a89f04e157",
+  "aligned_to_ctx_dataset_version": "7ec72147790e",
+  "role": "display_only"
+ }
+}

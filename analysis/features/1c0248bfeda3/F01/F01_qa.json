@@ -1,0 +1,217 @@
+{
+ "feature_id": "F01",
+ "anchors_verified_in_mmgis": {
+  "F01": true,
+  "F02": true,
+  "F03": true
+ },
+ "sources": {
+  "DEM-2020": {
+   "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_006_DTM_MOLAtopography_DeltaGeoid_1m_Eqc_latTs0_lon0_blend40.tif",
+   "doi": "10.5066/P9REJ9JN",
+   "role": "elevation",
+   "header": {
+    "size": [
+     21400,
+     21488
+    ],
+    "dtype": "float32",
+    "nodata": -3.4028226550889045e+38,
+    "crs": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+    "transform": [
+     1.0,
+     0.0,
+     4577366.0,
+     0.0,
+     -1.0,
+     1106618.0
+    ],
+    "pixel_is": "Area"
+   },
+   "window_nodata_share": 0.0,
+   "window_sha256": "91fb0dc5748dce393e1f27939a71da717f1be54ef292315afb9af7b6d61fe51b"
+  },
+  "HIRISE-2020": {
+   "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first.tif",
+   "doi": "10.5066/P9QJDP48",
+   "role": "imagery (detail)",
+   "header": {
+    "size": [
+     85600,
+     85952
+    ],
+    "dtype": "uint8",
+    "nodata": 0.0,
+    "crs": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+    "transform": [
+     0.25,
+     0.0,
+     4577366.0,
+     0.0,
+     -0.25,
+     1106618.0
+    ],
+    "pixel_is": "Area"
+   },
+   "window_nodata_share": 0.0,
+   "window_sha256": "eecef83b4678c1f7efdf57a09da08e7da83872f983164f6bee84f66b604131d2"
+  },
+  "CTX-2020": {
+   "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0.tif",
+   "doi": "10.5066/P9GV1ND3",
+   "role": "imagery (context)",
+   "header": {
+    "size": [
+     5322,
+     5040
+    ],
+    "dtype": "uint8",
+    "nodata": 0.0,
+    "crs": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+    "transform": [
+     6.0,
+     0.0,
+     4573663.250853,
+     0.0,
+     -6.0,
+     1109693.140188
+    ],
+    "pixel_is": "Area"
+   },
+   "window_nodata_share": 0.0,
+   "window_sha256": "a69e0a4d9833ed4c43bc66a1c13d7d63d7a66936c7c597078020f791db11c6a4"
+  }
+ },
+ "window": {
+  "crs": "eqc lat_ts 0 lon_0 0 R 3396190 (all three products)",
+  "x0": 4587844.0,
+  "y0": 1094484.0,
+  "cell_proj_m": 2.0,
+  "cell_ground_m": [
+   1.8971043129398701,
+   2.0
+  ],
+  "nx": 369,
+  "ny": 350,
+  "half_size_ground_m": 350.0,
+  "dem_source_window_px": {
+   "col0": 10478,
+   "row0": 12134,
+   "cols": 738,
+   "rows": 700
+  }
+ },
+ "registration": {
+  "ctx_vs_hirise_6m": {
+   "east_m": 0.73,
+   "north_m": -0.92,
+   "ncc": 0.907,
+   "sharpness": 0.34,
+   "peak_on_search_edge": false,
+   "convention": "feature in CTX minus in HiRISE"
+  },
+  "dtm_hillshade_vs_hirise_2m": {
+   "east_m": 1.56,
+   "north_m": 0.08,
+   "ncc": 0.552,
+   "sharpness": 0.211,
+   "peak_on_search_edge": false,
+   "sun_az_alt_deg": [
+    270,
+    60
+   ],
+   "convention": "feature in HiRISE minus in DTM"
+  }
+ },
+ "measurements": {
+  "method": "Transect through the F01 rover anchor along the dominant downslope direction of cells steeper than 15 deg (unit vector E 0.0267, N -0.9996); profile sampled bilinearly every 1 m on the 2 m HiRISE DTM cells; crest and foot = where the profile slope (10 m baseline) falls below 10 deg on either side of the steepest point; local slope = Horn 3x3 cell slopes within 10 m of the crest-foot segment.",
+  "nominal": {
+   "crest_elev_m": -2514.163,
+   "foot_elev_m": -2522.52,
+   "delta_z_m": 8.357,
+   "horizontal_span_m": 23.0,
+   "mean_transect_slope_deg": 19.968,
+   "local_slope_cells": 193,
+   "local_slope_mean_deg": 14.236,
+   "local_slope_p50_deg": 9.899,
+   "local_slope_p95_deg": 31.801,
+   "local_slope_max_deg": 32.459
+  },
+  "picks": {
+   "crest_s": -25.0,
+   "foot_s": -2.0,
+   "steepest_s": -17.0,
+   "steepest_deg": 27.37
+  }
+ },
+ "uncertainty": {
+  "source_resolution": {
+   "DEM-2020": "1 m posting (2 m analysis cells); effective resolution several metres",
+   "CTX-2020": "6 m",
+   "HIRISE-2020": "0.25 m (1 m panel)"
+  },
+  "picking_threshold_range": {
+   "delta_z_m": [
+    8.2,
+    8.89
+   ],
+   "horizontal_span_m": [
+    22.0,
+    27.0
+   ],
+   "mean_transect_slope_deg": [
+    18.22,
+    20.45
+   ]
+  },
+  "profile_baseline_range": {
+   "delta_z_m": [
+    8.13,
+    8.36
+   ],
+   "horizontal_span_m": [
+    21.0,
+    23.0
+   ],
+   "mean_transect_slope_deg": [
+    19.97,
+    21.16
+   ]
+  },
+  "independent_stereo_dem_range": {
+   "delta_z_m": [
+    8.15,
+    8.62
+   ],
+   "horizontal_span_m": [
+    23.0,
+    24.0
+   ],
+   "mean_transect_slope_deg": [
+    19.5,
+    19.97
+   ],
+   "local_slope_p95_deg": [
+    29.56,
+    31.8
+   ]
+  },
+  "mosaic_equals_pair_share": {
+   "C": 1.0,
+   "W": 0.0,
+   "DL": 0.0003
+  },
+  "vertical": "Relative: independent stereo pairs give the delta_z range above (constant pair offsets up to 2.4 m cancel in delta_z). Per-2 m-edge grade noise from M0-A pair comparison <= 0.048 (~2.7 deg). Absolute vertical datum UNVERIFIED.",
+  "registration": "See registration: HiRISE vs CTX and DTM hillshade vs HiRISE shifts; these move the boundary in the imagery panels, not the DEM measurements.",
+  "interpretation": "The crest/foot line is an algorithmic break-in-slope candidate on a multi-part delta front; a geologist may place the fan-front contact differently. Image correlation does not certify the geology."
+ },
+ "status": {
+  "three_raster_validation": "AUTOMATED_MEASUREMENT_PENDING_REVIEW",
+  "qa_status": "LITERATURE_CONFIRMED",
+  "next_required": "THREE_LAYER_VISUALLY_CONFIRMED by the geology reviewer (team plan step 10)",
+  "reviewer": null,
+  "validated_for_human_eva": false,
+  "used_in_routing": false
+ },
+ "doi_note": "DOI as given in the team document v0.9; product file names and headers verified here, DOI landing pages not resolved offline."
+}

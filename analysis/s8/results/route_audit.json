@@ -1,0 +1,247 @@
+{
+ "generated_by": "analysis/s8/route_audit.ts",
+ "algorithm": "core/src/route.ts (unchanged)",
+ "params": {
+  "cost_curve": "minetti",
+  "g_max": 0.45,
+  "cell_slope_gate_deg": null,
+  "connectivity": 8
+ },
+ "grids": {
+  "m0a": {
+   "dataset_version": "f8de9017164a",
+   "cell_m": [
+    1.8971372313334578,
+    2
+   ],
+   "size": [
+    259,
+    369
+   ]
+  },
+  "roi_a": {
+   "dataset_version": "7ec72147790e",
+   "cell_m": [
+    20.00342773336083,
+    20
+   ],
+   "size": [
+    74,
+    90
+   ]
+  }
+ },
+ "routes": [
+  {
+   "name": "M0-A reference (M0 rover position to A rover position)",
+   "start": {
+    "row": 273,
+    "col": 161
+   },
+   "goal": {
+    "row": 89,
+    "col": 97
+   },
+   "distance": {
+    "length_m": 416.426,
+    "surface_length_m": 418.495,
+    "ascent_m": 26.46,
+    "descent_m": 1.5,
+    "cost_flat_equiv_m": 416.426,
+    "steepest_step_deg": 22,
+    "exceeds_24_2_deg": false,
+    "astar_minus_dijkstra": 5.684341886080802e-14,
+    "path_rescored_minus_cost": 0,
+    "reverse_cost_flat_equiv_m": 416.426,
+    "straight_line_m": 387.513,
+    "grid_detour_percent": 7.46,
+    "turns": 6,
+    "smoothed": {
+     "length_m": 387.513,
+     "cost_flat_equiv_m": 387.513,
+     "grid_cost_flat_equiv_m": 416.426,
+     "ascent_m": 25.65,
+     "descent_m": 0.69,
+     "steepest_sample_deg": 22.79,
+     "turns": 0,
+     "anchors": 2,
+     "length_saving_percent": 6.94,
+     "cost_saving_percent": 6.94
+    }
+   },
+   "terrain": {
+    "length_m": 416.426,
+    "surface_length_m": 418.124,
+    "ascent_m": 25.09,
+    "descent_m": 0.12,
+    "cost_flat_equiv_m": 664.39,
+    "steepest_step_deg": 18.18,
+    "exceeds_24_2_deg": false,
+    "astar_minus_dijkstra": 0,
+    "path_rescored_minus_cost": 0,
+    "reverse_cost_flat_equiv_m": 303.8,
+    "straight_line_m": 387.513,
+    "grid_detour_percent": 7.46,
+    "turns": 49,
+    "smoothed": {
+     "length_m": 387.513,
+     "cost_flat_equiv_m": 645.135,
+     "grid_cost_flat_equiv_m": 664.39,
+     "ascent_m": 25.65,
+     "descent_m": 0.69,
+     "steepest_sample_deg": 22.79,
+     "turns": 0,
+     "anchors": 2,
+     "length_saving_percent": 6.94,
+     "cost_saving_percent": 2.9
+    }
+   }
+  },
+  {
+   "name": "M0-A: ARES Base (hypothetical) to A rover position",
+   "start": {
+    "row": 185,
+    "col": 200
+   },
+   "goal": {
+    "row": 89,
+    "col": 97
+   },
+   "distance": {
+    "length_m": 277.919,
+    "surface_length_m": 279.714,
+    "ascent_m": 23.84,
+    "descent_m": 0.35,
+    "cost_flat_equiv_m": 277.919,
+    "steepest_step_deg": 18.27,
+    "exceeds_24_2_deg": false,
+    "astar_minus_dijkstra": 5.684341886080802e-14,
+    "path_rescored_minus_cost": 0,
+    "reverse_cost_flat_equiv_m": 277.919,
+    "straight_line_m": 273.947,
+    "grid_detour_percent": 1.45,
+    "turns": 7,
+    "smoothed": {
+     "length_m": 273.947,
+     "cost_flat_equiv_m": 273.947,
+     "grid_cost_flat_equiv_m": 277.919,
+     "ascent_m": 23.85,
+     "descent_m": 0.36,
+     "steepest_sample_deg": 21.21,
+     "turns": 0,
+     "anchors": 2,
+     "length_saving_percent": 1.43,
+     "cost_saving_percent": 1.43
+    }
+   },
+   "terrain": {
+    "length_m": 279.059,
+    "surface_length_m": 280.708,
+    "ascent_m": 23.61,
+    "descent_m": 0.12,
+    "cost_flat_equiv_m": 514.012,
+    "steepest_step_deg": 18.21,
+    "exceeds_24_2_deg": false,
+    "astar_minus_dijkstra": 0,
+    "path_rescored_minus_cost": 0,
+    "reverse_cost_flat_equiv_m": 173.067,
+    "straight_line_m": 273.947,
+    "grid_detour_percent": 1.87,
+    "turns": 5,
+    "smoothed": {
+     "length_m": 274.755,
+     "cost_flat_equiv_m": 513.757,
+     "grid_cost_flat_equiv_m": 514.012,
+     "ascent_m": 23.77,
+     "descent_m": 0.28,
+     "steepest_sample_deg": 20.83,
+     "turns": 2,
+     "anchors": 4,
+     "length_saving_percent": 1.54,
+     "cost_saving_percent": 0.05
+    }
+   }
+  },
+  {
+   "name": "ROI-A reference (Rochette/Montdenier to Landing)",
+   "start": {
+    "row": 63,
+    "col": 24
+   },
+   "goal": {
+    "row": 22,
+    "col": 42
+   },
+   "distance": {
+    "length_m": 969.161,
+    "surface_length_m": 970.239,
+    "ascent_m": 22.8,
+    "descent_m": 12.29,
+    "cost_flat_equiv_m": 969.161,
+    "steepest_step_deg": 5.92,
+    "exceeds_24_2_deg": false,
+    "astar_minus_dijkstra": 0,
+    "path_rescored_minus_cost": 0,
+    "reverse_cost_flat_equiv_m": 969.161,
+    "straight_line_m": 895.569,
+    "grid_detour_percent": 8.22,
+    "turns": 3,
+    "smoothed": {
+     "length_m": 895.569,
+     "cost_flat_equiv_m": 895.569,
+     "grid_cost_flat_equiv_m": 969.161,
+     "ascent_m": 12.81,
+     "descent_m": 2.29,
+     "steepest_sample_deg": 4.51,
+     "turns": 0,
+     "anchors": 2,
+     "length_saving_percent": 7.59,
+     "cost_saving_percent": 7.59
+    }
+   },
+   "terrain": {
+    "length_m": 969.161,
+    "surface_length_m": 969.326,
+    "ascent_m": 12.73,
+    "descent_m": 2.21,
+    "cost_flat_equiv_m": 1058.299,
+    "steepest_step_deg": 2.41,
+    "exceeds_24_2_deg": false,
+    "astar_minus_dijkstra": 0,
+    "path_rescored_minus_cost": 0,
+    "reverse_cost_flat_equiv_m": 893.717,
+    "straight_line_m": 895.569,
+    "grid_detour_percent": 8.22,
+    "turns": 8,
+    "smoothed": {
+     "length_m": 895.569,
+     "cost_flat_equiv_m": 990.263,
+     "grid_cost_flat_equiv_m": 1058.299,
+     "ascent_m": 12.81,
+     "descent_m": 2.29,
+     "steepest_sample_deg": 4.51,
+     "turns": 0,
+     "anchors": 2,
+     "length_saving_percent": 7.59,
+     "cost_saving_percent": 6.43
+    }
+   }
+  }
+ ],
+ "random_parity": {
+  "m0a": {
+   "pairs": 60,
+   "distance_max_abs_diff": 6.252776074688882e-13,
+   "terrain_max_rel_diff": 0,
+   "terrain_no_route": 0,
+   "terrain_route_differs_from_distance": 18
+  },
+  "roi_a": {
+   "pairs": 300,
+   "distance_max_abs_diff": 2.0463630789890885e-12,
+   "terrain_max_rel_diff": 0,
+   "terrain_no_route": 0,
+   "terrain_route_differs_from_distance": 0
+  }
+ }
+}

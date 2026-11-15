@@ -1,0 +1,255 @@
+{
+ "schema": "ares-hirise-display-layer 0.1 (proposed in CR-003; not part of contract v1.0.0)",
+ "layer_role": "DISPLAY ONLY. Not a routing input. Routes, lengths, profiles and model costs stay on the CTX 20 m grid.",
+ "roi_id": "roi_a",
+ "aligned_to_ctx_bundle": {
+  "roi_id": "roi_a",
+  "dataset_version": "7ec72147790e"
+ },
+ "crs": "+proj=eqc +lat_ts=18.4663 +lat_0=0 +lon_0=0.0 +x_0=0 +y_0=0 +R=3396190.0 +units=m +no_defs",
+ "crs_note": "Same projection as the CTX bundle: equirectangular, lat_ts 18.4663, sphere R 3396190 m; planetocentric latitude, east-positive longitude; row 0 = north edge; x0/y0 = upper-left pixel corner.",
+ "extent_proj_m": {
+  "x_min": 4353640.0,
+  "x_max": 4355120.0,
+  "y_min": 1091940.0,
+  "y_max": 1093740.0
+ },
+ "bounds_geo": {
+  "lat_min": 18.421688268770378,
+  "lat_max": 18.452055357514986,
+  "lon_min": 77.43569459188146,
+  "lon_max": 77.46201850198793
+ },
+ "grids": {
+  "dtm_2m": {
+   "nx": 740,
+   "ny": 900,
+   "dx_proj": 2.0,
+   "dy_proj": 2.0,
+   "dx_ground_m": 2.000343,
+   "dy_ground_m": 2.0,
+   "x0": 4353640.0,
+   "y0": 1093740.0,
+   "n_invalid": 0,
+   "valid_fraction": 1.0,
+   "file": "dtm_2m.f32.bin",
+   "encoding": "float32 little-endian, row-major, north row first, NaN = invalid",
+   "h_min": -2592.764,
+   "h_max": -2544.749
+  },
+  "dtm_4m": {
+   "nx": 370,
+   "ny": 450,
+   "dx_proj": 4.0,
+   "dy_proj": 4.0,
+   "dx_ground_m": 4.000686,
+   "dy_ground_m": 4.0,
+   "x0": 4353640.0,
+   "y0": 1093740.0,
+   "n_invalid": 0,
+   "valid_fraction": 1.0,
+   "file": "dtm_4m.f32.bin",
+   "encoding": "float32 little-endian, row-major, north row first, NaN = invalid",
+   "derived_from": "2x2 block mean of dtm_2m"
+  },
+  "ortho_0p5m": {
+   "nx": 2960,
+   "ny": 3600,
+   "dx_proj": 0.5,
+   "dy_proj": 0.5,
+   "dx_ground_m": 0.500086,
+   "dy_ground_m": 0.5,
+   "x0": 4353640.0,
+   "y0": 1093740.0,
+   "n_invalid": 0,
+   "valid_fraction": 1.0,
+   "file": "ortho_0p5m.jpg",
+   "encoding": "8-bit grayscale JPEG q90, source DN averaged, no stretch. Invalid cells are counted in n_invalid (stored as DN 0 before JPEG); lossy JPEG can also decode very dark valid pixels to DN 0, so use n_invalid, not DN 0, as the NoData record"
+  },
+  "ortho_1m": {
+   "nx": 1480,
+   "ny": 1800,
+   "dx_proj": 1.0,
+   "dy_proj": 1.0,
+   "dx_ground_m": 1.000171,
+   "dy_ground_m": 1.0,
+   "x0": 4353640.0,
+   "y0": 1093740.0,
+   "n_invalid": 0,
+   "valid_fraction": 1.0,
+   "file": "ortho_1m.jpg",
+   "encoding": "8-bit grayscale JPEG q90, 2x2 block mean of the 0.5 m texture before JPEG; same NoData rule as ortho_0p5m",
+   "derived_from": "ortho_0p5m (pre-JPEG)"
+  }
+ },
+ "elevation": {
+  "unit": "m",
+  "vertical_reference": "UNVERIFIED: source file names say MOLAtopography_DeltaGeoid; heights were tied to the USGS CTX LVS DTM via ground control; the metadata names no datum",
+  "adjusted_to_ctx": false,
+  "ctx_minus_hirise_at_20m_m": {
+   "median": 1.664,
+   "mean": 1.745,
+   "std": 2.071,
+   "p01": -2.875,
+   "p99": 6.845,
+   "max_abs": 10.023,
+   "cells": 6660,
+   "method": "dtm_2m 10x10 block mean vs CTX bundle dem.f32.bin on the identical 20 m grid"
+  },
+  "line_artifacts_1m_source": {
+   "count": 21,
+   "step_m_median": 0.061,
+   "step_m_max": 0.119,
+   "evaluated_on_source_px": [
+    1800,
+    1561
+   ],
+   "description": "coherent east-west row steps over >= 100 m segments in the 1 m source DTM; processing/mosaic artifacts, not geology; left unedited and disclosed"
+  },
+  "effective_resolution_note": "1 m post spacing; effective topographic resolution of stereo DTMs is coarser (often quoted ~3x post spacing). Not verified here."
+ },
+ "registration": {
+  "method": "high-pass (15 px box) NCC shift search, HiRISE 0.5 m texture block-averaged to the 5 m CTX bundle ortho grid, sub-pixel parabola",
+  "reference": "CTX bundle ortho.jpg (7ec72147790e), itself not quantitatively registered to the CTX DEM (G1/S-4 open)",
+  "offset_hirise_minus_ctx_m": {
+   "east": 1.24,
+   "north": -4.27
+  },
+  "ncc_peak": 0.723,
+  "ncc_zero_shift": 0.656,
+  "ncc_runner_up_outside_1px": 0.465,
+  "ncc_grid_median": 0.013,
+  "estimated_uncertainty_m": 2.5,
+  "uncertainty_basis": "half a 5 m CTX ortho pixel for the sub-pixel peak; USGS: 94.1% of HiRISE-vs-CTX LVS features within 6 m",
+  "applied_correction_m": {
+   "east": 0.0,
+   "north": 0.0
+  },
+  "why_not_applied": "offset is below one 20 m CTX analysis cell and within published uncertainty; the CTX reference is itself not validated (S-4), so HiRISE is not forced onto it"
+ },
+ "sources": [
+  {
+   "role": "dtm",
+   "product_file": "JEZ_hirise_soc_006_DTM_MOLAtopography_DeltaGeoid_1m_Eqc_latTs0_lon0_blend40.tif",
+   "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_006_DTM_MOLAtopography_DeltaGeoid_1m_Eqc_latTs0_lon0_blend40.tif",
+   "doi": "10.5066/P9REJ9JN",
+   "title": "High-Resolution Imaging Science Experiment Digital Terrain Model Mosaic for Mars 2020 Terrain Relative Navigation",
+   "publisher": "U.S. Geological Survey, Astrogeology Science Center",
+   "authors": "Fergason, R. L., Galuszka, D., Hare, T., Mayer, D., Redding, B., Smith, E.",
+   "published": "2020-07-24",
+   "mission": "Mars Reconnaissance Orbiter",
+   "instrument": "HiRISE",
+   "source_crs": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+   "source_transform": [
+    1.0,
+    0.0,
+    4577366.0,
+    0.0,
+    -1.0,
+    1106618.0
+   ],
+   "source_size_px": [
+    21400,
+    21488
+   ],
+   "source_dtype": "float32",
+   "source_nodata": -3.4028226550889045e+38,
+   "source_block": [
+    1,
+    21400
+   ],
+   "read_window_col_row_w_h": [
+    12569,
+    12838,
+    1645,
+    1880
+   ],
+   "read_window_nodata_pixels": 0,
+   "license": "USGS product, U.S. public domain (FGDC accconst/useconst: None); cite the DOI"
+  },
+  {
+   "role": "ortho",
+   "product_file": "JEZ_hirise_soc_007_orthoMosaic_25cm_Ortho_blend120.tif",
+   "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_007_orthoMosaic_25cm_Ortho_blend120.tif",
+   "doi": "10.5066/P9QJDP48",
+   "title": "High-Resolution Imaging Science Experiment Orthorectified image Mosaic for Mars 2020 Surface Operations",
+   "publisher": "U.S. Geological Survey, Astrogeology Science Center",
+   "authors": "Fergason, R. L., Galuszka, D., Hare, T., Mayer, D., Redding, B., Smith, E.",
+   "published": "2020-07-24",
+   "mission": "Mars Reconnaissance Orbiter",
+   "instrument": "HiRISE",
+   "source_crs": "+proj=ortho +lat_0=18.4663 +lon_0=77.4298 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+   "source_transform": [
+    0.25,
+    0.0,
+    -11612.0,
+    0.0,
+    -0.25,
+    12036.0
+   ],
+   "source_size_px": [
+    81064,
+    85936
+   ],
+   "source_dtype": "uint8",
+   "source_nodata": 0.0,
+   "source_block": [
+    256,
+    256
+   ],
+   "read_window_col_row_w_h": [
+    47613,
+    51360,
+    6243,
+    7522
+   ],
+   "read_window_nodata_pixels": 0,
+   "license": "USGS product, U.S. public domain (FGDC accconst/useconst: None); cite the DOI"
+  }
+ ],
+ "citations": [
+  "Fergason, R. L., Galuszka, D., Hare, T., Mayer, D., Redding, B., Smith, E. (2020). High-Resolution Imaging Science Experiment Digital Terrain Model Mosaic for Mars 2020 Terrain Relative Navigation. USGS Astrogeology Science Center. https://doi.org/10.5066/P9REJ9JN",
+  "Fergason, R. L., Galuszka, D., Hare, T., Mayer, D., Redding, B., Smith, E. (2020). High-Resolution Imaging Science Experiment Orthorectified image Mosaic for Mars 2020 Surface Operations. USGS Astrogeology Science Center. https://doi.org/10.5066/P9QJDP48",
+  "McEwen, A. S. et al. (2007). Mars Reconnaissance Orbiter's High Resolution Imaging Science Experiment (HiRISE). J. Geophys. Res. 112, E05S04. https://doi.org/10.1029/2005JE002605"
+ ],
+ "credit": "HiRISE images: NASA/JPL-Caltech/University of Arizona. DTM and orthomosaic: USGS Astrogeology. Historical orbital data (2006-2017 acquisitions), before the 2021 landing: no lander, rover or tracks are visible.",
+ "processing": [
+  "1. Read the actual source pixels over ROI-A plus a 40 m margin via HTTP range requests (windows recorded above).",
+  "2. DTM: ISIS NULL (< -1e30) -> invalid. Warp from eqc lat_ts=0 to the CTX eqc lat_ts=18.4663 grid at 2 m with GDAL average resampling (area-weighted mean; ~4.2 source pixels per cell, no upsampling).",
+  "3. Coverage mask warped the same way; a cell with any NoData contribution is set invalid (NaN). No filling or interpolation through NoData.",
+  "4. dtm_4m = 2x2 block mean of dtm_2m (fallback).",
+  "5. Ortho SOC_007: warp from orthographic (lat_0 18.4663, lon_0 77.4298) to the same grid at 0.5 m with GDAL average (4 source pixels per cell); DN rounded, no contrast stretch; 0 kept as NoData. ortho_1m = 2x2 block mean before JPEG.",
+  "6. No vertical shift and no horizontal correction applied; offsets vs CTX measured and recorded only."
+ ],
+ "limitations": [
+  "Display only: not used for routing, route length, elevation profile or model cost.",
+  "Vertical datum UNVERIFIED; heights differ from the CTX bundle (see ctx_minus_hirise_at_20m_m).",
+  "No per-pixel DTM confidence layer is published; only aggregate accuracies in the USGS metadata.",
+  "21 east-west line artifacts (see line_artifacts_1m_source) are visible in shaded relief and at vertical exaggeration.",
+  "A route drawn on this surface is a visualization; it is not validated for human walking.",
+  "G1/S-4, S2 (POI coordinates), S6 (cost curve) and the vertical datum remain open."
+ ],
+ "generator": "pipeline/hirise_bundle.py",
+ "files": [
+  {
+   "file": "dtm_2m.f32.bin",
+   "bytes": 2664000,
+   "sha256": "736474bca712b62a884b9d7f252dabc335d900f08dc6a85231bfeb04269d4326"
+  },
+  {
+   "file": "dtm_4m.f32.bin",
+   "bytes": 666000,
+   "sha256": "21882117f63e2a49c82eb88fe5a9cfca017eca1c397e1cd79e26d6bd4c7bc9b8"
+  },
+  {
+   "file": "ortho_0p5m.jpg",
+   "bytes": 2264096,
+   "sha256": "6bc14d92e2ca3cca3ef423052ad6ab510a8542bbeb1ed3dfbc4edc818b4d375c"
+  },
+  {
+   "file": "ortho_1m.jpg",
+   "bytes": 752487,
+   "sha256": "eeb11ed8c73f2b8a386d38b1443a89f784c522c97b631b725f09e267451d0062"
+  }
+ ]
+}

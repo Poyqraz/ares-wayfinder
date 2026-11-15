@@ -1,0 +1,77 @@
+{
+ "contract_version": "1.0.0",
+ "dataset_version": "5c4dd158f4cf",
+ "roi_id": "regional",
+ "role": "display_only_regional_relief",
+ "analysis_role": "DISPLAY ONLY regional relief. Not for routing, slopes, hazards or traversability. Not in web/public/data.",
+ "source_ids": [
+  "trn_ctx_dtm_20m"
+ ],
+ "nx": 341,
+ "ny": 178,
+ "dx_proj": 40.0,
+ "dy_proj": 40.0,
+ "dx_ground_m": 37.941789487260486,
+ "dy_ground_m": 40.0,
+ "x0": 4580743.250853,
+ "y0": 1097773.140188,
+ "radius_m": 3396190.0,
+ "lat_ts_deg": 0.0,
+ "central_meridian_deg": 0.0,
+ "crs_proj4": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+ "bounds_geo": {
+  "lat_min": 18.39997816537429,
+  "lat_max": 18.520096871964068,
+  "lon_min": 77.27990934161913,
+  "lon_max": 77.51002439188382
+ },
+ "roi_request_geo": {
+  "lat_min": 18.4,
+  "lat_max": 18.52,
+  "lon_min": 77.28,
+  "lon_max": 77.51
+ },
+ "source_window": {
+  "col0": 354,
+  "row0": 596,
+  "source_pixel_m": 20.0,
+  "cells_per_axis": 2,
+  "source_nodata_px": 0
+ },
+ "elevation_unit": "m",
+ "vertical_reference": "UNVERIFIED: file name says 'MOLAtopography_DeltaGeoid'; the FGDC metadata (.xml) says elevations 'refer to the Mars 2020 IAU Sphere with a radius of 3396190m' and that the mosaic was shifted 183.3 m vertically to align with HRSC. The two statements are not reconciled here.",
+ "nodata_policy": "NaN in dem = no source data (any NoData among the 2 x 2 native cells), never filled or interpolated",
+ "h_min": -2649.542724609375,
+ "h_max": -1789.957275390625,
+ "slope_method": "horn3x3",
+ "validity_counts": {
+  "0": 60698,
+  "1": 0,
+  "2": 0,
+  "3": 0
+ },
+ "semantic_resolution": {
+  "dem_posting_m": 40.0,
+  "image_gsd_m": 6.0,
+  "note": "40 m posting (2 x 2 mean of a 20 m CTX stereo DTM); effective relief resolution is ~100 m. The 6 m texture does not imply 6 m terrain."
+ },
+ "texture": {
+  "regional_basemap_version": "d3d62fc34c56",
+  "asset": "science_6m.jpg",
+  "x0": 4580743.250853,
+  "y0": 1097771.140188,
+  "dx": 6.0,
+  "dy": 6.0,
+  "nx": 2274,
+  "ny": 1187,
+  "same_crs": true
+ },
+ "gates": {
+  "R1_valid_share": 1.0,
+  "R2_trn_minus_jpl_mad_m": 0.364,
+  "R3_registration": "UNRESOLVED",
+  "R4_vertical_reference": "UNVERIFIED",
+  "doc": "analysis/regional_dem/GATES.md",
+  "numbers": "analysis/regional_dem/checks.json"
+ }
+}

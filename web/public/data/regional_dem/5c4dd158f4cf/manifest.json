@@ -1,0 +1,18 @@
+[
+ {
+  "file": "dem.f32.bin",
+  "sha256": "25990232ebaa99bea4c82b68ef11229cd9aeb39ee8559fe55984a24e3d696042"
+ },
+ {
+  "file": "hillshade.png",
+  "sha256": "7ac7b74f22aafb82f6b0a79f253680592109629be08428eee54d56a98e8f9e1f"
+ },
+ {
+  "file": "sources.json",
+  "sha256": "c0644e686f1381058a723fe0c2ef0bd9b65c48813e8384332430d7a20db17cd7"
+ },
+ {
+  "file": "validity.u8.bin",
+  "sha256": "2ef6c11aeece3fcf1c2f0a7dae3b2697875b05e53474146875dee739af85cfdc"
+ }
+]

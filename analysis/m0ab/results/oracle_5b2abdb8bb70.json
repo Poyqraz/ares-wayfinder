@@ -1,0 +1,327 @@
+{
+ "dataset_version": "5b2abdb8bb70",
+ "generator": "pipeline/m0a_routes.py (oracle.route_cost)",
+ "g6": {
+  "g_max_grade": 0.45,
+  "g_max_deg": 24.23,
+  "threshold_kind": "experimental algorithm threshold (cost-curve domain), NOT an astronaut safety limit",
+  "same_strong_component": true,
+  "component_share_of_grid": 1.0,
+  "edges_removed_share": 0.0119,
+  "result": "CONNECTED",
+  "pair": "M0->B",
+  "all_pairs_connected": {
+   "M0->A": true,
+   "M0->B": true,
+   "A->B": true
+  }
+ },
+ "cases": [
+  {
+   "id": "M0->A distance",
+   "start": [
+    273,
+    283
+   ],
+   "goal": [
+    89,
+    219
+   ],
+   "mode": "distance",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 416.42572132996787,
+   "vectorised_cost": 416.42572132996787
+  },
+  {
+   "id": "M0->A terrain-minetti",
+   "start": [
+    273,
+    283
+   ],
+   "goal": [
+    89,
+    219
+   ],
+   "mode": "terrain",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 664.3901018131736,
+   "vectorised_cost": 664.3901018131736
+  },
+  {
+   "id": "M0->A terrain-tobler",
+   "start": [
+    273,
+    283
+   ],
+   "goal": [
+    89,
+    219
+   ],
+   "mode": "terrain",
+   "curve": "tobler",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 530.2719731898817,
+   "vectorised_cost": 530.2719731898817
+  },
+  {
+   "id": "A->M0 distance",
+   "start": [
+    89,
+    219
+   ],
+   "goal": [
+    273,
+    283
+   ],
+   "mode": "distance",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 416.42572132996787,
+   "vectorised_cost": 416.42572132996787
+  },
+  {
+   "id": "A->M0 terrain-minetti",
+   "start": [
+    89,
+    219
+   ],
+   "goal": [
+    273,
+    283
+   ],
+   "mode": "terrain",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 303.8004283468983,
+   "vectorised_cost": 303.8004283468983
+  },
+  {
+   "id": "A->M0 terrain-tobler",
+   "start": [
+    89,
+    219
+   ],
+   "goal": [
+    273,
+    283
+   ],
+   "mode": "terrain",
+   "curve": "tobler",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 422.7929717098011,
+   "vectorised_cost": 422.7929717098011
+  },
+  {
+   "id": "M0->B distance",
+   "start": [
+    273,
+    283
+   ],
+   "goal": [
+    333,
+    79
+   ],
+   "mode": "distance",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 438.58687505886036,
+   "vectorised_cost": 438.58687505886036
+  },
+  {
+   "id": "M0->B terrain-minetti",
+   "start": [
+    273,
+    283
+   ],
+   "goal": [
+    333,
+    79
+   ],
+   "mode": "terrain",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 615.1357165939701,
+   "vectorised_cost": 615.1357165939701
+  },
+  {
+   "id": "M0->B terrain-tobler",
+   "start": [
+    273,
+    283
+   ],
+   "goal": [
+    333,
+    79
+   ],
+   "mode": "terrain",
+   "curve": "tobler",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 515.5803034990229,
+   "vectorised_cost": 515.5803034990229
+  },
+  {
+   "id": "B->M0 distance",
+   "start": [
+    333,
+    79
+   ],
+   "goal": [
+    273,
+    283
+   ],
+   "mode": "distance",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 438.58687505886036,
+   "vectorised_cost": 438.58687505886036
+  },
+  {
+   "id": "B->M0 terrain-minetti",
+   "start": [
+    333,
+    79
+   ],
+   "goal": [
+    273,
+    283
+   ],
+   "mode": "terrain",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 325.8374634093953,
+   "vectorised_cost": 325.8374634093953
+  },
+  {
+   "id": "B->M0 terrain-tobler",
+   "start": [
+    333,
+    79
+   ],
+   "goal": [
+    273,
+    283
+   ],
+   "mode": "terrain",
+   "curve": "tobler",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 413.9302091879727,
+   "vectorised_cost": 413.9302091879727
+  },
+  {
+   "id": "A->B distance",
+   "start": [
+    89,
+    219
+   ],
+   "goal": [
+    333,
+    79
+   ],
+   "mode": "distance",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 593.9312654093031,
+   "vectorised_cost": 593.9312654093031
+  },
+  {
+   "id": "A->B terrain-minetti",
+   "start": [
+    89,
+    219
+   ],
+   "goal": [
+    333,
+    79
+   ],
+   "mode": "terrain",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 599.6656341512945,
+   "vectorised_cost": 599.6656341512945
+  },
+  {
+   "id": "A->B terrain-tobler",
+   "start": [
+    89,
+    219
+   ],
+   "goal": [
+    333,
+    79
+   ],
+   "mode": "terrain",
+   "curve": "tobler",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 625.0702025937385,
+   "vectorised_cost": 625.0702025937385
+  },
+  {
+   "id": "B->A distance",
+   "start": [
+    333,
+    79
+   ],
+   "goal": [
+    89,
+    219
+   ],
+   "mode": "distance",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 593.9312654093031,
+   "vectorised_cost": 593.9312654093031
+  },
+  {
+   "id": "B->A terrain-minetti",
+   "start": [
+    333,
+    79
+   ],
+   "goal": [
+    89,
+    219
+   ],
+   "mode": "terrain",
+   "curve": "minetti",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 681.8223477232863,
+   "vectorised_cost": 681.8223477232863
+  },
+  {
+   "id": "B->A terrain-tobler",
+   "start": [
+    333,
+    79
+   ],
+   "goal": [
+    89,
+    219
+   ],
+   "mode": "terrain",
+   "curve": "tobler",
+   "g_max": 0.45,
+   "gate": null,
+   "expected_cost": 641.4002051988185,
+   "vectorised_cost": 641.4002051988185
+  }
+ ]
+}

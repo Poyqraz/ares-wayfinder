@@ -1,0 +1,106 @@
+/* S7 visual system: cool basalt chrome so the warm Mars imagery is the centrepiece. Loaded after styles.css. */
+:root {
+  --bg: #0b1016; --panel: #131a22; --panel-2: #19222c; --line: #2a3846; --ink: #e8eef4; --muted: #9db0c2;
+  --rust: #ffb454; --rust-2: #ffd9a0; --cyan: #6fd6ff; --amber: #ff8a3d;
+  --m0: #f2c14e; --ma: #ff8a3d; --mb: #7fb6ff; --site: #4fe0c0; --feature: #ff6fcf;
+  font-family: "Bahnschrift", "DIN Alternate", "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+  background: var(--bg);
+}
+body { background: linear-gradient(180deg, #101822 0%, var(--bg) 30%); }
+h1 { font-size: 26px; font-weight: 600; letter-spacing: 0; margin: 0 0 8px; }
+h2 { font-size: 15px; font-weight: 600; letter-spacing: 0.01em; text-transform: none; color: var(--ink); margin: 0 0 6px; }
+h3 { font-size: 13px; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--ink); margin: 8px 0 4px; }
+p { line-height: 1.45; }
+.fine, .chip { color: var(--muted); font-size: 12px; }
+button { background: var(--panel-2); border: 1px solid var(--line); border-radius: 4px; padding: 5px 10px; transition: border-color 120ms, background 120ms; }
+button:hover:not(:disabled) { border-color: #4a6177; background: #202b37; }
+button:focus-visible, input:focus-visible { outline: 2px solid var(--cyan); outline-offset: 1px; }
+button:disabled { opacity: 0.55; cursor: not-allowed; }
+button[aria-pressed="true"], button[aria-current="page"], [role="tab"][aria-selected="true"] { border-color: var(--rust); color: var(--rust-2); background: #2a2418; }
+button.primary { background: var(--rust); border-color: var(--rust); color: #1a1206; font-weight: 600; }
+button.primary:hover:not(:disabled) { background: #ffc577; }
+input { background: #0f151c; border: 1px solid var(--line); border-radius: 4px; padding: 5px 8px; }
+a { color: var(--cyan); }
+.top { grid-template-columns: auto 1fr auto; align-items: center; padding: 8px 14px; border-bottom: 1px solid var(--line); background: #0e141b; }
+.word { font-size: 15px; letter-spacing: 0.22em; font-weight: 700; }
+.word b { color: var(--rust); }
+.scenes button { border-color: transparent; background: transparent; padding: 6px 10px; }
+.scenes button[aria-current="page"] { background: #1c2631; border-color: var(--line); color: var(--ink); box-shadow: inset 0 -2px 0 var(--rust); }
+.chip { border: 1px solid var(--line); border-radius: 999px; padding: 3px 9px; }
+.foot { border-top: 1px solid var(--line); background: #0e141b; }
+.block, .inspector, .mission-nav, .mc-tabpanel, .mc-cards .mission-card, .ui-form, .ui-card, .ui-magnifier { background: var(--panel); border-color: var(--line); border-radius: 6px; }
+.inspector { border-color: #3b5166; box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35); }
+.inspector.empty { box-shadow: none; }
+.terrain-hud { background: #0f151c; border-color: var(--line); }
+.map-frame, .rc-box { background: #05080b; border-color: var(--line); border-radius: 6px; }
+.rc-tools { background: rgba(11, 16, 22, 0.8); border-radius: 6px; }
+.map-ground { fill: #0b1016; stroke: var(--line); }
+.banner, .regional-help, .warn { border-left-color: var(--rust); }
+.sheet { max-width: 1100px; }
+table.conditions th { color: var(--ink); font-weight: 600; }
+code { color: var(--rust-2); }
+
+/* mission and site visual language */
+.regional-wp { stroke-width: 3px; }
+.regional-wp.wp-M0 { stroke: var(--m0); fill: rgba(242, 193, 78, 0.22); }
+.regional-wp.wp-A { stroke: var(--ma); fill: rgba(255, 138, 61, 0.22); }
+.regional-wp.wp-B { stroke: var(--mb); fill: rgba(127, 182, 255, 0.22); }
+.regional-wp.on { stroke: #fff; stroke-width: 4px; }
+.regional-feature { fill: rgba(255, 111, 207, 0.22); stroke: var(--feature); stroke-width: 2px; }
+.regional-m0a { fill: rgba(79, 224, 192, 0.10); stroke: var(--site); stroke-dasharray: 5 4; }
+.regional-roi { stroke: #8fa3b5; stroke-dasharray: 2 4; }
+.site-base { fill: var(--site); stroke: #04231c; stroke-width: 2px; }
+.site-camp { fill: rgba(79, 224, 192, 0.85); stroke: #04231c; stroke-width: 2px; }
+.site-camp.provisional { fill: rgba(79, 224, 192, 0.25); stroke: var(--site); stroke-dasharray: 4 3; }
+.site-lz { fill: rgba(79, 224, 192, 0.10); stroke: var(--site); stroke-width: 2px; stroke-dasharray: 8 5; }
+.site-base.on, .site-camp.on, .site-lz.on { stroke: #fff; stroke-width: 3px; }
+.site-link { stroke: rgba(79, 224, 192, 0.55); stroke-width: 1.5px; stroke-dasharray: 3 6; }
+.site-text { fill: #d9fff5; }
+.mc-sites { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip-base { border-color: var(--site); color: #d9fff5; }
+.chip-lz, .chip-camp { border-color: #2f6f62; }
+.mc-tabs button:nth-child(1) { box-shadow: inset 0 -2px 0 var(--m0); }
+.mc-tabs button:nth-child(2) { box-shadow: inset 0 -2px 0 var(--ma); }
+.mc-tabs button:nth-child(3) { box-shadow: inset 0 -2px 0 var(--mb); }
+.mc-cards .mission-card:nth-child(1) { border-top: 3px solid var(--m0); }
+.mc-cards .mission-card:nth-child(2) { border-top: 3px solid var(--ma); }
+.mc-cards .mission-card:nth-child(3) { border-top: 3px solid var(--mb); }
+.mc-head h2 { font-size: 18px; }
+
+/* route-information markers */
+.route-marker circle { fill: #0b1016; stroke: #fff; stroke-width: 2px; cursor: pointer; }
+.route-marker text { fill: #fff; font-weight: 700; pointer-events: none; }
+.route-marker.on circle { fill: var(--rust); stroke: #1a1206; }
+.route-marker.on text { fill: #1a1206; }
+.rm-card { position: absolute; right: 10px; top: 10px; width: min(360px, 60%); background: rgba(15, 21, 28, 0.96); border: 1px solid #3b5166; border-radius: 6px; padding: 8px 10px; font-size: 12.5px; z-index: 5; box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4); }
+.rm-card ul { padding-left: 16px; margin: 0; }
+
+/* Orbital */
+.orbital-s7 { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 380px); gap: 12px; padding: 12px; }
+.orbital-map { min-height: 0; display: flex; }
+.orbital-map .rc-box { flex: 1; }
+.orbital-side { align-self: center; display: grid; gap: 10px; }
+.steps { margin: 0; padding-left: 20px; display: grid; gap: 4px; color: var(--muted); font-size: 13px; }
+
+/* EVA HUD */
+.eva { flex: 1; min-height: 0; overflow: auto; padding: 14px 18px; display: grid; gap: 12px; align-content: start; max-width: 1200px; }
+.tag-sim { border-left: 3px solid var(--rust); padding-left: 8px; color: var(--rust-2); margin: 0 0 4px; }
+.eva-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 8px; }
+.eva-cell { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; display: grid; gap: 2px; }
+.eva-cell span { color: var(--muted); font-size: 12px; }
+.eva-cell strong { font-size: 24px; font-weight: 600; }
+.eva-profile { width: 100%; height: 140px; background: #05080b; border: 1px solid var(--line); border-radius: 6px; }
+.eva-profile polyline { fill: none; stroke: var(--rust); stroke-width: 2px; vector-effect: non-scaling-stroke; }
+.eva-profile circle { fill: #fff; }
+.eva-now { stroke: var(--cyan); stroke-width: 2px; vector-effect: non-scaling-stroke; }
+.eva-scrub { display: grid; gap: 4px; font-size: 12px; color: var(--muted); }
+.eva-scrub input { width: 100%; }
+.prov table { margin-bottom: 12px; }
+@media (max-width: 980px) { .orbital-s7 { display: flex; flex-direction: column; } .orbital-map .rc-box { min-height: 62vw; } }
+@media (prefers-reduced-motion: reduce) { button { transition: none; } }
+
+/* 3D panel header: heading on its own line, buttons wrap instead of squeezing */
+.mission-nav-head { flex-wrap: wrap; justify-content: flex-start; }
+.mission-nav-head h2 { flex: 1 0 100%; }
+.mission-nav-head button { white-space: nowrap; }

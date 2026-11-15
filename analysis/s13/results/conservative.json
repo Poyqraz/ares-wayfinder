@@ -1,0 +1,232 @@
+{
+ "strategy": {
+  "version": "conservative-1.0.0",
+  "gate_deg": 25,
+  "comfort_deg": 5,
+  "weight": 4
+ },
+ "m0a": {
+  "dataset": "f8de9017164a",
+  "sigma_deg": 4,
+  "reference": {
+   "start": {
+    "row": 273,
+    "col": 161
+   },
+   "goal": {
+    "row": 89,
+    "col": 97
+   },
+   "distance": {
+    "status": "OK",
+    "length_m": 416.426,
+    "cost_flat_equiv_m": 416.426,
+    "ascent_m": 26.46,
+    "max_step_deg": 22,
+    "max_ground_deg": 23.4,
+    "max_cross_deg": 11.9,
+    "m_over_15": 28,
+    "m_over_20": 8,
+    "m_over_25": 0
+   },
+   "terrain": {
+    "status": "OK",
+    "length_m": 416.426,
+    "cost_flat_equiv_m": 664.39,
+    "ascent_m": 25.09,
+    "max_step_deg": 18.2,
+    "max_ground_deg": 19.9,
+    "max_cross_deg": 15.3,
+    "m_over_15": 33,
+    "m_over_20": 0,
+    "m_over_25": 0
+   },
+   "conservative": {
+    "status": "OK",
+    "length_m": 453.513,
+    "cost_flat_equiv_m": 695.372,
+    "ascent_m": 25.55,
+    "max_step_deg": 14.4,
+    "max_ground_deg": 18.1,
+    "max_cross_deg": 15.3,
+    "m_over_15": 9,
+    "m_over_20": 0,
+    "m_over_25": 0
+   },
+   "conservative_note": null,
+   "rules_hold": true
+  },
+  "random": {
+   "pairs": 200,
+   "conservative_ok": 167,
+   "conservative_no_corridor": 12,
+   "conservative_endpoint_blocked": 21,
+   "terrain_ok": 200,
+   "rules_fail": 0,
+   "pairs_where_conservative_has_the_steeper_worst_cell": 10,
+   "extra_length_pct": {
+    "median": 1.1,
+    "max": 70.3
+   },
+   "ground_gain_deg": {
+    "median": 1,
+    "min": -4.9,
+    "max": 21.7
+   },
+   "over15_terrain_m": 2930,
+   "over15_conservative_m": 1022
+  },
+  "fail_closed_examples": {
+   "ENDPOINT_BLOCKED_BY_POLICY": {
+    "start": {
+     "row": 273,
+     "col": 161
+    },
+    "goal": {
+     "row": 2,
+     "col": 77
+    },
+    "distance": {
+     "status": "OK",
+     "length_m": 605.559,
+     "cost_flat_equiv_m": 605.559,
+     "ascent_m": 62.54,
+     "max_step_deg": 19.3,
+     "max_ground_deg": 27,
+     "max_cross_deg": 24.5,
+     "m_over_15": 185,
+     "m_over_20": 99,
+     "m_over_25": 30
+    },
+    "terrain": {
+     "status": "OK",
+     "length_m": 605.559,
+     "cost_flat_equiv_m": 1230.883,
+     "ascent_m": 61.15,
+     "max_step_deg": 17.3,
+     "max_ground_deg": 23.4,
+     "max_cross_deg": 22.3,
+     "m_over_15": 135,
+     "m_over_20": 43,
+     "m_over_25": 0
+    },
+    "conservative": {
+     "status": "ENDPOINT_BLOCKED_BY_POLICY"
+    },
+    "conservative_note": "No supported conservative corridor: the destination lies on or beside ground steeper than 25° (27.9° nearby). Nothing was relaxed.",
+    "rules_hold": true
+   },
+   "NO_ROUTE": {
+    "start": {
+     "row": 273,
+     "col": 161
+    },
+    "goal": {
+     "row": 2,
+     "col": 95
+    },
+    "distance": {
+     "status": "OK",
+     "length_m": 591.939,
+     "cost_flat_equiv_m": 591.939,
+     "ascent_m": 74.78,
+     "max_step_deg": 30.2,
+     "max_ground_deg": 40.3,
+     "max_cross_deg": 30.7,
+     "m_over_15": 137,
+     "m_over_20": 63,
+     "m_over_25": 33
+    },
+    "terrain": {
+     "status": "OK",
+     "length_m": 597.247,
+     "cost_flat_equiv_m": 1396.047,
+     "ascent_m": 74.85,
+     "max_step_deg": 23.1,
+     "max_ground_deg": 44,
+     "max_cross_deg": 40.8,
+     "m_over_15": 174,
+     "m_over_20": 90,
+     "m_over_25": 55
+    },
+    "conservative": {
+     "status": "NO_ROUTE"
+    },
+    "conservative_note": "No supported conservative corridor: ground gentler than 25° (with its neighbours) does not connect the two points within the step-grade limit. Nothing was relaxed.",
+    "rules_hold": true
+   }
+  }
+ },
+ "roi_a": {
+  "dataset": "7ec72147790e",
+  "sigma_deg": 0,
+  "reference": {
+   "start": {
+    "row": 63,
+    "col": 24
+   },
+   "goal": {
+    "row": 22,
+    "col": 42
+   },
+   "distance": {
+    "status": "OK",
+    "length_m": 969.161,
+    "cost_flat_equiv_m": 969.161,
+    "ascent_m": 22.8,
+    "max_step_deg": 5.9,
+    "max_ground_deg": 6.5,
+    "max_cross_deg": 4.5,
+    "m_over_15": 0,
+    "m_over_20": 0,
+    "m_over_25": 0
+   },
+   "terrain": {
+    "status": "OK",
+    "length_m": 969.161,
+    "cost_flat_equiv_m": 1058.299,
+    "ascent_m": 12.73,
+    "max_step_deg": 2.4,
+    "max_ground_deg": 4.3,
+    "max_cross_deg": 3.9,
+    "m_over_15": 0,
+    "m_over_20": 0,
+    "m_over_25": 0
+   },
+   "conservative": {
+    "status": "OK",
+    "length_m": 969.161,
+    "cost_flat_equiv_m": 1058.299,
+    "ascent_m": 12.73,
+    "max_step_deg": 2.4,
+    "max_ground_deg": 4.3,
+    "max_cross_deg": 3.9,
+    "m_over_15": 0,
+    "m_over_20": 0,
+    "m_over_25": 0
+   },
+   "conservative_note": null,
+   "rules_hold": true
+  },
+  "random": {
+   "pairs": 200,
+   "conservative_ok": 200,
+   "conservative_no_corridor": 0,
+   "conservative_endpoint_blocked": 0,
+   "terrain_ok": 200,
+   "rules_fail": 0,
+   "pairs_where_conservative_has_the_steeper_worst_cell": 0,
+   "extra_length_pct": {
+    "median": 0,
+    "max": 0
+   },
+   "ground_gain_deg": {
+    "median": 0,
+    "min": 0,
+    "max": 2.9
+   },
+   "over15_terrain_m": 0,
+   "over15_conservative_m": 0
+  }
+ }
+}

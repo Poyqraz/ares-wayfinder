@@ -1,0 +1,33 @@
+[
+ {
+  "id": "hirise_dtm_1m",
+  "role": "ANALYSIS input for the M0-A prototype only (G5); in legacy ROI-A HiRISE stays display-only",
+  "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_006_DTM_MOLAtopography_DeltaGeoid_1m_Eqc_latTs0_lon0_blend40.tif",
+  "product": "USGS Mars 2020 TRN HiRISE DTM mosaic JEZ_hirise_soc_006 (MOLA topography, DeltaGeoid, blend40)",
+  "agency": "USGS Astrogeology / NASA",
+  "mission": "MRO",
+  "instrument": "HiRISE",
+  "crs": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+  "native_pixel_m": 1.0,
+  "processing": "2 x 2 block mean to 2 m; Horn slope on ground spacing; no fill, no smoothing",
+  "vertical_reference": "UNVERIFIED (DeltaGeoid per file name)"
+ },
+ {
+  "id": "hirise_ortho_25cm",
+  "role": "display texture only",
+  "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_007_orthoMosaic_25cm_Ortho_blend120.tif",
+  "product": "USGS Mars 2020 TRN HiRISE orthomosaic JEZ_hirise_soc_007 (25 cm, blend120)",
+  "agency": "USGS Astrogeology / NASA",
+  "mission": "MRO",
+  "instrument": "HiRISE",
+  "crs": "+proj=ortho +lat_0=18.4663 +lon_0=77.4298 +x_0=0 +y_0=0 +R=3396190 +units=m +no_defs=True",
+  "native_pixel_m": 0.25,
+  "processing": "warped from orthographic to the DTM grid at 1 m with GDAL average; 2-98 % stretch for display"
+ },
+ {
+  "id": "ares1_catalog",
+  "role": "endpoint positions (rover positions)",
+  "url": null,
+  "product": "ARES-1 science catalog 572fba1ce61f (PDS Three Forks tables, PDS Initial Reports, NASA MMGIS)"
+ }
+]
