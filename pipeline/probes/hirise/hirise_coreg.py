@@ -39,7 +39,7 @@ for sy in range(-S, S + 1):
 iy, ix = np.unravel_index(np.nanargmax(grid), grid.shape)
 print("DTM-vs-ortho shift search (1 m px, +x east, +y south): best (dx,dy) =", (ix - S, iy - S), "NCC", round(float(grid[iy, ix]), 3), "| NCC at (0,0):", round(float(grid[S, S]), 3), "| median of grid:", round(float(np.nanmedian(grid)), 3))
 # HiRISE vs CTX DEM horizontal offset via elevation matching (shift HiRISE sample positions, aggregate to CTX cells)
-BUN = r"C:/Users/cancor/Desktop/Repos/ares-wayfinder-wt-claude/web/public/data/roi_a/fc22a0c8a91f/"
+BUN = str(__import__("pathlib").Path(__file__).resolve().parents[3] / "web/public/data/roi_a/fc22a0c8a91f") + "/"
 meta = json.load(open(BUN + "terrain.json")); nx, ny, x0, y0, d = meta["nx"], meta["ny"], meta["x0"], meta["y0"], meta["dx_proj"]
 ctx = np.fromfile(BUN + "dem.f32.bin", dtype="<f4").reshape(ny, nx).astype(np.float64)
 R = 3396190.0; k = math.cos(math.radians(meta["lat_ts_deg"]))

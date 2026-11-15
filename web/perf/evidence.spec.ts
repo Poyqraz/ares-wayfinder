@@ -1,5 +1,5 @@
 // S9 evidence pictures, taken in real Chrome on the GPU: the same route north-up in 2D with the slope layer, in 3D at
-// true vertical scale from two directions, in 3D at x5 (to show what exaggeration does), and its terrain chart.
+// true vertical scale from two directions, in 3D at x2.5 (to show what exaggeration does), and its terrain chart.
 import { expect, test, type Page } from "@playwright/test";
 
 const nav = (page: Page, name: string) => page.getByRole("navigation", { name: "Scenes" }).getByRole("button", { name, exact: true }).click();

@@ -46,13 +46,17 @@
 
 - **Independent route check.** The TypeScript route engine is compared against a separate Python
   Dijkstra oracle (SciPy). The largest relative difference is 1.4e-16.
-- **Automated tests.** All suites pass in release candidate s4-rc1:
-  - core 38/38;
-  - web unit 49/49;
+- **Automated tests.** Results recorded for release candidate s15-rc1
+  (`docs/checkpoints/s15-rc1/S15_RC1_REPORT.md`):
+  - core 41/41;
+  - web unit 111/111;
   - M0–A analysis 8/8;
-  - pipeline 27/27;
+  - pipeline 43/43;
   - ARES-1 catalog 14/14;
-  - browser tests 15/15.
+  - browser tests: 46 of 48 on the dev server and 47 of 48 on the production preview in the one full
+    run. The failures were two test-only problems (an outdated expected sentence and a time limit that
+    was too short); both were corrected and those tests then passed;
+  - real-Chrome performance and picture suite 10/10.
 - **Reproducible data.**
   - Every data bundle carries SHA-256 hashes and can be rebuilt byte-for-byte from the public
     source files.

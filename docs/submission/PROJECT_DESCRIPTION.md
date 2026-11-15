@@ -2,17 +2,20 @@
 
 **NASA Space Apps Challenge 2026 · Challenge: Interplanetary Survival Guide: Martian Map**
 
-> Draft for the team. Every claim below is implemented and tested in release candidate s4-rc1
-> (commit `98534de`). Do not add claims that are not in that build.
+> Describes the build published at https://poyqraz.github.io/ (release s15-rc2 plus one display change:
+> the 3D vertical exaggeration steps are ×1, ×2.5 and ×10). Test results are those recorded in
+> `docs/checkpoints/s15-rc1/S15_RC1_REPORT.md`. Do not add claims that are not in that build.
 
 ## Summary
 
 Ares Wayfinder is an offline web app for planning a "Marswalk" in Jezero crater with real NASA and
-USGS data. Mission Control shows a controlled orbital map with three science areas and a read-only
-Science Atlas built from Mars 2020 PDS records. Planning compares two routes between two sourced
-rover positions on a 2 m terrain grid made from a HiRISE elevation model: shortest distance and
-lowest relative terrain cost. Both are 416.4 m long, but the terrain-aware route keeps every 2 m
-step at or below about 18° of slope, while the shortest route reaches 22°. Every layer and number
+USGS data. Mission Control shows a controlled orbital map with four science missions and a read-only
+Science Atlas built from Mars 2020 PDS records. Planning compares three routes between two sourced
+rover positions on a 2 m terrain grid made from a HiRISE elevation model: shortest distance,
+lowest relative terrain cost, and a conservative route that keeps away from steep ground. The first
+two are both 416.4 m long, but the terrain-aware route keeps every 2 m step at or below about 18° of
+slope, while the shortest route reaches 22°. The conservative route is 453.5 m long and stays at or
+below about 14°. The same routes can be seen in 3D and walked in a simulated visor view. Every layer and number
 shows its source, resolution and limits. It is a planning prototype, not a safety tool.
 
 ## The problem
@@ -27,7 +30,8 @@ about every number it shows?
 
 ## What we built
 
-An offline web app with three main views.
+An offline web app with six scenes: Orbital, Mission control, Planning, 3D terrain, EVA HUD and
+Provenance. The main views are described below.
 
 **1. Mission Control**
 - A regional orbital map of Jezero crater from the controlled USGS CTX 6 m orthomosaic
@@ -46,20 +50,41 @@ An offline web app with three main views.
   - 9 Bright Angel claims, each with its confidence, limitation and source (no life-detection claim);
   - the MEDA weather station pressure series for sol 516.
 
-**2. Planning**, with two analysis regions:
+**2. Planning**, with three analysis grids:
 - **ROI-A**: an engineering demo on the JPL CTX 20 m elevation model (Mangold et al. 2021).
 - **M0–A**: a prototype analysis grid made from the USGS HiRISE 1 m elevation model (soc_006),
   averaged to 2 m.
+- **M0–A–B**: the same grid widened to reach Amalik (mission B). It contains the M0–A grid cell for
+  cell.
 
-In both regions you get:
-- two route policies, *shortest distance* and *lowest relative terrain cost*;
+In every grid you get:
+- three route policies: *shortest distance*, *lowest relative terrain cost* (terrain-aware) and
+  *conservative terrain*. The conservative route refuses ground steeper than 25° around each cell,
+  allows for 4° of slope uncertainty on the HiRISE grids, and reports "no corridor" instead of
+  relaxing its rule;
 - scientific layers: imagery, hillshade, elevation, slope, an experimental steepness mask and
   NoData. Each layer shows its source, units, resolution and limitations;
 - layers we do not have (illumination, shadows, weather, temperature, dust, minerals, radiation)
-  are listed as "not available". They are never faked.
+  are listed as "not available". They are never faked;
+- an Environment panel with reference cards for dust, weather and radiation. Each card is tagged
+  Measured, Modelled, ARES-1 scenario or Not available. There are no environmental map layers and no
+  environmental quantity enters any route.
 
 **3. 3D terrain**
-- A flyover of the same grid the routes were computed on, with both routes drawn in 3D.
+- A flyover of the same grid the routes were computed on, with the three routes drawn in 3D.
+- Vertical exaggeration can be set to ×1, ×2.5 or ×10 and is always labelled. Above ×1 the app warns
+  that slopes look steeper than they are.
+
+**4. EVA HUD (simulated visor)**
+- A first-person walk along the selected route, over the same terrain.
+- It shows route-derived values only: distance remaining and done, elevation, slope, the next route
+  marker and a mini-map.
+- The suit strip (heart rate, oxygen reserve, suit pressure) shows fixed demo values for a fictional
+  suit. They are labelled "Simulated demo values · not sensor readings".
+- The dust-storm notice is a planned event of the ARES-1 scenario, not a weather forecast.
+
+**5. Provenance**
+- Every dataset in the build, with its version hash, source and known limits.
 
 **Destination tool**
 - Type a coordinate or click the map.
@@ -101,8 +126,13 @@ In both regions you get:
 |---|---|---|---|
 | Shortest distance | 416.4 m | 22° (22–29° on independent stereo DEMs) | reference |
 | Lowest terrain cost | 416.4 m | about 18° | 1.4 % lower (same model) |
+| Conservative terrain | 453.5 m | about 14° | higher: 695.4 against 664.4 flat-equivalent m |
 
-The terrain-aware route is just as short on the grid, but it avoids the steepest steps.
+The terrain-aware route is just as short on the grid, but it avoids the steepest steps. The
+conservative route is 37 m longer and stays on gentler ground.
+
+For mission B (M0 to Amalik, on the wider grid) all three routes are 438.6 m long. The steepest ground
+under the conservative route is 9.1°, against 15.4° under the terrain-aware route.
 
 ## Scientific traceability
 
@@ -110,6 +140,7 @@ The terrain-aware route is just as short on the grid, but it avoids the steepest
   - Each layer, endpoint and Atlas record names its dataset, product and version.
   - The data bundles in this build are:
     - M0–A analysis `f8de9017164a`;
+    - M0–A–B analysis `5b2abdb8bb70`;
     - regional map `d3d62fc34c56`;
     - ARES-1 catalog `572fba1ce61f`;
     - ROI-A `7ec72147790e`.
@@ -118,13 +149,16 @@ The terrain-aware route is just as short on the grid, but it avoids the steepest
   - The exact tube positions are not published, so the app shows "not available" rather than a
     guess. A test enforces this.
 - **Checks, not just claims.**
-  - Automated test suites all pass in s4-rc1:
-    - core 38/38;
-    - web unit 49/49;
+  - Automated test results recorded for s15-rc1:
+    - core 41/41;
+    - web unit 111/111;
     - M0–A analysis 8/8;
-    - pipeline 27/27;
+    - pipeline 43/43;
     - ARES-1 catalog 14/14;
-    - browser tests 15/15 on both the dev server and the production preview.
+    - browser tests: 46 of 48 on the dev server and 47 of 48 on the production preview in the one full
+      run. The failures were two test-only problems (an outdated expected sentence and a time limit that
+      was too short); both were corrected and those tests then passed;
+    - real-Chrome performance and picture suite 10/10.
   - The route engine matches the independent oracle.
 - **Sensitivity tested.** We moved the endpoints, changed the threshold and swapped in independent
   HiRISE stereo elevation models to see how much the result changes (see Limitations).

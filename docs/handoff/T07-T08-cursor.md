@@ -1,6 +1,6 @@
 # Handoff to Cursor — T07a–T08: 2D Mission Control (paste the prompt below into Cursor)
 
-Worktree: `C:\Users\cancor\Desktop\Repos\ares-wayfinder-wt-cursor`, branch `feat/web`.
+Worktree: `ares-wayfinder-wt-cursor` (a local git worktree), branch `feat/web`.
 Use PowerShell for `pnpm` (it fails under Git Bash on this machine).
 
 ```

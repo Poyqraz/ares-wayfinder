@@ -111,7 +111,7 @@ test("3D route: clean continuous lines by default; measured slope colouring is a
   await page.waitForTimeout(600);
   await shot(page, "07-3d-route-slope-overlay");
   await page.getByTestId("slope-overlay-toggle").uncheck();
-  for (const ve of ["5", "10"]) {
+  for (const ve of ["2.5", "10"]) {
     await page.getByRole("button", { name: `×${ve}`, exact: true }).click();
     await expect(page.getByTestId("ve-warning")).toBeVisible();
     await expect(canvas).toHaveAttribute("data-route-lines", "3"); // distance, terrain-aware and, since S13, conservative

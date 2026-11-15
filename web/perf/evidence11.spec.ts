@@ -1,5 +1,5 @@
 // S11 pictures in real Chrome on the GPU: Regional Relief 3D with its mission markers from several cameras and zooms,
-// and the 3D route line at x1, x5 and x10, from two angles, with and without the slope inspection overlay.
+// and the 3D route line at x1, x2.5 and x10, from two angles, with and without the slope inspection overlay.
 import { expect, test, type Page } from "@playwright/test";
 
 const nav = (page: Page, name: string) => page.getByRole("navigation", { name: "Scenes" }).getByRole("button", { name, exact: true }).click();
@@ -48,10 +48,10 @@ test("regional relief mission map and the 3D route line", async ({ page }) => {
   await page.getByTestId("fly-route-distance").click();
   await shot(page, "22-route-x1-distance-selected");
   await page.getByTestId("fly-route-terrain").click();
-  for (const ve of ["5", "10"]) {
+  for (const ve of ["2.5", "10"]) {
     await page.getByRole("button", { name: `×${ve}`, exact: true }).click();
     await page.getByTestId("fit-terrain").click();
-    await shot(page, `23-route-x${ve}`);
+    await shot(page, `23-route-x${ve.replace(".", "_")}`);
   }
   await page.getByRole("button", { name: "×1", exact: true }).click();
   await page.getByTestId("fit-terrain").click();

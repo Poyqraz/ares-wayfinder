@@ -1,8 +1,8 @@
 # Ares Wayfinder
 
-NASA Space Apps Challenge 2026 — *Interplanetary Survival Guide: Martian Map* (Konya).
+NASA Space Apps Challenge 2026 · *Interplanetary Survival Guide: Martian Map* · Konya
 
-**Live demo: https://poyqraz.github.io/** — opens in any desktop browser, no login, no install.
+**Live demo: https://poyqraz.github.io/** (any desktop browser, no login, no install)
 
 Ares Wayfinder is a "Marswalk" planning prototype for Jezero crater, built on real NASA and USGS
 data. It follows **ARES-1, a hypothetical crewed expedition**: it shows where the science targets
@@ -10,26 +10,57 @@ are, compares candidate walking routes over real terrain, and previews the walk 
 a simulated visor. Every layer and number shows its source, resolution and limits. It is a
 decision-support demonstration, **not** an EVA safety system.
 
-## What you can do in the demo
+![Planning: three candidate routes from the sample depot to the Amalik outcrop on a 2 m HiRISE grid](docs/images/03-planning-three-routes.jpg)
 
-Use the buttons at the top, or the Left and Right arrow keys, to move between the six scenes.
+*Planning scene: three candidate routes from the Three Forks depot to the Amalik outcrop, on a 2 m
+grid made from the HiRISE elevation model.*
 
-| Scene | What it shows |
+## Contents
+
+- [Tour of the demo](#tour-of-the-demo)
+- [What is real and what is simulated](#what-is-real-and-what-is-simulated)
+- [For reviewers](#for-reviewers)
+- [Run it locally](#run-it-locally)
+- [Run the tests](#run-the-tests)
+- [Repository layout](#repository-layout)
+- [How the routes are checked](#how-the-routes-are-checked)
+- [Data](#data)
+- [AI use](#ai-use)
+- [License](#license)
+
+## Tour of the demo
+
+Use the buttons at the top of the app, or the Left and Right arrow keys, to move between the six
+scenes.
+
+| | |
 |---|---|
-| Orbital | Jezero crater from orbit (MRO CTX) and the analysis areas. |
-| Mission control | Four science missions on a regional map, with a read-only Science Atlas built from Mars 2020 PDS records. |
-| Planning | Three candidate routes on a real elevation grid, with elevation, slope and NoData layers and a "why this route" explanation. |
-| 3D terrain | The same grid and the same routes in 3D, with a labelled vertical exaggeration (×1, ×2.5, ×10). |
-| EVA HUD | A first-person walk along the selected route. |
-| Provenance | Every dataset, its version hash, its source and its known limits. |
+| ![Orbital scene](docs/images/01-orbital.jpg) **1. Orbital.** Jezero crater from orbit (MRO CTX) and the analysis areas. | ![Mission control scene](docs/images/02-mission-control.jpg) **2. Mission control.** Four science missions on a regional map, with a read-only Science Atlas built from Mars 2020 PDS records. |
+| ![Planning scene](docs/images/03-planning-three-routes.jpg) **3. Planning.** Three candidate routes on a real elevation grid, with elevation, slope and NoData layers and an explanation of each route. | ![3D terrain scene](docs/images/04-3d-terrain.jpg) **4. 3D terrain.** The same grid and the same routes in 3D, with a labelled vertical exaggeration (×1, ×2.5, ×10). |
+| ![EVA HUD scene](docs/images/05-eva-hud.jpg) **5. EVA HUD.** A first-person walk along the selected route, in a simulated visor. | ![Provenance scene](docs/images/06-provenance.jpg) **6. Provenance.** Every dataset, its version hash, its source and its known limits. |
 
-**Missions.** M0: Three Forks sample depot. A: Skinner Ridge / Wildcat Ridge. B: Amalik /
-Enchanted Lake. C: Bright Angel (can be inspected, but not routed: there is no analysis grid there
-yet).
+All pictures are captures of the running app. None is AI-generated.
 
-**Routes.** *Shortest distance*, *terrain-aware* (lowest relative terrain cost) and *conservative
-terrain* (stays away from steep ground, and fails closed if it cannot). Routes are candidate
-corridors, not surveyed paths.
+### Missions
+
+| Mission | Target | In the app |
+|---|---|---|
+| M0 | Three Forks sample depot | Routed |
+| A | Skinner Ridge / Wildcat Ridge (western delta front) | Routed |
+| B | Amalik / Enchanted Lake | Routed, on a wider grid |
+| C | Bright Angel | Can be inspected; not routed, because there is no analysis grid there yet |
+
+### Routes
+
+| Route | What it does |
+|---|---|
+| Shortest distance | Minimises length on the grid. |
+| Terrain-aware | Minimises a relative terrain cost: step length times a slope factor. |
+| Conservative terrain | Keeps away from steep ground and allows for slope uncertainty. If it cannot, it reports "no corridor" instead of relaxing its rule. |
+
+From the depot to Skinner Ridge (mission A), the shortest and terrain-aware routes are both
+416.4 m long, and the conservative route is 453.5 m. From the depot to Amalik (mission B), all
+three are 438.6 m. Routes are candidate corridors, not surveyed paths.
 
 ## What is real and what is simulated
 
@@ -39,7 +70,7 @@ corridors, not surveyed paths.
 - **Hypothetical:** the ARES-1 expedition, its base and its missions. They are a scenario, not a
   NASA plan.
 - **Simulated:** the suit indicators in the EVA HUD (heart rate, oxygen, pressure) are fixed demo
-  values, not sensor readings. The dust storm alert is a planned event of the scenario, not a
+  values, not sensor readings. The dust-storm notice is a planned event of the scenario, not a
   weather forecast.
 - **Not claimed:** EVA safety, travel time or energy, obstacle clearance, hazard certification,
   weather or radiation maps, life detection. Endpoints are rover positions, not exact rock or
@@ -53,12 +84,12 @@ corridors, not surveyed paths.
 | [Project description](docs/submission/PROJECT_DESCRIPTION.md) | The problem, what we built, how it works, limitations |
 | [NASA data and resources](docs/submission/NASA_DATA_AND_RESOURCES.md) | Every NASA / USGS product used, with product IDs, URLs and DOIs |
 | [AI use disclosure](docs/submission/AI_USE_DISCLOSURE.md) | Which AI tools were used, for what, and how their output was checked |
+| [Demo runbook](docs/submission/DEMO_RUNBOOK.md) | How to run the demo offline |
 | [Latest release report](docs/checkpoints/s15-rc1/S15_RC1_REPORT.md) | Test results and evidence for the current build |
-| [Decision records](docs/decisions/) | Architecture decisions and change requests |
+| [Documentation map](docs/README.md) | What every folder under `docs/` holds, and which documents are historical |
 
-The submission documents are team drafts. Lines marked `[TEAM TO CONFIRM]` are still open, and
-some sections describe an earlier release (two routes, older test counts). This README and the
-live demo describe the current build.
+Lines marked `[TEAM TO CONFIRM]` in the submission documents are still open; they concern team
+details such as tool versions and names, not the app.
 
 ## Run it locally
 
@@ -67,6 +98,9 @@ requests.
 
 ```bash
 pnpm install
+```
+
+```bash
 pnpm --dir web dev
 ```
 
@@ -75,25 +109,25 @@ Then open http://localhost:5173. For the production build, use `pnpm --dir web b
 
 ## Run the tests
 
-```bash
-pnpm --dir core test
-pnpm --dir web test
-pnpm --dir web test:e2e
-cd pipeline && uv run pytest
-```
+| Suite | Command |
+|---|---|
+| Route core | `pnpm --dir core test` |
+| Web unit tests | `pnpm --dir web test` |
+| Browser tests (needs `pnpm --dir web exec playwright install chromium` once) | `pnpm --dir web test:e2e` |
+| Data pipeline (needs [uv](https://docs.astral.sh/uv/)) | `cd pipeline && uv run pytest` |
 
 ## Repository layout
 
 | Path | Content |
 |---|---|
-| `contracts/` | Frozen data and interface contract (`CONTRACT.md`, `types.ts`) |
-| `core/` | Coordinate transforms and the route search (TypeScript, runs in the browser) |
-| `pipeline/` | Data preparation, validation gates and an independent Dijkstra oracle (Python) |
-| `web/` | The app: Mission Control, planning map, 3D terrain, EVA HUD |
-| `ares1/` | The ARES-1 science catalog, built from Mars 2020 PDS records |
-| `analysis/` | Route, sensitivity and coverage analyses with their recorded results |
-| `science/` | Source register and area validation |
-| `docs/` | Decisions, release reports, reviews and submission documents |
+| [`contracts/`](contracts/) | Frozen data and interface contract (`CONTRACT.md`, `types.ts`) |
+| [`core/`](core/) | Coordinate transforms and the route search (TypeScript, runs in the browser) |
+| [`web/`](web/) | The app: Mission Control, planning map, 3D terrain, EVA HUD. The data bundles it loads are in `web/public/data/` |
+| [`pipeline/`](pipeline/) | Data preparation, validation gates and an independent Dijkstra oracle (Python) |
+| [`ares1/`](ares1/) | The ARES-1 science catalog, built from Mars 2020 PDS records |
+| [`analysis/`](analysis/) | Route, sensitivity and coverage analyses with their recorded results |
+| [`science/`](science/) | Source register and area validation reports |
+| [`docs/`](docs/) | Submission documents, pictures, decisions and release reports ([map](docs/README.md)) |
 
 ## How the routes are checked
 

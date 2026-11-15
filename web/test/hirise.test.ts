@@ -129,7 +129,7 @@ describe("HiRISE display loader", () => {
     assert.equal(hirise.ok, true);
     if (!hirise.ok) return;
     const route = planned.routes.distance;
-    for (const ve of [1, 5, 10]) {
+    for (const ve of [1, 2.5, 10]) {
       const drawn = drapeRouteOnHirise(verified.value.h_min, hirise.value.grid, hirise.value.heights, route.vertices_proj, route.profile, ve);
       assert.ok(drawn);
       if (!drawn) return;

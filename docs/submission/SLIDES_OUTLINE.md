@@ -1,5 +1,9 @@
 # Slides outline (7 slides maximum)
 
+> **Working draft from release s5-rc1.** It describes the earlier two-route demo and its screenshots.
+> The current build has three routes, mission B (Amalik) and the EVA HUD; current pictures are in
+> `docs/images/`. Update the shots before recording or presenting.
+
 ## Rules
 
 - **Length and language:** at most 7 slides, in English.

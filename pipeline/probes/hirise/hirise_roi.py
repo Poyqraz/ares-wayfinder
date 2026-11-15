@@ -10,7 +10,7 @@ OUT = sys.argv[1]
 B = "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/"
 DTM = B + "JEZ_hirise_soc_006_DTM_MOLAtopography_DeltaGeoid_1m_Eqc_latTs0_lon0_blend40.tif"
 ORT = B + "JEZ_hirise_soc_007_orthoMosaic_25cm_Ortho_blend120.tif"
-BUN = r"C:/Users/cancor/Desktop/Repos/ares-wayfinder-wt-claude/web/public/data/roi_a/fc22a0c8a91f/"
+BUN = str(__import__("pathlib").Path(__file__).resolve().parents[3] / "web/public/data/roi_a/fc22a0c8a91f") + "/"
 GEO = "+proj=longlat +R=3396190 +no_defs"
 meta = json.load(open(BUN + "terrain.json")); pois = json.load(open(BUN + "pois.json"))
 nx, ny, x0, y0, d = meta["nx"], meta["ny"], meta["x0"], meta["y0"], meta["dx_proj"]

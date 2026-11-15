@@ -3,11 +3,12 @@
 A versioned, source-traceable catalog for the ARES-1 scenario. It covers:
 - **M0**: the Three Forks depot;
 - **A**: Skinner Ridge and Wildcat Ridge;
-- **B**: Bright Angel / Cheyava Falls / Sapphire Canyon;
+- **B**: Bright Angel / Cheyava Falls / Sapphire Canyon (the catalog is frozen, so it keeps this id; the
+  application shows this mission as **C** and uses B for Amalik);
 - one real **MEDA** sol 516 pressure series.
 
-It is separate from the CTX/HiRISE terrain bundles and the routing engine, and is **not loaded by the
-application**. Bundle `572fba1ce61f` is frozen and conditionally approved for a read-only Science Atlas
+It is separate from the CTX/HiRISE terrain bundles and the routing engine. The application reads it only
+for the read-only Science Atlas and the mission markers; it never enters a route. Bundle `572fba1ce61f` is frozen and conditionally approved for a read-only Science Atlas
 only (see `docs/HANDOFF_SCIENCE_ATLAS.md`).
 
 | Path | Content |

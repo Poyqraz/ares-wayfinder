@@ -6,7 +6,7 @@ from affine import Affine
 from scipy.ndimage import uniform_filter
 D = sys.argv[1]
 CTXO = "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/ScienceInvestigationMaps_JPL/M20_JezeroCrater_CTXortho_mosaic_5m.tif"
-BUN = r"C:/Users/cancor/Desktop/Repos/ares-wayfinder-wt-claude/web/public/data/roi_a/fc22a0c8a91f/"
+BUN = str(__import__("pathlib").Path(__file__).resolve().parents[3] / "web/public/data/roi_a/fc22a0c8a91f") + "/"
 meta = json.load(open(BUN + "terrain.json"))
 img = np.load(f"{D}/ortho_roi.npy"); oj = json.load(open(f"{D}/ortho_roi.json")); ot = Affine(*oj["transform"])
 with rasterio.Env(GDAL_DISABLE_READDIR_ON_OPEN="EMPTY_DIR", CPL_VSIL_CURL_ALLOWED_EXTENSIONS=".tif"), rasterio.open("/vsicurl/" + CTXO) as s:
