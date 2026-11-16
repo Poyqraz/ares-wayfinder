@@ -41,6 +41,8 @@ scenes.
 
 All pictures are captures of the running app. None is AI-generated.
 
+<img width="1920" height="1080" alt="Ares Wayfinder - Opera 15 11 2026 12_20_04 png 15 11 2026 13_33_16" src="https://github.com/user-attachments/assets/0e502264-e122-4a75-98af-72f8d252847f" />
+
 ### Missions
 
 | Mission | Target | In the app |
