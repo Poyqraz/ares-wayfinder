@@ -107,7 +107,7 @@ pnpm install
 pnpm --dir web dev
 ```
 
-Then open http://localhost:5173. For the production build, use `pnpm --dir web build` and then
+Then open related localhost link. For the production build, use `pnpm --dir web build` and then
 `pnpm --dir web preview`.
 
 ## Run the tests
