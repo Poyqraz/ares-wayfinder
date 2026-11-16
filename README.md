@@ -2,8 +2,6 @@
 
 NASA Space Apps Challenge 2026 · *Interplanetary Survival Guide: Martian Map* · Konya
 
-**Live demo: https://poyqraz.github.io/** (any desktop browser, no login, no install)
-
 Ares Wayfinder is a "Marswalk" planning prototype for Jezero crater, built on real NASA and USGS
 data. It follows **ARES-1, a hypothetical crewed expedition**: it shows where the science targets
 are, compares candidate walking routes over real terrain, and previews the walk in 3D and through
